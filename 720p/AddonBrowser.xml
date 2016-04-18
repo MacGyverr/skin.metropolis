@@ -84,21 +84,7 @@
 					<width>340</width>
 					<height>40</height>
 					<align>left</align>
-					<label>24063</label>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-				</control>
-				<control type="radiobutton" id="6">
-					<description>No notifications</description>
-					<width>340</width>
-					<align>left</align>
-					<label>25000</label>
+					<label>10004</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<textoffsetx>20</textoffsetx>
