@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">5</defaultcontrol>
-	<include>Animation_CommonFadeNoHide</include>
-	<include>Animation_FadedByMenu</include>
+	<defaultcontrol>5</defaultcontrol>
 	<controls>
 		<control type="group">
-			<posx>280</posx>
-			<posy>65</posy>
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+			<visible>!Window.IsActive(145)</visible>
+			<posx>150</posx>
+			<posy>75</posy>
 			<!--  Menu Background Panel -->
 			<control type="image">
 				<description>background image</description>
 				<posx>-40</posx>
 				<posy>-30</posy>
-				<width>740</width>
-				<height>636</height>
+				<width>1050</width>
+				<height>655</height>
 				<texture>frames/Menu_Glass2c.png</texture>
 				<colordiffuse>OSDDialogBackgroundColor</colordiffuse>
 			</control>
 			<!-- Menu -->
 			<control type="label" id="2">
 				<description>Settings Heading</description>
-				<posx>10</posx>
-				<posy>32</posy>
+				<posx>160</posx>
+				<posy>27</posy>
 				<width>640</width>
 				<height>40</height>
 				<align>center</align>
@@ -33,15 +31,15 @@
 			</control>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
-				<posx>10</posx>
-				<posy>80</posy>
-				<width>640</width>
-				<height>460</height>
+				<posx>260</posx>
+				<posy>75</posy>
+				<width>655</width>
+				<height>465</height>
 				<itemgap>2</itemgap>
 				<orientation>vertical</orientation>
 				<pagecontrol>60</pagecontrol>
-				<onleft>28</onleft>
-				<onright>28</onright>
+				<onleft>9000</onleft>
+				<onright>5</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
 			</control>
@@ -114,6 +112,17 @@
 				<texturedownfocus>ArrowDownFo.png</texturedownfocus>
 				<pulseonselect>false</pulseonselect>
 			</control>
+			<control type="image" id="11">
+				<description>separator image</description>
+				<include>Settings_Line</include>
+			</control>
+			<control type="edit" id="12">
+				<width>620</width>
+				<height>120</height>
+				<align>left</align>
+				<label>-</label>
+				<include>SettingsLabel</include>
+			</control>
 			<control type="sliderex" id="13">
 				<description>Default Slider</description>
 				<height>40</height>
@@ -124,7 +133,7 @@
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 				<textoffsetx>20</textoffsetx>
-				<textoffsety>0</textoffsety>
+				<textoffsety>7</textoffsety>
 				<sliderwidth>150</sliderwidth>
 				<sliderheight>15</sliderheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
@@ -140,7 +149,7 @@
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
-				<left>0</left>
+				<left>50</left>
 				<top>0</top>
 				<height>40</height>
 				<align>center</align>
@@ -149,6 +158,111 @@
 				<textcolor>DialogTextFO</textcolor>
 				<label>-</label>
 			</control>
+			<control type="group" id="9000">
+				<left>00</left>
+				<top>00</top>
+				<width>250</width>
+				<height>120</height>
+				<orientation>vertical</orientation>
+				<control type="button" id="28">
+					<description>ok</description>
+					<posx>0</posx>
+					<posy>114</posy>
+					<width>250</width>
+					<height>38</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>20</textoffsetx>
+					<radiowidth>55</radiowidth>
+					<radioheight>55</radioheight>
+					<textureradiofocus>button_radioF.png</textureradiofocus>
+					<textureradionofocus>button_radioNF.png</textureradionofocus>
+					<textureup>ArrowUpNF.png</textureup>
+					<texturedown>ArrowDownNF.png</texturedown>
+					<textureupfocus>ArrowUpFo.png</textureupfocus>
+					<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>SettingsDetail</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<selectedcolor>TextFO</selectedcolor>
+					<texturefocus>ButtonFo.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					<onleft>noop</onleft>
+					<onright>5</onright>
+					<onup>30</onup>
+					<ondown>29</ondown>
+				</control>
+				<control type="button" id="29">
+					<description>cancel</description>
+					<posx>0</posx>
+					<posy>152</posy>
+					<width>250</width>
+					<height>38</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>20</textoffsetx>
+					<radiowidth>55</radiowidth>
+					<radioheight>55</radioheight>
+					<textureradiofocus>button_radioF.png</textureradiofocus>
+					<textureradionofocus>button_radioNF.png</textureradionofocus>
+					<textureup>ArrowUpNF.png</textureup>
+					<texturedown>ArrowDownNF.png</texturedown>
+					<textureupfocus>ArrowUpFo.png</textureupfocus>
+					<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>SettingsDetail</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<selectedcolor>TextFO</selectedcolor>
+					<texturefocus>ButtonFo.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					<onleft>noop</onleft>
+					<onright>5</onright>
+					<onup>28</onup>
+					<ondown>30</ondown>
+				</control>
+				<control type="button" id="30">
+					<description>clear</description>
+					<posx>0</posx>
+					<posy>190</posy>
+					<width>250</width>
+					<height>38</height>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textoffsetx>20</textoffsetx>
+					<radiowidth>55</radiowidth>
+					<radioheight>55</radioheight>
+					<textureradiofocus>button_radioF.png</textureradiofocus>
+					<textureradionofocus>button_radioNF.png</textureradionofocus>
+					<textureup>ArrowUpNF.png</textureup>
+					<texturedown>ArrowDownNF.png</texturedown>
+					<textureupfocus>ArrowUpFo.png</textureupfocus>
+					<texturedownfocus>ArrowDownFo.png</texturedownfocus>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>SettingsDetail</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<selectedcolor>TextFO</selectedcolor>
+					<texturefocus>ButtonFo.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<pulseonselect>false</pulseonselect>
+					<label>-</label>
+					<onleft>noop</onleft>
+					<onright>5</onright>
+					<onup>29</onup>
+					<ondown>28</ondown>
+				</control>	
+			</control>
 		</control>
 	</controls>
 </window>
+
+
+
+
+
