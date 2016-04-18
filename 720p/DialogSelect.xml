@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog">
+<window>
 	<defaultcontrol always="true">3</defaultcontrol>
-	<zorder>2</zorder>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="auto" easing="out" tween="back" time="300" />
+		<effect type="fade" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
 	<controls>
-		<include>Animation_OpenCloseFade</include>
+			<!--  Menu Background Panel -->
 		<include>Global_Background</include>
 		<control type="group">
-			<posy>-65</posy>
-			<include>Animation_CommonFade</include>
-			<visible>!Window.IsActive(okdialog)</visible>
+			<posx>0</posx>
+			<posy>25</posy>
 			<control type="label" id="2">
 				<description>Heading</description>
 				<posx>360</posx>
@@ -46,7 +52,7 @@
 				<posy>215</posy>
 				<width>840</width>
 				<height>380</height>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>60</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
@@ -94,7 +100,7 @@
 				<posy>206</posy>
 				<width>840</width>
 				<height>388</height>
-				<onleft>5</onleft>
+				<onleft>7</onleft>
 				<onright>61</onright>
 				<onup>6</onup>
 				<ondown>6</ondown>
@@ -212,10 +218,21 @@
 			<posx>0</posx>
 			<posy>196</posy>
 			<include>SettingsLabelLeft</include>
-			<onleft>3</onleft>
+			<onleft>noop</onleft>
 			<onright>3</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
+			<onup>noop</onup>
+			<ondown>noop</ondown>
+		</control>
+		<control type="button" id="7">
+			<description>Cancel button</description>
+			<posx>0</posx>
+			<posy>206</posy>
+			<include>SettingsLabelLeft</include>
+			<onleft>noop</onleft>
+			<onright>3</onright>
+			<onup>7</onup>
+			<ondown>7</ondown>
+			<label>-</label>
 		</control>
 		<include>Global_ContextFilter</include>
 		<include>Global_Weather</include>
