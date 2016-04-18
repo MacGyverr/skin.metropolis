@@ -24,7 +24,7 @@
 					<textcolor>SettingsTitle</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Property(Addon.Name)]</label>
+					<label>$INFO[ListItem.AddonName]</label>
 				</control>
 				<control type="label">
 					<posx>460</posx>
@@ -35,7 +35,7 @@
 					<textcolor>SettingsDetail</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[UPPERCASE]$LOCALIZE[146][/UPPERCASE] $INFO[ListItem.Property(Addon.Type)]</label>
+					<label>[UPPERCASE]$LOCALIZE[146][/UPPERCASE] $INFO[ListItem.AddonType]</label>
 				</control>
 				<control type="label">
 					<posx>460</posx>
@@ -46,7 +46,7 @@
 					<textcolor>SettingsDetail</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[UPPERCASE]$LOCALIZE[21863]:[/UPPERCASE] $INFO[ListItem.Property(Addon.Creator)]</label>
+					<label>[UPPERCASE]$LOCALIZE[21863]:[/UPPERCASE] $INFO[ListItem.AddonCreator]</label>
 				</control>
 				<control type="label">
 					<posx>460</posx>
@@ -57,7 +57,7 @@
 					<textcolor>SettingsDetail</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[UPPERCASE]$LOCALIZE[24051][/UPPERCASE] $INFO[ListItem.Property(Addon.Version)]</label>
+					<label>[UPPERCASE]$LOCALIZE[24051][/UPPERCASE] $INFO[ListItem.AddonVersion]</label>
 				</control>
 				<control type="label">
 					<posx>460</posx>
@@ -105,7 +105,7 @@
 					<textcolor>SettingsDetail</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>[UPPERCASE]$LOCALIZE[20037]:[/UPPERCASE] $INFO[ListItem.Property(Addon.Summary)]</label>
+					<label>[UPPERCASE]$LOCALIZE[20037]:[/UPPERCASE] $INFO[ListItem.AddonSummary]</label>
 				</control>
 				<control type="label">
 					<posx>460</posx>
@@ -117,7 +117,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<scroll>True</scroll>
-					<label>[UPPERCASE]$LOCALIZE[24052]:[/UPPERCASE] $INFO[ListItem.Property(Addon.Disclaimer)]</label>
+					<label>[UPPERCASE]$LOCALIZE[24052]:[/UPPERCASE] $INFO[ListItem.AddonDisclaimer]</label>
 				</control>
 				<control type="textbox" id="5">
 					<description>Textarea</description>
@@ -129,7 +129,7 @@
 					<textcolor>SettingsDetail</textcolor>
 					<align>left</align>
 					<aligny>top</aligny>
-					<label>[UPPERCASE]$LOCALIZE[21821]:[/UPPERCASE] $INFO[ListItem.Property(Addon.Description)]</label>
+					<label>[UPPERCASE]$LOCALIZE[21821]:[/UPPERCASE] $INFO[ListItem.AddonDescription]</label>
 					<autoscroll time="4000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
 			</control>
