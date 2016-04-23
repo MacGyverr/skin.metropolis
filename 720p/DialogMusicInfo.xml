@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog">
-	<defaultcontrol>7009</defaultcontrol>
+<window id="2001">
+	<defaultcontrol>7001</defaultcontrol>
 	<controls>
-<!-- All views except Song info -->			
+<!-- All views -->			
 		<control type="group">
 			<posx>360</posx>
 			<posy>0</posy>
-			<include>Animation_FadedByMenu</include>
-			<include>Animation_CommonFade</include>
-			<include>Animation_OpenCloseFade</include>
 			<control type="group">
 				<visible>![Container.Content(songs) | Container.Content(artists)]</visible>
 				<!-- Album Title -->
@@ -28,9 +25,21 @@
 					<width>515</width>
 					<height>30</height>
 					<aligny>center</aligny>
-					<texture>$INFO[ListItem.StarRating]</texture>
+					<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>String.IsEmpty(ListItem.UserRating)</visible>
+				</control>
+				<control type="image">
+					<posx>-8</posx>
+					<posy>495</posy>
+					<width>515</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<texture>$INFO[ListItem.UserRating,LeftRating/rating,.png]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 				</control>
 				<!-- Album Year -->
 				<control type="label">
@@ -165,8 +174,184 @@
 					<visible>!Control.IsVisible(50)</visible>
 				</control>
 			</control>
+			
+			
+
+<!-- Song info -->						
 			<control type="group">
-				<visible>!Container.Content(songs) + Container.Content(artists)</visible>
+				<visible>Container.Content(Songs)</visible>
+				<!-- Song Title -->
+				<control type="fadelabel">
+					<posx>-325</posx>
+					<posy>20</posy>
+					<width>970</width>
+					<height>30</height>
+					<font>METF_TitleTextLarge</font>
+					<textcolor>TitleText</textcolor>
+					<info>ListItem.Title</info>
+				</control>
+				<!-- Song Rating -->
+				<control type="image">
+					<posx>-8</posx>
+					<posy>495</posy>
+					<width>515</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>String.IsEmpty(ListItem.UserRating)</visible>
+				</control>
+				<control type="image">
+					<posx>-8</posx>
+					<posy>495</posy>
+					<width>515</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<texture>$INFO[ListItem.UserRating,LeftRating/rating,.png]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+				</control>
+				<!-- Song Artist -->
+				<control type="label">
+					<posx>-325</posx>
+					<posy>55</posy>
+					<width>100</width>
+					<height>36</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsInfo</textcolor>
+					<label>[UPPERCASE]$LOCALIZE[557]:[/UPPERCASE]</label>
+				</control>
+				<control type="label">
+					<posx>-250</posx>
+					<posy>55</posy>
+					<width>400</width>
+					<height>36</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_PlotText</font>
+					<textcolor>TextNF</textcolor>
+					<label fallback="161">$INFO[ListItem.Artist]</label>
+				</control>
+				<!-- Song Path -->
+				<control type="textbox">
+					<posx>-8</posx>
+					<posy>100</posy>
+					<width>515</width>
+					<height>25</height>
+					<align>left</align>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsGenre</textcolor>
+					<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
+					<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
+					<info>ListItem.Path</info>
+				</control>
+				<!-- Song Year -->
+				<control type="label">
+					<posx>-325</posx>
+					<posy>405</posy>
+					<width>275</width>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsInfo</textcolor>
+					<align>center</align>
+					<label>[UPPERCASE]$LOCALIZE[562]:[/UPPERCASE]</label>
+				</control>
+				<control type="textbox">
+					<posx>-325</posx>
+					<posy>425</posy>
+					<width>275</width>
+					<height>50</height>
+					<align>center</align>
+					<font>METF_InfoText</font>
+					<textcolor>TextNF</textcolor>
+					<label fallback="161">$INFO[ListItem.Year]</label>
+				</control>
+				<!-- Song Album -->
+				<control type="label">
+					<posx>-325</posx>
+					<posy>475</posy>
+					<width>275</width>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsInfo</textcolor>
+					<align>center</align>
+					<label>[UPPERCASE]$LOCALIZE[558]:[/UPPERCASE]</label>
+				</control>
+				<control type="textbox">
+					<posx>-325</posx>
+					<posy>495</posy>
+					<width>275</width>
+					<height>50</height>
+					<align>center</align>
+					<font>METF_InfoText</font>
+					<textcolor>TextNF</textcolor>
+					<label fallback="161">$INFO[ListItem.Album]</label>
+				</control>
+				<!-- Song Genre -->
+				<control type="label">
+					<posx>550</posx>
+					<posy>290</posy>
+					<width>340</width>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsInfo</textcolor>
+					<align>center</align>
+					<label>[UPPERCASE]$LOCALIZE[515]:[/UPPERCASE]</label>
+				</control>
+				<control type="textbox">
+					<posx>550</posx>
+					<posy>315</posy>
+					<height>74</height>
+					<width>340</width>
+					<align>center</align>
+					<font>METF_PlotText</font>
+					<textcolor>TextNF</textcolor>
+					<label fallback="161">$INFO[ListItem.Genre]</label>
+					<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
+					<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
+				</control>
+				<!-- Song Moods -->
+				<control type="label">
+					<posx>550</posx>
+					<posy>400</posy>
+					<width>340</width>
+					<font>METF_InfoText</font>
+					<textcolor>MediaDetailsInfo</textcolor>
+					<align>center</align>
+					<label>$LOCALIZE[175]</label>
+				</control>
+				<control type="textbox">
+					<posx>550</posx>
+					<posy>426</posy>
+					<height>96</height>
+					<width>340</width>
+					<align>center</align>
+					<font>METF_PlotText</font>
+					<textcolor>TextNF</textcolor>
+					<label fallback="161">$INFO[ListItem.Mood)]</label>
+					<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
+					<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
+				</control>
+				<!-- Song Comments -->
+				<control type="textbox">
+					<posx>-8</posx>
+					<posy>138</posy>
+					<width>515</width>
+					<height>339</height>
+					<font>METF_PlotText</font>
+					<textcolor>TextNF</textcolor>
+					<align>justify</align>
+					<label fallback="161">$INFO[ListItem.Comment]</label>
+					<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollLong</include>
+					<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
+					<visible>!Control.IsVisible(50)</visible>
+				</control>
+			</control>
+		
+<!-- Artist Info -->			
+			<control type="group">
+				<visible>Container.Content(Artists)</visible>
 				<!-- Artist Title -->
 				<control type="fadelabel">
 					<posx>-325</posx>
@@ -311,7 +496,6 @@
 				</control>
 			</control>
 			<control type="panel" id="50">
-				<visible>![Container.Content(songs)]</visible>
 				<posx>-8</posx>
 				<posy>135</posy>
 				<width>515</width>
@@ -320,6 +504,8 @@
 				<onright>7001</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
+				<onclick condition="System.HasAddon(script.libraryeditor)">RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID]&amp;tag=Track&amp;type=Song)</onclick>
+				<onclick condition="!System.HasAddon(script.libraryeditor)">noop</onclick>
 				<onfocus>99</onfocus>
 				<viewtype label="">list</viewtype>
 				<pagecontrol>-</pagecontrol>
@@ -371,7 +557,7 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums)] + !Container.Content(songs)</visible>
+			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
 			<control type="image">
 				<include>Animation_CommonFade</include>
 				<posx>35</posx>
@@ -396,7 +582,7 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums)] + !Container.Content(songs)</visible>
+			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
 			<control type="image">
 				<posx>915</posx>
 				<posy>79</posy>
@@ -414,12 +600,10 @@
 			</control>
 		</control>
 		<!-- Control Buttons -->
-		<control type="group" id="7009">
 			<control type="grouplist" id="7001">
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_CommonFade</include>
 				<include>Animation_OpenCloseFade</include>
-				<visible>!Container.Content(songs)</visible>
 				<posx>352</posx>
 				<posy>555</posy>
 				<width>515</width>
@@ -431,17 +615,14 @@
 				<onright>7001</onright>
 				<onup>50</onup>
 				<ondown>50</ondown>
-				<!-- Review/Tracks -->
-				<control type="togglebutton" id="5">
+				<!-- Refresh -->
+				<control type="button" id="6">
 					<include>VideoInfoButton</include>
-					<texturenofocus>osd/osd_button_playlist_nf.png</texturenofocus>
-					<texturefocus>osd/osd_button_playlist_fo.png</texturefocus>
-					<alttexturefocus>osd/osd_button_playlist_fo.png</alttexturefocus>
-					<alttexturenofocus>osd/osd_button_playlist_nf.png</alttexturenofocus>
-					<usealttexture>-</usealttexture>
+					<texturenofocus>buttons/button_refresh.png</texturenofocus>
+					<texturefocus>buttons/button_refreshFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
 				</control>
-				<!-- Thumb -->
+				<!-- Thumbs -->
 				<control type="button" id="10">
 					<include>VideoInfoButton</include>
 					<texturenofocus>buttons/button_thumb.png</texturenofocus>
@@ -454,14 +635,22 @@
 					<texturenofocus>buttons/button_fanart.png</texturenofocus>
 					<texturefocus>buttons/button_fanartFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
-					<visible>!Container.Content(Albums)</visible>
 				</control>
-				<!-- Refresh -->
-				<control type="button" id="6">
+				<!-- Rating -->
+				<control type="button" id="7">
 					<include>VideoInfoButton</include>
-					<texturenofocus>buttons/button_refresh.png</texturenofocus>
-					<texturefocus>buttons/button_refreshFO.png</texturefocus>
+					<texturenofocus>buttons/button_videoextras.png</texturenofocus>
+					<texturefocus>buttons/button_videoextrasFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
+				</control>
+				<!-- Play -->
+				<control type="button" id="18">
+					<include>VideoInfoButton</include>
+					<texturenofocus>osd/osd_button_play_nf.png</texturenofocus>
+					<texturefocus>osd/osd_button_play_fo.png</texturefocus>
+					<include>Animation_ButtonFocus</include>
+					<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+					<visible>Container.Content(Songs)</visible>
 				</control>
 			</control>
 			<!-- Control Button Text -->
@@ -469,33 +658,45 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_CommonFade</include>
 				<include>Animation_OpenCloseFade</include>
-				<visible>!Container.Content(songs)</visible>
 				<control type="label">
-					<description>Review/Tracks</description>
+					<description>Refresh</description>
 					<include>VideoInfoButtonLabel</include>
-					<info>Control.GetLabel(5)</info>
-					<visible>ControlGroup(7001).HasFocus(5)</visible>
+					<info>Control.GetLabel(6)</info>
+					<visible>ControlGroup(7001).HasFocus(6)</visible>
 				</control>
 				<control type="label">
 					<description>Thumb</description>
 					<include>VideoInfoButtonLabel</include>
-					<label>$LOCALIZE[13405]</label>
+					<info>Control.GetLabel(10)</info>
 					<visible>ControlGroup(7001).HasFocus(10)</visible>
-				</control>
-				<control type="label">
-					<description>Refresh</description>
-					<include>VideoInfoButtonLabel</include>
-					<label>$LOCALIZE[184]</label>
-					<visible>ControlGroup(7001).HasFocus(6)</visible>
 				</control>
 				<control type="label">
 					<description>Fanart</description>
 					<include>VideoInfoButtonLabel</include>
-					<label>$LOCALIZE[20413]</label>
+					<info>Control.GetLabel(12)</info>
 					<visible>ControlGroup(7001).HasFocus(12)</visible>
 				</control>
+				<control type="label">
+					<description>Review/Tracks</description>
+					<include>VideoInfoButtonLabel</include>
+					<info>Control.GetLabel(7)</info>
+					<visible>ControlGroup(7001).HasFocus(7)</visible>
+				</control>
+				<control type="label">
+					<description>Lyris</description>
+					<include>VideoInfoButtonLabel</include>
+					<label>Play</label>
+					<visible>ControlGroup(7001).HasFocus(18)</visible>
+					<visible>Container.Content(Songs)</visible>
+				</control>
+				
+				
+				
+				
+				
+				
 			</control>
-<!-- Song info only -->						
+<!-- Song info only 						
 			<control type="group">
 				<visible>Container.Content(songs)</visible>
 				<include>Animation_FadedByMenu</include>
@@ -531,9 +732,20 @@
 					<posy>258</posy>
 					<width>122</width>
 					<height>22</height>
-					<texture>$INFO[ListItem.StarRating]</texture>
+					<texture>$INFO[ListItem.Rating]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>String.IsEmpty(ListItem.UserRating)</visible>
 				</control>
+				<control type="image">
+					<description>User Rating Override</description>
+					<posx>480</posx>
+					<posy>258</posy>
+					<width>122</width>
+					<height>22</height>
+					<texture>$INFO[ListItem.UserRating]</texture>
+					<colordiffuse>MediaFlagDiffuse</colordiffuse>
+					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+				</control>		
 				<control type="group">
 					<posx>640</posx>
 					<posy>52</posy>
@@ -629,45 +841,40 @@
 					<onup>1</onup>
 					<ondown>1</ondown>
 					<orientation>vertical</orientation>
-					<control type="button" id="16">
-						<description>Ok</description>
-						<posy>0</posy>
-						<include>SettingsLabelLeft</include>
-						<label>$LOCALIZE[186]</label>
-					</control>
 					<control type="button" id="11">
 						<description>Cancel</description>
-						<posy>38</posy>
+						<posy>0</posy>
 						<include>SettingsLabelLeft</include>
 						<label>$LOCALIZE[222]</label>
+						<onclick>Action(close)</onclick>
 					</control>
 					<control type="button" id="6">
 						<description>Refresh</description>
-						<posy>76</posy>
+						<posy>38</posy>
 						<include>SettingsLabelLeft</include>
 						<label>Refresh</label>
 					</control>
 					<control type="button" id="10">
 						<description>Get Thumb</description>
-						<posy>114</posy>
+						<posy>76</posy>
 						<include>SettingsLabelLeft</include>
 						<label>Get Thumb</label>
 					</control>
 					<control type="button" id="12">
 						<description>Get Fanart / Album info</description>
-						<posy>152</posy>
+						<posy>114</posy>
 						<include>SettingsLabelLeft</include>
 						<label>Get Album info</label>
 					</control>	
 					<control type="button" id="7">
 						<description>Set my rating</description>
-						<posy>190</posy>
+						<posy>152</posy>
 						<include>SettingsLabelLeft</include>
 						<label>-</label>
 					</control>
 				</control>
 			</control>		
-		</control>		
+-->	
 		<include>Global_ContextFilter</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 		<include condition="Skin.HasSetting(DebugMode)">Debug</include>

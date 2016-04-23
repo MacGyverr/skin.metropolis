@@ -1009,7 +1009,7 @@
 			<posy>0</posy>
 			<include>Animation_CommonFade</include>
 			<include>Animation_FadedByMenu</include>
-			<visible>Window.IsActive(movieinformation) | Window.IsActive(musicinformation)</visible>
+			<visible>Window.IsActive(movieinformation) | Window.IsActive(2001) | Window.IsActive(songinformation)</visible>
 			<control type="image">
 				<posx>27</posx>
 				<posy>55</posy>
