@@ -133,7 +133,7 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.mpaa]</label>
-				<visible>Container.Content(movies) + !IsEmpty(ListItem.mpaa) + !Skin.HasSetting(ShowVideoPath)</visible>
+				<visible>!ControlGroup(7003).HasFocus(7) + Container.Content(movies) + !IsEmpty(ListItem.mpaa) + !Skin.HasSetting(ShowVideoPath)</visible>
 			</control>
 			<!-- Video Path -->
 			<control type="fadelabel">
@@ -148,7 +148,7 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.FilenameAndPath]</label>
-				<visible>!SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
+				<visible>!ControlGroup(7003).HasFocus(7) + !SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
 			</control>
 			<control type="textbox">
 				<posx>-8</posx>
@@ -159,7 +159,7 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.FilenameAndPath]</label>
-				<visible>SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
+				<visible>!ControlGroup(7003).HasFocus(7) + SubString(ListItem.FilenameAndPath," ") + [Container.Content(movies) | Container.Content(videos) | Container.Content(episodes) | Container.Content(MusicVideos)] + Skin.HasSetting(ShowVideoPath)</visible>
 			</control>
 			<!-- TV Show Next Aired info -->
 			<control type="label">
@@ -171,7 +171,30 @@
 				<font>METF_InfoText</font>
 				<textcolor>TextNF</textcolor>
 				<label>[COLOR=MediaDetailsInfo]$LOCALIZE[31427]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextTitle),,[CR]]$INFO[Window(Home).Property(NextAired.AirTime),, - ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-				<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>!ControlGroup(7003).HasFocus(7) + Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+			</control>
+			<!-- User Rating info -->			
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture fallback="LeftRating/rating0.png">$INFO[ListItem.Rating,rating,.png]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>ControlGroup(7003).HasFocus(7) | [String.IsEmpty(ListItem.UserRating) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + IsEmpty(ListItem.mpaa)]</visible>
+			</control>
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture>$INFO[ListItem.UserRating,LeftRating/rating,.png]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>ControlGroup(7003).HasFocus(7) | [!String.IsEmpty(ListItem.UserRating) + IsEmpty(Window(Home).Property(NextAired.NextDate)) + IsEmpty(ListItem.mpaa)]</visible>
 			</control>
 			<control type="group">
 				<posx>550</posx>
