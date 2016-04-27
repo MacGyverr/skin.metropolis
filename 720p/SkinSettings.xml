@@ -575,6 +575,14 @@
 						<label2>$INFO[System.AddonTitle(Skin.String(LyricPath))]</label2>
 						<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
 					</control>
+					<control type="radiobutton" id="715">
+						<label>Enable Optional Artwork Downloader Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.artwork.downloader)">Skin.ToggleSetting(EnableArtworkDownloader)</onclick>
+						<onclick condition="!System.HasAddon(script.artwork.downloader)">RunPlugin(plugin://script.artwork.downloader)</onclick>
+						<selected>Skin.HasSetting(EnableArtworkDownloader)</selected>
+						<visible>!System.HasAddon(script.artwork.downloader)</visible>
+					</control>
 					<control type="image" id="702">
 						<include>Settings_Line</include>
 						<visible>System.HasAddon(script.artwork.downloader)</visible>
@@ -643,10 +651,10 @@
 					</control>
 					<control type="radiobutton" id="712">
 						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31426]</label>
-						<onclick>Skin.ToggleSetting(NextAired)</onclick>
+						<label>Enable Optional TV Show Next Aired Script</label>
+						<onclick condition="System.HasAddon(script.tv.show.next.aired)">Skin.ToggleSetting(NextAired)</onclick>
+						<onclick condition="!System.HasAddon(script.tv.show.next.aired)">RunPlugin(plugin://script.tv.show.next.aired)</onclick>
 						<selected>Skin.HasSetting(NextAired)</selected>
-						<visible>System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 					<control type="image" id="713">
 						<include>Settings_Line</include>
@@ -657,8 +665,39 @@
 						<onclick>Skin.ToggleSetting(UseExtendedWeather)</onclick>
 						<selected>Skin.HasSetting(UseExtendedWeather)</selected>
 					</control>
+					<control type="radiobutton" id="716">
+						<label>Install Optional Global Search Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.globalsearch)">Skin.ToggleSetting(EnableGlobalSearch)</onclick>
+						<onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+						<selected>Skin.HasSetting(EnableGlobalSearch)</selected>
+						<visible>!System.HasAddon(script.globalsearch)</visible>
+					</control>
+					<control type="radiobutton" id="717">
+						<label>Install Optional Video Extras Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.videoextras)">Skin.ToggleSetting(EnableVideoExtras)</onclick>
+						<onclick condition="!System.HasAddon(script.videoextras)">RunPlugin(plugin://script.videoextras)</onclick>
+						<selected>Skin.HasSetting(EnableVideoExtras)</selected>
+						<visible>!System.HasAddon(script.videoextras)</visible>
+					</control>
+					<control type="radiobutton" id="718">
+						<label>Install Optional Cinema Experience Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.cinema.experience)">Skin.ToggleSetting(EnableCinemaExperience)</onclick>
+						<onclick condition="!System.HasAddon(script.cinema.experience)">RunPlugin(plugin://script.cinema.experience)</onclick>
+						<selected>Skin.HasSetting(EnableCinemaExperience)</selected>
+						<visible>!System.HasAddon(script.cinema.experience)</visible>
+					</control>
+					<control type="radiobutton" id="719">
+						<label>Install Optional Artist Slideshow Script</label>
+						<include>SettingsLabel</include>
+						<onclick condition="System.HasAddon(script.artistslideshow)">Skin.ToggleSetting(EnableArtistSlideshow)</onclick>
+						<onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
+						<selected>Skin.HasSetting(EnableArtistSlideshow)</selected>
+						<visible>!System.HasAddon(script.artistslideshow)</visible>
+					</control>
 				</control>
-
 				<!-- Video Settings -->
 				<control type="grouplist" id="9011">
 					<visible>Container(9000).Hasfocus(7)</visible>
