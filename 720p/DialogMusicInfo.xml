@@ -9,8 +9,9 @@
 		<control type="group">
 			<posx>360</posx>
 			<posy>0</posy>
+<!-- Album info -->			
 			<control type="group">
-				<visible>![Container.Content(songs) | Container.Content(artists)]</visible>
+				<visible>![StringCompare(ListItem.DBtype,song) | StringCompare(ListItem.DBtype,artist)]</visible>
 				<!-- Album Title -->
 				<control type="fadelabel">
 					<posx>-325</posx>
@@ -180,7 +181,7 @@
 			
 <!-- Song info -->						
 			<control type="group">
-				<visible>Container.Content(Songs)</visible>
+				<visible>StringCompare(ListItem.DBtype,song)</visible>
 				<!-- Song Title -->
 				<control type="fadelabel">
 					<posx>-325</posx>
@@ -352,7 +353,7 @@
 		
 <!-- Artist Info -->			
 			<control type="group">
-				<visible>Container.Content(Artists)</visible>
+				<visible>StringCompare(ListItem.DBtype,artist)</visible>
 				<!-- Artist Title -->
 				<control type="fadelabel">
 					<posx>-325</posx>
@@ -496,7 +497,7 @@
 					<visible>!Control.IsVisible(50)</visible>
 				</control>
 			</control>
-			<control type="panel" id="50">
+			<control type="list" id="50">
 				<posx>-8</posx>
 				<posy>135</posy>
 				<width>515</width>
@@ -504,10 +505,7 @@
 				<onleft>7001</onleft>
 				<onright>7001</onright>
 				<onup>50</onup>
-				<ondown>50</ondown>
-				<onclick condition="System.HasAddon(script.libraryeditor)">RunScript(script.libraryeditor,DBID=$INFO[ListItem.DBID]&amp;tag=Track&amp;type=Song)</onclick>
-				<onclick condition="!System.HasAddon(script.libraryeditor)">noop</onclick>
-				<onfocus>99</onfocus>
+				<ondown>7001</ondown>
 				<viewtype label="">list</viewtype>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
@@ -536,29 +534,18 @@
 						<font>METF_InfoText</font>
 						<textcolor>TextFO</textcolor>
 						<scrollspeed>30</scrollspeed>
-						<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
-					</control>
-					<control type="label">
-						<posx>10</posx>
-						<posy>3</posy>
-						<width>500</width>
-						<height>24</height>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_InfoText</font>
-						<textcolor>TextFO</textcolor>
-						<scrollspeed>30</scrollspeed>
-						<label>$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
+						<label fallback="161">$INFO[ListItem.TrackNumber,,. ]$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
 			</control>
 		</control>
+
 		<!-- Artist/Album Image -->
 		<control type="group">
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
+			<visible>Window.IsActive(musiclibrary) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
 			<control type="image">
 				<include>Animation_CommonFade</include>
 				<posx>35</posx>
@@ -583,7 +570,7 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs)]</visible>
+			<visible>Window.IsActive(musiclibrary) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
 			<control type="image">
 				<posx>915</posx>
 				<posy>79</posy>
@@ -624,22 +611,22 @@
 					<texturefocus>buttons/button_refreshFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
 				</control>
-				<!-- Thumbs -->
+				<!-- Thumbnails -->
 				<control type="button" id="10">
 					<include>VideoInfoButton</include>
 					<texturenofocus>buttons/button_thumb.png</texturenofocus>
 					<texturefocus>buttons/button_thumbFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
 				</control>
-				<!-- Fanart -->
+				<!-- Fanart / Album Info -->
 				<control type="button" id="12">
 					<include>VideoInfoButton</include>
 					<texturenofocus>buttons/button_fanart.png</texturenofocus>
 					<texturefocus>buttons/button_fanartFO.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
-					<visible>!Container.Content(Songs)</visible>
+					<visible>!StringCompare(ListItem.DBtype,song)</visible>
 				</control>
-				<!-- Rating -->
+				<!-- My Rating -->
 				<control type="button" id="7">
 					<include>VideoInfoButton</include>
 					<texturenofocus>buttons/button_videoextras.png</texturenofocus>
@@ -653,7 +640,7 @@
 					<texturefocus>osd/osd_button_play_fo.png</texturefocus>
 					<include>Animation_ButtonFocus</include>
 					<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
-					<visible>Container.Content(Songs)</visible>
+					<visible>StringCompare(ListItem.DBtype,song)</visible>
 				</control>
 			</control>
 			<!-- Control Button Text -->
@@ -690,7 +677,6 @@
 					<include>VideoInfoButtonLabel</include>
 					<label>Play</label>
 					<visible>ControlGroup(7001).HasFocus(18)</visible>
-					<visible>Container.Content(Songs)</visible>
 				</control>
 			</control>
 		<include>Global_ContextFilter</include>
