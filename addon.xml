@@ -1,92 +1,22 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<addon 
-	id="skin.metropolis"
-	version="3.4.0"
-	name="Metropolis (Krypton)"
-	provider-name="Amra, Stoli, jingai">
+<addon id="skin.metropolis" version="3.4.0" name="Metropolis (Krypton beta)" provider-name="Amra, Stoli, jingai">
 	<requires>
 		<import addon="xbmc.gui" version="5.11.0"/>
 		<import addon="service.library.data.provider" version="0.1.5"/>
 		<import addon="script.extendedinfo" version="4.5.1"/>
 		<import addon="script.skinshortcuts" version="1.0.6"/>
-		<import addon="resource.images.studios.white" version="0.0.2"/>
+		<import addon="resource.images.studios.white" version="0.0.5"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.4"/>
 		<import addon="resource.images.weatherfanart.prairie" version="0.0.5"/>
 		<import addon="resource.images.weathericons.outline" version="0.0.5"/>
 		<import addon="resource.images.recordlabels.white" version="0.0.6"/>
 	</requires>
-	<extension
-		point="xbmc.gui.skin"
-		debugging="false"
-		effectslowdown="0.75">
-		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	<extension point="xbmc.gui.skin" debugging="false">
+		<res width="1280" height="720" aspect="16:9" folder="720p"/>
 	</extension>
-
-	<extension point="xbmc.addon.metadata">	
-		<summary lang="bg_BG">A Mix of Retro and Modern.</summary>
-		<summary lang="cs_CZ">A Mix of Retro and Modern.</summary>
-		<summary lang="de_DE">A Mix of Retro and Modern.</summary>
-		<summary lang="en_GB">A Mix of Retro and Modern.</summary>
+	<extension point="xbmc.addon.metadata">
 		<summary lang="en_US">A Mix of Retro and Modern.</summary>
-		<summary lang="fr_CA">A Mix of Retro and Modern.</summary>
-		<summary lang="fr_FR">A Mix of Retro and Modern.</summary>
-		<summary lang="hr_HR">A Mix of Retro and Modern.</summary>
-		<summary lang="hu_HU">A Mix of Retro and Modern.</summary>
-		<summary lang="it_IT">A Mix of Retro and Modern.</summary>
-		<summary lang="ko_KR">A Mix of Retro and Modern.</summary>
-		<summary lang="lt_LT">A Mix of Retro and Modern.</summary>
-		<summary lang="ms_MY">A Mix of Retro and Modern.</summary>
-		<summary lang="nl_NL">A Mix of Retro and Modern.</summary>
-		<summary lang="pt_BR">A Mix of Retro and Modern.</summary>
-		<summary lang="sk_SK">A Mix of Retro and Modern.</summary>
-		<summary lang="sr_RS">A Mix of Retro and Modern.</summary>
-		<summary lang="sr_RS@latin">A Mix of Retro and Modern.</summary>
-		<summary lang="sv_SE">A Mix of Retro and Modern.</summary>
-		<summary lang="tr_TR">A Mix of Retro and Modern.</summary>
-		<summary lang="zh_CN">A Mix of Retro and Modern.</summary>
-		<description lang="bg_BG">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="cs_CZ">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="de_DE">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="en_GB">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
 		<description lang="en_US">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="fr_CA">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="fr_FR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="hr_HR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="hu_HU">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="it_IT">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="ko_KR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="lt_LT">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="ms_MY">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="nl_NL">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="pt_BR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="sk_SK">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="sr_RS">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="sr_RS@latin">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="sv_SE">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="tr_TR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<description lang="zh_CN">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</description>
-		<disclaimer lang="bg_BG">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="cs_CZ">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="de_DE">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="en_GB">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="en_US">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="fi_FI">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="fr_CA">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="fr_FR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="hr_HR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="hu_HU">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="it_IT">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="ko_KR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="lt_LT">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="ms_MY">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="nl_NL">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="pt_BR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="sk_SK">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="sr_RS">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="sr_RS@latin">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="tr_TR">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
-		<disclaimer lang="zh_CN">Metropolis is designed to show as much media info as possible with easy to read text and icons. All while trying to keep the skin smooth and simple to use for all family members with multiple themes and customizable menus and views. Credit to Hitcher for Alaska Revisited which was used as a base for Metropolis.</disclaimer>
 		<platform>all</platform>
 		<license>Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0) United States License</license>
 		<forum>http://forum.kodi.tv/forumdisplay.php?fid=162</forum>
@@ -94,14 +24,3 @@
 		<source>http://github.com/jingai/skin.metropolis/</source>
 	</extension>
 </addon>
-
-
-
-
-
-
-
-
-
-
-
