@@ -14,7 +14,7 @@
 		<include>Global_Background</include>
 		<control type="group">
 			<posx>0</posx>
-			<posy>25</posy>
+			<posy>-55</posy>
 			<control type="label" id="2">
 				<description>Heading</description>
 				<posx>360</posx>
