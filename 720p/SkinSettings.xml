@@ -1033,10 +1033,18 @@
 						<onclick>ReloadSkin()</onclick>
 						<selected>Skin.HasSetting(DebugGrid)</selected>
 					</control>
-					<control type="image" id="1003">
+					<control type="radiobutton" id="1003">
+						<include>SettingsLabel</include>
+						<label>Enable Debug Info</label>
+						<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+						<onclick>ReloadSkin()</onclick>
+						<selected>Skin.HasSetting(DebugInfo)</selected>
+						<visible>Skin.HasSetting(DebugGrid)</visible>
+					</control>
+					<control type="image" id="1004">
 						<include>Settings_Line</include>
 					</control>
-					<control type="button" id="1004">
+					<control type="button" id="1005">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31431]</label>
 						<onclick>Skin.ResetSettings</onclick>
