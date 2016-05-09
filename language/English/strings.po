@@ -1003,6 +1003,10 @@ msgctxt "#31481"
 msgid "Show Votes instead of Top250 always"
 msgstr ""
 
+msgctxt "#31482"
+msgid "Show BreadCrumbs (Detailed Sub-Menu labels)"
+msgstr ""
+
 #empty strings from id 31482 to 31599
 #PVR Resources
 

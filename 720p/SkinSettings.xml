@@ -355,28 +355,34 @@
 						<onclick>Skin.ToggleSetting(Hide_MovieTagline)</onclick>
 						<selected>Skin.HasSetting(Hide_MovieTagline)</selected>
 					</control>
-					<control type="image" id="510">
+					<control type="radiobutton" id="510">
+						<include>SettingsLabel</include>
+						<label>$LOCALIZE[31482]</label>
+						<onclick>Skin.ToggleSetting(Show_BreadCrumbs)</onclick>
+						<selected>Skin.HasSetting(Show_BreadCrumbs)</selected>
+					</control>
+					<control type="image" id="511">
 						<include>Settings_Line</include>
 					</control>
-					<control type="radiobutton" id="511">
+					<control type="radiobutton" id="512">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31399]</label>
 						<onclick>Skin.ToggleSetting(GlobalFanartLight)</onclick>
 						<selected>Skin.HasSetting(GlobalFanartLight)</selected>
 					</control>
-					<control type="radiobutton" id="512">
+					<control type="radiobutton" id="513">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31406]</label>
 						<onclick>Skin.ToggleSetting(NoSegmentedFanart)</onclick>
 						<selected>Skin.HasSetting(NoSegmentedFanart)</selected>
 					</control>
-					<control type="radiobutton" id="513">
+					<control type="radiobutton" id="514">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31422]</label>
 						<onclick>Skin.ToggleSetting(LogoViewSingleItem)</onclick>
 						<selected>Skin.HasSetting(LogoViewSingleItem)</selected>
 					</control>
-					<control type="radiobutton" id="514">
+					<control type="radiobutton" id="515">
 						<include>SettingsLabel</include>
 						<label>$LOCALIZE[31712]</label>
 						<onclick>Skin.ToggleSetting(CropMVGalleryIcon)</onclick>
