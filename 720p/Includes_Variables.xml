@@ -619,4 +619,10 @@
 		<value condition="IsEmpty(Container.FolderPath)">$INFO[System.CurrentWindow]</value>
 		<value>$INFO[Container.FolderName]</value>
 	</variable>
+	
+	<variable name="StarRating">
+		<value condition="[!Skin.HasSetting(PreferUserRating) + !IsEmpty(ListItem.Rating)] | [Skin.HasSetting(PreferUserRating) + IsEmpty(ListItem.UserRating)]">$INFO[ListItem.Rating]</value>
+		<value condition="Skin.HasSetting(PreferUserRating) + !IsEmpty(ListItem.UserRating)">$INFO[ListItem.UserRating]</value>
+		<value>NA</value>
+	</variable>
 </includes>

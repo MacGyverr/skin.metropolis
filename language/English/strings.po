@@ -62,7 +62,10 @@ msgctxt "#31012"
 msgid "Increase Star Rating"
 msgstr ""
 
-#empty strings from id 31013 to 31020
+msgctxt "#31013"
+msgstr ""
+
+#empty strings from id 31014 to 31020
 
 msgctxt "#31021"
 msgid "Decrease Star Rating"
