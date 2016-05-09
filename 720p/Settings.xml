@@ -90,7 +90,7 @@
 						<description>SkinSettings</description>
 						<label>$LOCALIZE[31011] $LOCALIZE[20077]</label>
 						<icon>settings/settings_skin.png</icon>
-						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+						<onclick>ActivateWindow(SkinSettings)</onclick>
 					</item>
 					<item id="2">
 						<description>InterfaceSettings</description>
