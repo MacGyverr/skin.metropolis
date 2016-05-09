@@ -16,7 +16,7 @@
 				<onup>55</onup>
 				<ondown>55</ondown>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
-				<onright>998</onright>
+				<onright>997</onright>
 				<scrolltime>160</scrolltime>
 				<viewtype label="31285">list</viewtype>
 				<orientation>vertical</orientation>
@@ -173,7 +173,16 @@
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(episodes)] + !IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
-					<!-- Episode Count for TVShows -->
+					<!-- Sets icon -->
+					<control type="image">
+						<posx>745</posx>
+						<posy>5</posy>
+						<width>32</width>
+						<height>24</height>
+						<texture>flags/set.png</texture>
+						<visible>Window.IsActive(videolibrary) + !Container.Content(sets) + !IsEmpty(ListItem.Set)</visible>
+					</control>
+					<!-- Episode Count for TVShows                  -->
 					<control type="label">
 						<posx>730</posx>
 						<posy>-2</posy>
@@ -400,6 +409,23 @@
 						<height>24</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(episodes)] + !IsEmpty(ListItem.VideoResolution)</visible>
+					</control>
+					<!-- Sets icon -->
+					<control type="image">
+						<posx>745</posx>
+						<posy>5</posy>
+						<width>32</width>
+						<height>24</height>
+						<texture>flags/set.png</texture>
+						<visible>Window.IsActive(videolibrary) + !Container.Content(sets) + !Control.HasFocus(997) + !IsEmpty(ListItem.Set)</visible>
+					</control>
+					<control type="image">
+						<posx>745</posx>
+						<posy>5</posy>
+						<width>32</width>
+						<height>24</height>
+						<texture>flags/setFO.png</texture>
+						<visible>Window.IsActive(videolibrary) + !Container.Content(sets) + Control.HasFocus(997) + !IsEmpty(ListItem.Set)</visible>
 					</control>
 					<!-- Episode Count for TVShows -->
 					<control type="label">
@@ -661,6 +687,25 @@
 					<include>ViewDetailsOneLineJustified</include>
 				</control>
 			</control>
+			
+
+			<!-- Sets button -->
+			<control type="button" id="997">
+				<onup>55</onup>
+				<ondown>55</ondown>
+				<onleft>55</onleft>
+				<onright>998</onright>
+				<description>sets</description>
+				<posx>745</posx>
+				<posy>5</posy>
+				<width>32</width>
+				<height>24</height>
+				<label>-</label>
+				<onclick>ActivateWindow(10025,"videodb://movies/sets/$INFO[ListItem.SetId]/?setid=$INFO[ListItem.SetId]",return)</onclick>
+				<visible>Window.IsActive(videolibrary) + !Container.Content(sets) + !IsEmpty(ListItem.Set)</visible>
+			</control>			
+			
+			
 			<!-- Scroll Bar -->
 			<control type="scrollbar" id="998">
 				<include>Animation_OpenCloseFade</include>
@@ -673,7 +718,7 @@
 				<texturesliderbackground>-</texturesliderbackground>
 				<textureslidernib>ScrollBarV_Nib_Focus.png</textureslidernib>
 				<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
-				<onleft>55</onleft>
+				<onleft>997</onleft>
 				<onright>noop</onright>
 				<showonepage>true</showonepage>
 				<orientation>vertical</orientation>
