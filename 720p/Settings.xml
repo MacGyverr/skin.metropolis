@@ -86,6 +86,18 @@
 						<icon>settings/settings_systeminfo.png</icon>
 						<onclick>activatewindow(7)</onclick>
 					</item>
+					<item id="3">
+						<description>SkinSettings</description>
+						<label>$LOCALIZE[31011] $LOCALIZE[20077]</label>
+						<icon>settings/settings_skin.png</icon>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					</item>
+					<item id="2">
+						<description>InterfaceSettings</description>
+						<label>$LOCALIZE[14206]</label>
+						<icon>settings/settings_appearance.png</icon>
+						<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					</item>
 					<item id="11">
 						<description>Profiles</description>
 						<label>$LOCALIZE[13200]</label>
@@ -93,40 +105,22 @@
 						<onclick>activatewindow(Profiles)</onclick>
 					</item>
 					<item id="8">
-						<description>Appearance</description>
-						<label>$LOCALIZE[480]</label>
-						<icon>settings/settings_appearance.png</icon>
-						<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						<description>PlayerSettings</description>
+						<label>$LOCALIZE[14200]</label>
+						<icon>settings/settings_video.png</icon>
+						<onclick>ActivateWindow(PlayerSettings)</onclick>
 					</item>
 					<item id="1">
-						<description>Video</description>
-						<label>$LOCALIZE[3]</label>
-						<icon>settings/settings_video.png</icon>
-						<onclick>ActivateWindow(VideosSettings)</onclick>
+						<description>LibrarySettings</description>
+						<label>$LOCALIZE[14202]</label>
+						<icon>settings/settings_pictures.png</icon>
+						<onclick>ActivateWindow(LibrarySettings)</onclick>
 					</item>
 					<item id="15">
 						<description>Live TV</description>
 						<label>$LOCALIZE[31601]</label>
 						<icon>settings/settings_livetv.png</icon>
 						<onclick>ActivateWindow(PVRSettings)</onclick>
-					</item>
-					<item id="2">
-						<description>Music</description>
-						<label>$LOCALIZE[2]</label>
-						<icon>settings/settings_music.png</icon>
-						<onclick>ActivateWindow(MusicSettings)</onclick>
-					</item>
-					<item id="3">
-						<description>Pictures</description>
-						<label>$LOCALIZE[1]</label>
-						<icon>settings/settings_pictures.png</icon>
-						<onclick>ActivateWindow(PicturesSettings)</onclick>
-					</item>
-					<item id="5">
-						<description>Weather</description>
-						<label>$LOCALIZE[8]</label>
-						<icon>settings/settings_weather.png</icon>
-						<onclick>ActivateWindow(WeatherSettings)</onclick>
 					</item>
 					<item id="4">
 						<description>Add-ons</description>
@@ -146,11 +140,40 @@
 			<control type="group">
 				<posx>40</posx>
 				<posy>498</posy>
+				<visible>Container(60).HasFocus(2)</visible>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="label">
+					<include>SettingsHeadingVars</include>
+					<label>14206</label>
+				</control>
+				<control type="label">
+					<include>SettingsDetailVars</include>
+					<label>Missing-$LOCALIZE[31216]</label>
+				</control>
+			</control>
+			<control type="group">
+				<posx>40</posx>
+				<posy>498</posy>
+				<visible>Container(60).HasFocus(3)</visible>
+				<include>Animation_CommonFadeNoHide</include>
+				<control type="label">
+					<include>SettingsHeadingVars</include>
+					<label>$LOCALIZE[31011] $LOCALIZE[20077]</label>
+				</control>
+				<control type="label">
+					<include>SettingsDetailVars</include>
+					<label>$LOCALIZE[31215]</label>
+				</control>
+			</control>
+			
+			<control type="group">
+				<posx>40</posx>
+				<posy>498</posy>
 				<visible>Container(60).HasFocus(1)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
 					<include>SettingsHeadingVars</include>
-					<label>157</label>
+					<label>14202</label>
 				</control>
 				<control type="label">
 					<include>SettingsDetailVars</include>
@@ -202,53 +225,11 @@
 			<control type="group">
 				<posx>40</posx>
 				<posy>498</posy>
-				<visible>Container(60).HasFocus(2)</visible>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="label">
-					<include>SettingsHeadingVars</include>
-					<label>10005</label>
-				</control>
-				<control type="label">
-					<include>SettingsDetailVars</include>
-					<label>$LOCALIZE[31214]</label>
-				</control>
-			</control>
-			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
-				<visible>Container(60).HasFocus(5)</visible>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="label">
-					<include>SettingsHeadingVars</include>
-					<label>400</label>
-				</control>
-				<control type="label">
-					<include>SettingsDetailVars</include>
-					<label>$LOCALIZE[31215]</label>
-				</control>
-			</control>
-			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
 				<visible>Container(60).HasFocus(8)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
 					<include>SettingsHeadingVars</include>
-					<label>480</label>
-				</control>
-				<control type="label">
-					<include>SettingsDetailVars</include>
-					<label>$LOCALIZE[31216]</label>
-				</control>
-			</control>
-			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
-				<visible>Container(60).HasFocus(3)</visible>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="label">
-					<include>SettingsHeadingVars</include>
-					<label>1213</label>
+					<label>14200</label>
 				</control>
 				<control type="label">
 					<include>SettingsDetailVars</include>
@@ -267,20 +248,6 @@
 				<control type="label">
 					<include>SettingsDetailVars</include>
 					<label>$LOCALIZE[31218]</label>
-				</control>
-			</control>
-			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
-				<visible>Container(60).HasFocus(9)</visible>
-				<include>Animation_CommonFadeNoHide</include>
-				<control type="label">
-					<include>SettingsHeadingVars</include>
-					<label>$LOCALIZE[31011]</label>
-				</control>
-				<control type="label">
-					<include>SettingsDetailVars</include>
-					<label>$LOCALIZE[31219]</label>
 				</control>
 			</control>
 			<control type="group">

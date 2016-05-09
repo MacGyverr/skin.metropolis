@@ -68,7 +68,10 @@ msgctxt "#31021"
 msgid "Decrease Star Rating"
 msgstr ""
 
-#empty strings from id 31022 to 31023
+msgctxt "#31022"
+msgid "Page"
+msgstr ""
+#empty strings with id 31023
 
 msgctxt "#31024"
 msgid "Icon Home layout"
@@ -247,7 +250,7 @@ msgid "Adjust how Kodi handles audio content. Includes browsing options for file
 msgstr ""
 
 msgctxt "#31215"
-msgid "Set up region information for Kodi's optional Weather displays"
+msgid "Set up Metropolis specific skin settings"
 msgstr ""
 
 msgctxt "#31216"
@@ -255,7 +258,7 @@ msgid "Adjust the look and feel of Kodi. Includes skin, theme, sound and font se
 msgstr ""
 
 msgctxt "#31217"
-msgid "Adjust how Kodi displays personal image collections. Includes screenshot grabbing, special effects and advanced display options"
+msgid "Adjust how Kodi plays media files, Discs, Audio Visualisations, A/V Playback, Picture Slideshows, Processing, 3D, Teletext and Subtitles"
 msgstr ""
 
 msgctxt "#31218"
