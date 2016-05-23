@@ -156,6 +156,78 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 
+		<!-- media totals labels -->
+	<variable name="HomeStatsDetails1">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$LOCALIZE[20342]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$LOCALIZE[20343]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$LOCALIZE[133]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetails2">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$LOCALIZE[16101]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$LOCALIZE[20360]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$LOCALIZE[132]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetails3">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$LOCALIZE[16102]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$LOCALIZE[16101]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$LOCALIZE[134]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetails4">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetails5">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetails6">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	
+		<!-- media totals content -->
+	<variable name="HomeStatsDetailsNumber1">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$INFO[Window.Property(Movies.Count)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$INFO[Window.Property(TVShows.Count)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$INFO[Window.Property(Music.ArtistsCount)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),musicvideos)">$INFO[Window.Property(MusicVideos.Count)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetailsNumber2">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$INFO[Window.Property(Movies.UnWatched)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$INFO[Window.Property(Episodes.Count)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$INFO[Window.Property(Music.AlbumsCount)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetailsNumber3">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),movies)">$INFO[Window.Property(Movies.Watched)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),tvshows)">$INFO[Window.Property(Episodes.UnWatched)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),music)">$INFO[Window.Property(Music.SongsCount)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetailsNumber4">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetailsNumber5">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+	<variable name="HomeStatsDetailsNumber6">
+		<value condition="StringCompare(Container(9000).ListItem.Property(labelID),settings)"></value>
+		<value></value>
+	</variable>
+
 	<variable name="RatingColor">
 		<value condition="!SubString(ListItem.Votes,$COMMA)">FFFF0000</value>
 		<value condition="SubString(ListItem.Votes,1$COMMA,Left)">FFFF5555</value>

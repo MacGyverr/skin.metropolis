@@ -88,24 +88,23 @@
 					<visible>System.HasLoginScreen</visible>
 				</control>
 
-				<!-- Movies -->
+				<!-- All Stats -->
 				<control type="grouplist">
-					<height>74</height>
+					<height>150</height>
 					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(Movies.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [StringCompare(Container(9000).ListItem.Property(labelID),movies)]]</visible>
+					<visible>true</visible>
 					<control type="grouplist">
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[20342]</label>
+							<label>$VAR[HomeStatsDetails1]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Movies.Count))</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Movies.Count)]</label>
+							<label>$VAR[HomeStatsDetailsNumber1]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
@@ -115,14 +114,13 @@
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[16101]</label>
+							<label>$VAR[HomeStatsDetails2]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Movies.UnWatched))</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Movies.UnWatched)]</label>
+							<label>$VAR[HomeStatsDetailsNumber2]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
@@ -132,38 +130,13 @@
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[16102]</label>
+							<label>$VAR[HomeStatsDetails3]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Movies.Watched)]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
-						</control>
-					</control>
-				</control>
-
-				<!-- TV Shows -->
-				<control type="grouplist">
-					<height>74</height>
-					<orientation>vertical</orientation>
-					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(Episodes.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [StringCompare(Container(9000).ListItem.Property(labelID),tvshows)]]</visible>
-					<control type="grouplist">
-						<height>24</height>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<label>$LOCALIZE[20343]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(TVShows.Count))</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Window.Property(TVShows.Count)]</label>
+							<label>$VAR[HomeStatsDetailsNumber3]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
@@ -173,14 +146,13 @@
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[20360]</label>
+							<label>$VAR[HomeStatsDetails4]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Episodes.Count))</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Episodes.Count)]</label>
+							<label>$VAR[HomeStatsDetailsNumber4]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
@@ -190,39 +162,13 @@
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[16101]</label>
+							<label>$VAR[HomeStatsDetails5]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Episodes.UnWatched))</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Episodes.UnWatched)]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
-						</control>
-					</control>
-				</control>
-
-				<!-- Music -->
-				<control type="grouplist">
-					<height>74</height>
-					<orientation>vertical</orientation>
-					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(Music.SongsCount),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [StringCompare(Container(9000).ListItem.Property(labelID),music)]]</visible>
-					<control type="grouplist">
-						<height>24</height>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<label>$LOCALIZE[133]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Music.ArtistsCount))</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Window.Property(Music.ArtistsCount)]</label>
+							<label>$VAR[HomeStatsDetailsNumber5]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
@@ -232,56 +178,13 @@
 						<height>24</height>
 						<orientation>horizontal</orientation>
 						<control type="label">
-							<label>$LOCALIZE[132]</label>
+							<label>$VAR[HomeStatsDetails6]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Music.AlbumsCount))</visible>
 						</control>
 						<control type="label">
-							<label>$INFO[Window.Property(Music.AlbumsCount)]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
-						</control>
-					</control>
-					<control type="grouplist">
-						<height>24</height>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<label>$LOCALIZE[134]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(Music.SongsCount))</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Window.Property(Music.SongsCount)]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
-						</control>
-					</control>
-				</control>
-
-				<!-- Music Videos -->
-				<control type="grouplist">
-					<height>26</height>
-					<orientation>vertical</orientation>
-					<itemgap>0</itemgap>
-					<visible>IntegerGreaterThan(Window.Property(MusicVideos.Count),0) + [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] | [StringCompare(Container(9000).ListItem.Property(labelID),musicvideos)]]</visible>
-					<control type="grouplist">
-						<height>24</height>
-						<orientation>horizontal</orientation>
-						<control type="label">
-							<label>$LOCALIZE[20389]</label>
-							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetails1</include>
-							<include condition="Skin.HasSetting(Home2)">HomeStatsDetails2</include>
-							<include condition="Skin.HasSetting(Home3)">HomeStatsDetails3</include>
-							<visible>!IsEmpty(Window.Property(MusicVideos.Count))</visible>
-						</control>
-						<control type="label">
-							<label>$INFO[Window.Property(MusicVideos.Count)]</label>
+							<label>$VAR[HomeStatsDetailsNumber6]</label>
 							<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">HomeStatsDetailsNumber1</include>
 							<include condition="Skin.HasSetting(Home2)">HomeStatsDetailsNumber2</include>
 							<include condition="Skin.HasSetting(Home3)">HomeStatsDetailsNumber3</include>
