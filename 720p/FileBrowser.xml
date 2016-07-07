@@ -8,6 +8,7 @@
 		<posy>0</posy>
 	</coordinates>
 	<controls>
+		<include>Global_Background</include>
 		<control type="fixedlist" id="450">
 			<posx>690</posx>
 			<posy>66</posy>
