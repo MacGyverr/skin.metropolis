@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<onload condition="!System.HasAddon(resource.images.weathericons.3d-coloured)">Skin.SetString(WeatherIcons,resource://resource.images.weathericons.outline)</onload>
+	<onload condition="!Skin.HasSetting(WeatherIcons)">Skin.SetString(WeatherIcons,resource://resource.images.weathericons.outline)</onload>
 	<controls>
 		<control type="button" id="10">
 			<description>Weather</description>
