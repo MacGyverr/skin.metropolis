@@ -22,7 +22,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewGalleryFanart)</visible>
-				<visible>Window.IsActive(pictures) | [Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]]</visible>
+				<visible>Window.IsActive(pictures) | [Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]]</visible>
 				<itemlayout width="300" height="200">
 					<control type="image">
 						<posx>22</posx>
@@ -250,7 +250,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>[Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]] | Window.IsActive(pictures)</visible>
+				<visible>[Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]] | Window.IsActive(pictures)</visible>
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
@@ -265,7 +265,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>ViewDetailsGenreYearDurEpsUnwatched</include>
-				<visible>Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 				<include>VisibleIfNotMovieSet</include>
 			</control>
 			<control type="label">
@@ -288,7 +288,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 				<control type="image">
 					<posx>10</posx>
 					<posy>508</posy>

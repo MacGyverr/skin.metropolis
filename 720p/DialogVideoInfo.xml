@@ -651,7 +651,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_CommonFade</include>
 				<include>Animation_OpenCloseFade</include>
-				<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(MusicVideos)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(MusicVideos)]</visible>
 				<!-- Default Poster Image -->
 				<control type="image">
 					<posx>35</posx>
@@ -747,7 +747,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_CommonFade</include>
 				<include>Animation_OpenCloseFade</include>
-				<visible>!Window.IsActive(videolibrary)</visible>
+				<visible>!Window.IsActive(videos)</visible>
 				<!-- Icon Image for items NOT in Video Library -->
 				<control type="image">
 					<posx>35</posx>

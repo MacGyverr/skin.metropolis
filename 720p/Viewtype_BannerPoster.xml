@@ -22,7 +22,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewBannerPoster)</visible>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<include>BannerViewCommon_Browser</include>
 			</control>
 			<control type="group">
@@ -31,7 +31,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<!-- Poster Image  -->
 				<control type="image">
 					<posx>37</posx>
@@ -88,7 +88,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>ViewDetailsYearDurEps</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 			</control>
 			<include>ScrollBar_Vertical</include>
 		</control>

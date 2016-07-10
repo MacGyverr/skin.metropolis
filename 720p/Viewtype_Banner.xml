@@ -21,7 +21,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewBanner)</visible>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<include>BannerViewCommon_Browser</include>
 			</control>
 			<!-- Title -->
@@ -38,7 +38,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
@@ -53,14 +53,14 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>ViewDetailsGenreYearDurEpsUnwatched</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 			</control>
 			<!-- Arrows -->
 			<control type="group">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(videolibrary)</visible>
+				<visible>Window.IsActive(videos)</visible>
 				<control type="image">
 					<posx>10</posx>
 					<posy>313</posy>

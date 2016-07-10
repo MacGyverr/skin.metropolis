@@ -23,7 +23,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewLandscape)</visible>
-				<visible>Window.IsActive(videolibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 				<itemlayout width="284" height="234">
 					<control type="image">
 						<posx>4</posx>
@@ -221,7 +221,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
@@ -236,7 +236,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>ViewDetailsGenreYearDurEpsUnwatched</include>
-				<visible>Window.IsActive(VideoLibrary) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
+				<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 				<include>VisibleIfNotMovieSet</include>
 			</control>
 			<control type="label">

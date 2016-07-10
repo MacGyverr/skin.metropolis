@@ -545,7 +545,7 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
+			<visible>Window.IsActive(music) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
 			<control type="image">
 				<include>Animation_CommonFade</include>
 				<posx>35</posx>
@@ -570,7 +570,7 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<visible>Window.IsActive(musiclibrary) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
+			<visible>Window.IsActive(music) + [StringCompare(ListItem.DBtype,artist) | StringCompare(ListItem.DBtype,album) | StringCompare(ListItem.DBtype,song)]</visible>
 			<control type="image">
 				<posx>915</posx>
 				<posy>79</posy>

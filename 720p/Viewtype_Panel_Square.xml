@@ -21,7 +21,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_OpenCloseFade</include>
 				<visible>!Skin.HasSetting(NoViewPanelSquare)</visible>
-				<visible>Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(videofiles) | Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists)</visible>
+				<visible>Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(videos) | Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists)</visible>
 				<itemlayout width="205" height="205">
 					<control type="image">
 						<posx>25</posx>
@@ -96,7 +96,7 @@
 					<height>182</height>
 					<texture fallback="home_art/music.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-					<visible>Window.IsActive(musiclibrary)</visible>
+					<visible>Window.IsActive(music)</visible>
 				</control>
 				<control type="image">
 					<posx>25</posx>
@@ -140,7 +140,7 @@
 				<include>Animation_OpenCloseFade</include>
 				<posx>52</posx>
 				<posy>264</posy>
-				<visible>Window.IsActive(musiclibrary)</visible>
+				<visible>Window.IsActive(music)</visible>
 				<!-- Album Genre -->
 				<control type="label">
 					<width>380</width>

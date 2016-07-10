@@ -2134,7 +2134,7 @@
 		       <pulseonselect>false</pulseonselect>
 		       <onclick>right</onclick>
 		       <onclick>$VAR[GoPlaylist]</onclick>
-		       <visible>[Window.IsActive(videolibrary) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(music)] + !StringCompare(Playlist.Length(music),0)]</visible>
+		       <visible>[Window.IsActive(videos) + !StringCompare(Playlist.Length(video),0)] | [[Window.IsActive(music)] + !StringCompare(Playlist.Length(music),0)]</visible>
 		       <visible>!Window.IsVisible(MusicPlaylist) + !Window.IsVisible(VideoPlaylist)</visible>
 	       </control>
 	       <control type="button" id="611">

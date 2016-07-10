@@ -24,14 +24,14 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewBannerFanart)</visible>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<include>BannerViewCommon_Browser</include>
 			</control>
 			<control type="group">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<!-- Movie Fanart Image -->
 				<control type="image">
 					<posx>35</posx>
@@ -97,7 +97,7 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>ViewDetailsYearDurEpsUnwatched</include>
-				<visible>Window.IsActive(videolibrary) + Container.Content(tvshows)</visible>
+				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 			</control>
 			<include>ScrollBar_Vertical</include>
 		</control>
