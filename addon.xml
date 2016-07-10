@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.metropolis" version="3.4.0" name="Metropolis (Krypton beta)" provider-name="Amra, Stoli, jingai">
+<addon id="skin.metropolis-master" version="3.4.0" name="Metropolis (Krypton beta)" provider-name="Amra, Stoli, jingai">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="service.library.data.provider" version="0.1.5"/>
