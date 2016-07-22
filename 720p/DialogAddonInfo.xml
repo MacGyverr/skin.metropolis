@@ -109,7 +109,19 @@
 				</control>
 				<control type="label">
 					<posx>460</posx>
-					<posy>271</posy>
+					<posy>266</posy>
+					<width>790</width>
+					<height>38</height>
+					<font>METF_ContextValue</font>
+					<textcolor>SettingsDetail</textcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<scroll>True</scroll>
+					<label>[UPPERCASE]$LOCALIZE[289]:[/UPPERCASE] $INFO[ListItem.AddonSize]</label>
+				</control>
+				<control type="label">
+					<posx>460</posx>
+					<posy>304</posy>
 					<width>790</width>
 					<height>38</height>
 					<font>METF_ContextValue</font>
@@ -122,7 +134,7 @@
 				<control type="textbox" id="5">
 					<description>Textarea</description>
 					<posx>460</posx>
-					<posy>314</posy>
+					<posy>342</posy>
 					<width>790</width>
 					<height>120</height>
 					<font>METF_ContextValue</font>
@@ -132,6 +144,7 @@
 					<label>[UPPERCASE]$LOCALIZE[21821]:[/UPPERCASE] $INFO[ListItem.AddonDescription]</label>
 					<autoscroll time="4000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
+				
 			</control>
 			<control type="panel" id="50">
 				<left>850</left>
