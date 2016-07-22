@@ -604,7 +604,7 @@
 	
 	<variable name="LeftSideTitle">
 	<!--<value>$INFO[System.CurrentWindow] - $INFO[Container.FolderName] - $INFO[Container.FolderPath] - $INFO[ListItem.Path] - $INFO[ListItem.FolderPath]</value>	-->
-		<value condition="[SubString(System.CurrentWindow,Videos,right) | SubString(System.CurrentWindow,Music,right) | SubString(System.CurrentWindow,Programs,right) | SubString(System.CurrentWindow,Pictures,right)] + IsEmpty(Container.FolderPath)]">$INFO[System.CurrentWindow]</value>
+		<value condition="[SubString(System.CurrentWindow,Videos,right) | SubString(System.CurrentWindow,Music,right) | SubString(System.CurrentWindow,Programs,right) | SubString(System.CurrentWindow,Pictures,right)] + IsEmpty(Container.FolderPath)">$INFO[System.CurrentWindow]</value>
 		<value condition="Skin.HasSetting(Show_BreadCrumbs) + [SubString(Container.FolderPath,library://video/movies/,right) | SubString(Container.FolderPath,library://video/tvshows/,right) | SubString(Container.FolderPath,sources://video/,right) | SubString(Container.FolderPath,special://videoplaylists/,right) | SubString(Container.FolderPath,addons://sources/video,right) | SubString(Container.FolderPath,addons://sources/executable,right) | SubString(Container.FolderPath,addons://sources/image,right)]">$INFO[System.CurrentWindow] | $INFO[Container.FolderName]</value>
 		
 		<!-- Left side movie titles -->
