@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window id="145">
 	<defaultcontrol>11</defaultcontrol>
+	<depth>DepthOSD+</depth>
+	<coordinates>
+		<left>340</left>
+		<top>10</top>
+	</coordinates>
 	<include>Animation_OpenCloseFade</include>
 	<controls>
 		<control type="group">
-			<posx>320</posx>
+			<posx>0</posx>
 			<posy>0</posy>
 			<control type="image">
 				<description>Background Panel</description>

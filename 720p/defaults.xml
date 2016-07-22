@@ -63,5 +63,25 @@
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
+	<default type="slider">
+		<controloffsetx>75</controloffsetx>
+		<controloffsety>0</controloffsety>
+		<orientation>horizontal</orientation>
+	</default>
+	<default type="sliderex">
+		<height>35</height>
+		<textoffsetx>7</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus border="5">button-focus.png</texturefocus>
+		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<sliderwidth>150</sliderwidth>
+		<sliderheight>20</sliderheight>
+		<texturesliderbar>osd/slider_bg_2.png</texturesliderbar>
+		<textureslidernib border="2">osd/SliderNibNF.png</textureslidernib>
+		<textureslidernibfocus border="2">osd/SliderNibFO.png</textureslidernibfocus>
+		<font>font12</font>
+		<textcolor>white</textcolor>
+		<disabledcolor>grey3</disabledcolor>
+	</default>
 	
 </includes>
