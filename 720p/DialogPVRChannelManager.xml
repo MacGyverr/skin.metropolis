@@ -220,7 +220,7 @@
 				<onleft>20</onleft>
 				<onright>7</onright>
 				<texturesliderbackground>-</texturesliderbackground>
-				<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>

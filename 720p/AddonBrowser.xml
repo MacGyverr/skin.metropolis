@@ -17,83 +17,12 @@
 			<include>Animation_NavMenu</include>
 			<include>NavMenuBackground</include>
 			<control type="grouplist" id="7000">
-				<posx>470</posx>
-				<posy>120</posy>
-				<width>340</width>
-				<height>548</height>
-				<itemgap>2</itemgap>
+				<include>NavMenuCommon</include>
+				<onback>55</onback>
 				<onleft>55</onleft>
 				<onright>55</onright>
-				<onup>7000</onup>
-				<ondown>7000</ondown>
-				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
-				<control type="button" id="2">
-					<description>View</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>-</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-				</control>
-				<control type="button" id="3">
-					<description>Sort</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<label>-</label>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<pulseonselect>false</pulseonselect>
-				</control>
-				<control type="togglebutton" id="4">
-					<description>Ascending/Descending</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<label>584</label>
-					<altlabel>585</altlabel>
-					<textoffsetx>20</textoffsetx>
-					<font>METF_DialogLarge</font>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<alttexturenofocus border="2">-</alttexturenofocus>
-					<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
-					<aligny>center</aligny>
-					<pulseonselect>false</pulseonselect>
-				</control>
-				<control type="button" id="5">
-					<description>Enable auto-updates</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<label>10004</label>
-					<aligny>center</aligny>
-					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-				</control>
+				<include>NavMenuListCommon</include>
+				<include>NavMenuListOrder</include>
 				<control type="radiobutton" id="7">
 					<description>Hide foreign</description>
 					<width>340</width>
@@ -137,7 +66,22 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 				</control>
-				<include>Nav_NowPlaying</include>
+				<control type="button" id="5">
+					<description>Settings</description>
+					<width>340</width>
+					<height>40</height>
+					<align>left</align>
+					<label>10004</label>
+					<aligny>center</aligny>
+					<font>METF_DialogLarge</font>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>TextNF</textcolor>
+					<focusedcolor>DialogTextFO</focusedcolor>
+					<disabledcolor>TextDisabled</disabledcolor>
+					<texturefocus>ButtonFO2Wide.png</texturefocus>
+					<texturenofocus>-</texturenofocus>
+				</control>
+				<include>NavMenuListPlaying</include>
 			</control>
 		</control>
 		<include>Global_Heading</include>

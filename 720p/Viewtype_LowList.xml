@@ -518,7 +518,7 @@
 				<onright>905</onright>
 				<visible allowhiddenfocus="true">Control.IsVisible(905) + Control.HasFocus(998)</visible>
 				<texturesliderbackground border="0,14,0,14">ScrollbarV.png</texturesliderbackground>
-				<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<include>Animation_CommonFade</include>

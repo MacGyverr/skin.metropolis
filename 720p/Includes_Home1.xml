@@ -29,7 +29,7 @@
 	<include name="Home1_Default">
 		<include>HomeDeck</include>
 		<control type="button" id="9002">
-			<description>Hidden Button to pass through navigation when recently added is disabled</description>
+			<description>Hidden Button to pass through navigation when homedeck is disabled</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
 			<width>1</width>

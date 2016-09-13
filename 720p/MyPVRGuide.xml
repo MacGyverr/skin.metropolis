@@ -587,7 +587,7 @@
 						<width>25</width>
 						<height>466</height>
 						<texturesliderbackground>-</texturesliderbackground>
-						<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>11</onleft>
 						<onright>101</onright>
 						<showonepage>false</showonepage>
@@ -934,7 +934,7 @@
 						<width>25</width>
 						<height>466</height>
 						<texturesliderbackground>-</texturesliderbackground>
-						<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>12</onleft>
 						<onright>101</onright>
 						<showonepage>false</showonepage>
@@ -1227,7 +1227,7 @@
 						<width>25</width>
 						<height>466</height>
 						<texturesliderbackground>-</texturesliderbackground>
-						<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>13</onleft>
 						<onright>101</onright>
 						<showonepage>false</showonepage>
@@ -1252,21 +1252,17 @@
 			<!-- TV Channel Plot (Bottom) -->
 			<include>LiveTVPlot</include>
 
-		<!--  Side Buttons -->
+		<!-- Navigation Menu -->
 		<control type="group">
 			<include>Animation_NavMenu</include>
 			<include>NavMenuBackground</include>
 			<control type="grouplist" id="7000">
-				<posx>470</posx>
-				<posy>120</posy>
-				<width>340</width>
-				<height>472</height>
-				<itemgap>2</itemgap>
+				<include>NavMenuCommon</include>
+				<onback>10</onback>
 				<onleft>10</onleft>
 				<onright>10</onright>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
-				<include>PVR_SideMenu</include>
-				<include>Nav_NowPlaying</include>
+				<include>PVR_NavMenu</include>
+				<include>NavMenuListPlaying</include>
 			</control>
 		</control>
 

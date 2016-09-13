@@ -182,7 +182,7 @@
 			<height>400</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(3) + Control.HasFocus(60)</visible>
 			<texturesliderbackground>-</texturesliderbackground>
-			<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onleft>3</onleft>
 			<onright>noop</onright>
 			<showonepage>true</showonepage>
@@ -196,7 +196,7 @@
 			<height>450</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(6) + Control.HasFocus(61)</visible>
 			<texturesliderbackground>-</texturesliderbackground>
-			<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onleft>6</onleft>
 			<onright>noop</onright>
 			<showonepage>true</showonepage>

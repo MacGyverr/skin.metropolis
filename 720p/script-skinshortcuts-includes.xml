@@ -4774,4 +4774,153 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-template-widget">
+		<include condition="StringCompare(System.ProfileName,Master user)">skinshortcuts-template-widget-Master user</include>
+	</include>
+	<include name="skinshortcuts-template-widget-Master user">
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_FadedByMenu</include>
+			<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+			<animation delay="100" effect="fade" end="100" start="0" time="200">Visible</animation>
+			<posx>265</posx>
+			<posy>560</posy>
+			<width>250</width>
+			<height>140</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
+			<bordersize>6</bordersize>
+			<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8000)</visible>
+		</control>
+		<control id="8000" type="list">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),movies)</visible>
+			<include>Widget_VerticalList</include>
+			<content target="videos">plugin://script.skin.helper.service/?action=recentmovies&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_FadedByMenu</include>
+			<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+			<animation delay="100" effect="fade" end="100" start="0" time="200">Visible</animation>
+			<posx>265</posx>
+			<posy>560</posy>
+			<width>250</width>
+			<height>140</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
+			<bordersize>6</bordersize>
+			<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8000)</visible>
+		</control>
+		<control id="8000" type="list">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),tvshows)</visible>
+			<include>Widget_VerticalList</include>
+			<content target="videos">plugin://script.skin.helper.service/?action=recentepisodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+		</control>
+		<control id="8002" type="button">
+			<left>1</left>
+			<top>1</top>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onclick>ActivateWindow(TVTimers)</onclick>
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),livetv)</visible>
+			<visible>PVR.IsRecording | PVR.HasNonRecordingTimer</visible>
+		</control>
+		<control type="grouplist">
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8002)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),livetv)</visible>
+			<include>Widget_PVR</include>
+			<content target="" />
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_FadedByMenu</include>
+			<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+			<animation delay="100" effect="fade" end="100" start="0" time="200">Visible</animation>
+			<posx>265</posx>
+			<posy>560</posy>
+			<width>250</width>
+			<height>140</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
+			<bordersize>6</bordersize>
+			<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8000)</visible>
+		</control>
+		<control id="8000" type="list">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),music)</visible>
+			<include>Widget_VerticalList</include>
+			<content target="music">plugin://script.skin.helper.service/?action=recentalbums&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreloadmusic)]</content>
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_FadedByMenu</include>
+			<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+			<animation delay="100" effect="fade" end="100" start="0" time="200">Visible</animation>
+			<posx>265</posx>
+			<posy>560</posy>
+			<width>250</width>
+			<height>140</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
+			<bordersize>6</bordersize>
+			<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8000)</visible>
+		</control>
+		<control id="8000" type="list">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),musicvideos)</visible>
+			<include>Widget_VerticalList</include>
+			<content target="videos">plugin://script.skin.helper.service/?action=recentmusicvideos&amp;reload=$INFO[Window(Home).Property(widgetreload)]</content>
+		</control>
+		<control id="8003" type="button">
+			<left>1</left>
+			<top>1</top>
+			<width>1</width>
+			<height>1</height>
+			<label>-</label>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<onclick>ActivateWindow(Weather)</onclick>
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+		</control>
+		<control type="grouplist">
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8003)</visible>
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),weather)</visible>
+			<include>Widget_WeatherForecast</include>
+			<content target="" />
+		</control>
+		<control type="image">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
+			<include>Animation_CommonFadeNoHide</include>
+			<include>Animation_FadedByMenu</include>
+			<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
+			<animation delay="100" effect="fade" end="100" start="0" time="200">Visible</animation>
+			<posx>265</posx>
+			<posy>560</posy>
+			<width>250</width>
+			<height>140</height>
+			<aspectratio align="right" aligny="center">keep</aspectratio>
+			<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
+			<bordersize>6</bordersize>
+			<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
+			<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8000)</visible>
+		</control>
+		<control id="8000" type="list">
+			<visible>StringCompare(Container(9000).ListItem.Property(submenuVisibility),num-1036)</visible>
+			<include>Widget_VerticalList</include>
+			<content target="static">plugin://script.skin.helper.service/?action=favourites&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]</content>
+		</control>
+	</include>
 </includes>

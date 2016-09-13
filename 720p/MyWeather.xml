@@ -4633,17 +4633,10 @@
 			<include>NavMenuBackground</include>
 			<!-- Weather Navigation menu -->
 			<control type="grouplist" id="7000">
-				<posx>470</posx>
-				<posy>120</posy>
-				<width>340</width>
-				<height>548</height>
+				<include>NavMenuCommon</include>
+				<onback>50</onback>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<onup>7000</onup>
-				<ondown>7000</ondown>
-				<itemgap>2</itemgap>
-				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
 				<control type="button" id="9">
 					<description>7 Day Forecast</description>
 					<visible>Skin.HasSetting(UseExtendedWeather)</visible>
@@ -4790,7 +4783,7 @@
 					<texturedownfocus>ArrowDownFO.png</texturedownfocus>
 					<reverse>yes</reverse>
 				</control>
-				<include>Nav_NowPlaying</include>
+				<include>NavMenuListPlaying</include>
 			</control>
 
 			<control type="label">

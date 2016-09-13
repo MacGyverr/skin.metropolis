@@ -55,8 +55,8 @@
 					<width>22</width>
 					<height>394</height>
 					<texturesliderbackground>-</texturesliderbackground>
-					<textureslidernib>ScrollbarVnibFO</textureslidernib>
-					<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+					<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
+					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>PreviousMenu</onleft>
 					<onright>PreviousMenu</onright>
 					<ondown>61</ondown>

@@ -1213,9 +1213,145 @@
 	</include>
 
 	<!-- Nav Menus -->
-	<include name="Nav_NowPlaying">
+	<include name="NavMenuCommon">
+		<posx>470</posx>
+		<posy>120</posy>
+		<width>340</width>
+		<height>548</height>
+		<itemgap>2</itemgap>
+		<onup>7000</onup>
+		<ondown>7000</ondown>
+		<orientation>vertical</orientation>
+		<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
+	</include>
+	<include name="NavMenuListCommon">
+		<control type="button" id="2">
+			<description>View</description>
+			<width>340</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>METF_DialogLarge</font>
+			<label>-</label>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+		<control type="button" id="3">
+			<description>Sort by</description>
+			<width>340</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>METF_DialogLarge</font>
+			<label>-</label>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+	</include>
+	<include name="NavMenuListOrder">
+		<control type="togglebutton" id="4">
+			<description>Order by</description>
+			<width>340</width>
+			<height>40</height>
+			<align>left</align>
+			<label>584</label>
+			<altlabel>585</altlabel>
+			<textoffsetx>20</textoffsetx>
+			<font>METF_DialogLarge</font>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<alttexturenofocus border="2">-</alttexturenofocus>
+			<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
+			<aligny>center</aligny>
+			<pulseonselect>false</pulseonselect>
+		</control>
+	</include>
+	<include name="NavMenuListFilter">
+		<control type="edit" id="19">
+			<description>Filter</description>
+			<width>340</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>587</label>
+			<font>METF_DialogLarge</font>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<visible>[Container.CanFilterAdvanced + Skin.HasSetting(SimpleMediaFilter)] | Container.CanFilter</visible>
+		</control>
+		<control type="radiobutton" id="98">
+			<description>Advanced Filter</description>
+			<width>340</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>587</label>
+			<font>METF_DialogLarge</font>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<selected>Container.Filtered</selected>
+			<onclick>right</onclick>
+			<onclick>Filter</onclick>
+			<visible>Container.CanFilterAdvanced + !Skin.HasSetting(SimpleMediaFilter)</visible>
+		</control>
+	</include>
+	<include name="NavMenuListSearch">
+		<control type="button" id="8">
+			<description>Search</description>
+			<width>340</width>
+			<height>40</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>METF_DialogLarge</font>
+			<label>137</label>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<pulseonselect>false</pulseonselect>
+		</control>
+	</include>
+	<include name="NavMenuListPartyMode">
+		<control type="radiobutton" id="16">
+			<description>PartyMode</description>
+			<width>340</width>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>METF_DialogLarge</font>
+			<label>589</label>
+			<textoffsetx>20</textoffsetx>
+			<textcolor>TextNF</textcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<texturefocus>ButtonFO2Wide.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+		</control>
+	</include>
+	<include name="NavMenuListPlaying">
 	       <control type="button" id="612">
-		       <description>Open Player Controls</description>
+		       <description>Current Playlist</description>
 		       <width>340</width>
 		       <height>40</height>
 		       <align>left</align>
@@ -1782,8 +1918,8 @@
 			<height>30</height>
 			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>
 			<texturesliderbackground>-</texturesliderbackground>
-			<textureslidernib>ScrollbarVnibFO</textureslidernib>
-			<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+			<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
+			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onup>55</onup>
 			<ondown>noop</ondown>
 			<showonepage>true</showonepage>
@@ -1802,8 +1938,8 @@
 			<height>484</height>
 			<visible allowhiddenfocus="true">Control.HasFocus(61) | Container.Scrolling</visible>
 			<texturesliderbackground>-</texturesliderbackground>
-			<textureslidernib>ScrollbarVnibFO</textureslidernib>
-			<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+			<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
+			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onleft>55</onleft>
 			<onright>noop</onright>
 			<showonepage>true</showonepage>

@@ -158,7 +158,7 @@
 					<width>25</width>
 					<height>466</height>
 					<texturesliderbackground>-</texturesliderbackground>
-					<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
 					<onright>104</onright>
 					<showonepage>false</showonepage>
@@ -169,21 +169,17 @@
 			<include>LiveTVPlot</include>
 		</control>
 
-		<!-- Side Buttons -->
+		<!-- Navigation Menu -->
 		<control type="group">
 			<include>Animation_NavMenu</include>
 			<include>NavMenuBackground</include>
 			<control type="grouplist" id="7000">
-				<posx>470</posx>
-				<posy>120</posy>
-				<width>340</width>
-				<height>472</height>
-				<itemgap>2</itemgap>
+				<include>NavMenuCommon</include>
+				<onback>50</onback>
 				<onleft>50</onleft>
 				<onright>50</onright>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
-				<include>PVR_SideMenu</include>
-				<include>Nav_NowPlaying</include>
+				<include>PVR_NavMenu</include>
+				<include>NavMenuListPlaying</include>
 			</control>
 		</control>
 

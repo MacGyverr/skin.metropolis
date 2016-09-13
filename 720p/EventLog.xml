@@ -149,8 +149,8 @@
 				<height>376</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
 				<texturesliderbackground>-</texturesliderbackground>
-				<textureslidernib>ScrollbarVnibFO</textureslidernib>
-				<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
+				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>570</onleft>
 				<onright>noop</onright>
 				<showonepage>true</showonepage>
@@ -181,36 +181,11 @@
 			<include>Animation_NavMenu</include>
 			<include>NavMenuBackground</include>
 			<control type="grouplist" id="7000">
-				<posx>470</posx>
-				<posy>120</posy>
-				<width>340</width>
-				<height>548</height>
-				<itemgap>2</itemgap>
+				<include>NavMenuCommon</include>
+				<onback>570</onback>
 				<onleft>570</onleft>
 				<onright>570</onright>
-				<onup>7000</onup>
-				<ondown>7000</ondown>
-				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">ControlGroup(7000).HasFocus</visible>
-				<control type="togglebutton" id="4">
-					<description>Ascending/Descending</description>
-					<width>340</width>
-					<height>40</height>
-					<align>left</align>
-					<label>584</label>
-					<altlabel>585</altlabel>
-					<textoffsetx>20</textoffsetx>
-					<font>METF_DialogLarge</font>
-					<textcolor>TextNF</textcolor>
-					<focusedcolor>DialogTextFO</focusedcolor>
-					<disabledcolor>TextDisabled</disabledcolor>
-					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<alttexturenofocus border="2">-</alttexturenofocus>
-					<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
-					<aligny>center</aligny>
-					<pulseonselect>false</pulseonselect>
-				</control>
+				<include>NavMenuListOrder</include>
 				<control type="button" id="21">
 					<description>Level button</description>
 					<width>340</width>

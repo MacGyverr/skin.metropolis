@@ -323,582 +323,23 @@
 
 			<!-- Widgets -->
 			<control type="group" id="9002">
-				<!-- Widget Menus -->
-				<control type="group">
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) | [[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] + !IsEmpty(Container(9000).ListItem.Property(widget))]</visible>
-					<control type="button" id="8001">
-						<description>Fake button for picture-based widgets</description>
-						<onup>Control.Move(8000,-1)</onup>
-						<ondown>Control.Move(8000,1)</ondown>
-						<onleft>9000</onleft>
-						<onright>9000</onright>
-						<onclick condition="IsEmpty(Container(8000).ListItem.PicturePath)">ShowPicture($INFO[Container(8000).ListItem.Thumb])</onclick>
-						<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures)</visible>
-					</control>
-					<control type="image">
-						<include>Animation_CommonFadeNoHide</include>
-						<include>Animation_FadedByMenu</include>
-						<description>Vertical Widget list Icon</description>
-						<posx>265</posx>
-						<posy>560</posy>
-						<width>250</width>
-						<height>140</height>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<bordertexture border="6">frames/thumb_border_round.png</bordertexture>
-						<bordersize>6</bordersize>
-						<texture diffuse="frames/EpisodeMatte.png">$VAR[GlobalWidgetIcon]</texture>
-						<visible>![StringCompare(Container(9000).ListItem.Property(widget), PVRWidget) | StringCompare(Container(9000).ListItem.Property(widget), WeatherForecastWidget)] + [[[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]]</visible>
-					</control>
-					<control type="list" id="8000">
-						<description>Widget Lists</description>
-						<!-- XXX: Use properties to define the widget style -->
-						<include>Global_VerticalListWidget</include>
-						<visible>!IsEmpty(Container(9000).ListItem.Property(widget))</visible>
-						<content target="$INFO[Container(9000).ListItem.Property(widgetTarget)]">$INFO[Container(9000).ListItem.Property(widgetPath)]</content>
-					</control>
-				</control>
-
-				<!-- PVR Widget button -->
-				<control type="button" id="8002">
-					<left>1</left>
-					<top>1</top>
-					<width>1</width>
-					<height>1</height>
-					<label>-</label>
+				<control type="button" id="8001">
+					<description>Fake button for picture-based widgets</description>
+					<onup>Control.Move(8000,-1)</onup>
+					<ondown>Control.Move(8000,1)</ondown>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<onclick>ActivateWindow(TVTimers)</onclick>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(widget),PVRWidget) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
+					<onclick condition="IsEmpty(Container(8000).ListItem.PicturePath)">ShowPicture($INFO[Container(8000).ListItem.Thumb])</onclick>
+					<visible>StringCompare(Container(9000).ListItem.Property(widgetType),pictures)</visible>
 				</control>
 
-				<!-- Weather Widget button -->
-				<control type="button" id="8003">
-					<left>1</left>
-					<top>1</top>
-					<width>1</width>
-					<height>1</height>
-					<label>-</label>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<onclick>ActivateWindow(Weather)</onclick>
-					<visible>!IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(widget),WeatherForecastWidget)</visible>
-				</control>
-			</control>
-
-			<!-- PVR Widget -->
-			<control type="group">
-				<left>470</left>
-				<top>554</top>
-				<visible>[Control.HasFocus(8002) | [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(widget),PVRWidget) + [PVR.IsRecording | PVR.HasNonRecordingTimer]</visible>
-				<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
-				<control type="group">
-					<animation effect="slide" start="0,0" end="0,80" time="0" condition="PVR.IsRecording">conditional</animation>
-					<visible>PVR.HasNonRecordingTimer</visible>
-					<control type="image">
-						<left>-100</left>
-						<top>0</top>
-						<width>80</width>
-						<height>80</height>
-						<aspectratio>keep</aspectratio>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
-						<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
-						<bordersize>4</bordersize>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>5</top>
-						<width>25</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
-						<texture>PVR-HasTimer.png</texture>
-					</control>
-					<control type="label">
-						<description>Next Timer Header label</description>
-						<left>40</left>
-						<top>5</top>
-						<height>25</height>
-						<width>400</width>
-						<label>$LOCALIZE[19157]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>Temp</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<description>NextRecordingDateTime</description>
-						<left>0</left>
-						<top>30</top>
-						<height>25</height>
-						<width>400</width>
-						<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>RecentlyAddedNF</textcolor>
-						<scroll>true</scroll>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<description>NextRecordingTitle Channel</description>
-						<left>0</left>
-						<top>50</top>
-						<height>25</height>
-						<width>800</width>
-						<label>$INFO[PVR.NextRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NextRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>RecentlyAddedNF</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scroll>true</scroll>
-					</control>
-				</control>
-				<control type="group">
-					<visible>PVR.IsRecording</visible>
-					<control type="image">
-						<left>-100</left>
-						<top>0</top>
-						<width>80</width>
-						<height>80</height>
-						<aspectratio>keep</aspectratio>
-						<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
-						<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
-						<bordersize>4</bordersize>
-					</control>
-					<control type="image">
-						<left>0</left>
-						<top>5</top>
-						<width>30</width>
-						<height>25</height>
-						<aspectratio>keep</aspectratio>
-						<texture>PVR-IsRecording.png</texture>
-					</control>
-					<control type="label">
-						<description>Is Recording Header label</description>
-						<left>40</left>
-						<top>5</top>
-						<height>25</height>
-						<width>400</width>
-						<label>$LOCALIZE[19158]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>Temp</textcolor>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<description>NextRecordingDateTime</description>
-						<left>0</left>
-						<top>30</top>
-						<height>25</height>
-						<width>400</width>
-						<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>RecentlyAddedNF</textcolor>
-						<scroll>true</scroll>
-						<shadowcolor>black</shadowcolor>
-					</control>
-					<control type="label">
-						<description>NextRecordingTitle Channel</description>
-						<left>0</left>
-						<top>50</top>
-						<height>30</height>
-						<width>800</width>
-						<label>$INFO[PVR.NowRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NowRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
-						<align>left</align>
-						<aligny>center</aligny>
-						<font>METF_RecentlyAddedListText</font>
-						<textcolor>RecentlyAddedNF</textcolor>
-						<shadowcolor>black</shadowcolor>
-						<scroll>true</scroll>
-					</control>
-				</control>
-			</control>
-
-			<!-- Weather Forecast Widget -->
-			<control type="grouplist">
-				<top>WeatherHomeTop</top>
-				<!-- <left>WeatherHomeLeft</left> -->
-				<left>0</left>
-				<align>center</align>
-				<height>WeatherHomeHeight</height>
-				<orientation>horizontal</orientation>
-				<itemgap>5</itemgap>
-				<visible>[Control.HasFocus(8003) | [![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)]] + !IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Container(9000).ListItem.Property(widget),WeatherForecastWidget)</visible>
-				<!-- Current Day Forecast -->
-				<control type="group">
-					<width>WeatherHomeWidth</width>
-					<control type="image">
-						<posy>0</posy>
-						<texture>WeatherDayBG.png</texture>
-						<colordiffuse>WeatherBGDiffuse</colordiffuse>
-					</control>
-					<control type="multiimage">
-						<height>40</height>
-						<posy>5</posy>
-						<include>Weather_Icon_Common</include>
-						<imagepath>$VAR[Weather_Icons_Day0]</imagepath>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[33006]</label>
-						<posy>35</posy>
-						<align>center</align>
-						<font>METF_WeatherDayName7Day</font>
-						<textcolor>WeatherDay</textcolor>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Daily.1.Outlook)</info>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>!SubString(Window(2600).Property(Daily.1.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Daily.1.Outlook)] $INFO[Window(2600).Property(Daily.1.ChancePrecipitation)]</label>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>SubString(Window(2600).Property(Daily.1.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day0.HighTemp)]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day0.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day0.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day0.LowTemp)]</label>
-						<posy>125</posy>>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day0.LowTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>125</posy>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day0.LowTemp))</visible>
-					</control>
-				</control>
-				<!-- Next Day Forecast or One Day From Today -->
-				<control type="group">
-					<width>WeatherHomeWidth</width>
-					<control type="image">
-						<posy>0</posy>
-						<texture>WeatherDayBG.png</texture>
-						<colordiffuse>WeatherBGDiffuse</colordiffuse>
-					</control>
-					<control type="multiimage">
-						<height>40</height>
-						<posy>5</posy>
-						<include>Weather_Icon_Common</include>
-						<imagepath>$VAR[Weather_Icons_Day1]</imagepath>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Day1.Title)</info>
-						<posy>35</posy>
-						<align>center</align>
-						<font>METF_WeatherDayName7Day</font>
-						<textcolor>WeatherDay</textcolor>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Daily.2.Outlook)</info>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>!SubString(Window(2600).Property(Daily.2.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Daily.2.Outlook)] $INFO[Window(2600).Property(Daily.2.ChancePrecipitation)]</label>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>SubString(Window(2600).Property(Daily.2.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day1.HighTemp)]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day1.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day1.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day1.LowTemp)]</label>
-						<posy>125</posy>>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day1.LowTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>125</posy>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day1.LowTemp))</visible>
-					</control>
-				</control>
-				<!-- Two Days From Today -->
-				<control type="group">
-					<width>WeatherHomeWidth</width>
-					<control type="image">
-						<posy>0</posy>
-						<texture>WeatherDayBG.png</texture>
-						<colordiffuse>WeatherBGDiffuse</colordiffuse>
-					</control>
-					<control type="multiimage">
-						<height>40</height>
-						<posy>5</posy>
-						<include>Weather_Icon_Common</include>
-						<imagepath>$VAR[Weather_Icons_Day2]</imagepath>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Day2.Title)</info>
-						<posy>35</posy>
-						<align>center</align>
-						<font>METF_WeatherDayName7Day</font>
-						<textcolor>WeatherDay</textcolor>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Daily.3.Outlook)</info>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>!SubString(Window(2600).Property(Daily.3.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Daily.3.Outlook)] $INFO[Window(2600).Property(Daily.3.ChancePrecipitation)]</label>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>SubString(Window(2600).Property(Daily.3.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day2.HighTemp)]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day2.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day2.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day2.LowTemp)]</label>
-						<posy>125</posy>>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day2.LowTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>125</posy>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day2.LowTemp))</visible>
-					</control>
-				</control>
-				<!-- Three Days From Today -->
-				<control type="group">
-					<width>WeatherHomeWidth</width>
-					<control type="image">
-						<posy>0</posy>
-						<texture>WeatherDayBG.png</texture>
-						<colordiffuse>WeatherBGDiffuse</colordiffuse>
-					</control>
-					<control type="multiimage">
-						<height>40</height>
-						<posy>5</posy>
-						<include>Weather_Icon_Common</include>
-						<imagepath>$VAR[Weather_Icons_Day3]</imagepath>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Day3.Title)</info>
-						<posy>35</posy>
-						<align>center</align>
-						<font>METF_WeatherDayName7Day</font>
-						<textcolor>WeatherDay</textcolor>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Daily.4.Outlook)</info>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>!SubString(Window(2600).Property(Daily.4.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Daily.4.Outlook)] $INFO[Window(2600).Property(Daily.4.ChancePrecipitation)]</label>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>SubString(Window(2600).Property(Daily.4.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day3.HighTemp)]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day3.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day3.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day3.LowTemp)]</label>
-						<posy>125</posy>>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day3.LowTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>125</posy>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day3.LowTemp))</visible>
-					</control>
-				</control>
-				<!-- Four Days From Today -->
-				<control type="group">
-					<visible>Skin.HasSetting(UseExtendedWeather)</visible>
-					<width>WeatherHomeWidth</width>
-					<control type="image">
-						<posy>0</posy>
-						<texture>WeatherDayBG.png</texture>
-						<colordiffuse>WeatherBGDiffuse</colordiffuse>
-					</control>
-					<control type="multiimage">
-						<height>40</height>
-						<posy>5</posy>
-						<include>Weather_Icon_Common</include>
-						<imagepath>$VAR[Weather_Icons_Day4]</imagepath>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Day4.Title)</info>
-						<posy>35</posy>
-						<align>center</align>
-						<font>METF_WeatherDayName7Day</font>
-						<textcolor>WeatherDay</textcolor>
-					</control>
-					<control type="label">
-						<info>Window(2600).Property(Daily.5.Outlook)</info>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>!SubString(Window(2600).Property(Daily.5.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Daily.5.Outlook)] $INFO[Window(2600).Property(Daily.5.ChancePrecipitation)]</label>
-						<posy>60</posy>
-						<font>METF_WeatherOutlookHome</font>
-						<align>center</align>
-						<textcolor>WeatherDetails</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>SubString(Window(2600).Property(Daily.5.Outlook),Chance)</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day4.HighTemp)]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day4.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>100</posy>
-						<align>center</align>
-						<font>METF_WeatherHighHome</font>
-						<textcolor>WeatherHighTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day4.HighTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$INFO[Window(2600).Property(Day4.LowTemp)]</label>
-						<posy>125</posy>>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>!IsEmpty(Window(2600).Property(Day4.LowTemp))</visible>
-					</control>
-					<control type="label">
-						<label>$LOCALIZE[31010]</label>
-						<posy>125</posy>
-						<align>center</align>
-						<font>METF_WeatherLowHome</font>
-						<textcolor>WeatherLowTemp</textcolor>
-						<visible>IsEmpty(Window(2600).Property(Day4.LowTemp))</visible>
-					</control>
-				</control>
+				<include>skinshortcuts-template-widget</include>
 			</control>
 		</control>
 	</include>
 
 	<!-- Vertical List Widget elements -->
-	<include name="Global_VerticalListWidget">
+	<include name="Widget_VerticalList">
 		<include>Animation_CommonFadeNoHide</include>
 		<include>Animation_FadedByMenu</include>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
@@ -941,7 +382,7 @@
 				<aligny>center</aligny>
 				<texture>FocusLine.png</texture>
 				<colordiffuse>FocusBar</colordiffuse>
-				<visible>[Control.HasFocus(8000) | Control.HasFocus(8001)]</visible>
+				<visible>[[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 			</control>
 			<control type="label">
 				<posx>10</posx>
@@ -959,5 +400,507 @@
 				<visible>[[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] + !IsEmpty(Container(9000).ListItem.Property(widget))] | [Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 			</control>
 		</focusedlayout>
+	</include>
+
+	<!-- PVR Widget -->
+	<include name="Widget_PVR">
+		<left>470</left>
+		<top>554</top>
+		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,80" time="0" condition="PVR.IsRecording">conditional</animation>
+			<visible>PVR.HasNonRecordingTimer</visible>
+			<control type="image">
+				<left>-100</left>
+				<top>0</top>
+				<width>80</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NextRecordingChannelIcon]</texture>
+				<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
+				<bordersize>4</bordersize>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>5</top>
+				<width>25</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<texture>PVR-HasTimer.png</texture>
+			</control>
+			<control type="label">
+				<description>Next Timer Header label</description>
+				<left>40</left>
+				<top>5</top>
+				<height>25</height>
+				<width>400</width>
+				<label>$LOCALIZE[19157]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>Temp</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>NextRecordingDateTime</description>
+				<left>0</left>
+				<top>30</top>
+				<height>25</height>
+				<width>400</width>
+				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>RecentlyAddedNF</textcolor>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>NextRecordingTitle Channel</description>
+				<left>0</left>
+				<top>50</top>
+				<height>25</height>
+				<width>800</width>
+				<label>$INFO[PVR.NextRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NextRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>RecentlyAddedNF</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<visible>PVR.IsRecording</visible>
+			<control type="image">
+				<left>-100</left>
+				<top>0</top>
+				<width>80</width>
+				<height>80</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" fallback="DefaultVideoCover.png">$INFO[PVR.NowRecordingChannelIcon]</texture>
+				<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
+				<bordersize>4</bordersize>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>5</top>
+				<width>30</width>
+				<height>25</height>
+				<aspectratio>keep</aspectratio>
+				<texture>PVR-IsRecording.png</texture>
+			</control>
+			<control type="label">
+				<description>Is Recording Header label</description>
+				<left>40</left>
+				<top>5</top>
+				<height>25</height>
+				<width>400</width>
+				<label>$LOCALIZE[19158]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>Temp</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>NextRecordingDateTime</description>
+				<left>0</left>
+				<top>30</top>
+				<height>25</height>
+				<width>400</width>
+				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>RecentlyAddedNF</textcolor>
+				<scroll>true</scroll>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>NextRecordingTitle Channel</description>
+				<left>0</left>
+				<top>50</top>
+				<height>30</height>
+				<width>800</width>
+				<label>$INFO[PVR.NowRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NowRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_RecentlyAddedListText</font>
+				<textcolor>RecentlyAddedNF</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+	</include>
+
+	<!-- Weather Forecast Widget -->
+	<include name="Widget_WeatherForecast">
+		<left>WeatherHomeLeft</left>
+		<top>WeatherHomeTop</top>
+		<height>WeatherHomeHeight</height>
+		<orientation>horizontal</orientation>
+		<itemgap>5</itemgap>
+		<!-- Current Day Forecast -->
+		<control type="group">
+			<width>WeatherHomeWidth</width>
+			<control type="image">
+				<posy>0</posy>
+				<texture>WeatherDayBG.png</texture>
+				<colordiffuse>WeatherBGDiffuse</colordiffuse>
+			</control>
+			<control type="multiimage">
+				<height>40</height>
+				<posy>5</posy>
+				<include>Weather_Icon_Common</include>
+				<imagepath>$VAR[Weather_Icons_Day0]</imagepath>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[33006]</label>
+				<posy>35</posy>
+				<align>center</align>
+				<font>METF_WeatherDayName7Day</font>
+				<textcolor>WeatherDay</textcolor>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Daily.1.Outlook)</info>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>!SubString(Window(2600).Property(Daily.1.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Daily.1.Outlook)] $INFO[Window(2600).Property(Daily.1.ChancePrecipitation)]</label>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>SubString(Window(2600).Property(Daily.1.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day0.HighTemp)]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day0.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day0.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day0.LowTemp)]</label>
+				<posy>125</posy>>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day0.LowTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>125</posy>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day0.LowTemp))</visible>
+			</control>
+		</control>
+		<!-- Next Day Forecast or One Day From Today -->
+		<control type="group">
+			<width>WeatherHomeWidth</width>
+			<control type="image">
+				<posy>0</posy>
+				<texture>WeatherDayBG.png</texture>
+				<colordiffuse>WeatherBGDiffuse</colordiffuse>
+			</control>
+			<control type="multiimage">
+				<height>40</height>
+				<posy>5</posy>
+				<include>Weather_Icon_Common</include>
+				<imagepath>$VAR[Weather_Icons_Day1]</imagepath>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Day1.Title)</info>
+				<posy>35</posy>
+				<align>center</align>
+				<font>METF_WeatherDayName7Day</font>
+				<textcolor>WeatherDay</textcolor>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Daily.2.Outlook)</info>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>!SubString(Window(2600).Property(Daily.2.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Daily.2.Outlook)] $INFO[Window(2600).Property(Daily.2.ChancePrecipitation)]</label>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>SubString(Window(2600).Property(Daily.2.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day1.HighTemp)]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day1.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day1.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day1.LowTemp)]</label>
+				<posy>125</posy>>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day1.LowTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>125</posy>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day1.LowTemp))</visible>
+			</control>
+		</control>
+		<!-- Two Days From Today -->
+		<control type="group">
+			<width>WeatherHomeWidth</width>
+			<control type="image">
+				<posy>0</posy>
+				<texture>WeatherDayBG.png</texture>
+				<colordiffuse>WeatherBGDiffuse</colordiffuse>
+			</control>
+			<control type="multiimage">
+				<height>40</height>
+				<posy>5</posy>
+				<include>Weather_Icon_Common</include>
+				<imagepath>$VAR[Weather_Icons_Day2]</imagepath>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Day2.Title)</info>
+				<posy>35</posy>
+				<align>center</align>
+				<font>METF_WeatherDayName7Day</font>
+				<textcolor>WeatherDay</textcolor>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Daily.3.Outlook)</info>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>!SubString(Window(2600).Property(Daily.3.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Daily.3.Outlook)] $INFO[Window(2600).Property(Daily.3.ChancePrecipitation)]</label>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>SubString(Window(2600).Property(Daily.3.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day2.HighTemp)]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day2.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day2.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day2.LowTemp)]</label>
+				<posy>125</posy>>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day2.LowTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>125</posy>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day2.LowTemp))</visible>
+			</control>
+		</control>
+		<!-- Three Days From Today -->
+		<control type="group">
+			<width>WeatherHomeWidth</width>
+			<control type="image">
+				<posy>0</posy>
+				<texture>WeatherDayBG.png</texture>
+				<colordiffuse>WeatherBGDiffuse</colordiffuse>
+			</control>
+			<control type="multiimage">
+				<height>40</height>
+				<posy>5</posy>
+				<include>Weather_Icon_Common</include>
+				<imagepath>$VAR[Weather_Icons_Day3]</imagepath>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Day3.Title)</info>
+				<posy>35</posy>
+				<align>center</align>
+				<font>METF_WeatherDayName7Day</font>
+				<textcolor>WeatherDay</textcolor>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Daily.4.Outlook)</info>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>!SubString(Window(2600).Property(Daily.4.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Daily.4.Outlook)] $INFO[Window(2600).Property(Daily.4.ChancePrecipitation)]</label>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>SubString(Window(2600).Property(Daily.4.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day3.HighTemp)]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day3.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day3.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day3.LowTemp)]</label>
+				<posy>125</posy>>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day3.LowTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>125</posy>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day3.LowTemp))</visible>
+			</control>
+		</control>
+		<!-- Four Days From Today -->
+		<control type="group">
+			<visible>Skin.HasSetting(UseExtendedWeather)</visible>
+			<width>WeatherHomeWidth</width>
+			<control type="image">
+				<posy>0</posy>
+				<texture>WeatherDayBG.png</texture>
+				<colordiffuse>WeatherBGDiffuse</colordiffuse>
+			</control>
+			<control type="multiimage">
+				<height>40</height>
+				<posy>5</posy>
+				<include>Weather_Icon_Common</include>
+				<imagepath>$VAR[Weather_Icons_Day4]</imagepath>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Day4.Title)</info>
+				<posy>35</posy>
+				<align>center</align>
+				<font>METF_WeatherDayName7Day</font>
+				<textcolor>WeatherDay</textcolor>
+			</control>
+			<control type="label">
+				<info>Window(2600).Property(Daily.5.Outlook)</info>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>!SubString(Window(2600).Property(Daily.5.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Daily.5.Outlook)] $INFO[Window(2600).Property(Daily.5.ChancePrecipitation)]</label>
+				<posy>60</posy>
+				<font>METF_WeatherOutlookHome</font>
+				<align>center</align>
+				<textcolor>WeatherDetails</textcolor>
+				<wrapmultiline>true</wrapmultiline>
+				<visible>SubString(Window(2600).Property(Daily.5.Outlook),Chance)</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day4.HighTemp)]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day4.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>100</posy>
+				<align>center</align>
+				<font>METF_WeatherHighHome</font>
+				<textcolor>WeatherHighTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day4.HighTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(2600).Property(Day4.LowTemp)]</label>
+				<posy>125</posy>>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>!IsEmpty(Window(2600).Property(Day4.LowTemp))</visible>
+			</control>
+			<control type="label">
+				<label>$LOCALIZE[31010]</label>
+				<posy>125</posy>
+				<align>center</align>
+				<font>METF_WeatherLowHome</font>
+				<textcolor>WeatherLowTemp</textcolor>
+				<visible>IsEmpty(Window(2600).Property(Day4.LowTemp))</visible>
+			</control>
+		</control>
 	</include>
 </includes>

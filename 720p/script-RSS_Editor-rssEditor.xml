@@ -111,7 +111,7 @@
 				<height>474</height>
 				<visible allowhiddenfocus="true">Control.IsVisible(10) + Control.HasFocus(60)</visible>
 				<texturesliderbackground>-</texturesliderbackground>
-				<textureslidernibfocus>ScrollbarVnibFO</textureslidernibfocus>
+				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>10</onleft>
 				<onright>noop</onright>
 				<showonepage>true</showonepage>
