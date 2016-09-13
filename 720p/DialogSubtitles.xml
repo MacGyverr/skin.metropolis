@@ -185,7 +185,7 @@
 							<top>11</top>
 							<width>90</width>
 							<height>17</height>
-							<texture>flags/LeftRating/rating$INFO[ListItem.ActualIcon].png</texture>
+							<texture>flags/Rating5/rating$INFO[ListItem.ActualIcon].png</texture>
 						</control>
 					</itemlayout>
 					<focusedlayout width="800" height="36">
@@ -258,7 +258,7 @@
 							<top>11</top>
 							<width>90</width>
 							<height>17</height>
-							<texture>flags/LeftRating/rating$INFO[ListItem.ActualIcon].png</texture>
+							<texture>flags/Rating5/rating$INFO[ListItem.ActualIcon].png</texture>
 						</control>
 					</focusedlayout>
 				</control>

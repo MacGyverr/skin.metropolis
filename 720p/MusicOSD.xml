@@ -16,9 +16,9 @@
 				<posx>30</posx>
 				<posy>18</posy>
 				<control type="image">
-					<width>122</width>
-					<height>22</height>
-					<info>Player.StarRating</info>
+					<width>256</width>
+					<height>32</height>
+					<texture fallback="flags/Rating10/rating0.png">$INFO[MusicPlayer.UserRating,flags/Rating10/rating,.png]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 			</control>

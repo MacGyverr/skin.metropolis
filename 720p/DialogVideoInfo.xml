@@ -123,17 +123,41 @@
 				<label>$LOCALIZE[20416] $INFO[ListItem.Premiered]</label>
 				<visible>!IsEmpty(ListItem.Premiered) + StringCompare(ListItem.DBType,episode)</visible>
 			</control>
+			<!-- User Rating -->
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>!Skin.HasSetting(ShowVideoPath) + !IsEmpty(ListItem.UserRating)</visible>
+			</control>
+			<control type="image">
+				<posx>-8</posx>
+				<posy>495</posy>
+				<width>515</width>
+				<height>30</height>
+				<aligny>center</aligny>
+				<texture>flags/Rating10/rating0.png</texture>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<colordiffuse>MediaFlagDiffuse</colordiffuse>
+				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + IsEmpty(ListItem.mpaa)</visible>
+			</control>
 			<!-- MPAA Long Description -->
 			<control type="textbox">
 				<posx>-8</posx>
-				<posy>489</posy>
+				<posy>490</posy>
 				<width>515</width>
-				<height>47</height>
-				<align>left</align>
+				<height>44</height>
+				<align>center</align>
+				<aligny>center</aligny>
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.mpaa]</label>
-				<visible>StringCompare(ListItem.DBType,movie) + !IsEmpty(ListItem.mpaa) + !Skin.HasSetting(ShowVideoPath)</visible>
+				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + !IsEmpty(ListItem.mpaa)</visible>
 			</control>
 			<!-- Video Path -->
 			<control type="fadelabel">

@@ -300,7 +300,7 @@
 					<width>88</width>
 					<height>22</height>
 					<colordiffuse>OSDProgressBar</colordiffuse>
-					<texture>flags/LeftRating/$INFO[Player.StarRating]</texture>
+					<texture fallback="flags/Rating10/rating0.png">$INFO[MusicPlayer.UserRating,flags/Rating10/rating,.png]</texture>
 				</control>
 				<control type="image">
 					<posx>218</posx>

@@ -29,21 +29,9 @@
 					<width>515</width>
 					<height>30</height>
 					<aligny>center</aligny>
-					<texture fallback="flags/LeftRating/rating0.png">$INFO[ListItem.Rating,flags/LeftRating/rating,.png]</texture>
+					<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-					<visible>String.IsEmpty(ListItem.UserRating)</visible>
-				</control>
-				<control type="image">
-					<posx>-8</posx>
-					<posy>495</posy>
-					<width>515</width>
-					<height>30</height>
-					<aligny>center</aligny>
-					<texture fallback="flags/LeftRating/rating0.png">$INFO[ListItem.UserRating,flags/LeftRating/rating,.png]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 				</control>
 				<!-- Album Year -->
 				<control type="label">
@@ -199,21 +187,9 @@
 					<width>515</width>
 					<height>30</height>
 					<aligny>center</aligny>
-					<texture fallback="flags/LeftRating/rating0.png">$INFO[ListItem.Rating,flags/LeftRating/rating,.png]</texture>
+					<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-					<visible>String.IsEmpty(ListItem.UserRating)</visible>
-				</control>
-				<control type="image">
-					<posx>-8</posx>
-					<posy>495</posy>
-					<width>515</width>
-					<height>30</height>
-					<aligny>center</aligny>
-					<texture fallback="flags/LeftRating/rating0.png">$INFO[ListItem.UserRating,flags/LeftRating/rating,.png]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>MediaFlagDiffuse</colordiffuse>
-					<visible>!String.IsEmpty(ListItem.UserRating)</visible>
 				</control>
 				<!-- Song Artist -->
 				<control type="label">
@@ -363,6 +339,17 @@
 					<font>METF_TitleTextLarge</font>
 					<textcolor>TitleText</textcolor>
 					<info>ListItem.Artist</info>
+				</control>
+				<!-- Artist Rating -->
+				<control type="image">
+					<posx>-8</posx>
+					<posy>495</posy>
+					<width>515</width>
+					<height>30</height>
+					<aligny>center</aligny>
+					<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<!-- Artist Years Active -->
 				<control type="label">
@@ -618,12 +605,14 @@
 			<onright>7001</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
-			<!-- Refresh -->
-			<control type="button" id="6">
+			<!-- Play -->
+			<control type="button" id="18">
 				<include>VideoInfoButton</include>
-				<texturenofocus>buttons/button_refresh.png</texturenofocus>
-				<texturefocus>buttons/button_refreshFO.png</texturefocus>
+				<texturenofocus>osd/osd_button_play_nf.png</texturenofocus>
+				<texturefocus>osd/osd_button_play_fo.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
+				<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+				<visible>StringCompare(ListItem.DBtype,song)</visible>
 			</control>
 			<!-- Thumbs -->
 			<control type="button" id="10">
@@ -640,21 +629,19 @@
 				<include>Animation_ButtonFocus</include>
 				<visible>!StringCompare(ListItem.DBtype,album) + !StringCompare(ListItem.DBtype,song)</visible>
 			</control>
-			<!-- Rating -->
+			<!-- Refresh -->
+			<control type="button" id="6">
+				<include>VideoInfoButton</include>
+				<texturenofocus>buttons/button_refresh.png</texturenofocus>
+				<texturefocus>buttons/button_refreshFO.png</texturefocus>
+				<include>Animation_ButtonFocus</include>
+			</control>
+			<!-- Set Rating -->
 			<control type="button" id="7">
 				<include>VideoInfoButton</include>
 				<texturenofocus>buttons/button_videoextras.png</texturenofocus>
 				<texturefocus>buttons/button_videoextrasFO.png</texturefocus>
 				<include>Animation_ButtonFocus</include>
-			</control>
-			<!-- Play -->
-			<control type="button" id="18">
-				<include>VideoInfoButton</include>
-				<texturenofocus>osd/osd_button_play_nf.png</texturenofocus>
-				<texturefocus>osd/osd_button_play_fo.png</texturefocus>
-				<include>Animation_ButtonFocus</include>
-				<onclick>PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
-				<visible>StringCompare(ListItem.DBtype,song)</visible>
 			</control>
 		</control>
 		<!-- Control Button Text -->
@@ -663,13 +650,14 @@
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
 			<control type="label">
-				<description>Refresh</description>
+				<description>Play</description>
 				<include>VideoInfoButtonLabel</include>
-				<info>Control.GetLabel(6)</info>
-				<visible>ControlGroup(7001).HasFocus(6)</visible>
+				<label>Play</label>
+				<visible>ControlGroup(7001).HasFocus(18)</visible>
+				<visible>StringCompare(ListItem.DBtype,song)</visible>
 			</control>
 			<control type="label">
-				<description>Thumb</description>
+				<description>Thumbs</description>
 				<include>VideoInfoButtonLabel</include>
 				<info>Control.GetLabel(10)</info>
 				<visible>ControlGroup(7001).HasFocus(10)</visible>
@@ -681,17 +669,16 @@
 				<visible>ControlGroup(7001).HasFocus(12)</visible>
 			</control>
 			<control type="label">
-				<description>Review/Tracks</description>
+				<description>Refresh</description>
+				<include>VideoInfoButtonLabel</include>
+				<info>Control.GetLabel(6)</info>
+				<visible>ControlGroup(7001).HasFocus(6)</visible>
+			</control>
+			<control type="label">
+				<description>Set Rating</description>
 				<include>VideoInfoButtonLabel</include>
 				<info>Control.GetLabel(7)</info>
 				<visible>ControlGroup(7001).HasFocus(7)</visible>
-			</control>
-			<control type="label">
-				<description>Lyris</description>
-				<include>VideoInfoButtonLabel</include>
-				<label>Play</label>
-				<visible>ControlGroup(7001).HasFocus(18)</visible>
-				<visible>StringCompare(ListItem.DBtype,song)</visible>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>
