@@ -80,6 +80,14 @@
 		<defaultID>programs</defaultID>
 	</shortcut>
 	<shortcut>
+		<label>Games</label>
+		<label2>32034</label2>
+		<defaultID>games</defaultID>
+		<icon>home_icons/games.png</icon>
+		<thumb>home_art/games.jpg</thumb>
+		<action>ActivateWindow(Games,files,return)</action>
+	</shortcut>
+	<shortcut>
 		<label>12600</label>
 		<label2>32034</label2>
 		<icon>home_icons/weather.png</icon>

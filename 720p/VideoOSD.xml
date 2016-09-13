@@ -20,6 +20,7 @@
 			<onfocus condition="SubString(Skin.String(DefaultOSD),800)">SetFocus(800)</onfocus>
 			<onfocus condition="SubString(Skin.String(DefaultOSD),801)">SetFocus(801)</onfocus>
 			<onfocus condition="!SubString(Skin.String(DefaultOSD),714) + !SubString(Skin.String(DefaultOSD),713) + !SubString(Skin.String(DefaultOSD),710) + !SubString(Skin.String(DefaultOSD),76) + !SubString(Skin.String(DefaultOSD),74) + !SubString(Skin.String(DefaultOSD),75) + !SubString(Skin.String(DefaultOSD),73) + !SubString(Skin.String(DefaultOSD),79) + !SubString(Skin.String(DefaultOSD),712) + !SubString(Skin.String(DefaultOSD),711) + !SubString(Skin.String(DefaultOSD),800) + !SubString(Skin.String(DefaultOSD),801)">SetFocus(4)</onfocus>
+			<onfocus condition="Player.HasGame">SetFocus(12)</onfocus>
 		</control>
 
 		<control type="group">
@@ -48,6 +49,7 @@
 					<texturefocus>osd/osd_button_playlist_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_playlist_nf.png</texturenofocus>
 					<onclick>ActivateWindow(videoplaylist)</onclick>
+					<visible>!Player.HasGame</visible>
 				</control>
 				<control type="button" id="12">
 					<description>Bookmarks</description>
@@ -56,7 +58,8 @@
 					<width>60</width>
 					<texturefocus>osd/osd_button_book_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_book_nf.png</texturenofocus>
-					<onclick>ActivateWindow(videobookmarks)</onclick>
+					<onclick condition="!Player.HasGame">ActivateWindow(VideoBookmarks)</onclick>
+					<onclick condition="Player.HasGame">ActivateWindow(GameSavestates)</onclick>
 				</control>
 				<control type="button" id="14">
 					<description>OSD Subtitles</description>
@@ -68,7 +71,7 @@
 					<onclick>Close</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
-					<visible>!Skin.HasSetting(OneButtonSubtitles) + IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<visible>!Skin.HasSetting(OneButtonSubtitles) + IsEmpty(Skin.String(SubtitlesPath)) + !Player.HasGame</visible>
 				</control>
 				<control type="button" id="17">
 					<description>OSD Subtitles</description>
@@ -80,7 +83,7 @@
 					<onclick>Close</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
-					<visible>!Skin.HasSetting(OneButtonSubtitles) + !IsEmpty(Skin.String(SubtitlesPath))</visible>
+					<visible>!Skin.HasSetting(OneButtonSubtitles) + !IsEmpty(Skin.String(SubtitlesPath)) + !Player.HasGame</visible>
 				</control>
 				<control type="button" id="15">
 					<description>One Button OSD Subtitles</description>
@@ -92,7 +95,7 @@
 					<onclick>Close</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>
-					<visible>Skin.HasSetting(OneButtonSubtitles) + !VideoPlayer.HasSubtitles</visible>
+					<visible>Skin.HasSetting(OneButtonSubtitles) + !VideoPlayer.HasSubtitles + !Player.HasGame</visible>
 				</control>
 				<control type="button" id="16">
 					<description>One Button OSD Subtitles</description>
@@ -103,7 +106,7 @@
 					<texturenofocus>osd/osd_button_sub_nf.png</texturenofocus>
 					<onclick>Dialog.Close(VideoOSD,true)</onclick>
 					<onclick>ShowSubtitles</onclick>
-					<visible>Skin.HasSetting(OneButtonSubtitles) + VideoPlayer.HasSubtitles</visible>
+					<visible>Skin.HasSetting(OneButtonSubtitles) + VideoPlayer.HasSubtitles + !Player.HasGame</visible>
 				</control>
 				<control type="button" id="7">
 					<description>DVD Menu</description>
@@ -113,7 +116,7 @@
 					<texturefocus>osd/osd_button_dvd_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_dvd_nf.png</texturenofocus>
 					<onclick>PlayerControl(ShowVideoMenu)</onclick>
-					<visible>VideoPlayer.HasMenu</visible>
+					<visible>VideoPlayer.HasMenu + !Player.HasGame</visible>
 				</control>
 				<control type="button" id="9">
 					<description>Previous</description>
@@ -123,6 +126,7 @@
 					<texturefocus>osd/osd_button_prev_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_prev_nf.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
+					<visible>!Player.HasGame</visible>
 				</control>
 				<control type="button" id="3">
 					<description>Rewind</description>
@@ -164,6 +168,7 @@
 					<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_ff_nf.png</texturenofocus>
 					<onclick>PlayerControl(forward)</onclick>
+					<visible>!Player.HasGame</visible>
 				</control>
 				<control type="button" id="10">
 					<description>Next</description>
@@ -173,6 +178,7 @@
 					<texturefocus>osd/osd_button_next_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_next_nf.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
+					<visible>!Player.HasGame</visible>
 				</control>
 				<control type="button" id="801">
 					<description>Repeat</description>
@@ -183,6 +189,7 @@
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onclick>PlayerControl(Repeat)</onclick>
+					<visible>!Player.HasGame</visible>
 				</control>
 				<control type="group" id="802">
 					<control type="image">
@@ -191,7 +198,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_nf.png</texture>
 						<visible>!Playlist.IsRepeat | !Playlist.IsRepeatOne</visible>
-						<visible>!Control.HasFocus(801)</visible>
+						<visible>!Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -199,7 +206,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_fo.png</texture>
 						<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
-						<visible>Control.HasFocus(801)</visible>
+						<visible>Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -207,7 +214,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_one_nf.png</texture>
 						<visible>Playlist.IsRepeatOne</visible>
-						<visible>!Control.HasFocus(801)</visible>
+						<visible>!Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -215,7 +222,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_one_fo.png</texture>
 						<visible>Playlist.IsRepeatOne</visible>
-						<visible>Control.HasFocus(801)</visible>
+						<visible>Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -223,7 +230,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_all_nf.png</texture>
 						<visible>Playlist.IsRepeat</visible>
-						<visible>!Control.HasFocus(801)</visible>
+						<visible>!Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 					<control type="image">
 						<posx>-60</posx>
@@ -231,7 +238,7 @@
 						<width>60</width>
 						<texture>osd/osd_button_repeat_all_fo.png</texture>
 						<visible>Playlist.IsRepeat</visible>
-						<visible>Control.HasFocus(801)</visible>
+						<visible>Control.HasFocus(801) + !Player.HasGame</visible>
 					</control>
 				</control>
 				<control type="button" id="13">

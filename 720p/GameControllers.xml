@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window> 
+	<defaultcontrol always="true">1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>Global_Background</include>	
+		<control type="image">
+			<posx>-70</posx>
+			<posy>450</posy>
+			<width>1420</width>
+			<height>63</height>
+			<texture flipy="true">osd/OSDdialogback.png</texture>
+			<colordiffuse>BackgroundColor</colordiffuse>
+		</control>
+		<!-- Kodi Logo and Skin Name -->
+		<control type="group">
+			<include>Animation_OpenCloseFade</include>
+			<include>Animation_FadedByMenu</include>
+			<control type="image">
+				<posx>-20</posx>
+				<posy>25</posy>
+				<width>240</width>
+				<height>54</height>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<colordiffuse>KodiLogoDiffuse</colordiffuse>
+				<texture>kodi-logo2.png</texture>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>67</posy>
+				<width>674</width>
+				<height>30</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>METF_Heading</font>
+				<textcolor>Home2SkinName</textcolor>
+				<label>$LOCALIZE[31011]</label>
+				<!--	<label>special://skin/extras/weather/$INFO[Window(Weather).Property(Current.FanartCode)].jpg</label>-->
+			</control>
+		</control>
+		<control type="focusplane" id="2">
+			<left>300</left>
+			<top>50</top>
+			<width>680</width>
+			<height>425</height>
+			<control type="gamecontroller" id="3">
+				<left>100</left>
+				<top>75</top>
+				<width>480</width>
+				<height>286</height>
+				<include>VisibleFadeEffect</include>
+				<include>Window_OpenClose_Animation</include>
+			</control>
+		</control>
+		<control type="group">
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
+			</animation>
+			<control type="fixedlist" id="1">
+			<posx>0</posx>
+			<posy>450</posy>
+			<height>450</height>
+			<width>1280</width>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+			<viewtype>list</viewtype>
+			<orientation>horizontal</orientation>
+			<focusposition>2</focusposition>
+			<scrolltime>200</scrolltime>
+				<orientation>Horizontal</orientation>
+				<itemlayout height="60" width="300">
+				<control type="image">
+					<posx>189</posx>
+					<posy>5</posy>
+					<width>1</width>
+					<height>50</height>
+					<texture>FocusLine.png</texture>
+					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>189</posx>
+					<posy>5</posy>
+					<width>1</width>
+					<height>50</height>
+					<texture>FocusLine.png</texture>
+					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+				</control>
+					<control type="label">
+					<left>-110</left>
+					<top>0</top>
+					<width>298</width>
+					<height>60</height>
+					<font>METF_HorizMenu</font>
+					<textcolor>HomeMenuText</textcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60" width="300">
+				<control type="image">
+					<posx>189</posx>
+					<posy>5</posy>
+					<width>1</width>
+					<height>50</height>
+					<texture>FocusLine.png</texture>
+					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>189</posx>
+					<posy>5</posy>
+					<width>1</width>
+					<height>50</height>
+					<texture>FocusLine.png</texture>
+					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+				</control>
+					<control type="label">
+					<left>-110</left>
+					<top>0</top>
+					<width>298</width>
+					<height>60</height>
+					<font>METF_HorizMenu</font>
+					<textcolor>HomeMenuTextFocused</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+					<left>-110</left>
+					<top>0</top>
+					<width>298</width>
+					<height>60</height>
+					<font>METF_HorizMenu</font>
+					<textcolor>HomeMenuTextFocused</textcolor>
+					<shadowcolor>ff000000</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(1)</visible>
+						<include>VisibleFadeEffect</include>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<include>Global_Weather</include>
+		<include>Global_Time</include>
+		<include>Global_MediaOverlay</include>
+		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
+		<include condition="Skin.HasSetting(DebugMode)">Debug</include>
+	</controls>
+</window>

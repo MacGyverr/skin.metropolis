@@ -1147,6 +1147,31 @@
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
+	<include name="SettingsLabelCenter">
+		<width>840</width>
+		<height>38</height>
+		<textoffsetx>20</textoffsetx>
+		<align>center</align>
+		<aligny>center</aligny>
+		<spinwidth>34</spinwidth>
+		<spinheight>34</spinheight>
+		<radiowidth>55</radiowidth>
+		<radioheight>55</radioheight>
+		<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
+		<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+		<textureup>ArrowUpNF.png</textureup>
+		<texturedown>ArrowDownNF.png</texturedown>
+		<textureupfocus>ArrowUpFO.png</textureupfocus>
+		<texturedownfocus>ArrowDownFO.png</texturedownfocus>
+		<font>METF_ContextValue</font>
+		<textcolor>SettingsDetail</textcolor>
+		<focusedcolor>ButtonText</focusedcolor>
+		<selectedcolor>TextFO</selectedcolor>
+		<texturefocus>ButtonFO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<disabledcolor>TextDisabled</disabledcolor>
+		<pulseonselect>false</pulseonselect>
+	</include>
 	<include name="SettingsHeaderLabel">
 		<width>840</width>
 		<height>38</height>
