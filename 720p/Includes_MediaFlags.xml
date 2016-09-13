@@ -85,7 +85,7 @@
 						<include>MediaFlagsVarsSquare</include>
 						<align>center</align>
 						<aligny>center</aligny>
-						<label fallback="NA">$INFO[ListItem.Rating]</label>
+						<label>$VAR[MediaFlag_Rating]</label>
 						<textcolor>MediaFlagDiffuse</textcolor>
 						<font>METF_StarRating</font>
 						<visible>!SubString(Container.FolderPath,advanced.launcher)</visible>

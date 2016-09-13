@@ -82,7 +82,11 @@ msgctxt "#31017"
 msgid "Select Language Flag icons"
 msgstr ""
 
-#empty strings from id 31018 to 31020
+msgctxt "#31018"
+msgid "Show User Rating instead of scraped Rating in Media Flag"
+msgstr ""
+
+#empty strings from id 31019 to 31020
 
 msgctxt "#31021"
 msgid "Decrease Star Rating"
