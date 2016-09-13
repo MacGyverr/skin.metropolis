@@ -59,6 +59,8 @@
 	<backgrounddefault defaultID="pictures">home\pictures\</backgrounddefault>
 	<background label="10001">home\programs\</background>
 	<backgrounddefault defaultID="programs">home\programs\</backgrounddefault>
+	<background label="15016">home\games\</background>
+	<backgrounddefault defaultID="games">home\games\</backgrounddefault>
 	<background label="12600">home\weather\</background>
 	<backgrounddefault defaultID="weather">home\weather\</backgrounddefault>
 	<background label="1036">home\favourites\</background>
