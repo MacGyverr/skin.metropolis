@@ -687,15 +687,6 @@
 						<onclick>InstallAddon(script.tv.show.next.aired)</onclick>
 						<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
-					<control type="image" id="715">
-						<include>Settings_Line</include>
-					</control>
-					<control type="radiobutton" id="716">
-						<include>SettingsLabel</include>
-						<label>$LOCALIZE[31710]</label>
-						<onclick>Skin.ToggleSetting(UseExtendedWeather)</onclick>
-						<selected>Skin.HasSetting(UseExtendedWeather)</selected>
-					</control>
 				</control>
 
 				<!-- Video Settings -->

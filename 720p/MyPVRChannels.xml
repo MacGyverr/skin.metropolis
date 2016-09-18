@@ -10,15 +10,15 @@
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-				<posx>760</posx>
+				<posx>778</posx>
 				<posy>50</posy>
-  				<control type="list" id="50">
+				<control type="list" id="50">
 	  				<posx>0</posx>
-  					<posy>0</posy>
-  					<width>550</width>
-  					<height>487</height>
-  					<onleft>100</onleft>
-	  				<onright>100</onright>
+					<posy>0</posy>
+					<width>550</width>
+					<height>487</height>
+					<onleft>100</onleft>
+					<onright>70</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -62,24 +62,24 @@
 							<posy>5</posy>
 							<width>50</width>
 							<height>50</height>
+							<aligny>center</aligny>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="progress">
 							<description>Channel progressbar</description>
 							<posx>115</posx>
-							<posy>54</posy>
-							<width>350</width>
-							<height>6</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
+							<posy>57</posy>
+							<width>304</width>
+							<height>8</height>
 							<info>ListItem.Progress</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="60" width="550">
+					<focusedlayout height="62" width="550">
 						<control type="image">
 							<description>Channel focus selection</description>
 							<posx>0</posx>
 							<posy>4</posy>
-							<width>475</width>
+							<width>458</width>
 							<height>62</height>
 							<texture>FocusLine.png</texture>
 							<colordiffuse>FocusBar</colordiffuse>
@@ -123,29 +123,28 @@
 	 						<posy>5</posy>
 							<width>50</width>
 							<height>50</height>
+							<aligny>center</aligny>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="progress">
 							<description>Channel progressbar</description>
 							<posx>115</posx>
-							<posy>54</posy>
-							<width>350</width>
-							<height>6</height>
-							<colordiffuse>88FFFFFF</colordiffuse>
+							<posy>57</posy>
+							<width>304</width>
+							<height>8</height>
 							<info>ListItem.Progress</info>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="70">
 					<description>Channel scrollbar</description>
-					<posx>445</posx>
+					<posx>490</posx>
 					<posy>0</posy>
 					<width>25</width>
-					<height>500</height>
+					<height>487</height>
 					<texturesliderbackground>-</texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
- 					<onright>100</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>

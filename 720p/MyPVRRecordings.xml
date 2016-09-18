@@ -100,7 +100,6 @@
  				<texturesliderbackground>-</texturesliderbackground>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>50</onleft>
-				<onright>102</onright>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 			</control>

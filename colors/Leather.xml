@@ -8,8 +8,8 @@
 
 	<!-- Metropolis Leather Colors -->
 	<!-- Global Colors -->
-	<color name="BackgroundColor">EEFFFFFF</color>
-	<color name="FanartDiffuse">26FFFFFF</color>
+	<color name="BackgroundColor">EEA0A0A0</color>
+	<color name="FanartDiffuse">20FFFFFF</color>
 	<color name="FanartDiffuseLight">86FFFFFF</color>			<!-- FanartDiffuse + 0x60 -->
 	<color name="FrameBackgroundDiffuse">dd000000</color>
 	<color name="Time">ddFFFFFF</color>

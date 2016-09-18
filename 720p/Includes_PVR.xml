@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PVR_NavMenu">
-		<control type="label" id="200">
-			<description>Options</description>
-			<width>340</width>
-			<height>38</height>
-			<font>METF_Heading</font>
-			<textcolor>GlobalHeading</textcolor>
-			<align>center</align>
-			<aligny>center</aligny>
-			<include>Animation_HiddenByInfo</include>
-			<label>33063</label>
-		</control>
 		<control type="button" id="100">
 			<description>TV Channels</description>
 			<width>340</width>

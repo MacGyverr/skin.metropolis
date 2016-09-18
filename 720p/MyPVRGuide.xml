@@ -4,7 +4,7 @@
 	<views>10,11,12</views>
 	<controls>
 		<include>Global_Background</include>
-		<include>PVR_Headers</include>
+
 		<control type="group" id="50">
 			<control type="group">
 				<description>TV Guide Timeline</description>
@@ -589,7 +589,6 @@
 						<texturesliderbackground>-</texturesliderbackground>
 						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>11</onleft>
-						<onright>101</onright>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -936,7 +935,6 @@
 						<texturesliderbackground>-</texturesliderbackground>
 						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>12</onleft>
-						<onright>101</onright>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -1229,7 +1227,6 @@
 						<texturesliderbackground>-</texturesliderbackground>
 						<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 						<onleft>13</onleft>
-						<onright>101</onright>
 						<showonepage>false</showonepage>
 						<orientation>vertical</orientation>
 					</control>
@@ -1249,8 +1246,8 @@
 			<visible>Window.IsActive(FileBrowser) | Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRGroupManager) | Window.IsActive(PVRGuideSearch)</visible>
 		</control>
 
-			<!-- TV Channel Plot (Bottom) -->
-			<include>LiveTVPlot</include>
+		<!-- TV Channel Plot (Bottom) -->
+		<include>LiveTVPlot</include>
 
 		<!-- Navigation Menu -->
 		<control type="group">

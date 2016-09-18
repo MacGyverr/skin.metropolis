@@ -86,7 +86,6 @@
 	<variable name="GlobalWidgetIcon">
 		<value condition="!IsEmpty(Container(8000).ListItem.Art(poster))">$INFO[Container(8000).ListItem.Art(poster)]</value>
 		<value condition="![IsEmpty(Container(8000).ListItem.Icon) | SubString(Container(8000).ListItem.Icon, default, left)]">$INFO[Container(8000).ListItem.Icon]</value>
-		<value>DefaultThumb.png</value>
 	</variable>
 	<variable name="GlobalWidgetLabel">
 		<value condition="StringCompare(Container(9000).ListItem.Property(widgetType), movies)">$INFO[ListItem.Title]$INFO[ListItem.Year, (,)]</value>

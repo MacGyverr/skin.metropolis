@@ -64,10 +64,12 @@
 	</default>
 
 	<default type="progress">
-		<texturebg border="6">osd/ProgressBack.png</texturebg>
-		<lefttexture>-</lefttexture>
-		<midtexture border="6">osd/ProgressMid.png</midtexture>
-		<righttexture>-</righttexture>
+		<reveal>true</reveal>
+		<texturebg>osd/osd_progress_back.png</texturebg>
+		<lefttexture>osd/osd_progress_left.png</lefttexture>
+		<midtexture>osd/osd_progress_mid.png</midtexture>
+		<righttexture>osd/osd_progress_right.png</righttexture>
 		<overlaytexture>-</overlaytexture>
+		<colordiffuse>DialogProgressBar</colordiffuse>
 	</default>
 </includes>

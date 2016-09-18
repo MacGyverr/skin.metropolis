@@ -6,7 +6,6 @@
 	<controls>
 		<include>Global_Background</include>
 		<include>Global_Background_Fanart</include>
-		<include>Object_InfoLines</include>
 		<include>Viewtype_List</include>			<!-- 55 -->
 		<include>Viewtype_LowList</include>			<!-- 905 -->
 		<include>Viewtype_ListFanart</include>			<!-- 509 -->

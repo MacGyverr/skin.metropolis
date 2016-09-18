@@ -336,7 +336,7 @@
 				<left>0</left>
 				<top>-50</top>
 				<width>650</width>
-				<height>420</height>
+				<height>458</height>
 				<texture>frames/Dialog_Glass2Panel.png</texture>
 			</control>
 			<control type="label">
@@ -441,6 +441,7 @@
 				<top>142</top>
 				<width>275</width>
 				<height>14</height>
+				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
 				<midtexture>osd/osd_progress_mid2.png</midtexture>
@@ -478,6 +479,7 @@
 				<top>167</top>
 				<width>275</width>
 				<height>14</height>
+				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
 				<midtexture>osd/osd_progress_mid2.png</midtexture>

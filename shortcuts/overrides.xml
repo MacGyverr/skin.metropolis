@@ -6,7 +6,7 @@
 	<!-- Videos -->
 
 	<!-- PVR -->
-	<widget type="video" label="31611">PVRWidget</widget>
+	<widget type="static" label="31611">PVRStatusWidget</widget>
 
 	<!-- Music -->
 
@@ -33,7 +33,7 @@
 	<widgetdefaultnode defaultID="music" group="mainmenu" type="albums" target="music" label="359" path="plugin://script.skin.helper.service/?action=recentalbums&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreloadmusic)]">RecentAlbums</widgetdefaultnode>
 	<widgetdefaultnode defaultID="musicvideos" group="mainmenu" type="musicvideos" target="video" label="20390" path="plugin://script.skin.helper.service/?action=recentmusicvideos&amp;reload=$INFO[Window(Home).Property(widgetreload)]">RecentMusicVideos</widgetdefaultnode>
 	<widgetdefaultnode defaultID="favourites" group="mainmenu" type="static" target="static" label="1036" path="plugin://script.skin.helper.service/?action=favourites&amp;limit=25&amp;reload=$INFO[Window(Home).Property(widgetreload)]$INFO[Window(Home).Property(widgetreload2)]">Favourites</widgetdefaultnode>
-	<widgetdefault defaultID="livetv" group="mainmenu">PVRWidget</widgetdefault>
+	<widgetdefault defaultID="livetv" group="mainmenu">PVRStatusWidget</widgetdefault>
 	<widgetdefault defaultID="weather" group="mainmenu">WeatherForecastWidget</widgetdefault>
 
 	<!-- Backgrounds (actual images specified in HomeBackground variables -->

@@ -49,6 +49,7 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<control type="image">
 				<posx>240</posx>
 				<posy>50</posy>
@@ -135,6 +136,7 @@
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
 			<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
@@ -163,6 +165,7 @@
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
 			<visible>Control.HasFocus(9001) + !StringCompare(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
@@ -200,6 +203,7 @@
 			<orientation>vertical</orientation>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="200" height="32">
 				<control type="label">
 					<posx>12</posx>
@@ -261,6 +265,7 @@
 			<animation effect="fade" start="0" end="100" delay="300" time="200">Visible</animation>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<posx>1060</posx>
 			<posy>50</posy>
 			<width>220</width>

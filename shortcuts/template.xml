@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <template>
-	<!-- PVR widget -->
+	<!-- PVR Status widget -->
 	<other include="widget">
-		<condition tag="property" attribute="name|widget">PVRWidget</condition>
+		<condition tag="property" attribute="name|widget">PVRStatusWidget</condition>
 
 		<!-- Retrieve the widgetPath and widgetTarget properties -->
 		<property name="target" tag="property" attribute="name|widgetTarget" />
@@ -25,7 +25,7 @@
 			<control type="grouplist">
 				<visible>[![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)] + !Skin.HasSetting(HideUnfocusedWidgets)] | Control.HasFocus(8002)</visible>
 				<skinshortcuts>visibility</skinshortcuts>
-				<include>Widget_PVR</include>
+				<include>Widget_PVRStatus</include>
 				<content target="$SKINSHORTCUTS[target]">$SKINSHORTCUTS[content]</content>
 			</control>
 		</controls>
@@ -81,6 +81,7 @@
 				<skinshortcuts>visibility</skinshortcuts>
 				<include>Animation_CommonFadeNoHide</include>
 				<include>Animation_FadedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
 				<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 				<animation effect="fade" start="0" end="100" time="200" delay="100" >Visible</animation>
 				<posx>265</posx>

@@ -62,6 +62,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="180" height="450">
 				<control type="image">
 					<posx>15</posx>
@@ -111,6 +112,7 @@
 		<control type="label">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<posx>490</posx>
 			<posy>480</posy>
 			<width>300</width>
@@ -127,6 +129,7 @@
 			<posy>2</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] + SubString(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
 				<posx>625</posx>
@@ -144,10 +147,11 @@
 			<animation effect="fade" start="0" end="100" delay="300" time="200">Visible</animation>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<posx>490</posx>
 			<posy>554</posy>
 			<width>300</width>
-			<height>170</height>
+			<height>164</height>
 			<onup>9001</onup>
 			<ondown>9001</ondown>
 			<onleft>9000</onleft>

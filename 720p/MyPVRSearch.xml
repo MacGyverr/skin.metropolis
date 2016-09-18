@@ -5,7 +5,7 @@
 	<controls>
 		<include>Global_Background</include>
 
-		<!-- EGP Search -->
+		<!-- EPG Search -->
 		<control type="group">
 			<description>TV Search group</description>
 			<visible>Control.IsVisible(50)</visible>
@@ -160,7 +160,6 @@
 					<texturesliderbackground>-</texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
-					<onright>104</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
 				</control>

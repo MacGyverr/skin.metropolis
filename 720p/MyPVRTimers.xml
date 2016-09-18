@@ -151,7 +151,6 @@
 					<texturesliderbackground>-</texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
-					<onright>103</onright>
 					<ondown>73</ondown>
 					<onup>73</onup>
 					<showonepage>false</showonepage>

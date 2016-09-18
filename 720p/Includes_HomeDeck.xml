@@ -63,6 +63,7 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
+			<include>Animation_HiddenByInfo</include>
 			<animation effect="fade" start="100" end="0" delay="200" time="200" condition="Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">conditional</animation>
 			<animation effect="fade" start="0" end="100" time="0" condition="Control.HasFocus(9001) + ![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">WindowClose</animation>
 			<animation effect="slide" start="180,0" end="0,0" tween="back" easing="out" time="300">Visible</animation>
@@ -301,6 +302,7 @@
 			<control type="group">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
+				<include>Animation_HiddenByInfo</include>
 				<!-- Widget arrow for all home views -->
 				<control type="image">
 					<include condition="![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]">RecentlyAddedArrow1</include>
@@ -342,6 +344,7 @@
 	<include name="Widget_VerticalList">
 		<include>Animation_CommonFadeNoHide</include>
 		<include>Animation_FadedByMenu</include>
+		<include>Animation_HiddenByInfo</include>
 		<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
 		<animation effect="fade" start="0" end="100" time="200" delay="100" >Visible</animation>
 		<posx>522</posx>
@@ -402,17 +405,18 @@
 		</focusedlayout>
 	</include>
 
-	<!-- PVR Widget -->
-	<include name="Widget_PVR">
+	<!-- PVR Status Widget -->
+	<include name="Widget_PVRStatus">
 		<left>470</left>
 		<top>554</top>
 		<animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(Favourites)">conditional</animation>
+		<width>800</width>
+		<height>160</height>
 		<control type="group">
-			<animation effect="slide" start="0,0" end="0,80" time="0" condition="PVR.IsRecording">conditional</animation>
+			<height>80</height>
 			<visible>PVR.HasNonRecordingTimer</visible>
 			<control type="image">
 				<left>-100</left>
-				<top>0</top>
 				<width>80</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
@@ -432,8 +436,8 @@
 				<description>Next Timer Header label</description>
 				<left>40</left>
 				<top>5</top>
-				<height>25</height>
 				<width>400</width>
+				<height>25</height>
 				<label>$LOCALIZE[19157]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -445,8 +449,8 @@
 				<description>NextRecordingDateTime</description>
 				<left>0</left>
 				<top>30</top>
-				<height>25</height>
 				<width>400</width>
+				<height>25</height>
 				<label>$INFO[PVR.NextRecordingDateTime,$LOCALIZE[19126] - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -459,8 +463,8 @@
 				<description>NextRecordingTitle Channel</description>
 				<left>0</left>
 				<top>50</top>
-				<height>25</height>
 				<width>800</width>
+				<height>25</height>
 				<label>$INFO[PVR.NextRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NextRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -471,6 +475,9 @@
 			</control>
 		</control>
 		<control type="group">
+			<animation effect="slide" start="0,0" end="0,-84" time="0" condition="!PVR.HasNonRecordingTimer">conditional</animation>
+			<top>0</top>
+			<height>80</height>
 			<visible>PVR.IsRecording</visible>
 			<control type="image">
 				<left>-100</left>
@@ -494,8 +501,8 @@
 				<description>Is Recording Header label</description>
 				<left>40</left>
 				<top>5</top>
-				<height>25</height>
 				<width>400</width>
+				<height>25</height>
 				<label>$LOCALIZE[19158]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -507,8 +514,8 @@
 				<description>NextRecordingDateTime</description>
 				<left>0</left>
 				<top>30</top>
-				<height>25</height>
 				<width>400</width>
+				<height>25</height>
 				<label>$INFO[PVR.NowRecordingDateTime,$LOCALIZE[19126] - ]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -521,8 +528,8 @@
 				<description>NextRecordingTitle Channel</description>
 				<left>0</left>
 				<top>50</top>
-				<height>30</height>
 				<width>800</width>
+				<height>25</height>
 				<label>$INFO[PVR.NowRecordingTitle][COLOR=SubmenuTextFocused]$INFO[PVR.NowRecordingChannel, - [COLOR=SubmenuTextFocused]([/COLOR],[COLOR=SubmenuTextFocused])[/COLOR]][/COLOR]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -831,7 +838,6 @@
 		</control>
 		<!-- Four Days From Today -->
 		<control type="group">
-			<visible>Skin.HasSetting(UseExtendedWeather)</visible>
 			<width>WeatherHomeWidth</width>
 			<control type="image">
 				<posy>0</posy>

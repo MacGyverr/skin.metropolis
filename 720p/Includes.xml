@@ -161,21 +161,6 @@
 			</control>
 
 			<!-- Right side details -->
-			<control type="label">
-				<label>$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[Container.NumItems,, $LOCALIZE[20359]]</label>
-				<include>Global_HeadingDetailVars</include>
-				<visible>!IntegerGreaterThan(Container.NumItems, 1) + Container.Content(episodes) + ![Control.HasFocus(998) | Container.Scrolling]</visible>
-			</control>
-			<control type="label">
-				<label>$INFO[ListItem.Season,$LOCALIZE[20373] , - ]$INFO[Container.NumItems,, $LOCALIZE[20360]]</label>
-				<include>Global_HeadingDetailVars</include>
-				<visible>IntegerGreaterThan(Container.NumItems, 1) + Container.Content(episodes) + ![Control.HasFocus(998) | Container.Scrolling]</visible>
-			</control>
-			<control type="label">
-				<label>$INFO[ListItem.Artist,, - ]$INFO[ListItem.Album,, - ]$INFO[Container.NumItems,, $LOCALIZE[31281]]</label>
-				<include>Global_HeadingDetailVars</include>
-				<visible>!SubString(ListItem.Label, *) + Window.IsActive(music) + Control.IsVisible(50)</visible>
-			</control>
 			<control type="label" id="52">
 				<description>Build Version</description>
 				<label>$LOCALIZE[144]</label>
@@ -185,7 +170,7 @@
 			<control type="label">
 				<label>$INFO[Container.CurrentItem,$LOCALIZE[31277] ]$INFO[Container.NumItems, $LOCALIZE[20163] ]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>IntegerGreaterThan(Container.NumItems, 1) + [![Container.Content(episodes) | Window.IsActive(systeminfo)] | Control.HasFocus(998) | Container.Scrolling]</visible>
+				<visible>IntegerGreaterThan(Container.NumItems, 1) + [!Window.IsActive(systeminfo) | Control.HasFocus(998) | Container.Scrolling]</visible>
 			</control>
 		</control>
 	</include>
@@ -1542,21 +1527,22 @@
 				<!-- TV Show Poster / Logo / Clearart -->
 				<control type="image">
 					<description>TV Show Thumbnail</description>
-					<posx>40</posx>
-					<posy>393</posy>
-					<width>206</width>
-					<height>302</height>
+					<posx>42</posx>
+					<posy>370</posy>
+					<width>216</width>
+					<height>318</height>
 					<texture background="true">$INFO[Player.Art(tvshow.poster)]</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<aspectratio scalediffuse="false">scale</aspectratio>
 					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default,Left) + !Skin.HasSetting(Enable_OSDClearArt)</visible>
 				</control>
 				<control type="image">
 					<description>TV Show Thumbnail Frame</description>
-					<posx>19</posx>
-					<posy>367</posy>
-					<width>253</width>
-					<height>343</height>
-					<texture>frames/ClassicFrame_PosterSmall.png</texture>
+					<posx>28</posx>
+					<posy>350</posy>
+					<width>244</width>
+					<height>358</height>
+					<texture>frames/ClassicFrame_PosterMedium.png</texture>
+					<aspectratio>stretch</aspectratio>
 					<visible>VideoPlayer.Content(Episodes) + !SubString(VideoPlayer.Cover,default,Left) + !Skin.HasSetting(Enable_OSDClearArt)</visible>
 				</control>
 				<control type="image">
@@ -1572,21 +1558,22 @@
 				<!-- Movie Poster -->
 				<control type="image">
 					<description>Movie Poster</description>
-					<posx>40</posx>
-					<posy>393</posy>
-					<width>206</width>
-					<height>302</height>
+					<posx>42</posx>
+					<posy>370</posy>
+					<width>216</width>
+					<height>318</height>
 					<texture background="true">$INFO[VideoPlayer.Cover]</texture>
-					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<aspectratio scalediffuse="false">scale</aspectratio>
 					<visible>VideoPlayer.Content(Movies) + !SubString(VideoPlayer.Cover,default,Left)</visible>
 				</control>
 				<control type="image">
 					<description>Movie Poster Frame</description>
-					<posx>19</posx>
-					<posy>367</posy>
-					<width>253</width>
-					<height>343</height>
-					<texture>frames/ClassicFrame_PosterSmall.png</texture>
+					<posx>28</posx>
+					<posy>350</posy>
+					<width>244</width>
+					<height>358</height>
+					<texture>frames/ClassicFrame_PosterMedium.png</texture>
+					<aspectratio>stretch</aspectratio>
 					<visible>VideoPlayer.Content(Movies) + !SubString(VideoPlayer.Cover,default,Left)</visible>
 				</control>
 				<!-- Music Video Thumbnail -->

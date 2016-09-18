@@ -17,8 +17,8 @@
 				<posx>438</posx>
 				<posy>65</posy>
 				<width>404</width>
-				<height>262</height>
-				<texture>frames/Menu_Glass2b.png</texture>
+				<height>264</height>
+				<texture>frames/Dialog_Glass2PanelLarge.png</texture>
 				<colordiffuse>DialogBackgroundColor</colordiffuse>
 			</control>
 			<!-- Menu -->
