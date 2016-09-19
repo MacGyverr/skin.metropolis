@@ -3,192 +3,203 @@
     <defaultcontrol>3</defaultcontrol>
     <controls>
 		<include>Global_Background</include>	
-		<control type="image">
-			<posx>-70</posx>
-			<posy>450</posy>
-			<width>1420</width>
-			<height>63</height>
-			<texture flipy="true">osd/OSDdialogback.png</texture>
-			<colordiffuse>BackgroundColor</colordiffuse>
-		</control>
-		<!--Lower instructions -->
-		<control type="label">
-			<top>565</top>
-			<left>350</left>
-			<width>600</width>
-			<align>center</align>
-			<font>METF_SettingsDetail</font>
-			<textcolor>LowerText</textcolor>
-			<wrapmultiline>true</wrapmultiline>
-			<label>$LOCALIZE[35055]</label>
-		</control>	
-		
-		<!--Left Side Controller Select Menu -->
-		<control type="label">
-			<description>Controller profiles grouplist heading</description>
-			<top>10</top>
-			<left>25</left>
-			<width>270</width>
-			<height>25</height>
-			<label>$LOCALIZE[35050]</label>
-			<align>left</align>
-			<aligny>center</aligny>
-			<font>METF_Heading</font>
-			<textcolor>GlobalHeading</textcolor>
-		</control>
-		<control type="grouplist" id="3">
-			<description>Controller profiles grouplist</description>
-			<left>0</left>
-			<top>90</top>
-			<width>370</width>
-			<height>400</height>
-			<onleft>9001</onleft>
-			<onright>5</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-		</control>
-		<control type="button" id="10">
-			<description>Default controller button</description>
-			<height>38</height>
-			<width>362</width>
-			<include>SettingsLabelLeft</include>
-		</control>
-	
-		<!--Middle Button Set Menu -->
-        <control type="group">
-            <left>500</left>
-            <top>10</top>		
-            <control type="gamecontroller" id="31">
-                <left>20</left>
-                <top>12</top>
-                <width>250</width>
-                <height>150</height>
-				<aspectratio>scale</aspectratio>
-            </control>
-            <control type="label">
-                <description>Feature list heading</description>
-                <top>166</top>
-                <left>20</left>
-                <width>250</width>
-                <height>25</height>
-                <label>$LOCALIZE[35059]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>METF_Heading</font>
-				<textcolor>DialogDropdownColor</textcolor>
-            </control>
-			<control type="image" id="999">
-				<description>border box</description>
-				<posx>0</posx>
-				<posy>180</posy>
-				<width>290</width>
-				<height>365</height>
-				<texture>frames/ClassicFrame_Poster.png</texture>
+		<control type="group">
+			<include>Animation_OpenCloseFade</include>
+
+			<!-- Heading -->
+			<control type="group">
+				<animation type="Conditional" condition="Window.IsActive(extendedprogressdialog)">
+					<effect type="fade" time="200" start="100" end="10" />
+				</animation>
+				<posx>30</posx>
+				<posy>10</posy>
+				<control type="label">
+					<description>Settings</description>
+					<label>$LOCALIZE[5]</label>
+					<include>Global_HeadingSectionVars</include>
+				</control>
+				<control type="label" id="500">
+					<description>header middle label</description>
+					<label>$LOCALIZE[35050]</label>
+					<include>Global_HeadingLevelVars</include>
+				</control>
+				<control type="label">
+					<description>header right label</description>
+					<label>Controller Select</label>
+					<include>Global_HeadingDetailVars</include>
+					<visible>ControlGroup(3).HasFocus</visible>
+				</control>
+				<control type="label">
+					<description>header right label</description>
+					<!--See complaint about 25 lines down -->
+					<label>Define List Item #$INFO[Window.Property(Controller)]'s $LOCALIZE[35059]</label>
+					<include>Global_HeadingDetailVars</include>
+					<visible>ControlGroup(5).HasFocus</visible>
+				</control>
 			</control>
-            <control type="grouplist" id="5">
-                <description>Features grouplist</description>
-                <left>20</left>
-                <top>202</top>
-                <width>250</width>
-                <height>317</height>
-                <onleft>3</onleft>
-                <onright>9001</onright>
-                <onup>5</onup>
-                <ondown>5</ondown>
-            </control>
-            <control type="button" id="7">
-                <description>Default feature button</description>
-                <height>30</height>
-                <width>250</width>
-				<include>SettingsLabelCenter</include>
-            </control>
-            <control type="label" id="8">
-                <description>Feature group title</description>
-                <height>40</height>
-                <width>250</width>
-                <label>-</label>
-                <align>center</align>
-                <aligny>center</aligny>
-                <font>METF_Heading</font>
-                <textcolor>SettingsTitle</textcolor>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="image" id="9">
-                <description>Feature separator image</description>
-                <height>1</height>
-                <width>250</width>
-				<include>Settings_Line</include>
-            </control>
-<!--		
-           <control type="scrollbar" id="61">
-                <left>0</left>
-                <top>0</top>
-                <width>10</width>
-                <height>317</height>
-                <onleft>5</onleft>
-                <onright>9001</onright>
-                <orientation>vertical</orientation>
-				<texturesliderbackground>-</texturesliderbackground>
-				<textureslidernib>ScrollBarV_Nib_Focus.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarV_Nib_Focus.png</textureslidernibfocus>
-				<visible allowhiddenfocus="true">Control.HasFocus(61) | Container.Scrolling</visible>
-				<showonepage>true</showonepage>
-           </control>
--->		</control>
 			
-		<control type="grouplist" id="9001">
-			<description>grouplist for context buttons</description>
-			<left>940</left>
-			<top>150</top>
-			<width>340</width>
-			<height max="670">auto</height>
-			<itemgap>2</itemgap>
-			<onleft>5</onleft>
-			<onright>3</onright>
-			<!-- Help Button -->
-<!--		<control type="button" id="17">
-				<description>button template</description>
-				<label>$LOCALIZE[10043]</label>
-				<left>-</left>
-				<top>-</top>
-				<width>340</width>
-				<height>35</height>
-				<include>SettingsLabel</include>
+			<!--Left Side Controller Select Menu -->
+			<control type="group">
+				<left>0</left>
+				<top>10</top>	
+				<width>370</width>
+				<control type="grouplist" id="3">
+					<description>Controller profiles grouplist</description>
+					<left>0</left>
+					<top>60</top>
+					<height>400</height>
+					<onleft>noop</onleft>
+					<onright>5</onright>
+					<onup>noop</onup>
+					<ondown>9001</ondown>
+				</control>
+				<control type="button" id="10">
+					<description>Default controller button</description>
+					<include>SettingsLabelLeft</include>
+					<!--Why can't I get the name of that damn id label to work below, so that the controller name will show in the top right -->
+					<onfocus>SetProperty(Controller,$INFO[Container(3).CurrentItem])</onfocus> 
+				</control>
 			</control>	
--->			<!-- Ok Button -->
-			<control type="button" id="18">
-				<description>button template</description>
-				<label>$LOCALIZE[186]</label>
-				<left>-</left>
-				<top>-</top>
-				<width>340</width>
-				<height>35</height>
-				<include>SettingsLabel</include>
-			</control>	
-			<!-- Reset Button -->
-			<control type="button" id="19">
-				<description>button template</description>
-				<label>$LOCALIZE[10035]</label>
-				<left>-</left>
-				<top>-</top>
-				<width>340</width>
-				<height>35</height>
-				<include>SettingsLabel</include>
-			</control>	
-			<!-- Get More Button -->
-			<control type="button" id="20">
-				<description>button template</description>
-				<label>$LOCALIZE[21452]</label>
-				<left>-</left>
-				<top>-</top>
-				<width>340</width>
-				<height>35</height>
-				<include>SettingsLabel</include>
+		
+			<!--Middle Button Set Menu -->
+			<control type="group">
+				<left>385</left>
+				<top>70</top>
+				<control type="image" id="9">
+					<description>Feature separator image</description>
+					<height>1</height>
+					<width>700</width>
+					<include>Settings_Line</include>
+				</control>
+				<control type="grouplist" id="5">
+					<description>Features grouplist</description>
+					<top>5</top>
+					<width>700</width>
+					<height>390</height>
+					<onleft>3</onleft>
+					<onright>noop</onright>
+					<onup>5</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="image" id="9">
+					<description>Feature separator image</description>
+					<height>1</height>
+					<width>700</width>
+					<include>Settings_Line</include>
+				</control>
+				<control type="label" id="8">
+					<description>Feature group title</description>
+					<left>0</left>
+					<top>5</top>	
+					<height>30</height>
+					<width>700</width>
+					<label>-</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_ContextValue</font>
+				<textcolor>DialogDropdownColor</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="button" id="7">
+					<description>Feature button</description>
+					<height>30</height>
+					<width>700</width>
+					<include>SettingsInfoRight</include>
+				</control>
+				<!-- Scollbar (broken)
+				<control type="scrollbar" id="61">
+					<include>Animation_OpenCloseFade</include>
+					<include>Animation_FadedByMenu</include>
+					<posx>1270</posx>
+					<posy>128</posy>
+					<width>22</width>
+					<height>376</height>
+					<visible allowhiddenfocus="true">Control.HasFocus(61) | Container.Scrolling</visible>
+					<texturesliderbackground>-</texturesliderbackground>
+					<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
+					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
+					<onleft>5</onleft>
+					<onright>9001</onright>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(61) | Container.Scrolling">Conditional</animation>
+				   </control>  -->
+				</control>
+			<control type="gamecontroller" id="31">
+				<description>Internal Game Controller image</description>
+				<left>50</left>
+				<top>565</top>
+				<width>200</width>
+				<height>135</height>
+				<aspectratio>scale</aspectratio>
 			</control>
-		</control>	
-		<include>Global_Weather</include>
-		<include>Global_Time</include>
-		<include>Global_MediaOverlay</include>
-		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>					
+			<control type="image" id="910">
+				<left>388</left>
+				<top>470</top>
+				<height>8</height>
+				<width>700</width>
+				<texture border="2">SettingsLine.png</texture>
+				<colordiffuse>SettingsLine</colordiffuse>
+			</control>	
+
+			<!-- Lower Button grouplist -->
+			<control type="grouplist" id="9001">
+				<left>385</left>
+				<top>488</top>
+				<width>800</width>
+				<height>38</height>
+				<itemgap>0</itemgap>
+				<onleft>noop</onleft>
+				<onright>noop</onright>
+				<onup>3</onup>
+				<ondown>noop</ondown>
+				<orientation>horizontal</orientation>
+				<!-- Ok Button -->
+				<control type="button" id="18">
+					<width>220</width>
+					<height>38</height>
+					<label>$LOCALIZE[186]</label>
+					<align>center</align>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus border="5">ButtonFO.png</texturefocus>
+					<texturenofocus border="5">ButtonNf.png</texturenofocus>
+				</control>
+				<!-- Reset Button -->
+				<control type="button" id="19">
+					<width>220</width>
+					<height>38</height>
+					<label>$LOCALIZE[10035]</label>
+					<align>center</align>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus border="5">ButtonFO.png</texturefocus>
+					<texturenofocus border="5">ButtonNf.png</texturenofocus>
+				</control>
+				<!-- Get More Button -->
+				<control type="button" id="20">
+					<width>260</width>
+					<height>38</height>
+					<label>$LOCALIZE[21452]</label>
+					<align>center</align>
+					<font>METF_TitleTextMedium</font>
+					<textcolor>white</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<texturefocus border="5">ButtonFO.png</texturefocus>
+					<texturenofocus border="5">ButtonNf.png</texturenofocus>
+				</control>
+			</control>	
+
+			<!-- Help text -->
+			<control type="group">
+				<include>PlotBox</include>
+			</control>
+			<include>Global_Weather</include>
+			<include>Global_Time</include>
+			<include>Global_MediaOverlay</include>
+			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>		
+		</control>			
     </controls>
 </window>

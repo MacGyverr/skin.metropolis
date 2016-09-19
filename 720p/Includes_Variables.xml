@@ -318,6 +318,8 @@
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + Control.HasFocus(10)">$LOCALIZE[31729]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + Control.HasFocus(301)">$LOCALIZE[31730]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + Control.HasFocus(308)">$LOCALIZE[31731]</value>
+		<!-- GameController Settings -->
+		<value condition="Window.IsActive(DialogGameControllers.xml)">$LOCALIZE[35055]</value>
 		<!-- Videos -->
 		<value condition="[Container.Content(Movies) + [!Skin.HasSetting(Show_PlotOutline) | IsEmpty(ListItem.PlotOutline)]] | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(MusicVideos) | SubString(Container.FolderPath,plugin)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(Movies) + Skin.HasSetting(Show_PlotOutline) + !IsEmpty(ListItem.PlotOutline)">$INFO[ListItem.PlotOutline]</value>

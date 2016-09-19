@@ -1132,11 +1132,9 @@
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
-	<include name="SettingsLabelCenter">
-		<width>840</width>
-		<height>38</height>
+	<include name="SettingsInfoRight">
 		<textoffsetx>20</textoffsetx>
-		<align>center</align>
+		<align>right</align>
 		<aligny>center</aligny>
 		<spinwidth>34</spinwidth>
 		<spinheight>34</spinheight>
