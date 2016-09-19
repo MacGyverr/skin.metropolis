@@ -109,31 +109,39 @@
 			<description>Create Savestate button</description>
 			<posx>54</posx>
 			<posy>550</posy>
-			<width>235</width>
-			<height>35</height>
-			<label>Create Savestate</label>
-			<font>METF_DialogMedium</font>
-			<textcolor>TextNF</textcolor>
-			<focusedcolor>TextFO</focusedcolor>
+			<height>40</height>
+			<width>230</width>
 			<align>center</align>
-			<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
+			<aligny>center</aligny>
+			<font>METF_DialogLargeBold</font>
+			<textcolor>TextNF</textcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<selectedcolor>DialogTextFO</selectedcolor>
+			<texturefocus>ButtonFO2.png</texturefocus>
+			<pulseonselect>false</pulseonselect>
+			<label>$LOCALIZE[35270]</label>
 			<onleft>4</onleft>
 			<onright>3</onright>
 			<ondown>11</ondown>
 			<onup>11</onup>
 		</control>
 		<control type="button" id="3">
-			<description>Load Savestate button</description>
+			<description>Erase/Clear Savestate button</description>
 			<posx>294</posx>
 			<posy>550</posy>
-			<width>235</width>
-			<height>35</height>
-			<label>Load Savestate</label>
-			<font>METF_DialogMedium</font>
-			<textcolor>TextNF</textcolor>
-			<focusedcolor>TextFO</focusedcolor>
+			<height>40</height>
+			<width>230</width>
 			<align>center</align>
-			<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
+			<aligny>center</aligny>
+			<font>METF_DialogLargeBold</font>
+			<textcolor>TextNF</textcolor>
+			<disabledcolor>TextDisabled</disabledcolor>
+			<focusedcolor>DialogTextFO</focusedcolor>
+			<selectedcolor>DialogTextFO</selectedcolor>
+			<texturefocus>ButtonFO2.png</texturefocus>
+			<pulseonselect>false</pulseonselect>
+			<label>$LOCALIZE[35271]</label>
 			<onleft>2</onleft>
 			<onright>4</onright>
 			<ondown>11</ondown>
