@@ -53,6 +53,8 @@
 			<control type="spincontrolex" id="9">
 				<description>Default Spin Control</description>
 				<include>SettingsLabel</include>
+				<textureupdisabled colordiffuse="40FFFFFF">ArrowUpNF.png</textureupdisabled>
+				<texturedowndisabled colordiffuse="40FFFFFF">ArrowDownNF.png</texturedowndisabled>
 			</control>
 			<control type="button" id="10">
 				<description>Default Category Button</description>

@@ -30,7 +30,7 @@
 						<height>155</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-						<visible>!StringCompare(ListItem.Icon,-) + !SubString(ListItem.Icon,default) + !IsEmpty(ListItem.Icon)</visible>
+						<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
 						<posx>25</posx>
@@ -46,7 +46,7 @@
 						<width>195</width>
 						<height>197</height>
 						<texture>frames/ClassicFrame_SquareSmall.png</texture>
-						<visible>!StringCompare(ListItem.Icon,-) + !SubString(ListItem.Icon,default) + !IsEmpty(ListItem.Icon)</visible>
+						<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="205" height="205">
@@ -60,7 +60,7 @@
 							<height>155</height>
 							<texture>frames/ClassicFrame_Background.png</texture>
 							<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-							<visible>!StringCompare(ListItem.Icon,-) + !SubString(ListItem.Icon,default) + !IsEmpty(ListItem.Icon)</visible>
+							<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
 							<posx>25</posx>
@@ -76,19 +76,19 @@
 							<width>195</width>
 							<height>197</height>
 							<texture>frames/ClassicFrame_SquareSmall.png</texture>
-							<visible>!StringCompare(ListItem.Icon,-) + !SubString(ListItem.Icon,default,Left) + !IsEmpty(ListItem.Icon)</visible>
+							<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 						</control>
 					</control>
 				</focusedlayout>
 			</control>
 			<!-- Fanart Image -->
 			<control type="group">
+				<posx>30</posx>
+				<posy>20</posy>
 				<include>Animation_ZoomInZoomOut</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>Animation_FadedByMenu</include>
-				<include>Animation_CommonFade</include>
-				<posx>30</posx>
-				<posy>20</posy>
+				<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 				<control type="image">
 					<posx>25</posx>
 					<posy>49</posy>

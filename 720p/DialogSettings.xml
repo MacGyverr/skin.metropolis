@@ -74,12 +74,8 @@
 				<radioheight>30</radioheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<!--
 				<textureradiofocus>keyboard/RadioButtonFO.png</textureradiofocus>
 				<textureradionofocus>keyboard/RadioButtonNF.png</textureradionofocus>
-				-->
-				<textureradiofocus>keyboard/RadiobuttonFO.png</textureradiofocus>
-				<textureradionofocus>keyboard/RadiobuttonNF.png</textureradionofocus>
 				<textoffsetx>20</textoffsetx>
 				<pulseonselect>false</pulseonselect>
 			</control>
@@ -100,12 +96,6 @@
 				<spinheight>26</spinheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<!--
-				<textureup>ArrowUpNF.png</textureup>
-				<texturedown>ArrowDownNF.png</texturedown>
-				<textureupfocus>ArrowUpFO.png</textureupfocus>
-				<texturedownfocus>ArrowDownFO.png</texturedownfocus>
-				-->
 				<textureup>ArrowUpNF.png</textureup>
 				<texturedown>ArrowDownNF.png</texturedown>
 				<textureupfocus>ArrowUpFO.png</textureupfocus>
