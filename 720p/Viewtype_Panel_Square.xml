@@ -41,10 +41,10 @@
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>2</posy>
-						<width>195</width>
-						<height>197</height>
+						<posx>6</posx>
+						<posy>4</posy>
+						<width>192</width>
+						<height>195</height>
 						<texture>frames/ClassicFrame_SquareSmall.png</texture>
 						<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 					</control>
@@ -71,10 +71,10 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
-							<posx>5</posx>
-							<posy>2</posy>
-							<width>195</width>
-							<height>197</height>
+							<posx>6</posx>
+							<posy>4</posy>
+							<width>192</width>
+							<height>195</height>
 							<texture>frames/ClassicFrame_SquareSmall.png</texture>
 							<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 						</control>
@@ -88,9 +88,9 @@
 				<include>Animation_ZoomInZoomOut</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>Animation_FadedByMenu</include>
-				<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
+				<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)]</visible>
 				<control type="image">
-					<posx>25</posx>
+					<posx>20</posx>
 					<posy>49</posy>
 					<width>324</width>
 					<height>182</height>
@@ -99,7 +99,7 @@
 					<visible>Window.IsActive(music) | Window.IsActive(videos)</visible>
 				</control>
 				<control type="image">
-					<posx>25</posx>
+					<posx>20</posx>
 					<posy>49</posy>
 					<width>324</width>
 					<height>182</height>
@@ -108,7 +108,7 @@
 					<visible>Window.IsActive(pictures)</visible>
 				</control>
 				<control type="image">
-					<posx>25</posx>
+					<posx>20</posx>
 					<posy>49</posy>
 					<width>324</width>
 					<height>182</height>
@@ -117,19 +117,19 @@
 					<visible>Window.IsActive(pictures) + IsEmpty(ListItem.Icon)</visible>
 				</control>
 				<control type="image">
-					<posx>25</posx>
+					<posx>20</posx>
 					<posy>49</posy>
 					<width>324</width>
 					<height>182</height>
 					<texture fallback="home_art/programs.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">stretch</aspectratio>
-					<visible>Container.Content(addons) | SubString(Container.FolderPath,plugin)</visible>
+					<visible>Container.Content(addons)</visible>
 				</control>
 				<control type="image">
 					<posx>4</posx>
-					<posy>29</posy>
-					<width>364</width>
-					<height>220</height>
+					<posy>30</posy>
+					<width>358</width>
+					<height>222</height>
 					<texture>frames/ClassicFrame_FanartSmall.png</texture>
 				</control>
 			</control>

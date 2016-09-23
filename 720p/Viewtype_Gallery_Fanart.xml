@@ -26,18 +26,18 @@
 				<itemlayout width="300" height="200">
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 						<visible>!IsEmpty(ListItem.Label)</visible>
 					</control>
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<visible>Container.Content(episodes)</visible>
@@ -45,9 +45,9 @@
 					<!-- Picture Icon Image -->
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<visible>Window.IsActive(pictures) + !IsEmpty(ListItem.Icon)</visible>
@@ -55,36 +55,36 @@
 					<!-- Picture Fanart Image (use for thumb if no icon set) -->
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true" fallback="home_art/pictures.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<visible>Window.IsActive(pictures) + IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true" fallback="home_art/movies.jpg">$VAR[LandscapeFanart]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					</control>
 					<control type="image">
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture>frames/ClassicFrameGlass_Horizontal.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<colordiffuse>GlassDiffuse</colordiffuse>
 					</control>
 					<control type="image">
 						<posx>8</posx>
-						<posy>11</posy>
-						<width>289</width>
-						<height>179</height>
+						<posy>14</posy>
+						<width>288</width>
+						<height>174</height>
 						<texture>frames/ClassicFrame_FanartSmall.png</texture>
 					</control>
 					<control type="image">
@@ -99,7 +99,7 @@
 					<!-- Watched Overlay for In-Progress Items -->
 					<control type="image">
 						<posx>236</posx>
-						<posy>126</posy>
+						<posy>128</posy>
 						<width>41</width>
 						<height>41</height>
 						<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
@@ -111,9 +111,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 						<visible>!IsEmpty(ListItem.Label)</visible>
@@ -125,9 +125,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="70" end="125" time="300" tween="back" easing="out" />
@@ -139,9 +139,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="70" end="125" time="300" tween="back" easing="out" />
@@ -153,9 +153,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true" fallback="home_art/pictures.jpg">$INFO[ListItem.Art(fanart)]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="70" end="125" time="300" tween="back" easing="out" />
@@ -167,9 +167,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture background="true" fallback="home_art/movies.jpg">$VAR[LandscapeFanart]</texture>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="70" end="125" time="300" tween="back" easing="out" />
@@ -181,9 +181,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>22</posx>
-						<posy>27</posy>
+						<posy>29</posy>
 						<width>260</width>
-						<height>146</height>
+						<height>142</height>
 						<texture>frames/ClassicFrameGlass_Horizontal.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<colordiffuse>GlassDiffuse</colordiffuse>
@@ -195,9 +195,9 @@
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
 						<posx>8</posx>
-						<posy>11</posy>
-						<width>289</width>
-						<height>179</height>
+						<posy>14</posy>
+						<width>288</width>
+						<height>174</height>
 						<texture>frames/ClassicFrame_FanartSmall.png</texture>
 						<visible>!IsEmpty(ListItem.Label)</visible>
 						<animation type="Focus" reversible="false">
@@ -222,7 +222,7 @@
 					<!-- Watched Overlay for In-Progress Items -->
 					<control type="image">
 						<include>Animation_GalleryFanartFloat</include>
-						<posx>236</posx>
+						<posx>238</posx>
 						<posy>126</posy>
 						<width>41</width>
 						<height>41</height>

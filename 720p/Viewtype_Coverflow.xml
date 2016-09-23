@@ -2844,7 +2844,7 @@
 					<textcolor>TitleText</textcolor>
 					<label>$VAR[ListItemTitle]</label>
 				</control>
-				<!-- XXX: Title is off-center if neither of these are present
+				<!-- XXX: Title is off-center if either of these are present
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>

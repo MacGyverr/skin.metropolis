@@ -1069,8 +1069,14 @@
 		<textoffsetx>20</textoffsetx>
 		<radiowidth>55</radiowidth>
 		<radioheight>55</radioheight>
-		<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
-		<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+		<texturefocus>ButtonFO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/button_radio_off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_off.png</textureradiooffdisabled>
 		<textureup>ArrowUpNF.png</textureup>
 		<texturedown>ArrowDownNF.png</texturedown>
 		<textureupfocus>ArrowUpFO.png</textureupfocus>
@@ -1079,8 +1085,6 @@
 		<textcolor>SettingsDetail</textcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
 		<selectedcolor>TextFO</selectedcolor>
-		<texturefocus>ButtonFO.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -1092,8 +1096,14 @@
 		<textoffsetx>58</textoffsetx>
 		<radiowidth>55</radiowidth>
 		<radioheight>55</radioheight>
-		<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
-		<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+		<texturefocus>ButtonFO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/button_radio_off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_off.png</textureradiooffdisabled>
 		<textureup>ArrowUpNF.png</textureup>
 		<texturedown>ArrowDownNF.png</texturedown>
 		<textureupfocus>ArrowUpFO.png</textureupfocus>
@@ -1102,8 +1112,6 @@
 		<textcolor>SettingsDetail</textcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
 		<selectedcolor>TextFO</selectedcolor>
-		<texturefocus>ButtonFO.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -1117,8 +1125,14 @@
 		<spinheight>34</spinheight>
 		<radiowidth>55</radiowidth>
 		<radioheight>55</radioheight>
-		<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
-		<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+		<texturefocus>ButtonFO.png</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/button_radio_off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_off.png</textureradiooffdisabled>
 		<textureup>ArrowUpNF.png</textureup>
 		<texturedown>ArrowDownNF.png</texturedown>
 		<textureupfocus>ArrowUpFO.png</textureupfocus>
@@ -1127,8 +1141,6 @@
 		<textcolor>SettingsDetail</textcolor>
 		<focusedcolor>ButtonText</focusedcolor>
 		<selectedcolor>TextFO</selectedcolor>
-		<texturefocus>ButtonFO.png</texturefocus>
-		<texturenofocus>-</texturenofocus>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -1181,8 +1193,13 @@
 		<spinheight>34</spinheight>
 		<radiowidth>55</radiowidth>
 		<radioheight>55</radioheight>
-		<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
-		<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+		<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
+		<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/button_radio_off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_off.png</textureradiooffdisabled>
 		<textureup>ArrowUpNF.png</textureup>
 		<texturedown>ArrowDownNF.png</texturedown>
 		<textureupfocus>ArrowUpFO.png</textureupfocus>
@@ -1190,7 +1207,6 @@
 		<font>METF_Menu</font>
 		<textcolor>TextNF</textcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
-		<texturefocus border="1">ButtonFO2Wide.png</texturefocus>
 		<disabledcolor>TextDisabled</disabledcolor>
 		<pulseonselect>false</pulseonselect>
 	</include>
@@ -1898,7 +1914,7 @@
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<posx>0</posx>
-			<posy>534</posy>
+			<posy>530</posy>
 			<width>1280</width>
 			<height>30</height>
 			<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>

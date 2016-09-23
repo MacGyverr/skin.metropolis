@@ -157,7 +157,7 @@
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
 				<label>$INFO[ListItem.mpaa]</label>
-				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + !IsEmpty(ListItem.mpaa)</visible>
+				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + !IsEmpty(ListItem.mpaa) + [!Skin.HasSetting(NextAired) | IsEmpty(Window(Home).Property(NextAired.NextDate))]</visible>
 			</control>
 			<!-- Video Path -->
 			<control type="fadelabel">
@@ -195,7 +195,7 @@
 				<font>METF_InfoText</font>
 				<textcolor>TextNF</textcolor>
 				<label>[COLOR=MediaDetailsInfo]$LOCALIZE[31427]:[/COLOR] $INFO[Window(Home).Property(NextAired.NextTitle),,[CR]]$INFO[Window(Home).Property(NextAired.AirTime),, - ]$INFO[Window(Home).Property(NextAired.NextDate)]</label>
-				<visible>StringCompare(ListItem.DBType,tvshow) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
+				<visible>StringCompare(ListItem.DBType,tvshow) + Skin.HasSetting(NextAired) + !IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			</control>
 			<control type="group">
 				<posx>550</posx>

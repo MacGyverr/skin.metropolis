@@ -68,9 +68,9 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<!-- Picture (3:2 aspect viewing window on a 16:9 monitor ) -->
+				<!-- Picture (3:2 aspect viewing window on a 16:9 monitor) -->
 				<control type="image">
-					<posx>95</posx>
+					<posx>94</posx>
 					<posy>113</posy>
 					<width>558</width>
 					<height>372</height>
@@ -79,7 +79,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>95</posx>
+					<posx>94</posx>
 					<posy>113</posy>
 					<width>558</width>
 					<height>372</height>
@@ -89,8 +89,8 @@
 				<control type="image">
 					<posx>72</posx>
 					<posy>92</posy>
-					<width>608</width>
-					<height>422</height>
+					<width>604</width>
+					<height>420</height>
 					<texture>frames/ClassicFrame_FanartMedium.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>

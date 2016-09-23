@@ -46,10 +46,10 @@
 						<visible>!IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>8</posx>
-						<posy>37</posy>
-						<width>247</width>
-						<height>346</height>
+						<posx>10</posx>
+						<posy>39</posy>
+						<width>244</width>
+						<height>342</height>
 						<texture>frames/ClassicFrame_PosterSmall.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -78,7 +78,7 @@
 				</itemlayout>
 				<focusedlayout width="720" height="420">
 					<control type="image">
-						<posx>32</posx>
+						<posx>34</posx>
 						<posy>31</posy>
 						<width>646</width>
 						<height>362</height>
@@ -89,7 +89,7 @@
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>32</posx>
+						<posx>34</posx>
 						<posy>31</posy>
 						<width>646</width>
 						<height>362</height>
@@ -100,7 +100,7 @@
 						<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>32</posx>
+						<posx>34</posx>
 						<posy>31</posy>
 						<width>646</width>
 						<height>362</height>
@@ -110,7 +110,7 @@
 						<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>32</posx>
+						<posx>34</posx>
 						<posy>31</posy>
 						<width>646</width>
 						<height>362</height>

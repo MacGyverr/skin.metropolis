@@ -29,7 +29,7 @@
 					<scrolltime>100</scrolltime>
 					<timeblocks>45</timeblocks>
 					<rulerunit>6</rulerunit>
-					<progresstexture border="0,48,18,14" colordiffuse="ArrowDiffuse">PVR-EpgProgressIndicator.png</progresstexture>
+					<progresstexture border="0,48,18,14" colordiffuse="ArrowDiffuse">pvr/PVR-EpgProgressIndicator.png</progresstexture>
 					<onleft>101</onleft>
 					<onright>101</onright>
 					<onup>10</onup>
@@ -54,7 +54,7 @@
 							<top>0</top>
 							<width>270</width>
 							<height>48</height>
-							<texture border="2">PVR-GreyNF.png</texture>
+							<texture border="2">pvr/PVR-GreyNF.png</texture>
 						</control>
 						<control type="label">
 							<left>5</left>
@@ -94,7 +94,7 @@
 							<top>0</top>
 							<width>270</width>
 							<height>48</height>
-							<texture border="2">PVR-GreyNF.png</texture>
+							<texture border="2">pvr/PVR-GreyNF.png</texture>
 							<visible>!Control.HasFocus(10)</visible>
 						</control>
 						<control type="image">
@@ -102,7 +102,7 @@
 							<top>0</top>
 							<width>270</width>
 							<height>48</height>
-							<texture border="2">PVR-GreyFO.png</texture>
+							<texture border="2">pvr/PVR-GreyFO.png</texture>
 							<visible>Control.HasFocus(10)</visible>
 						</control>
 						<control type="label">
@@ -162,7 +162,7 @@
 							<top>28</top>
 							<width>24</width>
 							<height>16</height>
-							<texture>PVR-IsRecording.png</texture>
+							<texture>pvr/PVR-IsRecording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -170,7 +170,7 @@
 							<top>28</top>
 							<width>16</width>
 							<height>16</height>
-							<texture>PVR-HasTimer.png</texture>
+							<texture>pvr/PVR-HasTimer.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -178,7 +178,7 @@
 							<top>28</top>
 							<width>16</width>
 							<height>16</height>
-							<texture>PVR-HasRecording.png</texture>
+							<texture>pvr/PVR-HasRecording.png</texture>
 							<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 						</control>
 					</itemlayout>
@@ -188,7 +188,7 @@
 							<height>48</height>
 							<left>0</left>
 							<top>0</top>
-							<texture border="5">PVR-Focus.png</texture>
+							<texture border="5">pvr/PVR-Focus.png</texture>
 						</control>
 						<control type="image" id="2">
 							<width>40</width>
@@ -214,7 +214,7 @@
 							<top>28</top>
 							<width>24</width>
 							<height>16</height>
-							<texture>PVR-IsRecording.png</texture>
+							<texture>pvr/PVR-IsRecording.png</texture>
 							<visible>ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -222,7 +222,7 @@
 							<top>28</top>
 							<width>16</width>
 							<height>16</height>
-							<texture>PVR-HasTimer.png</texture>
+							<texture>pvr/PVR-HasTimer.png</texture>
 							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 						</control>
 						<control type="image">
@@ -230,7 +230,7 @@
 							<top>28</top>
 							<width>16</width>
 							<height>16</height>
-							<texture>PVR-HasRecording.png</texture>
+							<texture>pvr/PVR-HasRecording.png</texture>
 							<visible>ListItem.HasRecording + !ListItem.IsRecording + !ListItem.HasTimer</visible>
 						</control>
 					</focusedlayout>
@@ -335,7 +335,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>41</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>100</left>
@@ -343,7 +343,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="image">
 								<left>960</left>
@@ -351,7 +351,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="label">
 								<left>-5</left>
@@ -402,7 +402,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -423,7 +423,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -454,7 +454,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>40</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>100</left>
@@ -462,7 +462,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(11)</visible>
 							</control>
 							<control type="image">
@@ -471,7 +471,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(11)</visible>
 							</control>
 							<control type="image">
@@ -480,7 +480,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(11)</visible>
 							</control>
 							<control type="image">
@@ -489,7 +489,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(11)</visible>
 							</control>
 							<control type="label">
@@ -541,7 +541,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -562,7 +562,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -679,7 +679,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>41</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>100</left>
@@ -687,7 +687,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="image">
 								<left>960</left>
@@ -695,7 +695,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="label">
 								<left>-5</left>
@@ -746,7 +746,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -767,7 +767,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -798,7 +798,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>40</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>100</left>
@@ -806,7 +806,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(12)</visible>
 							</control>
 							<control type="image">
@@ -815,7 +815,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(12)</visible>
 							</control>
 							<control type="image">
@@ -824,7 +824,7 @@
 								<width>250</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(12)</visible>
 							</control>
 							<control type="image">
@@ -833,7 +833,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(12)</visible>
 							</control>
 							<control type="label">
@@ -885,7 +885,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -906,7 +906,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -1013,7 +1013,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>41</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -1021,7 +1021,7 @@
 								<width>300</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="image">
 								<left>960</left>
@@ -1029,7 +1029,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>33FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 							</control>
 							<control type="label">
 								<left>10</left>
@@ -1060,7 +1060,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -1081,7 +1081,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -1112,7 +1112,7 @@
 								<top>0</top>
 								<width>1100</width>
 								<height>101</height>
-								<texture border="5">PVR-GreyNF.png</texture>
+								<texture border="5">pvr/PVR-GreyNF.png</texture>
 							</control>
 							<control type="image">
 								<left>0</left>
@@ -1120,7 +1120,7 @@
 								<width>300</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(13)</visible>
 							</control>
 							<control type="image">
@@ -1129,7 +1129,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>AAFFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>!Control.HasFocus(13)</visible>
 							</control>
 							<control type="image">
@@ -1138,7 +1138,7 @@
 								<width>300</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(13)</visible>
 							</control>
 							<control type="image">
@@ -1147,7 +1147,7 @@
 								<width>140</width>
 								<height>40</height>
 								<colordiffuse>88FFFFFF</colordiffuse>
-								<texture border="5">PVR-Button.png</texture>
+								<texture border="5">pvr/PVR-Button.png</texture>
 								<visible>Control.HasFocus(13)</visible>
 							</control>
 							<control type="label">
@@ -1179,7 +1179,7 @@
 								<top>10</top>
 								<width>30</width>
 								<height>20</height>
-								<texture>PVR-IsRecording.png</texture>
+								<texture>pvr/PVR-IsRecording.png</texture>
 								<visible>ListItem.IsRecording</visible>
 							</control>
 							<control type="label">
@@ -1200,7 +1200,7 @@
 								<top>10</top>
 								<width>20</width>
 								<height>20</height>
-								<texture>PVR-HasTimer.png</texture>
+								<texture>pvr/PVR-HasTimer.png</texture>
 								<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
 							</control>
 							<control type="label">

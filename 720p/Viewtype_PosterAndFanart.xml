@@ -9,7 +9,7 @@
 				<posx>-100</posx>
 				<posy>40</posy>
 				<height>500</height>
-				<width>1500</width>				
+				<width>1500</width>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 				<ondown>60</ondown>
 				<onleft>550</onleft>
@@ -26,38 +26,37 @@
 				<itemlayout width="260" height="420">
 					<control type="group">
 						<posx>-30</posx>
-						<posy>9</posy>
+						<posy>10</posy>
 						<!-- Unfocused Item - Poster -->
 						<control type="image">
-							<posx>20</posx>
-							<posy>21</posy>
-							<width>236</width>
-							<height>362</height>
+							<posx>21</posx>
+							<posy>24</posy>
+							<width>238</width>
+							<height>359</height>
 							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="image">
-							<posx>20</posx>
-							<posy>21</posy>
-							<width>236</width>
-							<height>362</height>
+							<posx>21</posx>
+							<posy>24</posy>
+							<width>238</width>
+							<height>359</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
 						</control>
 						<!-- Unfocused Item - Frame -->
 						<control type="image">
-							<posx>20</posx>
-							<posy>21</posy>
-							<width>236</width>
-							<height>362</height>
+							<posx>21</posx>
+							<posy>24</posy>
+							<width>238</width>
+							<height>359</height>
 							<texture>frames/ClassicFrameGlass_Vertical.png</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>GlassDiffuse</colordiffuse>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
-						<!-- Unfocused Item - Frame -->
 						<control type="image">
 							<width>285</width>
 							<height>408</height>
@@ -67,8 +66,8 @@
 						</control>
 						<!-- Unfocused Item - Watched Overlay -->
 						<control type="image">
-							<posx>220</posx>
-							<posy>341</posy>
+							<posx>216</posx>
+							<posy>340</posy>
 							<width>32</width>
 							<height>32</height>
 							<fadetime>400</fadetime>
@@ -78,8 +77,8 @@
 						</control>
 						<!-- Unfocused Item - Watched Overlay for In-Progress Items -->
 						<control type="image">
-							<posx>216</posx>
-							<posy>336</posy>
+							<posx>214</posx>
+							<posy>338</posy>
 							<width>43</width>
 							<height>43</height>
 							<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
@@ -96,37 +95,37 @@
 						</animation>
 						<!-- Focused Item - Poster -->
 						<control type="image">
-							<posx>13</posx>
-							<posy>29</posy>
-							<width>290</width>
-							<height>443</height>
+							<posx>12</posx>
+							<posy>32</posy>
+							<width>286</width>
+							<height>432</height>
 							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<control type="image">
-							<posx>13</posx>
-							<posy>29</posy>
-							<width>290</width>
-							<height>443</height>
+							<posx>12</posx>
+							<posy>32</posy>
+							<width>286</width>
+							<height>432</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<visible>IsEmpty(ListItem.Title)</visible>
 						</control>
 						<!-- Focused Item - Poster Frame -->
 						<control type="image">
-							<posx>-2</posx>
+							<posx>-5</posx>
 							<posy>8</posy>
 							<width>321</width>
-							<height>485</height>
+							<height>480</height>
 							<texture>frames/ClassicFrame_PosterMedium.png</texture>
 							<aspectratio>stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title)</visible>
 						</control>
 						<!-- Focused Item - Watched Overlay -->
 						<control type="image">
-							<posx>260</posx>
-							<posy>425</posy>
+							<posx>257</posx>
+							<posy>422</posy>
 							<width>32</width>
 							<height>32</height>
 							<fadetime>400</fadetime>
@@ -136,11 +135,11 @@
 								<effect type="fade" start="0" end="100" time="300" />
 							</animation>
 							<visible>!ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
-						</control>						
+						</control>
 						<!-- Focused Item - Watched Overlay for In-Progress Items -->
 						<control type="image">
-							<posx>256</posx>
-							<posy>420</posy>
+							<posx>253</posx>
+							<posy>418</posy>
 							<width>43</width>
 							<height>43</height>
 							<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
@@ -176,7 +175,7 @@
 							<visible>!IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
 						<control type="image">
-							<posx>23</posx>
+							<posx>25</posx>
 							<posy>21</posy>
 							<width>646</width>
 							<height>362</height>
@@ -185,7 +184,7 @@
 							<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
 						<control type="image">
-							<posx>23</posx>
+							<posx>25</posx>
 							<posy>21</posy>
 							<width>646</width>
 							<height>362</height>
@@ -201,7 +200,7 @@
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>!IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
-						<!-- Focused Item Normal Fanart Frame -->						
+						<!-- Focused Item Normal Fanart Frame -->
 						<control type="image">
 							<width>700</width>
 							<height>410</height>

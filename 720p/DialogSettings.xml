@@ -74,8 +74,6 @@
 				<radioheight>30</radioheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
 				<texturenofocus>-</texturenofocus>
-				<textureradiofocus>keyboard/RadioButtonFO.png</textureradiofocus>
-				<textureradionofocus>keyboard/RadioButtonNF.png</textureradionofocus>
 				<textoffsetx>20</textoffsetx>
 				<pulseonselect>false</pulseonselect>
 			</control>

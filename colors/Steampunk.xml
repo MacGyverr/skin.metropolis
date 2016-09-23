@@ -60,7 +60,7 @@
 	<color name="BulletDiffuse">ccFFFFFF</color>
 	<color name="ArrowDiffuse">FFc89008</color>
 	<color name="BannerFrameNF">eec89008</color>
-	<color name="GlassDiffuse">00FFFFFF</color>
+	<color name="GlassDiffuse">89FFFFFF</color>
 	<color name="FocusBar">89a80808</color>
 	<color name="FocusBarText">eeFFFFFF</color>
 

@@ -52,10 +52,10 @@
 						<visible>!Container.Content(musicvideos) | Skin.HasSetting(CropMVGalleryIcon)</visible>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>2</posy>
-						<width>195</width>
-						<height>197</height>
+						<posx>6</posx>
+						<posy>4</posy>
+						<width>192</width>
+						<height>195</height>
 						<texture>frames/ClassicFrame_SquareSmall.png</texture>
 						<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 					</control>
@@ -92,10 +92,10 @@
 						<visible>!Container.Content(musicvideos) | Skin.HasSetting(CropMVGalleryIcon)</visible>
 						</control>
 						<control type="image">
-							<posx>5</posx>
-							<posy>2</posy>
-							<width>195</width>
-							<height>197</height>
+							<posx>6</posx>
+							<posy>4</posy>
+							<width>192</width>
+							<height>195</height>
 							<texture>frames/ClassicFrame_SquareSmall.png</texture>
 							<visible>!StringCompare(ListItem.Icon,-) + [!SubString(ListItem.Icon,default,Left) | SubString(ListItem.Icon,defaultalbumcover,Left)] + !IsEmpty(ListItem.Icon)</visible>
 						</control>

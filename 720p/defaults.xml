@@ -37,12 +37,14 @@
 		<disabledcolor>TextDisabled</disabledcolor>
 		<radiowidth>30</radiowidth>
 		<radioheight>30</radioheight>
-		<texturenofocus border="2">keyboard/ButtonNF.png</texturenofocus>
 		<texturefocus border="5">keyboard/ButtonFO.png</texturefocus>
-		<textureradiofocus>keyboard/RadioButtonFO.png</textureradiofocus>
-		<textureradionofocus>keyboard/RadioButtonNF.png</textureradionofocus>
-		<textureradioondisabled colordiffuse="40FFFFFF">keyboard/RadioButtonFO.png</textureradioondisabled>
-		<textureradiooffdisabled colordiffuse="40FFFFFF">keyboard/RadioButtonNF.png</textureradiooffdisabled>
+		<texturenofocus border="2">keyboard/ButtonNF.png</texturenofocus>
+		<textureradioonfocus>buttons/button_radio_circle_on.png</textureradioonfocus>
+		<textureradioonnofocus>buttons/button_radio_circle_on.png</textureradioonnofocus>
+		<textureradioofffocus>buttons/button_radio_circle_off.png</textureradioofffocus>
+		<textureradiooffnofocus>buttons/button_radio_circle_off.png</textureradiooffnofocus>
+		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_circle_on.png</textureradioondisabled>
+		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_circle_off.png</textureradiooffdisabled>
 		<textoffsetx>20</textoffsetx>
 		<pulseonselect>false</pulseonselect>
 	</default>

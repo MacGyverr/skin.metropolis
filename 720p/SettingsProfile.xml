@@ -32,15 +32,19 @@
 				<aligny>center</aligny>
 				<radiowidth>80</radiowidth>
 				<radioheight>55</radioheight>
-				<textureradiofocus>buttons/button_radioFO.png</textureradiofocus>
-				<textureradionofocus>buttons/button_radioNF.png</textureradionofocus>
+				<texturefocus>-</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
+				<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
+				<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
+				<textureradiooffnofocus>buttons/button_radio_off.png</textureradiooffnofocus>
+				<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_on.png</textureradioondisabled>
+				<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_off.png</textureradiooffdisabled>
 				<font>METF_ContextValue</font>
 				<textcolor>ButtonText</textcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 				<focusedcolor>ButtonText</focusedcolor>
-				<texturefocus>-</texturefocus>
 				<selectedcolor>TextFO</selectedcolor>
-				<texturenofocus>-</texturenofocus>
 				<pulseonselect>false</pulseonselect>
 				<label>$LOCALIZE[20096]</label>
 			</control>
