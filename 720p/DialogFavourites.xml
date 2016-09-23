@@ -8,10 +8,10 @@
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<description>Icon Image</description>
-				<posx>70</posx>
+				<posx>50</posx>
 				<posy>126</posy>
-				<width>260</width>
-				<height>260</height>
+				<width>300</width>
+				<height>300</height>
 				<texture fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
 				<bordersize>4</bordersize>
