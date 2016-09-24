@@ -660,59 +660,81 @@
 					<texture fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
 					<visible>[Window.IsActive(music) | [Window.IsActive(videos) + SubString(Container.FolderPath,videodb://musicvideos/)]] + Container.Content(genres)</visible>
 				</control>
-			<!-- Retroplayer Thumbnails (note that is really ugly, it will always display the default icon, then overlay a png over that, then overlay a jpg over that, but there exists no other way to do it yet without library support for games) -->
-				<control type="image">
-					<posx>37</posx>
-					<posy>45</posy>
-					<width>300</width>
-					<height>440</height>
-					<fadetime>100</fadetime>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture fallback="DefaultAddonGame.png">$INFO[ListItem.FolderPath]poster.png</texture>
-					<visible>IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-				</control>
-				<control type="image">
-					<posx>37</posx>
-					<posy>45</posy>
-					<width>300</width>
-					<height>440</height>
-					<fadetime>100</fadetime>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.Icon]</texture>
-					<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-				</control>
-				<control type="image">
-					<posx>37</posx>
-					<posy>45</posy>
-					<width>300</width>
-					<height>440</height>
-					<fadetime>100</fadetime>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.FileNameAndPath].png</texture>
-					<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-				</control>
-				<control type="image">
-					<posx>37</posx>
-					<posy>45</posy>
-					<width>300</width>
-					<height>440</height>
-					<fadetime>100</fadetime>
-					<aspectratio align="right" aligny="center">keep</aspectratio>
-					<texture>$INFO[ListItem.FileNameAndPath].jpg</texture>
-					<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-				</control>
-				<!-- used for testing labels 
-				<control type="label">
-					<posx>37</posx>
-					<posy>505</posy>
-					<width>1250</width>
-					<height>27</height>
-					<align>left</align>
-					<label>$INFO[ListItem.FileName] $INFO[ListItem.Path] $INFO[ListItem.FolderName] $INFO[ListItem.FolderPath] $INFO[ListItem.FileExtension] $INFO[ListItem.FileNameAndPath] </label>
-					<font>METF_DialogVerySmall</font>
-					<textcolor>MediaDetailsInfo</textcolor>
+				<!-- Retroplayer Posters (note that this is really ugly (and temporary), it will always display the default icon, then overlay a png over that, then overlay a jpg over that, but there exists no other way to do it yet without library support for games) -->
+				<control type="group">
 					<visible>Window.IsActive(games)</visible>
-				</control> -->
+					<posx>20</posx>
+					<posy>65</posy>
+					<control type="image">
+						<posx>17</posx>
+						<posy>15</posy>
+						<width>300</width>
+						<height>440</height>
+						<texture>frames/ClassicFrame_Background.png</texture>
+						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+						<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>15</posy>
+						<width>300</width>
+						<height>440</height>
+						<fadetime>100</fadetime>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
+						<texture background="true" fallback="DefaultAddonGame.png">$INFO[ListItem.FolderPath]poster.png</texture>
+						<visible>IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>15</posy>
+						<width>300</width>
+						<height>440</height>
+						<fadetime>100</fadetime>
+						<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>15</posy>
+						<width>300</width>
+						<height>440</height>
+						<fadetime>100</fadetime>
+						<texture>$INFO[ListItem.FileNameAndPath].png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>15</posy>
+						<width>300</width>
+						<height>440</height>
+						<fadetime>100</fadetime>
+						<texture>$INFO[ListItem.FileNameAndPath].jpg</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>-10</posy>
+						<width>335</width>
+						<height>490</height>
+						<texture>frames/ClassicFrame_PosterMedium.png</texture>
+						<visible>!IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<!-- used for testing labels 
+					<control type="label">
+						<posx>37</posx>
+						<posy>505</posy>
+						<width>1250</width>
+						<height>27</height>
+						<align>left</align>
+						<label>$INFO[ListItem.FileName] $INFO[ListItem.Path] $INFO[ListItem.FolderName] $INFO[ListItem.FolderPath] $INFO[ListItem.FileExtension] $INFO[ListItem.FileNameAndPath] </label>
+						<font>METF_DialogVerySmall</font>
+						<textcolor>MediaDetailsInfo</textcolor>
+						<visible>Window.IsActive(games)</visible>
+					</control> -->
+				</control>
 			</control>
 			<!-- Info Details -->
 			<control type="group">
