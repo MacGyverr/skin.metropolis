@@ -30,7 +30,7 @@
 				<textcolor>DialogTextFO</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="textbox" id="9">
 				<posx>50</posx>
@@ -41,7 +41,7 @@
 				<textcolor>LowerText</textcolor>
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
-				<label>-</label>
+				<label></label>
 				<align>left</align>
 			</control>
 			<control type="progress" id="20">

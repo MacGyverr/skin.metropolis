@@ -504,7 +504,7 @@
 						<width>300</width>
 						<height>440</height>
 						<fadetime>100</fadetime>
-						<texture background="true" diffuse="frames/poster_matte.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 						<visible>IsEmpty(ListItem.Title)</visible>
 					</control>
@@ -773,7 +773,7 @@
 				<width>22</width>
 				<height>376</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>997</onleft>

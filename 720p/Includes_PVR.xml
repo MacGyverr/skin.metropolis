@@ -13,7 +13,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>$LOCALIZE[19019]</label>
 			<onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
 			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
@@ -31,7 +31,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>$LOCALIZE[22020]</label>
 			<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
 			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
@@ -49,7 +49,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>$LOCALIZE[19163]</label>
 			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
@@ -66,7 +66,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>$LOCALIZE[19040]</label>
 			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
@@ -83,7 +83,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>$LOCALIZE[137]</label>
 			<onclick condition="IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 			<onclick condition="!IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
@@ -97,7 +97,7 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<include>Animation_HiddenByInfo</include>
-			<label>-</label>
+			<label></label>
 		</control>
 		<control type="label" id="201">
 			<description>View Options</description>
@@ -122,8 +122,8 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<label>-</label>
+			<texturenofocus></texturenofocus>
+			<label></label>
 		</control>
 		<control type="radiobutton" id="5">
 			<description>Group recording items by folder structure</description>
@@ -136,7 +136,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>19270</label>
 			<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 		</control>
@@ -152,8 +152,8 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<label>-</label>
+			<texturenofocus></texturenofocus>
+			<label></label>
 			<visible>Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)</visible>
 		</control>
 		<control type="button" id="3">
@@ -168,7 +168,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>103</label>
 		</control>
 		<control type="togglebutton" id="4">
@@ -182,8 +182,8 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<alttexturenofocus border="2">-</alttexturenofocus>
+			<texturenofocus></texturenofocus>
+			<alttexturenofocus border="2"></alttexturenofocus>
 			<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
 			<aligny>center</aligny>
 			<pulseonselect>false</pulseonselect>
@@ -202,7 +202,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>587</label>
 			<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 		</control>		
@@ -217,7 +217,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>19051</label>
 			<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
 		</control>
@@ -232,7 +232,7 @@
 			<focusedcolor>DialogTextFO</focusedcolor>
 			<disabledcolor>TextDisabled</disabledcolor>
 			<texturefocus>ButtonFO2Wide.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturenofocus></texturenofocus>
 			<label>19184</label>
 			<visible>Window.IsActive(TVRecordings) | Window.IsActive(RadioRecordings)</visible>
 		</control>

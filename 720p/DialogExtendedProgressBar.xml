@@ -19,8 +19,8 @@
 			<posy>-10</posy>
 			<height>1</height>
 			<width>1</width>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<onfocus>Skin.SetBool(LibraryUpdated)</onfocus>
 		</control>
 		<control type="image">
@@ -81,7 +81,7 @@
 				<width min="25" max="835">auto</width>
 				<height>30</height>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 				<font>METF_DialogSmallBold</font>
 				<textcolor>TextNF</textcolor>
 			</control>

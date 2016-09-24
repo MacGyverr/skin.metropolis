@@ -17,10 +17,10 @@
 				<top>0</top>
 				<width>20</width>
 				<height>720</height>
-				<label>-</label>
-				<font>-</font>
-				<texturenofocus>-</texturenofocus>
-				<texturefocus>-</texturefocus>
+				<label></label>
+				<font></font>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
 				<visible>true</visible>
 			</control>
 			<control type="image">
@@ -38,8 +38,8 @@
 				<top>0</top>
 				<width>64</width>
 				<height>32</height>
-				<label>-</label>
-				<font>-</font>
+				<label></label>
+				<font></font>
 				<onclick>PreviousMenu</onclick>
 				<texturefocus>subtitles/DialogCloseButton-focus.png</texturefocus>
 				<texturenofocus>subtitles/DialogCloseButton.png</texturenofocus>

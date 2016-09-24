@@ -1,3 +1,21 @@
+3.4.0 - 20160923
+- Required changes for Kodi 17 (Krypton).
+- Adjustable row height for Banner View.
+- Adjust frames alignment and size.
+- Clean up PVR views.
+- Make Leather theme darker.
+- Speed up widget display.
+- Clean up Navigation Menus.
+- Use default widgets from SkinShortcuts/SkinHelper.
+- Show numeric position in lists.
+- Add Breadcrumbs to Global Heading.
+- Restore background fanart for addons.
+- Fix visual glitches in progress bars.
+- Fix Media Overlay text overlapping Media Flags.
+- Support for Videos in Panel Square view.
+- Add screenshots to DialogAddonInfo.
+- Add addon size to DialogAddonInfo.
+
 3.3.2 - 20160831
 - New default backgrounds.
 - Consistently omit frame around unknown media.

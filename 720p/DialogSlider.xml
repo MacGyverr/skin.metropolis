@@ -19,7 +19,7 @@
 				<posy>30</posy>
 				<width>500</width>
 				<height>44</height>
-				<label>-</label>
+				<label></label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>METF_Menu</font>
@@ -34,7 +34,7 @@
 				<posy>80</posy>
 				<width>500</width>
 				<height>44</height>
-				<label>-</label>
+				<label></label>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_DialogLarge</font>
@@ -53,8 +53,8 @@
 				<ondown>noop</ondown>
 				<onleft>11</onleft>
 				<onright>11</onright>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 				<texturesliderbar>osd/slider_bg2.png</texturesliderbar>
 				<textureslidernib border="2">osd/slider_nib_nf.png</textureslidernib>
 				<textureslidernibfocus border="2">osd/slider_nib_fo.png</textureslidernibfocus>

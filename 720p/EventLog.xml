@@ -148,7 +148,7 @@
 				<width>22</width>
 				<height>376</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>570</onleft>
@@ -193,13 +193,13 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<label>-</label>
+					<label></label>
 					<textoffsetx>20</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="radiobutton" id="22">
@@ -208,13 +208,13 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<label>-</label>
+					<label></label>
 					<textoffsetx>20</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="20">
 					<description>Clear button</description>
@@ -229,7 +229,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 			</control>

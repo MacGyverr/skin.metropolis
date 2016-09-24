@@ -157,7 +157,7 @@
 					<posy>30</posy>
 					<width>25</width>
 					<height>466</height>
-					<texturesliderbackground>-</texturesliderbackground>
+					<texturesliderbackground></texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
 					<showonepage>false</showonepage>

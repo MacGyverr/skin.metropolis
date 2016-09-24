@@ -67,9 +67,9 @@
 				<align>right</align>
 				<aligny>center</aligny>
 				<texturefocus>ButtonFO.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<alttexturefocus>ButtonFO.png</alttexturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
+				<alttexturenofocus></alttexturenofocus>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="sliderex" id="13">
@@ -103,7 +103,7 @@
 				<aligny>center</aligny>
 				<font>METF_ContextValue</font>
 				<textcolor>SettingsDetail</textcolor>
-				<label>-</label>
+				<label></label>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>

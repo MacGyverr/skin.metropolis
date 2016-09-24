@@ -32,7 +32,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="21">
 					<description>Save</description>
@@ -47,7 +47,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="22">
@@ -63,7 +63,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="23">
@@ -79,7 +79,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="26">
@@ -95,7 +95,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<include>NavMenuListPlaying</include>

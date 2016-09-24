@@ -32,8 +32,8 @@
 				<aligny>center</aligny>
 				<radiowidth>80</radiowidth>
 				<radioheight>55</radioheight>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 				<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
 				<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
 				<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
@@ -65,7 +65,7 @@
 				<focusedcolor>ButtonText</focusedcolor>
 				<texturefocus>ButtonFO.png</texturefocus>
 				<selectedcolor>TextFO</selectedcolor>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<label>$LOCALIZE[31444]</label>
 				<enable>!System.HasLoginScreen</enable>
 			</control>

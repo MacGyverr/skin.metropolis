@@ -40,7 +40,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(addonbrowser, addons://more/executable/, return)</onclick>
 					<visible>Container.Content(addons)</visible>

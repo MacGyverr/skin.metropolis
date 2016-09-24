@@ -35,7 +35,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<control type="radiobutton" id="8">
 					<description>Hide broken</description>
@@ -49,7 +49,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="9">
 					<description>Check for updates</description>
@@ -64,7 +64,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="5">
 					<description>Settings</description>
@@ -79,7 +79,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 				</control>
 				<include>NavMenuListPlaying</include>
 			</control>

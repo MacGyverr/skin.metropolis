@@ -27,7 +27,7 @@
 				<aligny>center</aligny>
 				<font>METF_SettingsHeading</font>
 				<textcolor>DialogTextFO</textcolor>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
@@ -50,13 +50,13 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_DialogLarge</font>
-				<label>-</label>
+				<label></label>
 				<textoffsetx>20</textoffsetx>
 				<textcolor>TextNF</textcolor>
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<pulseonselect>false</pulseonselect>
 			</control>
 			<control type="radiobutton" id="8">
@@ -66,14 +66,14 @@
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_DialogLarge</font>
-				<label>-</label>
+				<label></label>
 				<textcolor>TextNF</textcolor>
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 				<radiowidth>30</radiowidth>
 				<radioheight>30</radioheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<textoffsetx>20</textoffsetx>
 				<pulseonselect>false</pulseonselect>
 			</control>
@@ -83,7 +83,7 @@
 				<height>40</height>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 				<font>METF_DialogLarge</font>
 				<textoffsetx>20</textoffsetx>
 				<textcolor>TextNF</textcolor>
@@ -93,7 +93,7 @@
 				<spinwidth>26</spinwidth>
 				<spinheight>26</spinheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<textureup>ArrowUpNF.png</textureup>
 				<texturedown>ArrowDownNF.png</texturedown>
 				<textureupfocus>ArrowUpFO.png</textureupfocus>
@@ -108,7 +108,7 @@
 				<width>620</width>
 				<height>120</height>
 				<align>left</align>
-				<label>-</label>
+				<label></label>
 				<include>SettingsLabel</include>
 			</control>
 			<control type="sliderex" id="13">
@@ -125,7 +125,7 @@
 				<sliderwidth>150</sliderwidth>
 				<sliderheight>15</sliderheight>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<texturesliderbar>osd/slider_bg.png</texturesliderbar>
 				<textureslidernib border="2">osd/slider_nib_nf.png</textureslidernib>
 				<textureslidernibfocus border="2">osd/slider_nib_fo.png</textureslidernibfocus>
@@ -139,7 +139,7 @@
 				<aligny>center</aligny>
 				<font>METF_DialogLarge</font>
 				<textcolor>DialogTextFO</textcolor>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
@@ -162,7 +162,7 @@
 					<selectedcolor>DialogTextFO</selectedcolor>
 					<texturefocus>ButtonFO2.png</texturefocus>
 					<pulseonselect>false</pulseonselect>
-					<label>-</label>
+					<label></label>
 					<onleft>30</onleft>
 					<onright>29</onright>
 					<onup>5</onup>
@@ -183,7 +183,7 @@
 					<selectedcolor>DialogTextFO</selectedcolor>
 					<texturefocus>ButtonFO2.png</texturefocus>
 					<pulseonselect>false</pulseonselect>
-					<label>-</label>
+					<label></label>
 					<onleft>28</onleft>
 					<onright>30</onright>
 					<onup>5</onup>

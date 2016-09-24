@@ -19,7 +19,7 @@
 				<textcolor>SettingsDetail</textcolor>
 				<align>right</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="image">
 				<posx>440</posx>
@@ -181,7 +181,7 @@
 			<width>18</width>
 			<height>400</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(3) + Control.HasFocus(60)</visible>
-			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbackground></texturesliderbackground>
 			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onleft>3</onleft>
 			<onright>noop</onright>
@@ -195,7 +195,7 @@
 			<width>18</width>
 			<height>450</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(6) + Control.HasFocus(61)</visible>
-			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbackground></texturesliderbackground>
 			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 			<onleft>6</onleft>
 			<onright>noop</onright>
@@ -226,7 +226,7 @@
 			<onright condition="!Control.IsVisible(6)">3</onright>
 			<onup>5</onup>
 			<ondown>5</ondown>
-			<label>-</label>
+			<label></label>
 		</control>
 		<include>Global_ContextFilter</include>
 		<include>Global_Weather</include>

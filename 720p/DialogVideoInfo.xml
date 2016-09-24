@@ -5,20 +5,20 @@
 	<defaultcontrol always="true">7003</defaultcontrol>
 	<controls>
 		<control type="button" id="7050">
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<onfocus>SendClick(MovieInformation,5)</onfocus>
 			<onfocus>SetFocus(7003)</onfocus>
 		</control>
 		<control type="button" id="7051">
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<onfocus>SendClick(MovieInformation,5)</onfocus>
 			<onfocus>SetFocus(300)</onfocus>
 		</control>
 		<control type="button" id="5">
-			<label>-</label>
-			<font>-</font>
+			<label></label>
+			<font></font>
 			<onfocus>SetFocus(50)</onfocus>
 		</control>
 		<control type="group">
@@ -133,7 +133,7 @@
 				<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>MediaFlagDiffuse</colordiffuse>
-				<visible>!Skin.HasSetting(ShowVideoPath) + !IsEmpty(ListItem.UserRating)</visible>
+				<visible>!Skin.HasSetting(ShowVideoPath) + !IsEmpty(ListItem.UserRating) + [!Skin.HasSetting(NextAired) | IsEmpty(Window(Home).Property(NextAired.NextDate))]</visible>
 			</control>
 			<control type="image">
 				<posx>-8</posx>
@@ -144,7 +144,7 @@
 				<texture>flags/Rating10/rating0.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<colordiffuse>MediaFlagDiffuse</colordiffuse>
-				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + IsEmpty(ListItem.mpaa)</visible>
+				<visible>!Skin.HasSetting(ShowVideoPath) + IsEmpty(ListItem.UserRating) + IsEmpty(ListItem.mpaa) + [!Skin.HasSetting(NextAired) | IsEmpty(Window(Home).Property(NextAired.NextDate))]</visible>
 			</control>
 			<!-- MPAA Long Description -->
 			<control type="textbox">
@@ -347,7 +347,7 @@
 				<ondown>50</ondown>
 				<viewtype label="">list</viewtype>
 				<visible>!Control.HasFocus(300) + !Control.HasFocus(7003) + !Control.HasFocus(7050) + !Control.HasFocus(7051)</visible>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
 				<itemlayout height="24" width="515">

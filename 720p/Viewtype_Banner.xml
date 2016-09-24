@@ -42,7 +42,7 @@
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
 				<ondown>511</ondown>
 				<onup>511</onup>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<orientation>vertical</orientation>
 				<preloaditems>2</preloaditems>
 				<scrolltime>200</scrolltime>

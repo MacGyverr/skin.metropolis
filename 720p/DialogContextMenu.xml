@@ -37,8 +37,6 @@
 			<description>button template</description>
 			<onleft>Dialog.Close(contextmenu)</onleft>
 			<onright>Dialog.Close(contextmenu)</onright>
-			<left>-</left>
-			<top>-</top>
 			<width>340</width>
 			<height>35</height>
 			<font>METF_DialogLarge</font>

@@ -34,10 +34,10 @@
 			<posy>-20</posy>
 			<width>1</width>
 			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<label></label>
+			<font></font>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<onup>9000</onup>

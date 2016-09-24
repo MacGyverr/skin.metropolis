@@ -40,7 +40,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(addonbrowser, addons://more/image/, return)</onclick>
 					<visible>Container.Content(addons)</visible>
@@ -58,7 +58,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<visible>!ListItem.IsFolder + !SubString(Container.FolderPath,plugin)</visible>
 				</control>
@@ -75,7 +75,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<visible>ListItem.IsFolder + !SubString(Container.FolderPath,plugin)</visible>
 				</control>
@@ -91,7 +91,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<visible>!SubString(Container.FolderPath,plugin)</visible>
 				</control>
 				<include>NavMenuListPlaying</include>

@@ -56,27 +56,17 @@
 		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
 		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
 	</variable>
-	<variable name="GlobalSearchFanart">
-		<value condition="Control.HasFocus(111)">$INFO[Container(111).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(121)">$INFO[Container(121).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(131)">$INFO[Container(131).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(141)">$INFO[Container(141).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(151)">$INFO[Container(151).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(161)">$INFO[Container(161).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(171)">$INFO[Container(171).ListItem.Property(Fanart_Image)]</value>
-		<value condition="Control.HasFocus(181)">$INFO[Container(181).ListItem.Property(Fanart_Image)]</value>
-	</variable>
 	<variable name="GlobalFanart">
 		<value condition="Window.IsActive(pictures) + IsEmpty(ListItem.Art(fanart)) + [StringCompare(ListItem.FileExtension,png) | StringCompare(ListItem.FileExtension,jpg) | StringCompare(ListItem.FileExtension,jpeg) | StringCompare(ListItem.FileExtension,bmp) | StringCompare(ListItem.FileExtension,gif) | StringCompare(ListItem.FileExtension,ico) | StringCompare(ListItem.FileExtension,tif) | StringCompare(ListItem.FileExtension,tiff) | StringCompare(ListItem.FileExtension,tga) | StringCompare(ListItem.FileExtension,pcx) | StringCompare(ListItem.FileExtension,cbz) | StringCompare(ListItem.FileExtension,zip) | StringCompare(ListItem.FileExtension,cbr) | StringCompare(ListItem.FileExtension,rar) | StringCompare(ListItem.FileExtension,m3u)]">$INFO[listitem.filenameandpath]</value>
 		<value>$INFO[ListItem.Art(fanart)]</value>
 	</variable>
 	<variable name="GlobalExtraFanart">
 		<!-- XXX: This is such a kludge.  It sucks having to see the first image first all the time -->
-		<value condition="!IsEmpty(ListItem.Art(fanart)) + !System.IdleTime(5)">-</value>
+		<value condition="!IsEmpty(ListItem.Art(fanart)) + !System.IdleTime(5)"></value>
 		<value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !IsEmpty(Window(Home).Property(SkinHelper.ExtraFanArtPath))">$INFO[Window(Home).Property(SkinHelper.ExtraFanArtPath)]</value>
 		<value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !IsEmpty(Window(Home).Property(SkinHelper.Music.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.Music.ExtraFanArt)]</value>
 		<value condition="Skin.HasSetting(SkinHelper.EnableExtraFanart) + !IsEmpty(Window(Home).Property(SkinHelper.PVR.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.ExtraFanArt)]</value>
-		<value>-</value>
+		<value></value>
 	</variable>
 	<variable name="GlobalFanartDiffuse">
 		<value condition="Skin.HasSetting(GlobalFanartLight)">FanartDiffuseLight</value>
@@ -419,12 +409,12 @@
 		<value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,NC-17)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,NC-17)]">flags/MPAA/mpaa_nc17.png</value>
 		<value condition="[!IsEmpty(ListItem.mpaa) + StringCompare(ListItem.mpaa,G)] | [IsEmpty(ListItem.mpaa) + StringCompare(VideoPlayer.mpaa,G)]">flags/MPAA/mpaa_general.png</value>
 		<!-- US (TV) -->
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-14,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-14,Left)]">flags/MPAA/TV-14.png</value>
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-G,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-G,Left)]">flags/MPAA/TV-G.png</value>
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-MA,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-MA,Left)]">flags/MPAA/TV-MA.png</value>
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-PG,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-PG,Left)]">flags/MPAA/TV-PG.png</value>
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-Y7,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-Y7,Left)]">flags/MPAA/TV-Y7.png</value>
-		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated TV-Y,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated TV-Y,Left)]">flags/MPAA/TV-Y.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-14,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-14,Right)]">flags/MPAA/TV-14.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-G,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-G,Right)]">flags/MPAA/TV-G.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-MA,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-MA,Right)]">flags/MPAA/TV-MA.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-PG,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-PG,Right)]">flags/MPAA/TV-PG.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y7,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-Y7,Right)]">flags/MPAA/TV-Y7.png</value>
+		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,TV-Y,Right)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,TV-Y,Right)]">flags/MPAA/TV-Y.png</value>
 		<!-- Germany -->
 		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:0)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:0)]">flags/MPAA/germany_0.png</value>
 		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Germany:6)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Germany:6)]">flags/MPAA/germany_6.png</value>

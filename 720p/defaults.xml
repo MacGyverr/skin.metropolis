@@ -31,7 +31,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>METF_ContextValue</font>
-		<label>-</label>
+		<label></label>
 		<textcolor>TextNF</textcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
@@ -71,7 +71,7 @@
 		<lefttexture>osd/osd_progress_left.png</lefttexture>
 		<midtexture>osd/osd_progress_mid.png</midtexture>
 		<righttexture>osd/osd_progress_right.png</righttexture>
-		<overlaytexture>-</overlaytexture>
+		<overlaytexture></overlaytexture>
 		<colordiffuse>DialogProgressBar</colordiffuse>
 	</default>
 </includes>

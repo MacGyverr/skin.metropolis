@@ -19,7 +19,7 @@
 				<textcolor>SettingsTitle</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 
 			<control type="button" id="21">
@@ -92,7 +92,7 @@
 				<height>38</height>
 				<align>right</align>
 				<include>SettingsLabel</include>
-				<label>-</label>
+				<label></label>
 				<onup>22</onup>
 				<onleft>20</onleft>
 				<onright>noop</onright>
@@ -264,9 +264,9 @@
 				<onleft>18</onleft>
 				<onup>17</onup>
 				<ondown>23</ondown>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<texturefocus>ButtonFO.png</texturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
+				<alttexturenofocus></alttexturenofocus>
 				<alttexturefocus>ButtonFO.png</alttexturefocus>
 			</control>
 			<control type="spincontrolex" id="23">
@@ -291,9 +291,9 @@
 				<onleft>23</onleft>
 				<onup>18</onup>
 				<ondown>22</ondown>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<texturefocus>ButtonFO.png</texturefocus>
-				<alttexturenofocus>-</alttexturenofocus>
+				<alttexturenofocus></alttexturenofocus>
 				<alttexturefocus>ButtonFO.png</alttexturefocus>
 			</control>
 			<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>

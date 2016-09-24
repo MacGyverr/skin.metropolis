@@ -25,7 +25,7 @@
 				<textcolor>SettingsTitle</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label>-</label>
+				<label></label>
 			</control>
 			<control type="grouplist" id="2">
 				<description>Control Area</description>

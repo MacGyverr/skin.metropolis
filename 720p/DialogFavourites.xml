@@ -74,7 +74,7 @@
 				<width>22</width>
 				<height>376</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<onleft>450</onleft>

@@ -62,7 +62,7 @@
 				<height>422</height>
 				<onleft>13</onleft>
 				<onright>11</onright>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -145,7 +145,7 @@
 				<height>422</height>
 				<onleft>11</onleft>
 				<onright>12</onright>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -232,7 +232,7 @@
 				<height>422</height>
 				<onleft>12</onleft>
 				<onright>29</onright>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
@@ -278,7 +278,7 @@
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
 				<texturefocus>ButtonFO2Wide.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<texturenofocus></texturenofocus>
 				<label>19289</label>
 			</control>
 		</control>

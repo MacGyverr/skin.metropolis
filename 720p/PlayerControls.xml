@@ -44,7 +44,7 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_prev_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_prev_nf.png</texturenofocus>
 				<onclick>PlayerControl(Previous)</onclick>
@@ -59,7 +59,7 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_rew_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_rew_nf.png</texturenofocus>
 				<onclick>PlayerControl(rewind)</onclick>
@@ -74,14 +74,14 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_pause_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_pause_nf.png</texturenofocus>
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<alttexturefocus border="2">osd/osd_button_play_fo.png</alttexturefocus>
 				<alttexturenofocus border="2">osd/osd_button_play_nf.png</alttexturenofocus>
-				<disabledcolor>-</disabledcolor>
-				<colordiffuse>-</colordiffuse>
+				<disabledcolor></disabledcolor>
+				<colordiffuse></colordiffuse>
 				<onclick>PlayerControl(play)</onclick>
 			</control>
 			<control type="button" id="405">
@@ -94,7 +94,7 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_stop_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_stop_nf.png</texturenofocus>
 				<onclick>PlayerControl(stop)</onclick>
@@ -109,7 +109,7 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_ff_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_ff_nf.png</texturenofocus>
 				<onclick>PlayerControl(forward)</onclick>
@@ -124,7 +124,7 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_next_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_next_nf.png</texturenofocus>
 				<onclick>PlayerControl(Next)</onclick>
@@ -139,9 +139,9 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
-				<texturefocus>-</texturefocus>
-				<texturenofocus>-</texturenofocus>
+				<label></label>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
 				<onclick>PlayerControl(repeat)</onclick>
 			</control>
 			<control type="image">
@@ -208,14 +208,14 @@
 				<ondown>Dialog.Close(PlayerControls)</ondown>
 				<height>46</height>
 				<width>46</width>
-				<label>-</label>
+				<label></label>
 				<texturefocus border="2">osd/osd_button_random_fo.png</texturefocus>
 				<texturenofocus border="2">osd/osd_button_random_nf.png</texturenofocus>
 				<usealttexture>Playlist.IsRandom</usealttexture>
 				<alttexturefocus border="2">osd/osd_button_random_on_fo.png</alttexturefocus>
 				<alttexturenofocus border="2">osd/osd_button_random_on_nf.png</alttexturenofocus>
-				<disabledcolor>-</disabledcolor>
-				<colordiffuse>-</colordiffuse>
+				<disabledcolor></disabledcolor>
+				<colordiffuse></colordiffuse>
 				<onclick>PlayerControl(random)</onclick>
 			</control>
 		</control>

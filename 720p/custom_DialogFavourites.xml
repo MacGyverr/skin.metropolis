@@ -7,10 +7,10 @@
 			<posy>-20</posy>
 			<width>1</width>
 			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<texturenofocus>-</texturenofocus>
-			<texturefocus>-</texturefocus>
+			<label></label>
+			<font></font>
+			<texturenofocus></texturenofocus>
+			<texturefocus></texturefocus>
 			<onfocus>RunScript(script.favourites,playlists=play)</onfocus>
 			<onfocus>450</onfocus>
 			<onup>450</onup>
@@ -61,7 +61,7 @@
 				<onright>Close</onright>
 				<onup>450</onup>
 				<ondown>450</ondown>
-				<pagecontrol>-</pagecontrol>
+				<pagecontrol></pagecontrol>
 				<scrolltime>0</scrolltime>
 				<itemlayout height="38" width="810">
 					<control type="label">

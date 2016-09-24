@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(VisBgArtistSlideshow)">RunScript(script.artistslideshow)</onload>
-	<defaultcontrol>-</defaultcontrol>
+	<defaultcontrol></defaultcontrol>
 	<controls>
 		<control type="multiimage" id="99">
 			<include>MusicVis_Background</include>
@@ -185,7 +185,7 @@
 				<midtexture>osd/osd_progress_mid.png</midtexture>
 				<righttexture>osd/osd_progress_right.png</righttexture>
 				<colordiffuse>OSDProgressBar</colordiffuse>
-				<overlaytexture>-</overlaytexture>
+				<overlaytexture></overlaytexture>
 				<visible>!Skin.HasSetting(ShowMusicTime)</visible>
 			</control>
 			<control type="fadelabel">
@@ -214,7 +214,7 @@
 				<midtexture>osd/osd_progress_mid.png</midtexture>
 				<righttexture>osd/osd_progress_right.png</righttexture>
 				<colordiffuse>OSDProgressBar</colordiffuse>
-				<overlaytexture>-</overlaytexture>
+				<overlaytexture></overlaytexture>
 				<visible>Skin.HasSetting(ShowMusicTime)</visible>
 			</control>
 			<control type="fadelabel">

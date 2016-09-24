@@ -40,8 +40,8 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
-					<alttexturenofocus border="2">-</alttexturenofocus>
+					<texturenofocus></texturenofocus>
+					<alttexturenofocus border="2"></alttexturenofocus>
 					<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
 					<usealttexture>library.isscanningmusic</usealttexture>
 					<aligny>center</aligny>
@@ -62,7 +62,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(addonbrowser, addons://more/audio/, return)</onclick>
 					<visible>Container.Content(addons)</visible>

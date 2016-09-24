@@ -4,8 +4,8 @@
 	<controls>
 		<include>Global_Background</include>
 		<control type="button" id="50">
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
 			<onright>7000</onright>
 			<!-- for switching between weather maps -->
@@ -4219,7 +4219,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>Skin.SetString(WeatherDisplay,7Day)</onclick>
 				</control>
@@ -4237,7 +4237,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>Skin.SetString(WeatherDisplay,12Hour)</onclick>
 				</control>
@@ -4255,7 +4255,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>Skin.SetString(WeatherDisplay,36Hour)</onclick>
 				</control>
@@ -4273,7 +4273,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>Skin.SetString(WeatherDisplay,Weekend)</onclick>
 				</control>
@@ -4291,7 +4291,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>Skin.SetString(WeatherDisplay,WeatherMap)</onclick>
 				</control>
@@ -4302,13 +4302,13 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<label>-</label>
+					<label></label>
 					<textoffsetx>20</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="4">
@@ -4324,7 +4324,7 @@
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(servicesettings,weather)</onclick>
 				</control>
@@ -4334,14 +4334,14 @@
 					<height>40</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>-</font>
-					<label>-</label>
+					<font></font>
+					<label></label>
 					<textoffsetx>20</textoffsetx>
-					<textcolor>-</textcolor>
-					<focusedcolor>-</focusedcolor>
+					<textcolor></textcolor>
+					<focusedcolor></focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus>-</texturenofocus>
+					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<spinwidth>34</spinwidth>
 					<spinheight>34</spinheight>

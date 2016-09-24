@@ -219,7 +219,7 @@
 				<height>455</height>
 				<onleft>20</onleft>
 				<onright>7</onright>
-				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbackground></texturesliderbackground>
 				<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
