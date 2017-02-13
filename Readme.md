@@ -1,6 +1,6 @@
-Metropolis for Kodi 18 and also RetroPlayer
+# Metropolis for Kodi 18 and also RetroPlayer
 
-So this is not official and very Alpha, but it should work with Kodi 18.
+## So this is not official and very Alpha, but it should work with Kodi 18.
 
 It will need a special version of script.skinshortcuts which in turn needs script.module.simpleeval.
 I have included the most current versions of those I could find available on Feb 12 2017 in this version, 
