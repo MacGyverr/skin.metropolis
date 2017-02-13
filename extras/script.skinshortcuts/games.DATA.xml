@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>24001</defaultID>
+		<label>Settings</label>
+		<label2>Custom shortcut</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(GameSettings)</action>
+	</shortcut>
+</shortcuts>
