@@ -13,9 +13,9 @@ it will name the download "skin.metropolis-Retroplayer18.zip", this is the file 
 the dependencies have been installed.
 
 So:
-script.module.simpleeval.zip      First
-script.skinshortcuts-1.9.0.zip    Second
-skin.metropolis-Retroplayer18.zip Last
+script.module.simpleeval.zip      First.
+script.skinshortcuts-1.9.0.zip    Second.
+skin.metropolis-Retroplayer18.zip Last.
 
 
 Failing to do so in that order will give you a version that has no menus and will be a pain to undo.
