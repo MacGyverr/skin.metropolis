@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<views>55,53,57</views>
+	<views>55,867,53,57</views>
 	<defaultcontrol>55</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
 		<include>Viewtype_List</include>
+		<include>Viewtype_Zoomed</include>			<!-- 867 -->
 		<include>Viewtype_Poster_Fixed</include>
 		<include>Viewtype_Poster_Wrap</include>
 		<include>Global_ContextFilter</include>

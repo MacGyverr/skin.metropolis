@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<views>55,58,559,950,951,952</views>
+	<views>55,867,58,559,950,951,952</views>
 	<defaultcontrol>55</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
 		<include>Global_Background_Fanart</include>
 		<include>Viewtype_List</include>		<!-- 55 -->
+		<include>Viewtype_Zoomed</include>			<!-- 867 -->
 		<include>Viewtype_Gallery_Square</include>	<!-- 58 -->
 		<include>Viewtype_Panel_Square</include>	<!-- 559 -->
 		<include>Viewtype_Games_Tall</include>		<!-- 950 -->

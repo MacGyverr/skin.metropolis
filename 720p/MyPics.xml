@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<views>55,509,59,58,559,500</views>
+	<views>55,867,509,59,58,559,500</views>
 	<defaultcontrol>55</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
 		<include>Global_Background_Fanart</include>
 		<include>Viewtype_List</include>
+		<include>Viewtype_Zoomed</include>			<!-- 867 -->
 		<include>Viewtype_ListFanart</include>
 		<include>Viewtype_Gallery_Fanart</include>
 		<include>Viewtype_Gallery_Square</include>
@@ -60,7 +61,7 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
-					<visible>!ListItem.IsFolder + !SubString(Container.FolderPath,plugin)</visible>
+					<visible>!ListItem.IsFolder + !String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<control type="button" id="7">
 					<description>Recursive Slideshow</description>
@@ -77,7 +78,7 @@
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
-					<visible>ListItem.IsFolder + !SubString(Container.FolderPath,plugin)</visible>
+					<visible>ListItem.IsFolder + !String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<control type="radiobutton" id="9">
 					<description>Randomise</description>
@@ -92,7 +93,7 @@
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
 					<texturenofocus></texturenofocus>
-					<visible>!SubString(Container.FolderPath,plugin)</visible>
+					<visible>!String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<include>NavMenuListPlaying</include>
 			</control>
