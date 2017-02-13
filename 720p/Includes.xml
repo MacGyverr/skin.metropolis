@@ -171,7 +171,7 @@
 			<control type="label">
 				<label>$INFO[Container.CurrentItem,$LOCALIZE[31277] ]$INFO[Container.NumItems, $LOCALIZE[20163] ]</label>
 				<include>Global_HeadingDetailVars</include>
-				<visible>IntegerGreaterThan(Container.NumItems, 1) + [!Window.IsActive(systeminfo) | Control.HasFocus(998) | Container.Scrolling]</visible>
+				<visible>Integer.IsGreater(Container.NumItems, 1) + [!Window.IsActive(systeminfo) | Control.HasFocus(998) | Container.Scrolling]</visible>
 			</control>
 		</control>
 	</include>
@@ -1519,7 +1519,7 @@
 				<scrollspeed>40</scrollspeed>
 				<scroll>true</scroll>
 				<label>$VAR[VideoPlayerTitle]</label>
-				<animation effect="slide" end="0,25" condition="[!VideoPlayer.Content(MusicVideos) + String.IsEmpty(VideoPlayer.Tagline) + !IntegerGreaterThan(Player.ChapterCount,1)] | [VideoPlayer.Content(MusicVideos) + String.IsEmpty(VideoPlayer.Artist) + String.IsEmpty(VideoPlayer.Album)]">Conditional</animation>
+				<animation effect="slide" end="0,25" condition="[!VideoPlayer.Content(MusicVideos) + String.IsEmpty(VideoPlayer.Tagline) + !Integer.IsGreater(Player.ChapterCount,1)] | [VideoPlayer.Content(MusicVideos) + String.IsEmpty(VideoPlayer.Artist) + String.IsEmpty(VideoPlayer.Album)]">Conditional</animation>
 			</control>
 			<!-- Chapter Info, Movie Tagline, or Music Video Artist/Album -->
 			<control type="fadelabel">
@@ -1685,7 +1685,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<label>$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]</label>
-				<visible>IntegerGreaterThan(Player.ChapterCount,1) + !VideoPlayer.Content(LiveTV)</visible>
+				<visible>Integer.IsGreater(Player.ChapterCount,1) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<!-- Finish Time -->
 			<control type="label">

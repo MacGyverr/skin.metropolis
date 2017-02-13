@@ -491,7 +491,7 @@
 	<variable name="VideoPlayerTitle2">
 		<value condition="!String.IsEmpty(VideoPlayer.Year) + [!String.IsEmpty(VideoPlayer.Artist) | !String.IsEmpty(VideoPlayer.Album)] + VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]$INFO[VideoPlayer.Year, (,)]</value>
 		<value condition="String.IsEmpty(VideoPlayer.Year) + [!String.IsEmpty(VideoPlayer.Artist) | !String.IsEmpty(VideoPlayer.Album)] + VideoPlayer.Content(MusicVideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album, - ]</value>
-		<value condition="IntegerGreaterThan(Player.ChapterCount,1) + !VideoPlayer.Content(LiveTV)">$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName,[COLOR=TitleText] - (,)[/COLOR]]</value>
+		<value condition="Integer.IsGreater(Player.ChapterCount,1) + !VideoPlayer.Content(LiveTV)">$INFO[Player.Chapter,$LOCALIZE[21396]: ]$INFO[Player.ChapterCount, / ]$INFO[Player.ChapterName,[COLOR=TitleText] - (,)[/COLOR]]</value>
 		<value>$INFO[VideoPlayer.Tagline]</value>
 	</variable>
 	<variable name="GoPlaylist">
