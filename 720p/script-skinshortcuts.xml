@@ -325,7 +325,7 @@
 						<label>$ADDON[script.skinshortcuts 32025]</label>
 						<label2>$INFO[Container(211).ListItem.Label]</label2>
 					</control>
-					<!-- What -->
+					<!-- Select Background 
 					<control type="button" id="306">
 						<left>0</left>
 						<top>0</top>
@@ -335,9 +335,9 @@
 						<textcolor>white</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
-						<label>button 306</label>
-						<label2>what does it do</label2>
-					</control>
+						<label>Set Background</label>
+						<label2>Real Background</label2>
+					</control> -->
 					<!-- Select widget -->
 					<control type="button" id="312">
 						<left>0</left>
