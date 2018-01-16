@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">410</defaultcontrol>
 	<animation type="WindowOpen" reversible="false">
@@ -14,10 +13,10 @@
 			<!-- Background Panel -->
 			<control type="image">
 				<description>Background Image</description>
-				<posx>438</posx>
-				<posy>65</posy>
-				<width>404</width>
-				<height>264</height>
+				<posx>657</posx>
+				<posy>98</posy>
+				<width>606</width>
+				<height>396</height>
 				<texture>frames/Dialog_Glass2PanelLarge.png</texture>
 				<colordiffuse>DialogBackgroundColor</colordiffuse>
 			</control>
@@ -28,9 +27,9 @@
 				<onfocus>SetFocus(1)</onfocus>
 			</control>
 			<control type="grouplist" id="1">
-				<posx>470</posx>
-				<posy>100</posy>
-				<height>196</height>
+				<posx>705</posx>
+				<posy>150</posy>
+				<height>294</height>
 				<onup>1</onup>
 				<ondown>1</ondown>
 				<onleft>Dialog.Close(shutdownmenu)</onleft>

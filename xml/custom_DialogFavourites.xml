@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1114">
 	<defaultcontrol always="true">451</defaultcontrol>
 	<controls>
 		<control type="button" id="451">
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
 			<label></label>
 			<font></font>
-			<texturenofocus></texturenofocus>
-			<texturefocus></texturefocus>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>1</width>
+			<height>1</height>
 			<onfocus>RunScript(script.favourites,playlists=play)</onfocus>
 			<onfocus>450</onfocus>
 			<onup>450</onup>
@@ -22,19 +21,19 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<control type="image">
-				<posx>440</posx>
-				<posy>158</posy>
-				<width>840</width>
-				<height>38</height>
+				<posx>660</posx>
+				<posy>237</posy>
+				<width>1260</width>
+				<height>57</height>
 				<texture>ButtonFO.png</texture>
 				<animation effect="fade" start="100" end="70" condition="True">Conditional</animation>
 			</control>
 			<control type="label">
 				<description>header label</description>
-				<posx>460</posx>
-				<posy>158</posy>
-				<width>810</width>
-				<height>38</height>
+				<posx>690</posx>
+				<posy>237</posy>
+				<width>1215</width>
+				<height>57</height>
 				<font>METF_ContextValue</font>
 				<textcolor>ButtonText</textcolor>
 				<align>left</align>
@@ -43,59 +42,57 @@
 			</control>
 			<control type="image">
 				<description>Icon Image</description>
-				<posx>120</posx>
-				<posy>196</posy>
-				<width>260</width>
-				<height>260</height>
+				<posx>180</posx>
+				<posy>294</posy>
+				<width>390</width>
+				<height>390</height>
 				<texture fallback="DefaultThumb.png">$INFO[Container(450).ListItem.Icon]</texture>
 				<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
 				<bordersize>4</bordersize>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 			</control>
 			<control type="list" id="450">
-				<posx>440</posx>
-				<posy>215</posy>
-				<width>840</width>
-				<height>380</height>
+				<posx>660</posx>
+				<posy>322</posy>
+				<width>1260</width>
+				<height>570</height>
 				<onleft>Close</onleft>
 				<onright>Close</onright>
 				<onup>450</onup>
 				<ondown>450</ondown>
 				<pagecontrol></pagecontrol>
 				<scrolltime>0</scrolltime>
-				<itemlayout height="38" width="810">
+				<itemlayout height="57" width="1215">
 					<control type="label">
-						<posx>20</posx>
-						<width>810</width>
-						<height>38</height>
+						<posx>30</posx>
+						<width>1215</width>
+						<height>57</height>
 						<textcolor>SettingsDetail</textcolor>
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="38" width="840">
+				<focusedlayout height="57" width="1260">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>840</width>
-						<height>38</height>
+						<width>1260</width>
+						<height>57</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<texture>ButtonFO.png</texture>
 					</control>
 					<control type="label">
-						<posx>20</posx>
+						<posx>30</posx>
 						<posy>0</posy>
-						<width>810</width>
-						<height>38</height>
+						<width>1215</width>
+						<height>57</height>
 						<textcolor>ButtonText</textcolor>
 						<font>METF_ContextValue</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<focusedcolor>ButtonText</focusedcolor>
 						<selectedcolor>ButtonText</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -286,25 +283,25 @@
 		</control>
 		<control type="image">
 			<include>Animation_CommonFadeNoHide</include>
-			<posx>848</posx>
-			<posy>194</posy>
-			<height>24</height>
-			<width>24</width>
+			<posx>1272</posx>
+			<posy>291</posy>
+			<height>36</height>
+			<width>36</width>
 			<texture>Arrow2Up.png</texture>
 			<visible>Container(450).HasPrevious</visible>
 		</control>
 		<control type="image">
 			<include>Animation_CommonFadeNoHide</include>
-			<posx>848</posx>
-			<posy>592</posy>
-			<height>24</height>
-			<width>24</width>
+			<posx>1272</posx>
+			<posy>888</posy>
+			<height>36</height>
+			<width>36</width>
 			<texture>Arrow2Down.png</texture>
 			<visible>Container(450).HasNext</visible>
 		</control>
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<label>$LOCALIZE[1036]</label>

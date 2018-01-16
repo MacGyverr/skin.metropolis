@@ -1,34 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="slide" start="0,-100" end="0,0" time="300" />
+				<effect type="slide" start="0,-150" end="0,0" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0,0" end="0,-100" time="300" />
+				<effect type="slide" start="0,0" end="0,-150" time="300" />
 				<effect type="fade" delay="1000" start="100" end="0" time="300" />
 			</animation>
 			<visible>!Player.Muted</visible>
-			<posx>964</posx>
-			<posy>-15</posy>
+			<posx>1446</posx>
+			<posy>-22</posy>
 			<!-- Background Panel -->
 			<control type="image">
 				<description>background image</description>
-				<posx>5</posx>
-				<posy>-5</posy>
-				<width>1100</width>
-				<height>70</height>
+				<posx>8</posx>
+				<posy>-8</posy>
+				<width>1650</width>
+				<height>105</height>
 				<texture flipx="true">dialogs/DialogBG_DropdownWide2.png</texture>
 				<colordiffuse>DialogDropdownColor</colordiffuse>
 			</control>
 			<control type="image">
 				<description>Volume Icon</description>
-				<posx>36</posx>
-				<posy>19</posy>
-				<width>30</width>
-				<height>30</height>
+				<posx>54</posx>
+				<posy>28</posy>
+				<width>45</width>
+				<height>45</height>
 				<aspectratio>keep</aspectratio>
 				<texture>dialogs/Dialog_VolumeIcon.png</texture>
 			</control>
@@ -37,10 +36,10 @@
 				<visible>!player.passthrough</visible>
 				<control type="progress" id="404">
 					<description>Progressbar</description>
-					<posx>66</posx>
-					<posy>26</posy>
-					<width>160</width>
-					<height>16</height>
+					<posx>99</posx>
+					<posy>39</posy>
+					<width>240</width>
+					<height>24</height>
 					<reveal>true</reveal>
 					<texturebg>osd/osd_progress_back2.png</texturebg>
 					<lefttexture>osd/osd_progress_left2.png</lefttexture>
@@ -50,10 +49,10 @@
 					<info>player.volume</info>
 				</control>
 				<control type="label">
-					<posx>300</posx>
-					<posy>10</posy>
-					<width>80</width>
-					<height>45</height>
+					<posx>450</posx>
+					<posy>15</posy>
+					<width>120</width>
+					<height>68</height>
 					<textcolor>TextFO</textcolor>
 					<align>right</align>
 					<aligny>center</aligny>
@@ -65,10 +64,10 @@
 			<control type="group">
 				<visible>player.passthrough</visible>
 				<control type="label">
-					<posx>72</posx>
-					<posy>10</posy>
-					<width>200</width>
-					<height>45</height>
+					<posx>108</posx>
+					<posy>15</posy>
+					<width>300</width>
+					<height>68</height>
 					<textcolor>TextFO</textcolor>
 					<align>left</align>
 					<aligny>center</aligny>
@@ -80,31 +79,31 @@
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="slide" start="0,-100" end="0,0" time="300" />
+				<effect type="slide" start="0,-150" end="0,0" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="0,0" end="0,-100" time="300" />
+				<effect type="slide" start="0,0" end="0,-150" time="300" />
 				<effect type="fade" delay="300" start="100" end="0" time="300" />
 			</animation>
-			<posx>1050</posx>
-			<posy>-15</posy>
+			<posx>1575</posx>
+			<posy>-22</posy>
 			<visible>Player.Muted + !VideoPlayer.IsFullscreen</visible>
 			<!-- Background Panel -->
 			<control type="image">
 				<description>background image</description>
-				<posx>5</posx>
-				<posy>-10</posy>
-				<width>1100</width>
-				<height>67</height>
+				<posx>8</posx>
+				<posy>-15</posy>
+				<width>1650</width>
+				<height>100</height>
 				<texture flipx="true">dialogs/DialogBG_DropdownWide2.png</texture>
 				<colordiffuse>DialogDropdownColor</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>25</posx>
-				<posy>20</posy>
-				<width>200</width>
-				<height>22</height>
+				<posx>38</posx>
+				<posy>30</posy>
+				<width>300</width>
+				<height>33</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>METF_DialogSmallBold</font>
@@ -115,24 +114,24 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<visible>Player.Muted + VideoPlayer.IsFullscreen + !Window.IsActive(fullscreeninfo)</visible>
-			<posx>1195</posx>
-			<posy>65</posy>
+			<posx>1792</posx>
+			<posy>98</posy>
 			<control type="group">
 				<control type="image">
 					<description>background image</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>60</width>
-					<height>60</height>
+					<width>90</width>
+					<height>90</height>
 					<texture>dialogs/DialogBG_Icon2.png</texture>
 					<colordiffuse>DialogBackgroundColor</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Mute Icon</description>
-					<posx>7</posx>
-					<posy>5</posy>
-					<width>50</width>
-					<height>50</height>
+					<posx>10</posx>
+					<posy>8</posy>
+					<width>75</width>
+					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<texture>dialogs/Dialog_MuteIcon.png</texture>
 				</control>
@@ -141,24 +140,24 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<visible>Player.Muted + VideoPlayer.IsFullscreen + Window.IsActive(fullscreeninfo)</visible>
-			<posx>1195</posx>
-			<posy>185</posy>
+			<posx>1792</posx>
+			<posy>278</posy>
 			<control type="group">
 				<control type="image">
 					<description>background image</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>60</width>
-					<height>60</height>
+					<width>90</width>
+					<height>90</height>
 					<texture>dialogs/DialogBG_Icon2.png</texture>
 					<colordiffuse>DialogBackgroundColor</colordiffuse>
 				</control>
 				<control type="image">
 					<description>Mute Icon</description>
-					<posx>7</posx>
-					<posy>5</posy>
-					<width>50</width>
-					<height>50</height>
+					<posx>10</posx>
+					<posy>8</posy>
+					<width>75</width>
+					<height>75</height>
 					<aspectratio>keep</aspectratio>
 					<texture>dialogs/Dialog_MuteIcon.png</texture>
 				</control>

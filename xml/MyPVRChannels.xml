@@ -1,34 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
 	<controls>
 		<include>Global_Background</include>
-
 		<!-- TV Channel view -->
 		<control type="group">
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-				<posx>778</posx>
-				<posy>50</posy>
+				<posx>1167</posx>
+				<posy>75</posy>
 				<control type="list" id="50">
-	  				<posx>0</posx>
+					<posx>0</posx>
 					<posy>0</posy>
-					<width>550</width>
-					<height>487</height>
+					<width>825</width>
+					<height>730</height>
 					<onleft>100</onleft>
 					<onright>70</onright>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>70</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="60" width="550">
+					<itemlayout height="90" width="825">
 						<control type="label">
 							<description>Channel number label</description>
 							<left>0</left>
 							<top>0</top>
-							<width>110</width>
-							<height>35</height>
+							<width>165</width>
+							<height>52</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
@@ -36,10 +34,10 @@
 						</control>
 						<control type="label">
 							<description>Channel name label</description>
-							<posx>115</posx>
-							<posy>4</posy>
-							<width>340</width>
-							<height>25</height>
+							<posx>172</posx>
+							<posy>6</posy>
+							<width>510</width>
+							<height>38</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
@@ -47,10 +45,10 @@
 						</control>
 						<control type="label">
 							<description>Channel title label</description>
-							<posx>115</posx>
-							<posy>29</posy>
-							<width>340</width>
-							<height>20</height>
+							<posx>172</posx>
+							<posy>44</posy>
+							<width>510</width>
+							<height>30</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
@@ -58,29 +56,29 @@
 						</control>
 						<control type="image">
 							<description>Channel icon</description>
-							<posx>370</posx>
-							<posy>5</posy>
-							<width>50</width>
-							<height>50</height>
+							<posx>555</posx>
+							<posy>8</posy>
+							<width>75</width>
+							<height>75</height>
 							<aligny>center</aligny>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="progress">
 							<description>Channel progressbar</description>
-							<posx>115</posx>
-							<posy>57</posy>
-							<width>304</width>
-							<height>8</height>
+							<posx>172</posx>
+							<posy>86</posy>
+							<width>456</width>
+							<height>12</height>
 							<info>ListItem.Progress</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="62" width="550">
+					<focusedlayout height="93" width="825">
 						<control type="image">
 							<description>Channel focus selection</description>
 							<posx>0</posx>
-							<posy>4</posy>
-							<width>458</width>
-							<height>62</height>
+							<posy>6</posy>
+							<width>687</width>
+							<height>93</height>
 							<texture>FocusLine.png</texture>
 							<colordiffuse>FocusBar</colordiffuse>
 						</control>
@@ -88,8 +86,8 @@
 							<description>Channel number label</description>
 							<left>0</left>
 							<top>0</top>
-							<width>110</width>
-							<height>35</height>
+							<width>165</width>
+							<height>52</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
@@ -97,21 +95,21 @@
 						</control>
 						<control type="label">
 							<description>Channel name label</description>
-							<posx>115</posx>
-							<posy>4</posy>
-							<width>340</width>
-							<height>25</height>
+							<posx>172</posx>
+							<posy>6</posy>
+							<width>510</width>
+							<height>38</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label">
-		 					<description>Channel title label</description>
-							<posx>115</posx>
-							<posy>29</posy>
-							<width>340</width>
-							<height>20</height>
+							<description>Channel title label</description>
+							<posx>172</posx>
+							<posy>44</posy>
+							<width>510</width>
+							<height>30</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>METF_PVRChannelList</font>
@@ -119,29 +117,29 @@
 						</control>
 						<control type="image">
 							<description>Channel icon</description>
-							<posx>370</posx>
-	 						<posy>5</posy>
-							<width>50</width>
-							<height>50</height>
+							<posx>555</posx>
+							<posy>8</posy>
+							<width>75</width>
+							<height>75</height>
 							<aligny>center</aligny>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="progress">
 							<description>Channel progressbar</description>
-							<posx>115</posx>
-							<posy>57</posy>
-							<width>304</width>
-							<height>8</height>
+							<posx>172</posx>
+							<posy>86</posy>
+							<width>456</width>
+							<height>12</height>
 							<info>ListItem.Progress</info>
 						</control>
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="70">
 					<description>Channel scrollbar</description>
-					<posx>490</posx>
+					<posx>735</posx>
 					<posy>0</posy>
-					<width>25</width>
-					<height>487</height>
+					<width>38</width>
+					<height>730</height>
 					<texturesliderbackground></texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
@@ -149,44 +147,43 @@
 					<orientation>vertical</orientation>
 				</control>
 			</control>
-
 			<control type="group">
 				<description>TV Channel information</description>
-				<posx>25</posx>
-				<posy>40</posy>
+				<posx>38</posx>
+				<posy>60</posy>
 				<control type="image">
 					<description>PVR Display Picture</description>
-					<posx>22</posx>
-					<posy>20</posy>
-					<width>704</width>
-					<height>396</height>
+					<posx>33</posx>
+					<posy>30</posy>
+					<width>1056</width>
+					<height>594</height>
 					<texture background="true" fallback="home_art/livetv.jpg">$INFO[Skin.String(CustomLiveTV)]</texture>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<visible>!Player.HasVideo</visible>
 				</control>
 				<control type="videowindow">
-					<description>PVR Display Window</description>
-					<posx>22</posx>
-					<posy>20</posy>
-					<width>704</width>
-					<height>396</height>
-					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture background="true" diffuse="FanartDiffuse.png"></texture>
+					<description>PVR Display Window</description>
+					<posx>33</posx>
+					<posy>30</posy>
+					<width>1056</width>
+					<height>594</height>
+					<aspectratio aligny="bottom">stretch</aspectratio>
 					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>746</width>
-					<height>442</height>
+					<width>1119</width>
+					<height>663</height>
 					<texture>frames/ClassicFrame_Fanart.png</texture>
 				</control>
 				<control type="label">
 					<description>Channel start time label</description>
-					<posx>120</posx>
-					<posy>434</posy>
-					<width>110</width>
-					<height>20</height>
+					<posx>180</posx>
+					<posy>651</posy>
+					<width>165</width>
+					<height>30</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -194,18 +191,18 @@
 				</control>
 				<control type="progress">
 					<description>Channel progress bar</description>
-					<posx>130</posx>
-					<posy>442</posy>
-					<width>480</width>
-					<height>8</height>
+					<posx>195</posx>
+					<posy>663</posy>
+					<width>720</width>
+					<height>12</height>
 					<info>Container(50).ListItem.Progress</info>
 				</control>
 				<control type="label">
 					<description>Channel end time label</description>
-					<posx>620</posx>
-					<posy>434</posy>
-					<width>110</width>
-					<height>20</height>
+					<posx>930</posx>
+					<posy>651</posy>
+					<width>165</width>
+					<height>30</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -213,9 +210,9 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>468</posy>
-					<width>746</width>
-					<height>20</height>
+					<posy>702</posy>
+					<width>1119</width>
+					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -226,7 +223,6 @@
 			<!-- TV Channel Plot (Bottom) -->
 			<include>LiveTVPlot</include>
 		</control>
-
 		<!-- Navigation Menu -->
 		<control type="group">
 			<include>Animation_NavMenu</include>
@@ -240,7 +236,6 @@
 				<include>NavMenuListPlaying</include>
 			</control>
 		</control>
-
 		<include>PVR_Headers</include>
 		<include>Global_Weather</include>
 		<include>Global_Time</include>

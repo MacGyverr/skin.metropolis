@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onunload>
@@ -10,9 +9,9 @@
 			<control type="list" id="9000">
 				<description>List</description>
 				<posx>0</posx>
-				<posy>100</posy>
-				<width>380</width>
-				<height>456</height>
+				<posy>150</posy>
+				<width>570</width>
+				<height>684</height>
 				<itemgap>0</itemgap>
 				<scrolltime>0</scrolltime>
 				<onleft>9010</onleft>
@@ -21,26 +20,25 @@
 				<ondown>9000</ondown>
 				<orientation>vertical</orientation>
 				<pagecontrol></pagecontrol>
-				<itemlayout height="38" width="380">
+				<itemlayout height="57" width="570">
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>362</width>
-						<height>38</height>
+						<width>543</width>
+						<height>57</height>
 						<textcolor>SettingsDetail</textcolor>
 						<font>METF_TitleTextMedium</font>
 						<aligny>center</aligny>
 						<align>right</align>
-						<focusedcolor>ButtonText</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="38" width="380">
+				<focusedlayout height="57" width="570">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>380</width>
-						<height>38</height>
+						<width>570</width>
+						<height>57</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<texture>ButtonFO.png</texture>
@@ -49,14 +47,13 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>362</width>
-						<height>38</height>
+						<width>543</width>
+						<height>57</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
 						<font>METF_TitleTextMedium</font>
 						<textcolor>DialogTextFO</textcolor>
-						<focusedcolor>BDialogTextFO</focusedcolor>
 					</control>
 				</focusedlayout>
 				<content>
@@ -103,16 +100,15 @@
 				</content>
 			</control>
 			<control type="group" id="9010">
-				<posx>440</posx>
-				<posy>100</posy>
-
+				<posx>660</posx>
+				<posy>150</posy>
 				<!-- General -->
 				<control type="grouplist" id="9001">
 					<visible>Container(9000).Hasfocus(1)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -174,62 +170,60 @@
 						<selected>Skin.HasSetting(SimpleMediaFilter)</selected>
 					</control>
 				</control>
-
 				<!-- Image Resources -->
 				<control type="grouplist" id="9004">
 					<visible>Container(9000).Hasfocus(4)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<control type="button" id="401">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31013]</label>
 						<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
 						<onclick>RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
 					</control>
 					<control type="button" id="402">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31014]</label>
 						<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
 						<onclick>RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
 					</control>
 					<control type="button" id="403">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31015]</label>
 						<label2>$INFO[Skin.String(StudioIcons.name)]</label2>
 						<onclick>RunScript(script.image.resource.select,property=StudioIcons&amp;type=resource.images.studios)</onclick>
 					</control>
 					<control type="button" id="404">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31016]</label>
 						<label2>$INFO[Skin.String(RecordLabelIcons.name)]</label2>
 						<onclick>RunScript(script.image.resource.select,property=RecordLabelIcons&amp;type=resource.images.recordlabels)</onclick>
 					</control>
 					<control type="button" id="405">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31017]</label>
 						<label2>$INFO[Skin.String(LanguageIcons.name)]</label2>
 						<onclick>RunScript(script.image.resource.select,property=LanguageIcons&amp;type=resource.images.languageflags)</onclick>
 					</control>
 				</control>
-
 				<!-- Home Options -->
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -293,14 +287,13 @@
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					</control>
 				</control>
-
 				<!-- View Options -->
 				<control type="grouplist" id="9007">
 					<visible>Container(9000).Hasfocus(3)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -404,14 +397,13 @@
 						<selected>Skin.HasSetting(CropMVGalleryIcon)</selected>
 					</control>
 				</control>
-
 				<!-- View Types -->
 				<control type="grouplist" id="9005">
 					<visible>Container(9000).Hasfocus(5)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -586,21 +578,20 @@
 						<visible>System.HasAddon(plugin.program.advanced.launcher)</visible>
 					</control>
 				</control>
-
 				<!-- Scripts/Extras -->
 				<control type="grouplist" id="9006">
 					<visible>Container(9000).Hasfocus(6)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
 					<onright>9000</onright>
 					<control type="button" id="701">
 						<include>SettingsLabel</include>
-						<width>370</width>
+						<width>555</width>
 						<label>$LOCALIZE[31319]</label>
 						<label2>$INFO[System.AddonTitle(Skin.String(LyricPath))]</label2>
 						<onclick>Skin.SetAddon(LyricPath,xbmc.python.lyrics)</onclick>
@@ -686,14 +677,13 @@
 						<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
 					</control>
 				</control>
-
 				<!-- Video Settings -->
 				<control type="grouplist" id="9011">
 					<visible>Container(9000).Hasfocus(7)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -732,8 +722,8 @@
 					<control type="label" id="806">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>775</width>
-						<height>30</height>
+						<width>1162</width>
+						<height>45</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
@@ -743,8 +733,8 @@
 					<control type="grouplist" id="807">
 						<left>0</left>
 						<top>0</top>
-						<width>780</width>
-						<height>70</height>
+						<width>1170</width>
+						<height>105</height>
 						<itemgap>0</itemgap>
 						<orientation>horizontal</orientation>
 						<onleft>9000</onleft>
@@ -753,15 +743,15 @@
 						<ondown>9006</ondown>
 						<visible>!Skin.HasSetting(OneButtonSubtitles)</visible>
 						<control type="image" id="808">
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texture>Blank.png</texture>
 						</control>
 						<control type="button" id="809">
 							<description>Playlists</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_playlist_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_playlist_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),711)">OSDdiffuse</include>
@@ -770,8 +760,8 @@
 						<control type="button" id="810">
 							<description>Bookmarks</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_book_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_book_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),712)">OSDdiffuse</include>
@@ -780,8 +770,8 @@
 						<control type="button" id="811">
 							<description>OSD Subtitles</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_sub_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_sub_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),714)">OSDdiffuse</include>
@@ -790,8 +780,8 @@
 						<control type="button" id="812">
 							<description>Previous</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_prev_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_prev_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),79)">OSDdiffuse</include>
@@ -800,8 +790,8 @@
 						<control type="button" id="813">
 							<description>Rewind</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_rew_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),73)">OSDdiffuse</include>
@@ -810,8 +800,8 @@
 						<control type="button" id="814">
 							<description>Stop</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_stop_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),75)">OSDdiffuse</include>
@@ -820,8 +810,8 @@
 						<control type="button" id="815">
 							<description>Play</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_pause_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_pause_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),74)">OSDdiffuse</include>
@@ -830,8 +820,8 @@
 						<control type="button" id="816">
 							<description>Forward</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_ff_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),76)">OSDdiffuse</include>
@@ -840,8 +830,8 @@
 						<control type="button" id="817">
 							<description>Next</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_next_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_next_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),710)">OSDdiffuse</include>
@@ -850,8 +840,8 @@
 						<control type="button" id="818">
 							<description>Repeat</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_repeat_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_repeat_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),801)">OSDdiffuse</include>
@@ -860,8 +850,8 @@
 						<control type="button" id="819">
 							<description>Video Settings</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_settings_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_settings_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),713)">OSDdiffuse</include>
@@ -870,8 +860,8 @@
 						<control type="button" id="820">
 							<description>Audio Settings</description>
 							<include>Animation_ButtonFocus</include>
-							<height>60</height>
-							<width>60</width>
+							<height>90</height>
+							<width>90</width>
 							<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
 							<texturenofocus>osd/osd_button_audio_nf.png</texturenofocus>
 							<include condition="String.Contains(Skin.String(DefaultOSD),800)">OSDdiffuse</include>
@@ -879,14 +869,13 @@
 						</control>
 					</control>
 				</control>
-
 				<!-- Music Settings -->
 				<control type="grouplist" id="9009">
 					<visible>Container(9000).Hasfocus(8)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -972,14 +961,13 @@
 						<visible>Skin.HasSetting(VisBgFanart) | Skin.HasSetting(VisBgExtraFanart) | Skin.HasSetting(VisBgArtistSlideshow)</visible>
 					</control>
 				</control>
-
 				<!-- Picture Settings -->
 				<control type="grouplist" id="9013">
 					<visible>Container(9000).Hasfocus(11)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -991,14 +979,13 @@
 						<selected>Skin.HasSetting(HidePictureFanart)</selected>
 					</control>
 				</control>
-
 				<!-- Debug -->
 				<control type="grouplist" id="9008">
 					<visible>Container(9000).Hasfocus(9)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>840</width>
-					<height>418</height>
+					<width>1260</width>
+					<height>627</height>
 					<itemgap>0</itemgap>
 					<scrolltime>0</scrolltime>
 					<onleft>9000</onleft>
@@ -1030,19 +1017,19 @@
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
-				<posx>848</posx>
-				<posy>76</posy>
-				<height>24</height>
-				<width>24</width>
+				<posx>1272</posx>
+				<posy>114</posy>
+				<height>36</height>
+				<width>36</width>
 				<texture>Arrow2Up.png</texture>
 				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasPrevious] | [Container(9000).Hasfocus(5) + Container(9005).HasPrevious] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
-				<posx>848</posx>
-				<posy>518</posy>
-				<height>24</height>
-				<width>24</width>
+				<posx>1272</posx>
+				<posy>777</posy>
+				<height>36</height>
+				<width>36</width>
 				<texture>Arrow2Down.png</texture>
 				<visible>[Container(9000).Hasfocus(2) + Container(9002).HasNext] | [Container(9000).Hasfocus(5) + Container(9005).HasNext] | [Container(9000).Hasfocus(3) + Container(9007).HasPrevious] | [Container(9000).Hasfocus(6) + Container(9006).HasPrevious]</visible>
 			</control>

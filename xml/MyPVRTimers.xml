@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
 	<controls>
 		<include>Global_Background</include>
-
 		<control type="group">
 			<description>Timers group</description>
 			<visible>Control.IsVisible(50)</visible>
 			<control type="group">
-				<posx>110</posx>
-				<posy>60</posy>
+				<posx>165</posx>
+				<posy>90</posy>
 				<control type="label">
 					<description>Title Header Label</description>
 					<posx>0</posx>
-					<posy>20</posy>
-					<width>300</width>
-					<height>20</height>
+					<posy>30</posy>
+					<width>450</width>
+					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -24,10 +22,10 @@
 				</control>
 				<control type="label">
 					<description>Schedule time header label</description>
-					<posx>270</posx>
-					<posy>20</posy>
-					<width>600</width>
-					<height>20</height>
+					<posx>405</posx>
+					<posy>30</posy>
+					<width>900</width>
+					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -35,10 +33,10 @@
 				</control>
 				<control type="label">
 					<description>Comment header label</description>
-					<posx>840</posx>
-					<posy>20</posy>
-					<width>200</width>
-					<height>20</height>
+					<posx>1260</posx>
+					<posy>30</posy>
+					<width>300</width>
+					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<include>LiveTVLabel</include>
@@ -47,30 +45,30 @@
 				<control type="image">
 					<description>separator image</description>
 					<left>0</left>
-					<top>50</top>
-					<width>1100</width>
+					<top>75</top>
+					<width>1650</width>
 					<height>1</height>
 					<colordiffuse>88FFFFFF</colordiffuse>
 					<texture>VideoInfoLine.png</texture>
 				</control>
 				<control type="list" id="50">
 					<posx>0</posx>
-					<posy>55</posy>
-					<width>1100</width>
-					<height>414</height>
+					<posy>82</posy>
+					<width>1650</width>
+					<height>621</height>
 					<onup>50</onup>
 					<ondown>50</ondown>
 					<onleft>103</onleft>
 					<onright>73</onright>
 					<pagecontrol>73</pagecontrol>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="40">
+					<itemlayout height="60">
 						<control type="label">
 							<description>Title Label</description>
 							<left>0</left>
 							<top>0</top>
-							<width>290</width>
-							<height>40</height>
+							<width>435</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
@@ -78,10 +76,10 @@
 						</control>
 						<control type="label">
 							<description>Schedule time label</description>
-							<left>270</left>
+							<left>405</left>
 							<top>0</top>
-							<width>590</width>
-							<height>40</height>
+							<width>885</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
@@ -89,31 +87,31 @@
 						</control>
 						<control type="label">
 							<description>Status label</description>
-							<left>845</left>
+							<left>1268</left>
 							<top>0</top>
-							<width>190</width>
-							<height>40</height>
+							<width>285</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
 							<info>ListItem.Comment</info>
 						</control>
 					</itemlayout>
-					<focusedlayout height="40">
+					<focusedlayout height="60">
 						<description>Focus selection</description>
 						<control type="image">
 							<posx>0</posx>
-							<posy>4</posy>
-							<width>1050</width>
-							<height>40</height>
+							<posy>6</posy>
+							<width>1575</width>
+							<height>60</height>
 							<texture>ButtonFO.png</texture>
 						</control>
 						<control type="label">
 							<description>Title Label</description>
 							<left>0</left>
 							<top>0</top>
-							<width>290</width>
-							<height>40</height>
+							<width>435</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
@@ -121,10 +119,10 @@
 						</control>
 						<control type="label">
 							<description>Schedule time label</description>
-							<left>270</left>
+							<left>405</left>
 							<top>0</top>
-							<width>590</width>
-							<height>40</height>
+							<width>885</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
@@ -132,10 +130,10 @@
 						</control>
 						<control type="label">
 							<description>Status label</description>
-							<left>845</left>
+							<left>1268</left>
 							<top>0</top>
-							<width>190</width>
-							<height>40</height>
+							<width>285</width>
+							<height>60</height>
 							<align>center</align>
 							<aligny>center</aligny>
 							<include>LiveTVLabel</include>
@@ -144,10 +142,10 @@
 					</focusedlayout>
 				</control>
 				<control type="scrollbar" id="73">
-					<posx>1105</posx>
-					<posy>50</posy>
-					<width>25</width>
-					<height>480</height>
+					<posx>1658</posx>
+					<posy>75</posy>
+					<width>38</width>
+					<height>720</height>
 					<texturesliderbackground></texturesliderbackground>
 					<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
 					<onleft>50</onleft>
@@ -159,10 +157,10 @@
 				</control>
 				<control type="label">
 					<description>Next timer date</description>
-					<posx>55</posx>
-					<posy>545</posy>
-					<width>1010</width>
-					<height>30</height>
+					<posx>82</posx>
+					<posy>818</posy>
+					<width>1515</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
@@ -172,7 +170,6 @@
 				</control>
 			</control>
 		</control>
-
 		<!-- Navigation Menu -->
 		<control type="group">
 			<include>Animation_NavMenu</include>
@@ -186,7 +183,6 @@
 				<include>NavMenuListPlaying</include>
 			</control>
 		</control>
-
 		<include>PVR_Headers</include>
 		<include>Global_Weather</include>
 		<include>Global_Time</include>

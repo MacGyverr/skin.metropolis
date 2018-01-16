@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<default type="label">
 		<font>METF_ContextValue</font>
@@ -8,7 +7,6 @@
 		<pulseonselect>false</pulseonselect>
 		<scrollsuffix>    -    </scrollsuffix>
 	</default>
-
 	<default type="button">
 		<align>center</align>
 		<aligny>center</aligny>
@@ -18,25 +16,23 @@
 		<selectedcolor>TextFO</selectedcolor>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="togglebutton">
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="radiobutton">
+		<label></label>
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>300</width>
-		<height>40</height>
+		<width>450</width>
+		<height>60</height>
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>METF_ContextValue</font>
-		<label></label>
 		<textcolor>TextNF</textcolor>
 		<focusedcolor>DialogTextFO</focusedcolor>
 		<disabledcolor>TextDisabled</disabledcolor>
-		<radiowidth>30</radiowidth>
-		<radioheight>30</radioheight>
+		<radiowidth>45</radiowidth>
+		<radioheight>45</radioheight>
 		<texturefocus border="5">keyboard/ButtonFO.png</texturefocus>
 		<texturenofocus border="2">keyboard/ButtonNF.png</texturenofocus>
 		<textureradioonfocus>buttons/button_radio_circle_on.png</textureradioonfocus>
@@ -45,26 +41,22 @@
 		<textureradiooffnofocus>buttons/button_radio_circle_off.png</textureradiooffnofocus>
 		<textureradioondisabled colordiffuse="40FFFFFF">buttons/button_radio_circle_on.png</textureradioondisabled>
 		<textureradiooffdisabled colordiffuse="40FFFFFF">buttons/button_radio_circle_off.png</textureradiooffdisabled>
-		<textoffsetx>20</textoffsetx>
+		<textoffsetx>30</textoffsetx>
 		<pulseonselect>false</pulseonselect>
 	</default>
-
 	<default type="spincontrolex">
 		<pulseonselect>false</pulseonselect>
 		<textureupdisabled colordiffuse="40FFFFFF">subtitles/scroll-up.png</textureupdisabled>
 		<texturedowndisabled colordiffuse="40FFFFFF">subtitles/scroll-down.png</texturedowndisabled>
 	</default>
-
 	<default type="spincontrol">
 		<pulseonselect>false</pulseonselect>
 		<textureupdisabled colordiffuse="40FFFFFF">subtitles/scroll-up.png</textureupdisabled>
 		<texturedowndisabled colordiffuse="40FFFFFF">subtitles/scroll-down.png</texturedowndisabled>
 	</default>
-
 	<default type="slider">
 		<orientation>horizontal</orientation>
 	</default>
-
 	<default type="progress">
 		<reveal>true</reveal>
 		<texturebg>osd/osd_progress_back.png</texturebg>

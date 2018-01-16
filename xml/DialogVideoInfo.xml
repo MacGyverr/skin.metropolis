@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onload>
 	<onload condition="System.HasAddon(script.tv.show.next.aired) + Skin.HasSetting(NextAired) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)]">RunScript(script.tv.show.next.aired,backend=True)</onload>
@@ -22,17 +21,17 @@
 			<onfocus>SetFocus(50)</onfocus>
 		</control>
 		<control type="group">
-			<posx>360</posx>
+			<posx>540</posx>
 			<posy>0</posy>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
 			<!-- Title -->
 			<control type="fadelabel">
-				<posx>-325</posx>
-				<posy>20</posy>
-				<width>970</width>
-				<height>30</height>
+				<posx>-488</posx>
+				<posy>30</posy>
+				<width>1455</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
 				<pauseatend>200</pauseatend>
@@ -44,10 +43,10 @@
 				<visible>!String.IsEqual(ListItem.DBType,episode) + !Window.IsActive(extendedprogressdialog)</visible>
 			</control>
 			<control type="fadelabel">
-				<posx>-325</posx>
-				<posy>20</posy>
-				<width>970</width>
-				<height>30</height>
+				<posx>-488</posx>
+				<posy>30</posy>
+				<width>1455</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
 				<pauseatend>200</pauseatend>
@@ -60,10 +59,10 @@
 			</control>
 			<!-- Tagline -->
 			<control type="label">
-				<posx>-325</posx>
-				<posy>55</posy>
-				<width>840</width>
-				<height>36</height>
+				<posx>-488</posx>
+				<posy>82</posy>
+				<width>1260</width>
+				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_PlotText</font>
@@ -73,10 +72,10 @@
 			</control>
 			<!-- TVShows Number of Episodes -->
 			<control type="label">
-				<posx>-325</posx>
-				<posy>55</posy>
-				<width>840</width>
-				<height>36</height>
+				<posx>-488</posx>
+				<posy>82</posy>
+				<width>1260</width>
+				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_InfoTextLarger</font>
@@ -86,10 +85,10 @@
 			</control>
 			<!-- Episode Watched Status -->
 			<control type="label">
-				<posx>-325</posx>
-				<posy>55</posy>
-				<width>840</width>
-				<height>36</height>
+				<posx>-488</posx>
+				<posy>82</posy>
+				<width>1260</width>
+				<height>54</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_InfoTextLarger</font>
@@ -99,10 +98,10 @@
 			</control>
 			<!-- Genre -->
 			<control type="label">
-				<posx>-8</posx>
-				<posy>96</posy>
-				<width>515</width>
-				<height>30</height>
+				<posx>-12</posx>
+				<posy>144</posy>
+				<width>772</width>
+				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_InfoText</font>
@@ -112,10 +111,10 @@
 			</control>
 			<!-- Episode Air Date -->
 			<control type="label">
-				<posx>-8</posx>
-				<posy>96</posy>
-				<width>515</width>
-				<height>30</height>
+				<posx>-12</posx>
+				<posy>144</posy>
+				<width>772</width>
+				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_InfoTextLarger</font>
@@ -125,10 +124,10 @@
 			</control>
 			<!-- User Rating -->
 			<control type="image">
-				<posx>-8</posx>
-				<posy>495</posy>
-				<width>515</width>
-				<height>30</height>
+				<posx>-12</posx>
+				<posy>742</posy>
+				<width>772</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<texture fallback="flags/Rating10/rating0.png">$INFO[ListItem.UserRating,flags/Rating10/rating,.png]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -136,10 +135,10 @@
 				<visible>!Skin.HasSetting(ShowVideoPath) + !String.IsEmpty(ListItem.UserRating) + [!Skin.HasSetting(NextAired) | String.IsEmpty(Window(Home).Property(NextAired.NextDate))]</visible>
 			</control>
 			<control type="image">
-				<posx>-8</posx>
-				<posy>495</posy>
-				<width>515</width>
-				<height>30</height>
+				<posx>-12</posx>
+				<posy>742</posy>
+				<width>772</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<texture>flags/Rating10/rating0.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -148,10 +147,10 @@
 			</control>
 			<!-- Video Path -->
 			<control type="fadelabel">
-				<posx>-8</posx>
-				<posy>489</posy>
-				<width>515</width>
-				<height>47</height>
+				<posx>-12</posx>
+				<posy>734</posy>
+				<width>772</width>
+				<height>70</height>
 				<align>left</align>
 				<scroll>true</scroll>
 				<scrollout>false</scrollout>
@@ -162,10 +161,10 @@
 				<visible>!String.Contains(ListItem.FilenameAndPath," ") + Skin.HasSetting(ShowVideoPath)</visible>
 			</control>
 			<control type="textbox">
-				<posx>-8</posx>
-				<posy>489</posy>
-				<width>515</width>
-				<height>47</height>
+				<posx>-12</posx>
+				<posy>734</posy>
+				<width>772</width>
+				<height>70</height>
 				<align>left</align>
 				<font>METF_MPAA</font>
 				<textcolor>MPAADescription</textcolor>
@@ -174,10 +173,10 @@
 			</control>
 			<!-- TV Show Next Aired info -->
 			<control type="label">
-				<posx>-8</posx>
-				<posy>489</posy>
-				<width>515</width>
-				<height>60</height>
+				<posx>-12</posx>
+				<posy>734</posy>
+				<width>772</width>
+				<height>90</height>
 				<align>center</align>
 				<font>METF_InfoText</font>
 				<textcolor>TextNF</textcolor>
@@ -185,15 +184,15 @@
 				<visible>String.IsEqual(ListItem.DBType,tvshow) + Skin.HasSetting(NextAired) + !String.IsEmpty(Window(Home).Property(NextAired.NextDate))</visible>
 			</control>
 			<control type="group">
-				<posx>550</posx>
-				<posy>225</posy>
+				<posx>825</posx>
+				<posy>338</posy>
 				<visible>!Control.IsVisible(50) + [![String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] | !Skin.HasSetting(NextAired)]</visible>
 				<!-- Director -->
 				<control type="label">
 					<posx>0</posx>
-					<posy>99</posy>
-					<width>340</width>
-					<height>24</height>
+					<posy>148</posy>
+					<width>510</width>
+					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_PlotText</font>
@@ -202,15 +201,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>550</posx>
-				<posy>225</posy>
+				<posx>825</posx>
+				<posy>338</posy>
 				<visible>!Control.IsVisible(50) + [String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)] + Skin.HasSetting(NextAired)</visible>
 				<!-- TV Show Status -->
 				<control type="label">
 					<posx>0</posx>
-					<posy>99</posy>
-					<width>340</width>
-					<height>24</height>
+					<posy>148</posy>
+					<width>510</width>
+					<height>36</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_PlotText</font>
@@ -219,15 +218,15 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>550</posx>
-				<posy>353</posy>
+				<posx>825</posx>
+				<posy>530</posy>
 				<visible>!Control.IsVisible(50)</visible>
 				<!-- Cast (Actor) -->
 				<control type="textbox">
 					<posx>0</posx>
-					<posy>20</posy>
-					<width>340</width>
-					<height>140</height>
+					<posy>30</posy>
+					<width>510</width>
+					<height>210</height>
 					<align>center</align>
 					<font>METF_PlotText</font>
 					<textcolor>TextNF</textcolor>
@@ -236,9 +235,9 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>160</posy>
-					<width>340</width>
-					<height>25</height>
+					<posy>240</posy>
+					<width>510</width>
+					<height>38</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_HelpText</font>
@@ -249,10 +248,10 @@
 			</control>
 			<!-- Plot -->
 			<control type="textbox">
-				<posx>-8</posx>
-				<posy>138</posy>
-				<width>515</width>
-				<height>342</height>
+				<posx>-12</posx>
+				<posy>207</posy>
+				<width>772</width>
+				<height>513</height>
 				<align>justify</align>
 				<font>METF_PlotText</font>
 				<textcolor>TextNF</textcolor>
@@ -261,23 +260,22 @@
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
 				<visible>!Control.IsVisible(50)</visible>
 			</control>
-
 			<!-- Director/Status/Cast selector -->
 			<control type="panel" id="300">
-				<posx>552</posx>
-				<posy>302</posy>
-				<width>340</width>
-				<height>300</height>
+				<posx>828</posx>
+				<posy>453</posy>
+				<width>510</width>
+				<height>450</height>
 				<onup>300</onup>
 				<ondown>7050</ondown>
 				<onleft>7050</onleft>
 				<onright>7050</onright>
 				<orientation>vertical</orientation>
-				<itemlayout height="51" width="340">
+				<itemlayout height="76" width="510">
 					<control type="label">
 						<top>0</top>
-						<width>340</width>
-						<height>48</height>
+						<width>510</width>
+						<height>72</height>
 						<align>center</align>
 						<aligny>top</aligny>
 						<font>METF_PlotText</font>
@@ -285,18 +283,18 @@
 						<label fallback="161">$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="51" width="340">
+				<focusedlayout height="76" width="510">
 					<control type="image">
 						<top>0</top>
-						<width>340</width>
-						<height>24</height>
+						<width>510</width>
+						<height>36</height>
 						<texture border="4">ButtonFO.png</texture>
 						<visible>Control.HasFocus(300)</visible>
 					</control>
 					<control type="label">
 						<top>0</top>
-						<width>340</width>
-						<height>48</height>
+						<width>510</width>
+						<height>72</height>
 						<align>center</align>
 						<aligny>top</aligny>
 						<font>METF_PlotText</font>
@@ -320,13 +318,12 @@
 					</item>
 				</content>
 			</control>
-
 			<!-- Cast -->
 			<control type="panel" id="50">
-				<posx>-8</posx>
-				<posy>138</posy>
-				<width>515</width>
-				<height>336</height>
+				<posx>-12</posx>
+				<posy>207</posy>
+				<width>772</width>
+				<height>504</height>
 				<onleft>7050</onleft>
 				<onright>7050</onright>
 				<onup>50</onup>
@@ -336,12 +333,12 @@
 				<pagecontrol></pagecontrol>
 				<scrolltime>0</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout height="24" width="515">
+				<itemlayout height="36" width="772">
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>515</width>
-						<height>24</height>
+						<width>772</width>
+						<height>36</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>METF_InfoText</font>
@@ -351,8 +348,8 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>515</width>
-						<height>24</height>
+						<width>772</width>
+						<height>36</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>METF_InfoText</font>
@@ -360,12 +357,12 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="24" width="516">
+				<focusedlayout height="36" width="774">
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>515</width>
-						<height>24</height>
+						<width>772</width>
+						<height>36</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>METF_InfoText</font>
@@ -376,8 +373,8 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>515</width>
-						<height>24</height>
+						<width>772</width>
+						<height>36</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<font>METF_InfoText</font>
@@ -389,61 +386,60 @@
 			</control>
 			<!-- Actor Images -->
 			<control type="image">
-				<posx>638</posx>
-				<posy>310</posy>
-				<width>152</width>
-				<height>194</height>
+				<posx>957</posx>
+				<posy>465</posy>
+				<width>228</width>
+				<height>291</height>
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<aspectratio align="center" aligny="center">stretch</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 			<control type="image">
 				<description>Actor image</description>
-				<posx>638</posx>
-				<posy>310</posy>
-				<width>152</width>
-				<height>194</height>
+				<posx>957</posx>
+				<posy>465</posy>
+				<width>228</width>
+				<height>291</height>
 				<texture>$INFO[Container(50).Listitem.Icon]</texture>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<visible>Control.IsVisible(50) + !String.StartsWith(Container(50).Listitem.Icon,default)</visible>
 			</control>
 			<control type="image">
 				<description>Actor image</description>
-				<posx>638</posx>
-				<posy>310</posy>
-				<width>152</width>
-				<height>194</height>
+				<posx>957</posx>
+				<posy>465</posy>
+				<width>228</width>
+				<height>291</height>
 				<texture>$INFO[Container(50).Listitem.Icon]</texture>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<visible>Control.IsVisible(50) + String.StartsWith(Container(50).Listitem.Icon,default)</visible>
 			</control>
 			<control type="image">
-				<posx>628</posx>
-				<posy>296</posy>
-				<width>180</width>
-				<height>224</height>
+				<posx>942</posx>
+				<posy>444</posy>
+				<width>270</width>
+				<height>336</height>
 				<texture background="true">frames/ClassicFrame_PosterSmall.png</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>Control.IsVisible(50)</visible>
 			</control>
 		</control>
-
 		<!-- Year and Duration -->
 		<control type="grouplist">
-			<posx>625</posx>
-			<posy>23</posy>
-			<width>620</width>
-			<height>30</height>
+			<posx>938</posx>
+			<posy>34</posy>
+			<width>930</width>
+			<height>45</height>
 			<align>right</align>
-			<itemgap>10</itemgap>
+			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
 			<!-- Country -->
 			<control type="label">
-				<width min="25" max="380">auto</width>
-				<height>30</height>
+				<width min="38" max="570">auto</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<font>METF_MediaDetailsSmall</font>
 				<textcolor>MediaDetailsYear</textcolor>
@@ -457,8 +453,8 @@
 			</control>
 			<!-- Year -->
 			<control type="label">
-				<width min="25" max="220">auto</width>
-				<height>30</height>
+				<width min="38" max="330">auto</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<font>METF_MediaDetailsSmall</font>
 				<textcolor>MediaDetailsYear</textcolor>
@@ -472,8 +468,8 @@
 			</control>
 			<!-- Duration -->
 			<control type="label">
-				<width min="25" max="220">auto</width>
-				<height>30</height>
+				<width min="38" max="330">auto</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<font>METF_MediaDetailsSmall</font>
 				<textcolor>MediaDetailsDuration</textcolor>
@@ -481,17 +477,16 @@
 				<visible>!String.IsEmpty(ListItem.Duration) + [String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 			</control>
 		</control>
-
 		<!-- Control Buttons -->
 		<control type="grouplist" id="7003">
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<include>Animation_OpenCloseFade</include>
-			<posx>334</posx>
-			<posy>555</posy>
-			<width>552</width>
-			<height>70</height>
-			<itemgap>10</itemgap>
+			<posx>501</posx>
+			<posy>832</posy>
+			<width>828</width>
+			<height>105</height>
+			<itemgap>15</itemgap>
 			<align>center</align>
 			<orientation>horizontal</orientation>
 			<onleft>7003</onleft>
@@ -632,7 +627,6 @@
 				<visible>ControlGroup(7003).HasFocus(7)</visible>
 			</control>
 		</control>
-
 		<!-- Images -->
 		<control type="group">
 			<control type="group">
@@ -642,10 +636,10 @@
 				<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				<!-- Default Poster Image -->
 				<control type="image">
-					<posx>44</posx>
-					<posy>116</posy>
-					<width>270</width>
-					<height>396</height>
+					<posx>66</posx>
+					<posy>174</posy>
+					<width>405</width>
+					<height>594</height>
 					<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation effect="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="inout">WindowOpen</animation>
@@ -654,10 +648,10 @@
 				</control>
 				<!-- Poster Image for TV Show Seasons and Episodes -->
 				<control type="image">
-					<posx>44</posx>
-					<posy>116</posy>
-					<width>270</width>
-					<height>396</height>
+					<posx>66</posx>
+					<posy>174</posy>
+					<width>405</width>
+					<height>594</height>
 					<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Art(season.poster)]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<animation effect="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="inout">WindowOpen</animation>
@@ -666,10 +660,10 @@
 				</control>
 				<!-- Thumbnail for Music Videos -->
 				<control type="image">
-					<posx>48</posx>
-					<posy>120</posy>
-					<width>260</width>
-					<height>260</height>
+					<posx>72</posx>
+					<posy>180</posy>
+					<width>390</width>
+					<height>390</height>
 					<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<animation effect="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="inout">WindowOpen</animation>
@@ -678,10 +672,10 @@
 				</control>
 				<!-- Poster Frame -->
 				<control type="image">
-					<posx>28</posx>
-					<posy>94</posy>
-					<width>302</width>
-					<height>444</height>
+					<posx>42</posx>
+					<posy>141</posy>
+					<width>453</width>
+					<height>666</height>
 					<texture>frames/ClassicFrame_Poster.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<animation effect="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="inout">WindowOpen</animation>
@@ -690,43 +684,42 @@
 				</control>
 				<!-- Square Frame (for Music Videos) -->
 				<control type="image">
-					<posx>26</posx>
-					<posy>100</posy>
-					<width>302</width>
-					<height>302</height>
+					<posx>39</posx>
+					<posy>150</posy>
+					<width>453</width>
+					<height>453</height>
 					<texture>frames/ClassicFrame_SquareMedium.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<animation effect="zoom" center="auto" start="40" end="100" time="400" tween="cubic" easing="inout">WindowOpen</animation>
 					<animation effect="fade" start="0" end="0" time="0">WindowClose</animation>
 					<visible>String.IsEqual(ListItem.DBType,musicvideo)</visible>
 				</control>
-
 				<!-- Default Fanart Image -->
 				<control type="image">
-					<posx>912</posx>
-					<posy>80</posy>
-					<width>320</width>
-					<height>180</height>
+					<posx>1368</posx>
+					<posy>120</posy>
+					<width>480</width>
+					<height>270</height>
 					<texture fallback="home_art/movies.jpg">$INFO[ListItem.Art(fanart)]</texture>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 					<visible>!String.IsEqual(ListItem.DBType,episode)</visible>
 				</control>
 				<!-- TV Show Episode Fanart Image -->
 				<control type="image">
-					<posx>912</posx>
-					<posy>80</posy>
-					<width>320</width>
-					<height>180</height>
+					<posx>1368</posx>
+					<posy>120</posy>
+					<width>480</width>
+					<height>270</height>
 					<texture>$INFO[ListItem.Thumb]</texture>
 					<aspectratio aligny="center" scalediffuse="false">scale</aspectratio>
 					<visible>String.IsEqual(ListItem.DBType,episode)</visible>
 				</control>
 				<!-- Frame for fanart -->
 				<control type="image">
-					<posx>892</posx>
-					<posy>62</posy>
-					<width>360</width>
-					<height>218</height>
+					<posx>1338</posx>
+					<posy>93</posy>
+					<width>540</width>
+					<height>327</height>
 					<aspectratio>stretch</aspectratio>
 					<texture>frames/ClassicFrame_FanartSmall.png</texture>
 					<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)</visible>
@@ -739,10 +732,10 @@
 				<visible>![String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,musicvideo)]</visible>
 				<!-- Icon Image for items NOT in Video Library -->
 				<control type="image">
-					<posx>35</posx>
-					<posy>115</posy>
-					<width>275</width>
-					<height>404</height>
+					<posx>52</posx>
+					<posy>172</posy>
+					<width>412</width>
+					<height>606</height>
 					<aspectratio align="right" aligny="center">keep</aspectratio>
 					<texture fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 					<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>

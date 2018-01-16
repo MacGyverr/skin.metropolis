@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
-
 		<control type="group">
-			<posx>390</posx>
-			<posy>60</posy>
+			<posx>585</posx>
+			<posy>90</posy>
 			<control type="label">
 				<description>Search Label</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>320</width>
-				<height>40</height>
+				<width>480</width>
+				<height>60</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -20,10 +18,10 @@
 			</control>
 			<control type="edit" id="9">
 				<description>Search Edit</description>
-				<posx>5</posx>
-				<posy>45</posy>
-				<width>860</width>
-				<height>40</height>
+				<posx>8</posx>
+				<posy>68</posy>
+				<width>1290</width>
+				<height>60</height>
 				<align>left</align>
 				<onleft>26</onleft>
 				<onright>26</onright>
@@ -33,23 +31,23 @@
 			</control>
 			<control type="textbox">
 				<description>Search Help Label</description>
-				<posx>20</posx>
-				<posy>100</posy>
-				<width>840</width>
-				<height>70</height>
+				<posx>30</posx>
+				<posy>150</posy>
+				<width>1260</width>
+				<height>105</height>
 				<align>left</align>
 				<include>LiveTVLabel</include>
 				<label>$LOCALIZE[19001] $LOCALIZE[19002]</label>
 			</control>
 			<control type="group">
 				<posx>0</posx>
-				<posy>170</posy>
+				<posy>255</posy>
 				<control type="radiobutton" id="10">
 					<description>Include Description RadioButton</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<height>35</height>
-					<width>430</width>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -62,9 +60,9 @@
 				<control type="radiobutton" id="11">
 					<description>Case Sensitive RadioButton</description>
 					<posx>0</posx>
-					<posy>35</posy>
-					<height>35</height>
-					<width>430</width>
+					<posy>52</posy>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -77,9 +75,9 @@
 				<control type="edit" id="14">
 					<description>Start Date Edit</description>
 					<posx>0</posx>
-					<posy>70</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>105</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19128]</label>
 					<onleft>26</onleft>
@@ -90,9 +88,9 @@
 				<control type="edit" id="15">
 					<description>Stop Date Edit</description>
 					<posx>0</posx>
-					<posy>105</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>158</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19129]</label>
 					<onleft>26</onleft>
@@ -103,9 +101,9 @@
 				<control type="spincontrolex" id="18">
 					<description>Genre SpinControlex</description>
 					<posx>0</posx>
-					<posy>140</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>210</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[515]</label>
 					<onleft>26</onleft>
@@ -116,9 +114,9 @@
 				<control type="radiobutton" id="20">
 					<description>Include Unknown Genres RadioButton</description>
 					<posx>0</posx>
-					<posy>175</posy>
-					<height>35</height>
-					<width>430</width>
+					<posy>262</posy>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -131,9 +129,9 @@
 				<control type="radiobutton" id="22">
 					<description>Free To Air Only RadioButton</description>
 					<posx>0</posx>
-					<posy>210</posy>
-					<height>35</height>
-					<width>430</width>
+					<posy>315</posy>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -146,9 +144,9 @@
 				<control type="radiobutton" id="24">
 					<description>Ignore Timers RadioButton</description>
 					<posx>0</posx>
-					<posy>245</posy>
-					<height>35</height>
-					<width>430</width>
+					<posy>368</posy>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -160,14 +158,14 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>430</posx>
-				<posy>170</posy>
+				<posx>645</posx>
+				<posy>255</posy>
 				<control type="spincontrolex" id="12">
 					<description>Minimum Duration SpinControlex</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>430</width>
-					<height>35</height>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19130]</label>
 					<onleft>10</onleft>
@@ -178,9 +176,9 @@
 				<control type="spincontrolex" id="13">
 					<description>Maximum Duration SpinControlex</description>
 					<posx>0</posx>
-					<posy>35</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>52</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19131]</label>
 					<onleft>11</onleft>
@@ -191,9 +189,9 @@
 				<control type="edit" id="16">
 					<description>Start Time Edit</description>
 					<posx>0</posx>
-					<posy>70</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>105</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19126]</label>
 					<onleft>14</onleft>
@@ -204,9 +202,9 @@
 				<control type="edit" id="17">
 					<description>Stop Time Edit</description>
 					<posx>0</posx>
-					<posy>105</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>158</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19127]</label>
 					<onleft>15</onleft>
@@ -217,9 +215,9 @@
 				<control type="radiobutton" id="19">
 					<description>Avoid Repeats RadioButton</description>
 					<posx>0</posx>
-					<posy>140</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>210</posy>
+					<width>645</width>
+					<height>52</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -232,9 +230,9 @@
 				<control type="spincontrolex" id="21">
 					<description>Group SpinControlex</description>
 					<posx>0</posx>
-					<posy>175</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>262</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19141]</label>
 					<onleft>20</onleft>
@@ -245,9 +243,9 @@
 				<control type="spincontrolex" id="23">
 					<description>Channel SpinControlex</description>
 					<posx>0</posx>
-					<posy>210</posy>
-					<width>430</width>
-					<height>35</height>
+					<posy>315</posy>
+					<width>645</width>
+					<height>52</height>
 					<include>SettingsLabel</include>
 					<label>$LOCALIZE[19148]</label>
 					<onleft>22</onleft>
@@ -258,9 +256,9 @@
 				<control type="radiobutton" id="27">
 					<description>Ignore Recordings RadioButton</description>
 					<posx>0</posx>
-					<posy>245</posy>
-					<height>35</height>
-					<width>430</width>
+					<posy>368</posy>
+					<height>52</height>
+					<width>645</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<include>SettingsLabel</include>
@@ -272,12 +270,11 @@
 				</control>
 			</control>
 		</control>
-
 		<!-- Menu group -->
 		<control type="grouplist" id="9000">
-			<posx>-10</posx>
-			<posy>200</posy>
-			<itemgap>20</itemgap>
+			<posx>-15</posx>
+			<posy>300</posy>
+			<itemgap>30</itemgap>
 			<orientation>vertical</orientation>
 			<onleft>9</onleft>
 			<onright>9</onright>
@@ -297,11 +294,10 @@
 				<label>$LOCALIZE[137]</label>
 			</control>
 		</control>
-
 		<!-- Header group -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<label>$LOCALIZE[31601]</label>
@@ -312,10 +308,9 @@
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>
-
 		<!-- Time, weather and debug options -->
 		<include>Global_Weather</include>
- 		<include>Global_Time</include>
+		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 	</controls>
 </window>

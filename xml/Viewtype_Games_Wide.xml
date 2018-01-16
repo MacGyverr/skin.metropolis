@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_Games_Wide">
 		<control type="group">
@@ -10,12 +9,12 @@
 				<visible>String.Contains(Container.FolderPath,plugin)</visible>
 				<!-- Browser label and flags -->
 				<control type="group">
-					<posx>490</posx>
-					<posy>438</posy>
+					<posx>735</posx>
+					<posy>657</posy>
 					<!-- Title -->
 					<control type="fadelabel">
-						<width>800</width>
-						<height>50</height>
+						<width>1200</width>
+						<height>75</height>
 						<aligny>center</aligny>
 						<scrollout>false</scrollout>
 						<pauseatend>600</pauseatend>
@@ -25,15 +24,15 @@
 						<label>$VAR[ListItemTitle]</label>
 					</control>
 					<control type="grouplist">
-						<posy>42</posy>
-						<width>1200</width>
-						<height>30</height>
-						<itemgap>10</itemgap>
+						<posy>63</posy>
+						<width>1800</width>
+						<height>45</height>
+						<itemgap>15</itemgap>
 						<orientation>horizontal</orientation>
 						<!-- Year -->
 						<control type="label">
-							<width min="25" max="1200">auto</width>
-							<height>30</height>
+							<width min="38" max="1800">auto</width>
+							<height>45</height>
 							<aligny>center</aligny>
 							<font>METF_MediaDetailsSmall</font>
 							<textcolor>MediaDetailsYear</textcolor>
@@ -47,8 +46,8 @@
 						</control>
 						<!-- Duration -->
 						<control type="label">
-							<width min="25" max="1200">auto</width>
-							<height>30</height>
+							<width min="38" max="1800">auto</width>
+							<height>45</height>
 							<aligny>center</aligny>
 							<font>METF_MediaDetailsSmall</font>
 							<textcolor>MediaDetailsDuration</textcolor>
@@ -59,27 +58,27 @@
 						<control type="image">
 							<include>ViewDetailsBullet</include>
 							<visible>![String.IsEmpty(ListItem.studio) | String.IsEmpty(ListItem.Genre)]</visible>
-						</control>				
+						</control>
 						<!-- Genre -->
 						<control type="label">
-							<width min="25" max="1200">auto</width>
-							<height>30</height>
+							<width min="38" max="1800">auto</width>
+							<height>45</height>
 							<aligny>center</aligny>
 							<font>METF_MediaDetailsSmall</font>
 							<textcolor>MediaDetailsGenre</textcolor>
 							<label>$INFO[ListItem.Genre]</label>
 							<visible>!String.IsEmpty(ListItem.Genre)</visible>
 						</control>
-					</control>			
+					</control>
 				</control>
-			</control>			
+			</control>
 			<!-- Browser -->
 			<control type="wraplist" id="952">
 				<viewtype label="31463">bigwrap</viewtype>
-				<posx>-100</posx>
-				<posy>40</posy>
-				<height>500</height>
-				<width>1500</width>				
+				<posx>-150</posx>
+				<posy>60</posy>
+				<height>750</height>
+				<width>2250</width>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 				<ondown>60</ondown>
 				<onleft>952</onleft>
@@ -94,16 +93,16 @@
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewGames)</visible>
 				<visible>String.Contains(Container.FolderPath,advanced.launcher)</visible>
-				<itemlayout width="480" height="420">
+				<itemlayout width="720" height="630">
 					<control type="group">
-						<posx>-260</posx>
-						<posy>13</posy>
+						<posx>-390</posx>
+						<posy>20</posy>
 						<!-- Unfocused Item - Poster -->
 						<control type="image">
-							<posx>33</posx>
-							<posy>18</posy>
-							<width>318</width>
-							<height>234</height>
+							<posx>50</posx>
+							<posy>27</posy>
+							<width>477</width>
+							<height>351</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -111,10 +110,10 @@
 						</control>
 						<!-- Unfocused Item - Frame -->
 						<control type="image">
-							<posx>20</posx>
-							<posy>21</posy>
-							<width>343</width>
-							<height>239</height>
+							<posx>30</posx>
+							<posy>32</posy>
+							<width>514</width>
+							<height>358</height>
 							<texture>frames/ClassicFrameGlass_Vertical.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -123,8 +122,8 @@
 						</control>
 						<!-- Unfocused Item - Frame -->
 						<control type="image">
-							<width>390</width>
-							<height>269</height>
+							<width>585</width>
+							<height>404</height>
 							<texture>frames/ClassicFrame_PosterSmall.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -132,10 +131,10 @@
 						</control>
 						<!-- Unfocused Item - Watched Overlay -->
 						<control type="image">
-							<posx>285</posx>
-							<posy>213</posy>
-							<width>32</width>
-							<height>32</height>
+							<posx>428</posx>
+							<posy>320</posy>
+							<width>48</width>
+							<height>48</height>
 							<fadetime>200</fadetime>
 							<texture>$INFO[ListItem.Overlay]</texture>
 							<colordiffuse>WatchedOverlay</colordiffuse>
@@ -143,18 +142,18 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="1030" height="420">
+				<focusedlayout width="1545" height="630">
 					<!-- Focused Item Poster -->
 					<control type="group">
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="100,0" start="90" end="100" time="300" tween="sine" easing="inout" />
+							<effect type="zoom" center="150,0" start="90" end="100" time="300" tween="sine" easing="inout" />
 						</animation>
 						<!-- Focused Item - Poster -->
 						<control type="image">
-							<posx>-334</posx>
-							<posy>30</posy>
-							<width>408</width>
-							<height>285</height>
+							<posx>-501</posx>
+							<posy>45</posy>
+							<width>612</width>
+							<height>428</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<fadetime>200</fadetime>
@@ -162,10 +161,10 @@
 						</control>
 						<!-- Focused Item - Poster Frame -->
 						<control type="image">
-							<posx>-362</posx>
-							<posy>12</posy>
-							<width>465</width>
-							<height>321</height>
+							<posx>-543</posx>
+							<posy>18</posy>
+							<width>698</width>
+							<height>482</height>
 							<fadetime>200</fadetime>
 							<texture>frames/ClassicFrame_PosterMedium.png</texture>
 							<aspectratio>stretch</aspectratio>
@@ -173,13 +172,13 @@
 					</control>
 					<!-- Focused Item Fanart -->
 					<control type="group">
-						<posx>89</posx>
-						<posy>10</posy>
+						<posx>134</posx>
+						<posy>15</posy>
 						<control type="image">
-							<posx>23</posx>
-							<posy>21</posy>
-							<width>646</width>
-							<height>362</height>
+							<posx>34</posx>
+							<posy>32</posy>
+							<width>969</width>
+							<height>543</height>
 							<texture>frames/ClassicFrame_SegmentedDiffuse.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -190,10 +189,10 @@
 							<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>21</posy>
-							<width>646</width>
-							<height>362</height>
+							<posx>34</posx>
+							<posy>32</posy>
+							<width>969</width>
+							<height>543</height>
 							<texture>frames/ClassicFrame_Background.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -204,10 +203,10 @@
 							<visible>!String.IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>21</posy>
-							<width>646</width>
-							<height>362</height>
+							<posx>34</posx>
+							<posy>32</posy>
+							<width>969</width>
+							<height>543</height>
 							<texture fallback="home_art/games.jpg" diffuse="frames/ClassicFrame_SegmentedDiffuse.png">$INFO[ListItem.Art(fanart)]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -217,10 +216,10 @@
 							<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
 						<control type="image">
-							<posx>23</posx>
-							<posy>21</posy>
-							<width>646</width>
-							<height>362</height>
+							<posx>34</posx>
+							<posy>32</posy>
+							<width>969</width>
+							<height>543</height>
 							<texture fallback="home_art/games.jpg">$INFO[ListItem.Art(fanart)]</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -231,8 +230,8 @@
 						</control>
 						<!-- Focused Item Segmented Fanart Frame -->
 						<control type="image">
-							<width>700</width>
-							<height>410</height>
+							<width>1050</width>
+							<height>615</height>
 							<texture>frames/ClassicFrame_Segmented.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -241,10 +240,10 @@
 							</animation>
 							<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 						</control>
-						<!-- Focused Item Normal Fanart Frame -->						
+						<!-- Focused Item Normal Fanart Frame -->
 						<control type="image">
-							<width>700</width>
-							<height>410</height>
+							<width>1050</width>
+							<height>615</height>
 							<texture>frames/ClassicFrame_FanartMedium.png</texture>
 							<fadetime>200</fadetime>
 							<aspectratio scalediffuse="false">stretch</aspectratio>

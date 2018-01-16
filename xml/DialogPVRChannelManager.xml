@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">4</defaultcontrol>
-
 	<controls>
 		<include>Global_Background</include>
-
 		<!-- Channel information -->
 		<control type="group">
-			<posx>870</posx>
-			<posy>80</posy>
+			<posx>1305</posx>
+			<posy>120</posy>
 			<control type="radiobutton" id="7">
 				<description>Channel Enabled</description>
 				<posx>0</posx>
-				<width>380</width>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19074]</label>
 				<onleft>60</onleft>
@@ -23,8 +20,8 @@
 			<control type="edit" id="8">
 				<description>Channel Name</description>
 				<posx>0</posx>
-				<posy>35</posy>
-				<width>380</width>
+				<posy>52</posy>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19201]</label>
 				<onright>4</onright>
@@ -35,8 +32,8 @@
 			<control type="button" id="9">
 				<description>Channel Logo (Text)</description>
 				<posx>0</posx>
-				<posy>70</posy>
-				<width>380</width>
+				<posy>105</posy>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19202]</label>
 				<onleft>60</onleft>
@@ -46,18 +43,18 @@
 			</control>
 			<control type="image" id="10">
 				<description>Channel Logo (Icon)</description>
-				<posx>335</posx>
-				<posy>70</posy>
-				<width>35</width>
-				<height>35</height>
+				<posx>502</posx>
+				<posy>105</posy>
+				<width>52</width>
+				<height>52</height>
 				<aspectratio>keep</aspectratio>
 				<info>ListItem.Property(Icon)</info>
 			</control>
-			<control type="spincontrolex" id ="11">
+			<control type="spincontrolex" id="11">
 				<description>Group Selection</description>
 				<posx>0</posx>
-				<posy>105</posy>
-				<width>380</width>
+				<posy>158</posy>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19207]</label>
 				<onright>4</onright>
@@ -65,11 +62,11 @@
 				<onup>9</onup>
 				<ondown>12</ondown>
 			</control>
-			<control type="radiobutton" id ="12">
+			<control type="radiobutton" id="12">
 				<description>EPG Activated</description>
 				<posx>0</posx>
-				<posy>140</posy>
-				<width>380</width>
+				<posy>210</posy>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19206]</label>
 				<onleft>60</onleft>
@@ -77,11 +74,11 @@
 				<onup>11</onup>
 				<ondown>13</ondown>
 			</control>
-			<control type="spincontrolex" id ="13">
+			<control type="spincontrolex" id="13">
 				<description>EPG Source</description>
 				<posx>0</posx>
-				<posy>175</posy>
-				<width>380</width>
+				<posy>262</posy>
+				<width>570</width>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19200]</label>
 				<onright>4</onright>
@@ -90,17 +87,16 @@
 				<ondown>30</ondown>
 			</control>
 		</control>
-
 		<!-- Action Buttons group -->
 		<control type="group">
-			<posx>870</posx>
-			<posy>340</posy>
-			<control type="button" id ="30">
+			<posx>1305</posx>
+			<posy>510</posy>
+			<control type="button" id="30">
 				<description>Group Manager Button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>380</width>
-				<height>35</height>
+				<width>570</width>
+				<height>52</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19205]</label>
 				<onleft>60</onleft>
@@ -108,12 +104,12 @@
 				<onup>13</onup>
 				<ondown>34</ondown>
 			</control>
-			<control type="button" id ="34">
+			<control type="button" id="34">
 				<description>Radio Switch Button</description>
 				<posx>0</posx>
-				<posy>35</posy>
-				<width>380</width>
-				<height>35</height>
+				<posy>52</posy>
+				<width>570</width>
+				<height>52</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19024]</label>
 				<visible>String.IsEmpty(Window.Property(IsRadio))</visible>
@@ -122,12 +118,12 @@
 				<onup>30</onup>
 				<ondown>31</ondown>
 			</control>
-			<control type="button" id ="34">
+			<control type="button" id="34">
 				<description>TV Channel Switch Button</description>
 				<posx>0</posx>
-				<posy>35</posy>
-				<width>380</width>
-				<height>35</height>
+				<posy>52</posy>
+				<width>570</width>
+				<height>52</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19023]</label>
 				<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
@@ -136,12 +132,12 @@
 				<onup>30</onup>
 				<ondown>19204</ondown>
 			</control>
-			<control type="button" id ="19204">
+			<control type="button" id="19204">
 				<description>New Channel Button</description>
 				<posx>0</posx>
-				<posy>140</posy>
-				<width>380</width>
-				<height>35</height>
+				<posy>210</posy>
+				<width>570</width>
+				<height>52</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19204]</label>
 				<onleft>60</onleft>
@@ -150,60 +146,59 @@
 				<ondown>7</ondown>
 			</control>
 		</control>
-
 		<!-- TV Channel list-->
 		<control type="group">
-			<posx>450</posx>
-			<posy>70</posy>
+			<posx>675</posx>
+			<posy>105</posy>
 			<control type="list" id="20">
 				<posx>0</posx>
-				<posy>10</posy>
-				<width>370</width>
-				<height>435</height>
+				<posy>15</posy>
+				<width>555</width>
+				<height>652</height>
 				<onleft>4</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="60">
 					<control type="image">
-						<posx>15</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>22</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<info>ListItem.Property(Icon)</info>
 					</control>
 					<control type="label">
-						<posx>50</posx>
+						<posx>75</posx>
 						<posy>0</posy>
-						<width>290</width>
-						<height>38</height>
+						<width>435</width>
+						<height>57</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
 						<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="60">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<height>40</height>
-						<width>350</width>
+						<height>60</height>
+						<width>525</width>
 						<texture>ButtonFO.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(20)">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>15</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>22</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<info>ListItem.Property(Icon)</info>
 					</control>
 					<control type="label">
-						<posx>50</posx>
+						<posx>75</posx>
 						<posy>0</posy>
-						<width>290</width>
-						<height>38</height>
+						<width>435</width>
+						<height>57</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
@@ -211,12 +206,11 @@
 					</control>
 				</focusedlayout>
 			</control>
-
 			<control type="scrollbar" id="60">
-				<posx>364</posx>
+				<posx>546</posx>
 				<posy>0</posy>
-				<width>25</width>
-				<height>455</height>
+				<width>38</width>
+				<height>682</height>
 				<onleft>20</onleft>
 				<onright>7</onright>
 				<texturesliderbackground></texturesliderbackground>
@@ -225,12 +219,11 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-
 		<!-- Default Menu -->
 		<control type="grouplist">
 			<posx>0</posx>
-			<posy>236</posy>
-			<itemgap>12</itemgap>
+			<posy>354</posy>
+			<itemgap>18</itemgap>
 			<orientation>vertical</orientation>
 			<onleft>7</onleft>
 			<onright>20</onright>
@@ -250,11 +243,10 @@
 				<label>$LOCALIZE[222]</label>
 			</control>
 		</control>
-
 		<!-- Header group -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<label>$LOCALIZE[5]</label>
@@ -265,10 +257,9 @@
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>
-
 		<!-- Time, weather and debug options -->
 		<include>Global_Weather</include>
- 		<include>Global_Time</include>
+		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 	</controls>
 </window>

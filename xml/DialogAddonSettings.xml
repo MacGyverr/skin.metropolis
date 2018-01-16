@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">3</defaultcontrol>
 	<include>Animation_OpenCloseFade</include>
@@ -11,28 +10,28 @@
 	<controls>
 		<control type="group">
 			<animation type="Conditional" condition="Window.IsActive(filebrowser)">
-				<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="inout" />
+				<effect type="zoom" time="600" center="960,540" start="100" end="50" tween="cubic" easing="inout" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
-			<posy>-110</posy>
+			<posy>-165</posy>
 			<control type="label" id="2">
+				<label></label>
 				<description>Header Label</description>
-				<posx>460</posx>
-				<posy>175</posy>
-				<width>810</width>
-				<height>38</height>
+				<posx>690</posx>
+				<posy>262</posy>
+				<width>1215</width>
+				<height>57</height>
 				<font>METF_TitleTextLarge</font>
 				<textcolor>SettingsTitle</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label></label>
 			</control>
 			<control type="grouplist" id="5">
 				<description>Control Area</description>
-				<posx>440</posx>
-				<posy>240</posy>
-				<width>840</width>
-				<height>380</height>
+				<posx>660</posx>
+				<posy>360</posy>
+				<width>1260</width>
+				<height>570</height>
 				<itemgap>0</itemgap>
 				<onleft>28</onleft>
 				<onright>28</onright>
@@ -56,7 +55,7 @@
 				<include>Settings_Line</include>
 			</control>
 			<control type="edit" id="12">
-				<include>DefaultSettingButton</include>
+				<include>SettingsLabel</include>
 			</control>
 			<control type="label" id="14">
 				<description>Separator label</description>
@@ -75,9 +74,9 @@
 			<control type="grouplist" id="3">
 				<description>Button Area</description>
 				<posx>0</posx>
-				<posy>392</posy>
-				<width>380</width>
-				<height>230</height>
+				<posy>588</posy>
+				<width>570</width>
+				<height>345</height>
 				<itemgap>0</itemgap>
 				<scrolltime>0</scrolltime>
 				<onleft>5</onleft>
@@ -94,7 +93,7 @@
 				<control type="button" id="30">
 					<description>Default</description>
 					<posx>0</posx>
-					<posy>240</posy>
+					<posy>360</posy>
 					<include>SettingsLabelLeft</include>
 					<label>$LOCALIZE[409]</label>
 					<onleft>5</onleft>
@@ -105,7 +104,7 @@
 				<control type="button" id="29">
 					<description>Cancel</description>
 					<posx>0</posx>
-					<posy>278</posy>
+					<posy>417</posy>
 					<include>SettingsLabelLeft</include>
 					<label>$LOCALIZE[222]</label>
 					<onleft>5</onleft>
@@ -116,7 +115,7 @@
 				<control type="button" id="28">
 					<description>Ok</description>
 					<posx>0</posx>
-					<posy>316</posy>
+					<posy>474</posy>
 					<include>SettingsLabelLeft</include>
 					<label>$LOCALIZE[186]</label>
 					<onleft>5</onleft>
@@ -127,20 +126,20 @@
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
-				<posx>848</posx>
-				<posy>218</posy>
-				<height>24</height>
-				<width>24</width>
+				<posx>1272</posx>
+				<posy>327</posy>
+				<height>36</height>
+				<width>36</width>
 				<texture>Arrow2Up.png</texture>
 				<colordiffuse>ArrowDiffuse</colordiffuse>
 				<visible>Container(2).HasPrevious</visible>
 			</control>
 			<control type="image">
 				<include>Animation_CommonFadeNoHide</include>
-				<posx>848</posx>
-				<posy>620</posy>
-				<height>24</height>
-				<width>24</width>
+				<posx>1272</posx>
+				<posy>930</posy>
+				<height>36</height>
+				<width>36</width>
 				<texture>Arrow2Down.png</texture>
 				<colordiffuse>ArrowDiffuse</colordiffuse>
 				<visible>Container(2).HasNext</visible>

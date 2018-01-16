@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">450</defaultcontrol>
 	<zorder>2</zorder>
@@ -11,10 +10,10 @@
 		<include>Animation_OpenCloseFade</include>
 		<include>Global_Background</include>
 		<control type="fixedlist" id="450">
-			<posx>690</posx>
-			<posy>66</posy>
-			<height>468</height>
-			<width>590</width>
+			<posx>1035</posx>
+			<posy>99</posy>
+			<height>702</height>
+			<width>885</width>
 			<onup>450</onup>
 			<ondown>450</ondown>
 			<onleft>7001</onleft>
@@ -25,15 +24,15 @@
 			<focusposition>7</focusposition>
 			<pagecontrol>60</pagecontrol>
 			<animation type="Conditional" condition="Window.IsActive(contextmenu)">
-				<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="inout" />
+				<effect type="zoom" time="600" center="960,540" start="100" end="50" tween="cubic" easing="inout" />
 				<effect type="fade" time="400" start="100" end="20" />
 			</animation>
-			<itemlayout width="0" height="30">
+			<itemlayout width="0" height="45">
 				<control type="label">
-					<posx>20</posx>
+					<posx>30</posx>
 					<posy>0</posy>
-					<width>550</width>
-					<height>30</height>
+					<width>825</width>
+					<height>45</height>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<textcolor>TextNF</textcolor>
@@ -42,21 +41,21 @@
 					<scroll>false</scroll>
 				</control>
 			</itemlayout>
-			<focusedlayout width="0" height="42">
+			<focusedlayout width="0" height="63">
 				<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>590</width>
-					<height>42</height>
+					<width>885</width>
+					<height>63</height>
 					<aligny>center</aligny>
 					<texture>ButtonFO.png</texture>
 					<animation effect="fade" start="100" end="100" condition="!Control.HasFocus(450)">Conditional</animation>
 				</control>
 				<control type="label">
-					<posx>20</posx>
+					<posx>30</posx>
 					<posy>0</posy>
-					<width>550</width>
-					<height>42</height>
+					<width>825</width>
+					<height>63</height>
 					<aligny>center</aligny>
 					<scrollout>false</scrollout>
 					<pauseatend>1800</pauseatend>
@@ -70,10 +69,10 @@
 			</focusedlayout>
 		</control>
 		<control type="image">
-			<posx>300</posx>
-			<posy>74</posy>
-			<width>360</width>
-			<height>440</height>
+			<posx>450</posx>
+			<posy>111</posy>
+			<width>540</width>
+			<height>660</height>
 			<fadetime>100</fadetime>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Icon]</texture>
@@ -82,10 +81,10 @@
 			<visible>!String.StartsWith(ListItem.Icon,default)</visible>
 		</control>
 		<control type="image">
-			<posx>300</posx>
-			<posy>74</posy>
-			<width>360</width>
-			<height>440</height>
+			<posx>450</posx>
+			<posy>111</posy>
+			<width>540</width>
+			<height>660</height>
 			<fadetime>100</fadetime>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
 			<texture>$INFO[ListItem.Icon]</texture>
@@ -93,8 +92,8 @@
 		</control>
 		<!-- Buttons -->
 		<control type="grouplist" id="7001">
-			<posx>-110</posx>
-			<posy>230</posy>
+			<posx>-165</posx>
+			<posy>345</posy>
 			<onleft>noop</onleft>
 			<onright>450</onright>
 			<onup>7001</onup>
@@ -102,21 +101,21 @@
 			<control type="button" id="414">
 				<description>Cancel</description>
 				<posx>0</posx>
-				<posy>95</posy>
+				<posy>142</posy>
 				<include>SettingsLabelLeft</include>
 				<label>222</label>
 			</control>
 			<control type="button" id="413">
 				<description>Ok</description>
 				<posx>0</posx>
-				<posy>133</posy>
+				<posy>200</posy>
 				<include>SettingsLabelLeft</include>
 				<label>186</label>
 			</control>
 			<control type="button" id="415">
 				<description>Create Folder</description>
 				<posx>0</posx>
-				<posy>171</posy>
+				<posy>256</posy>
 				<include>SettingsLabelLeft</include>
 				<label>119</label>
 			</control>
@@ -124,10 +123,10 @@
 		<!-- Scroll Bar -->
 		<control type="scrollbar" id="60">
 			<include>Animation_FadedByMenu</include>
-			<posx>1270</posx>
-			<posy>60</posy>
-			<width>18</width>
-			<height>474</height>
+			<posx>1905</posx>
+			<posy>90</posy>
+			<width>27</width>
+			<height>711</height>
 			<visible allowhiddenfocus="true">Control.IsVisible(450) + Control.HasFocus(60)</visible>
 			<texturesliderbackground></texturesliderbackground>
 			<textureslidernibfocus>ScrollbarVnibFO.png</textureslidernibfocus>
@@ -139,8 +138,8 @@
 		</control>
 		<!-- Heading -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label" id="411">

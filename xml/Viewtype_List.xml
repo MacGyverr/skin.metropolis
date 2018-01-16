@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_List">
 		<control type="group">
@@ -6,13 +5,13 @@
 			<!-- Browser -->
 			<control type="list" id="55">
 				<animation type="Conditional" condition="Window.IsActive(addoninformation)">
-					<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="out" />
+					<effect type="zoom" time="600" center="960,540" start="100" end="50" tween="cubic" easing="out" />
 					<effect type="fade" time="400" start="100" end="0" />
 				</animation>
-				<posx>360</posx>
-				<posy>140</posy>
-				<height>350</height>
-				<width>850</width>
+				<posx>540</posx>
+				<posy>210</posy>
+				<height>525</height>
+				<width>1275</width>
 				<onup>55</onup>
 				<ondown>55</ondown>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
@@ -26,23 +25,23 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<itemlayout width="0" height="35">
+				<itemlayout width="0" height="52">
 					<!-- List Line Item Divider -->
 					<control type="image">
-						<posx>35</posx>
-						<posy>33</posy>
-						<width>815</width>
-						<height>2</height>
+						<posx>52</posx>
+						<posy>50</posy>
+						<width>1222</width>
+						<height>3</height>
 						<aligny>center</aligny>
 						<texture>VideoInfoLine.png</texture>
 						<colordiffuse>FilesDividerDiffuse</colordiffuse>
 					</control>
 					<!-- Items in Video Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>708</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1062</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<font>METF_TitleText</font>
 						<textcolor>TextNF</textcolor>
@@ -52,10 +51,10 @@
 						<visible>Window.IsActive(videos) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]</visible>
 					</control>
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>635</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>952</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<font>METF_TitleText</font>
 						<textcolor>TextNF</textcolor>
@@ -65,10 +64,10 @@
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(episodes)]</visible>
 					</control>
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>576</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>864</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<font>METF_TitleText</font>
 						<textcolor>TextNF</textcolor>
@@ -79,30 +78,30 @@
 					</control>
 					<!-- Watched Overlay for Items in Video Library -->
 					<control type="image">
-						<posx>4</posx>
-						<posy>5</posy>
-						<width>24</width>
-						<height>24</height>
+						<posx>6</posx>
+						<posy>8</posy>
+						<width>36</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>!ListItem.IsResumable + Window.IsActive(videos) + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 					<!-- Watched Overlay for In-Progress Items in Video Library -->
 					<control type="image">
-						<posx>-2</posx>
+						<posx>-3</posx>
 						<posy>0</posy>
-						<width>35</width>
-						<height>35</height>
+						<width>52</width>
+						<height>52</height>
 						<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>ListItem.IsResumable + Window.IsActive(videos) + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 					<!-- Items in Music Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>708</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1062</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<font>METF_TitleText</font>
 						<textcolor>TextNF</textcolor>
@@ -113,10 +112,10 @@
 					</control>
 					<!-- Items NOT in Video or Music Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>740</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1110</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<font>METF_TitleText</font>
 						<textcolor>TextNF</textcolor>
@@ -127,20 +126,20 @@
 					</control>
 					<!-- Watched Overlay for Items NOT in Video Library -->
 					<control type="image">
-						<posx>4</posx>
-						<posy>5</posy>
-						<width>24</width>
-						<height>24</height>
+						<posx>6</posx>
+						<posy>8</posy>
+						<width>36</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>!Window.IsActive(videos) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					<!-- Addon Progress/state -->
 					<control type="label">
-						<posx>630</posx>
-						<posy>-2</posy>
-						<width>220</width>
-						<height>35</height>
+						<posx>945</posx>
+						<posy>-3</posy>
+						<width>330</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Addon.Status)]</label>
@@ -150,44 +149,44 @@
 					</control>
 					<!-- HD/SD icons -->
 					<control type="image">
-						<posx>768</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1152</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)] + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<posx>695</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1042</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + Container.Content(seasons) + String.IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<posx>695</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1042</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<!-- 3D icon -->
 					<control type="image">
-						<posx>745</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1118</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>flags/3d.png</texture>
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(episodes)] + [ListItem.IsStereoscopic | String.Contains(ListItem.FilenameAndPath,.3d.) | String.Contains(ListItem.FilenameAndPath,hsbs) | String.Contains(ListItem.FilenameAndPath,sbs) | String.Contains(ListItem.FilenameAndPath,half-sbs)]</visible>
 					</control>
 					<!-- Episode Count for TVShows -->
 					<control type="label">
-						<posx>730</posx>
-						<posy>-2</posy>
-						<width>120</width>
-						<height>35</height>
+						<posx>1095</posx>
+						<posy>-3</posy>
+						<width>180</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(NumEpisodes)] $LOCALIZE[20360]</label>
@@ -197,10 +196,10 @@
 					</control>
 					<!-- Episode Count for Seasons -->
 					<control type="label">
-						<posx>730</posx>
-						<posy>-2</posy>
-						<width>120</width>
-						<height>35</height>
+						<posx>1095</posx>
+						<posy>-3</posy>
+						<width>180</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(NumEpisodes)] $LOCALIZE[20360]</label>
@@ -216,10 +215,10 @@
 						-->
 						<visible>!Window.IsActive(videos) + !String.Contains(Container.FolderPath,plugin)</visible>
 						<control type="label">
-							<posx>775</posx>
-							<posy>-2</posy>
-							<width>45</width>
-							<height>35</height>
+							<posx>1162</posx>
+							<posy>-3</posy>
+							<width>68</width>
+							<height>52</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Rating]</label>
@@ -228,43 +227,43 @@
 							<visible>!String.IsEmpty(ListItem.Rating)</visible>
 						</control>
 						<control type="image">
-							<posx>772</posx>
-							<posy>6</posy>
-							<width>20</width>
-							<height>20</height>
+							<posx>1158</posx>
+							<posy>9</posy>
+							<width>30</width>
+							<height>30</height>
 							<texture>Star.png</texture>
 							<colordiffuse>FFFFFFFF</colordiffuse>
 							<visible>!String.IsEmpty(ListItem.Rating)</visible>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="0" height="35">
+				<focusedlayout width="0" height="52">
 					<!-- List Line Item Divider -->
 					<control type="image">
-						<posx>35</posx>
-						<posy>33</posy>
-						<width>815</width>
-						<height>2</height>
+						<posx>52</posx>
+						<posy>50</posy>
+						<width>1222</width>
+						<height>3</height>
 						<aligny>center</aligny>
 						<texture>VideoInfoLine.png</texture>
 						<colordiffuse>FilesDividerDiffuse</colordiffuse>
 					</control>
 					<!-- Focus Bar -->
 					<control type="image">
-						<posx>35</posx>
+						<posx>52</posx>
 						<posy>0</posy>
-						<width>815</width>
-						<height>33</height>
+						<width>1222</width>
+						<height>50</height>
 						<aligny>center</aligny>
 						<texture>FocusLine.png</texture>
 						<colordiffuse>FocusBar</colordiffuse>
 					</control>
 					<!-- Items in Video Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>708</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1062</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<scrollout>false</scrollout>
 						<pauseatend>1800</pauseatend>
@@ -277,10 +276,10 @@
 						<visible>Window.IsActive(videos) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies) | Container.Content(sets)]</visible>
 					</control>
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>635</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>952</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<scrollout>false</scrollout>
 						<pauseatend>1800</pauseatend>
@@ -293,10 +292,10 @@
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(episodes)]</visible>
 					</control>
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>576</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>864</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<scrollout>false</scrollout>
 						<pauseatend>1800</pauseatend>
@@ -310,30 +309,30 @@
 					</control>
 					<!-- Watched Overlay -->
 					<control type="image">
-						<posx>4</posx>
-						<posy>5</posy>
-						<width>24</width>
-						<height>24</height>
+						<posx>6</posx>
+						<posy>8</posy>
+						<width>36</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>!ListItem.IsResumable + Window.IsActive(videos) + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 					<!-- Watched Overlay for In-Progress Items in Video Library -->
 					<control type="image">
-						<posx>-2</posx>
+						<posx>-3</posx>
 						<posy>0</posy>
-						<width>35</width>
-						<height>35</height>
+						<width>52</width>
+						<height>52</height>
 						<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>ListItem.IsResumable + Window.IsActive(videos) + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 					<!-- Items in Music Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>708</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1062</width>
+						<height>52</height>
 						<scrollout>false</scrollout>
 						<pauseatend>1800</pauseatend>
 						<scrollspeed>40</scrollspeed>
@@ -347,10 +346,10 @@
 					</control>
 					<!-- Items NOT in Video or Music Library -->
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>740</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1110</width>
+						<height>52</height>
 						<aligny>center</aligny>
 						<scrollout>false</scrollout>
 						<pauseatend>1800</pauseatend>
@@ -364,20 +363,20 @@
 					</control>
 					<!-- Watched Overlay for Items NOT in Video Library -->
 					<control type="image">
-						<posx>4</posx>
-						<posy>5</posy>
-						<width>24</width>
-						<height>24</height>
+						<posx>6</posx>
+						<posy>8</posy>
+						<width>36</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>!Window.IsActive(videos) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 					<!-- Addon Progress/state -->
 					<control type="label">
-						<posx>630</posx>
-						<posy>-2</posy>
-						<width>220</width>
-						<height>35</height>
+						<posx>945</posx>
+						<posy>-3</posy>
+						<width>330</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(Addon.Status)]</label>
@@ -387,44 +386,44 @@
 					</control>
 					<!-- HD/SD icons -->
 					<control type="image">
-						<posx>768</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1152</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<posx>695</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1042</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + Container.Content(seasons) + String.IsEmpty(ListItem.Property(UnWatchedEpisodes)) + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<control type="image">
-						<posx>695</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1042</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>$INFO[ListItem.VideoResolution,flags/VideoResolutionIcons/,.png]</texture>
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(episodes)] + !String.IsEmpty(ListItem.VideoResolution)</visible>
 					</control>
 					<!-- 3D icon -->
 					<control type="image">
-						<posx>745</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>24</height>
+						<posx>1118</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>36</height>
 						<texture>flags/3d.png</texture>
 						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(episodes)] + [ListItem.IsStereoscopic | String.Contains(ListItem.FilenameAndPath,.3d.) | String.Contains(ListItem.FilenameAndPath,hsbs) | String.Contains(ListItem.FilenameAndPath,sbs) | String.Contains(ListItem.FilenameAndPath,half-sbs)]</visible>
 					</control>
 					<!-- Episode Count for TVShows -->
 					<control type="label">
-						<posx>730</posx>
-						<posy>-2</posy>
-						<width>120</width>
-						<height>35</height>
+						<posx>1095</posx>
+						<posy>-3</posy>
+						<width>180</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(NumEpisodes)] $LOCALIZE[20360]</label>
@@ -434,10 +433,10 @@
 					</control>
 					<!-- Episode Count for Seasons -->
 					<control type="label">
-						<posx>730</posx>
-						<posy>-2</posy>
-						<width>120</width>
-						<height>35</height>
+						<posx>1095</posx>
+						<posy>-3</posy>
+						<width>180</width>
+						<height>52</height>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Property(NumEpisodes)] $LOCALIZE[20360]</label>
@@ -453,10 +452,10 @@
 						-->
 						<visible>!Window.IsActive(videos) + !String.Contains(Container.FolderPath,plugin)</visible>
 						<control type="label">
-							<posx>775</posx>
-							<posy>-2</posy>
-							<width>45</width>
-							<height>35</height>
+							<posx>1162</posx>
+							<posy>-3</posy>
+							<width>68</width>
+							<height>52</height>
 							<align>right</align>
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Rating]</label>
@@ -465,10 +464,10 @@
 							<visible>!String.IsEmpty(ListItem.Rating)</visible>
 						</control>
 						<control type="image">
-							<posx>772</posx>
-							<posy>6</posy>
-							<width>20</width>
-							<height>20</height>
+							<posx>1158</posx>
+							<posy>9</posy>
+							<width>30</width>
+							<height>30</height>
 							<texture>Star.png</texture>
 							<colordiffuse>$VAR[RatingColor]</colordiffuse>
 							<visible>!String.IsEmpty(ListItem.Rating)</visible>
@@ -479,242 +478,242 @@
 			<!-- Thumbnails -->
 			<control type="group">
 				<animation type="Conditional" condition="Window.IsActive(addoninformation)">
-					<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="out" />
+					<effect type="zoom" time="600" center="960,540" start="100" end="50" tween="cubic" easing="out" />
 					<effect type="fade" time="400" start="100" end="0" />
 				</animation>
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<!-- Movie, TVShow and Season Posters -->
-					<control type="group">
-						<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-						<posx>20</posx>
-						<posy>65</posy>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<texture>frames/ClassicFrame_Background.png</texture>
-							<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-							<visible>!String.IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>String.IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!String.IsEmpty(ListItem.Title)</visible>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>-10</posy>
-							<width>335</width>
-							<height>490</height>
-							<texture>frames/ClassicFrame_PosterMedium.png</texture>
-							<visible>!String.IsEmpty(ListItem.Title)</visible>
-						</control>
-					</control>
-					<!-- Episode Posters -->
-					<control type="group">
-						<visible>Window.IsActive(videos) + Container.Content(episodes)</visible>
-						<posx>25</posx>
-						<posy>45</posy>
-						<control type="image">
-							<posx>22</posx>
-							<posy>112</posy>
-							<width>293</width>
-							<height>265</height>
-							<texture>frames/ClassicFrame_Background.png</texture>
-							<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-							<visible>String.IsEmpty(ListItem.Title) + String.IsEqual(ListItem.Icon,-) + String.StartsWith(ListItem.Icon,default)</visible>
-						</control>
-						<control type="image">
-							<posx>22</posx>
-							<posy>112</posy>
-							<width>293</width>
-							<height>265</height>
-							<fadetime>100</fadetime>
-							<texture background="true" diffuse="frames/episode_matte.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>String.IsEmpty(ListItem.Title) | String.IsEqual(ListItem.Icon,-) | String.StartsWith(ListItem.Icon,default)</visible>
-						</control>
-						<control type="image">
-							<posx>22</posx>
-							<posy>162</posy>
-							<width>293</width>
-							<height>165</height>
-							<fadetime>100</fadetime>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-							<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
-						</control>
-						<control type="image">
-							<posx>22</posx>
-							<posy>162</posy>
-							<width>293</width>
-							<height>165</height>
-							<texture>frames/ClassicFrameGlass_Horizontal.png</texture>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<colordiffuse>GlassDiffuse</colordiffuse>
-							<fadetime>100</fadetime>
-							<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
-						</control>
-						<control type="image">
-							<posx>5</posx>
-							<posy>144</posy>
-							<width>328</width>
-							<height>203</height>
-							<texture>frames/ClassicFrame_FanartSmall.png</texture>
-							<fadetime>100</fadetime>
-							<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
-						</control>
-					</control>
-				<!-- Artist/Album Cover, Addons, and Pictures -->
+				<control type="group">
+					<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<posx>30</posx>
+					<posy>98</posy>
 					<control type="image">
-						<posx>32</posx>
-						<posy>132</posy>
-						<width>300</width>
-						<height>300</height>
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-						<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)]] + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
+						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>32</posx>
-						<posy>132</posy>
-						<width>300</width>
-						<height>300</height>
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
 						<fadetime>100</fadetime>
-						<aspectratio align="right" aligny="center">stretch</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons)</visible>
+						<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<visible>String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>32</posx>
-						<posy>132</posy>
-						<width>300</width>
-						<height>300</height>
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
 						<fadetime>100</fadetime>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)</visible>
+						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>12</posx>
-						<posy>111</posy>
-						<width>339</width>
-						<height>342</height>
-						<texture>frames/ClassicFrame_SquareMedium.png</texture>
-						<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)]] + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
+						<posx>0</posx>
+						<posy>-15</posy>
+						<width>502</width>
+						<height>735</height>
+						<texture>frames/ClassicFrame_PosterMedium.png</texture>
+						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
-					<!-- Images for other items -->
+				</control>
+				<!-- Episode Posters -->
+				<control type="group">
+					<visible>Window.IsActive(videos) + Container.Content(episodes)</visible>
+					<posx>38</posx>
+					<posy>68</posy>
 					<control type="image">
-						<posx>37</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>440</height>
+						<posx>33</posx>
+						<posy>168</posy>
+						<width>440</width>
+						<height>398</height>
+						<texture>frames/ClassicFrame_Background.png</texture>
+						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+						<visible>String.IsEmpty(ListItem.Title) + String.IsEqual(ListItem.Icon,-) + String.StartsWith(ListItem.Icon,default)</visible>
+					</control>
+					<control type="image">
+						<posx>33</posx>
+						<posy>168</posy>
+						<width>440</width>
+						<height>398</height>
 						<fadetime>100</fadetime>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<texture>$INFO[ListItem.Icon]</texture>
-						<visible>[!Window.IsActive(videos) + !Window.IsActive(games) | [Window.IsActive(videos) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(genres)]] + ![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin) + !Window.IsActive(games)]]</visible>
+						<texture background="true" diffuse="frames/episode_matte.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<visible>String.IsEmpty(ListItem.Title) | String.IsEqual(ListItem.Icon,-) | String.StartsWith(ListItem.Icon,default)</visible>
 					</control>
 					<control type="image">
-						<posx>37</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>440</height>
+						<posx>33</posx>
+						<posy>243</posy>
+						<width>440</width>
+						<height>248</height>
 						<fadetime>100</fadetime>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<texture fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
-						<visible>Window.IsActive(videos) + !String.Contains(Container.FolderPath,videodb://musicvideos/) + Container.Content(genres)</visible>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
 					</control>
 					<control type="image">
-						<posx>37</posx>
-						<posy>45</posy>
-						<width>300</width>
-						<height>440</height>
+						<posx>33</posx>
+						<posy>243</posy>
+						<width>440</width>
+						<height>248</height>
+						<texture>frames/ClassicFrameGlass_Horizontal.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<colordiffuse>GlassDiffuse</colordiffuse>
 						<fadetime>100</fadetime>
-						<aspectratio align="right" aligny="center">keep</aspectratio>
-						<texture fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
-						<visible>[Window.IsActive(music) | [Window.IsActive(videos) + String.Contains(Container.FolderPath,videodb://musicvideos/)]] + Container.Content(genres)</visible>
+						<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
 					</control>
+					<control type="image">
+						<posx>8</posx>
+						<posy>216</posy>
+						<width>492</width>
+						<height>304</height>
+						<texture>frames/ClassicFrame_FanartSmall.png</texture>
+						<fadetime>100</fadetime>
+						<visible>!String.IsEmpty(ListItem.Title) + !String.IsEqual(ListItem.Icon,-) + !String.StartsWith(ListItem.Icon,default)</visible>
+					</control>
+				</control>
+				<!-- Artist/Album Cover, Addons, and Pictures -->
+				<control type="image">
+					<posx>48</posx>
+					<posy>198</posy>
+					<width>450</width>
+					<height>450</height>
+					<texture>frames/ClassicFrame_Background.png</texture>
+					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+					<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)]] + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>198</posy>
+					<width>450</width>
+					<height>450</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">stretch</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons)</visible>
+				</control>
+				<control type="image">
+					<posx>48</posx>
+					<posy>198</posy>
+					<width>450</width>
+					<height>450</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)</visible>
+				</control>
+				<control type="image">
+					<posx>18</posx>
+					<posy>166</posy>
+					<width>508</width>
+					<height>513</height>
+					<texture>frames/ClassicFrame_SquareMedium.png</texture>
+					<visible>[Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin)]] + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
+				</control>
+				<!-- Images for other items -->
+				<control type="image">
+					<posx>56</posx>
+					<posy>68</posy>
+					<width>450</width>
+					<height>660</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<visible>[!Window.IsActive(videos) + !Window.IsActive(games) | [Window.IsActive(videos) + !Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes) + !Container.Content(genres)]] + ![Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(addons) | [Window.IsActive(pictures) + !String.Contains(Container.FolderPath,plugin) + !Window.IsActive(games)]]</visible>
+				</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>68</posy>
+					<width>450</width>
+					<height>660</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultMovieGenre.jpg">moviegenres/$INFO[ListItem.Label].jpg</texture>
+					<visible>Window.IsActive(videos) + !String.Contains(Container.FolderPath,videodb://musicvideos/) + Container.Content(genres)</visible>
+				</control>
+				<control type="image">
+					<posx>56</posx>
+					<posy>68</posy>
+					<width>450</width>
+					<height>660</height>
+					<fadetime>100</fadetime>
+					<aspectratio align="right" aligny="center">keep</aspectratio>
+					<texture fallback="DefaultMusicGenre.jpg">musicgenres/$INFO[ListItem.Label].jpg</texture>
+					<visible>[Window.IsActive(music) | [Window.IsActive(videos) + String.Contains(Container.FolderPath,videodb://musicvideos/)]] + Container.Content(genres)</visible>
+				</control>
 				<!-- Retroplayer Posters (note that this is really ugly (and temporary), it will always display the default icon, then overlay a png over that, then overlay a jpg over that, but there exists no other way to do it yet without library support for games) -->
-					<control type="group">
-						<visible>Window.IsActive(games)</visible>
-						<posx>20</posx>
-						<posy>65</posy>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<texture>frames/ClassicFrame_Background.png</texture>
-							<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
-							<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<aspectratio align="right" aligny="center">keep</aspectratio>
-							<texture background="true" fallback="DefaultAddonGame.png">$INFO[ListItem.FolderPath]poster.png</texture>
-							<visible>String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio scalediffuse="false">keep</aspectratio>
-							<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<texture>$INFO[ListItem.FileNameAndPath].png</texture>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<control type="image">
-							<posx>17</posx>
-							<posy>15</posy>
-							<width>300</width>
-							<height>440</height>
-							<fadetime>100</fadetime>
-							<texture>$INFO[ListItem.FileNameAndPath].jpg</texture>
-							<aspectratio scalediffuse="false">stretch</aspectratio>
-							<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>-10</posy>
-							<width>335</width>
-							<height>490</height>
-							<texture>frames/ClassicFrame_PosterMedium.png</texture>
-							<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
-						</control>
-						<!-- used for testing labels 
+				<control type="group">
+					<visible>Window.IsActive(games)</visible>
+					<posx>30</posx>
+					<posy>98</posy>
+					<control type="image">
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
+						<texture>frames/ClassicFrame_Background.png</texture>
+						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
+						<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
+						<fadetime>100</fadetime>
+						<aspectratio align="right" aligny="center">keep</aspectratio>
+						<texture background="true" fallback="DefaultAddonGame.png">$INFO[ListItem.FolderPath]poster.png</texture>
+						<visible>String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
+						<fadetime>100</fadetime>
+						<texture background="true" diffuse="frames/postermatte.png">$INFO[ListItem.Icon]</texture>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
+						<fadetime>100</fadetime>
+						<texture>$INFO[ListItem.FileNameAndPath].png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>26</posx>
+						<posy>22</posy>
+						<width>450</width>
+						<height>660</height>
+						<fadetime>100</fadetime>
+						<texture>$INFO[ListItem.FileNameAndPath].jpg</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>-15</posy>
+						<width>502</width>
+						<height>735</height>
+						<texture>frames/ClassicFrame_PosterMedium.png</texture>
+						<visible>!String.IsEmpty(ListItem.FileExtension) + Window.IsActive(games)</visible>
+					</control>
+					<!-- used for testing labels 
 						<control type="label">
 							<posx>37</posx>
 							<posy>505</posy>
@@ -726,29 +725,29 @@
 							<textcolor>MediaDetailsInfo</textcolor>
 							<visible>Window.IsActive(games)</visible>
 						</control> -->
-					</control>
 				</control>
+			</control>
 			<!-- Info Details -->
 			<control type="group">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<posy>95</posy>
+				<posy>142</posy>
 				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | [!String.IsEmpty(ListItem.AddonCreator) + Container.Content(addons)]</visible>
 				<include>VisibleIfNotMovieSet</include>
 				<control type="image">
-					<posx>360</posx>
-					<posy>33</posy>
-					<width>890</width>
-					<height>3</height>
+					<posx>540</posx>
+					<posy>50</posy>
+					<width>1335</width>
+					<height>4</height>
 					<texture>VideoInfoLine.png</texture>
 					<colordiffuse>LowListDivider</colordiffuse>
 				</control>
 				<!-- Episode Aired Date -->
 				<control type="label">
-					<posx>1245</posx>
-					<width>550</width>
-					<height>27</height>
+					<posx>1868</posx>
+					<width>825</width>
+					<height>40</height>
 					<align>right</align>
 					<label>$LOCALIZE[20416] $INFO[ListItem.Premiered]</label>
 					<font>METF_MediaDetails</font>
@@ -757,9 +756,9 @@
 				</control>
 				<!-- Addon Author -->
 				<control type="label">
-					<posx>1245</posx>
-					<width>550</width>
-					<height>27</height>
+					<posx>1868</posx>
+					<width>825</width>
+					<height>40</height>
 					<align>right</align>
 					<label fallback="416">[COLOR=MediaDetailsGenre]$LOCALIZE[31423]:[/COLOR] $INFO[ListItem.AddonCreator]</label>
 					<font>METF_MediaDetails</font>
@@ -768,9 +767,9 @@
 				</control>
 				<!-- Genre -->
 				<control type="label">
-					<posx>1245</posx>
-					<width>590</width>
-					<height>27</height>
+					<posx>1868</posx>
+					<width>885</width>
+					<height>40</height>
 					<align>right</align>
 					<label>$INFO[ListItem.Genre]</label>
 					<font>METF_MediaDetails</font>
@@ -778,9 +777,9 @@
 					<visible>!String.IsEmpty(ListItem.Genre) + [Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos)]</visible>
 				</control>
 				<control type="label">
-					<posx>1245</posx>
-					<width>590</width>
-					<height>27</height>
+					<posx>1868</posx>
+					<width>885</width>
+					<height>40</height>
 					<align>right</align>
 					<label>$INFO[ListItem.Property(Artist_Genre)]</label>
 					<font>METF_MediaDetails</font>
@@ -789,10 +788,10 @@
 				</control>
 				<!-- Year/Duration/Number of Episodes -->
 				<control type="grouplist">
-					<posx>365</posx>
-					<width>300</width>
+					<posx>548</posx>
+					<width>450</width>
 					<align>left</align>
-					<itemgap>10</itemgap>
+					<itemgap>15</itemgap>
 					<orientation>horizontal</orientation>
 					<include>Animation_OpenCloseFade</include>
 					<include>Animation_FadedByMenu</include>
@@ -804,10 +803,10 @@
 			<control type="scrollbar" id="998">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
-				<posx>1270</posx>
-				<posy>128</posy>
-				<width>22</width>
-				<height>376</height>
+				<posx>1905</posx>
+				<posy>192</posy>
+				<width>33</width>
+				<height>564</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
 				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>

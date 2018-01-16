@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PosterViewCommon_Browser">
-		<posx>20</posx>
-		<posy>70</posy>
-		<height>515</height>
-		<width>1240</width>
+		<posx>30</posx>
+		<posy>105</posy>
+		<height>772</height>
+		<width>1860</width>
 		<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 		<ondown>60</ondown>
 		<orientation>horizontal</orientation>
@@ -15,39 +14,39 @@
 		<include>Animation_FadedByMenu</include>
 		<include>Animation_HiddenByInfo</include>
 		<visible>Window.IsActive(videos) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
-		<itemlayout width="195" height="245">
+		<itemlayout width="292" height="368">
 			<control type="image">
-				<posx>16</posx>
-				<posy>121</posy>
-				<width>164</width>
-				<height>241</height>
+				<posx>24</posx>
+				<posy>182</posy>
+				<width>246</width>
+				<height>362</height>
 				<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>16</posx>
-				<posy>121</posy>
-				<width>164</width>
-				<height>241</height>
+				<posx>24</posx>
+				<posy>182</posy>
+				<width>246</width>
+				<height>362</height>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<visible>String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
 				<posx>1</posx>
-				<posy>105</posy>
-				<width>197</width>
-				<height>273</height>
+				<posy>158</posy>
+				<width>296</width>
+				<height>410</height>
 				<texture>frames/ClassicFrame_PosterSmall.png</texture>
 				<aspectratio>stretch</aspectratio>
-			<visible>!String.IsEmpty(ListItem.Title)</visible>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>148</posx>
-				<posy>330</posy>
-				<width>24</width>
-				<height>24</height>
+				<posx>222</posx>
+				<posy>495</posy>
+				<width>36</width>
+				<height>36</height>
 				<fadetime>400</fadetime>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
@@ -55,21 +54,21 @@
 			</control>
 			<!-- Watched Overlay for In-Progress Items -->
 			<control type="image">
-				<posx>144</posx>
-				<posy>325</posy>
-				<width>35</width>
-				<height>35</height>
+				<posx>216</posx>
+				<posy>488</posy>
+				<width>52</width>
+				<height>52</height>
 				<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
 				<visible>ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 			</control>
 		</itemlayout>
-		<focusedlayout width="265" height="400">
+		<focusedlayout width="398" height="600">
 			<control type="image">
-				<posx>13</posx>
-				<posy>71</posy>
-				<width>240</width>
-				<height>353</height>
+				<posx>20</posx>
+				<posy>106</posy>
+				<width>360</width>
+				<height>530</height>
 				<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -81,10 +80,10 @@
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>13</posx>
-				<posy>71</posy>
-				<width>240</width>
-				<height>353</height>
+				<posx>20</posx>
+				<posy>106</posy>
+				<width>360</width>
+				<height>530</height>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 				<aspectratio scalediffuse="false">keep</aspectratio>
 				<animation type="Focus" reversible="false">
@@ -96,10 +95,10 @@
 				<visible>String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>-1</posx>
-				<posy>52</posy>
-				<width>267</width>
-				<height>392</height>
+				<posx>-2</posx>
+				<posy>78</posy>
+				<width>400</width>
+				<height>588</height>
 				<texture>frames/ClassicFrame_PosterMedium.png</texture>
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="auto" start="72" end="100" time="250" tween="sine" easing="inout" delay="150" />
@@ -111,15 +110,15 @@
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>210</posx>
-				<posy>382</posy>
-				<width>32</width>
-				<height>32</height>
+				<posx>315</posx>
+				<posy>573</posy>
+				<width>48</width>
+				<height>48</height>
 				<fadetime>400</fadetime>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
 				<animation type="Focus" reversible="false">
-					<effect type="zoom" center="135,198" start="75" end="100" time="250" tween="sine" easing="inout" delay="150" />
+					<effect type="zoom" center="202,297" start="75" end="100" time="250" tween="sine" easing="inout" delay="150" />
 					<!--
 					<effect type="fade" start="0" end="100" time="300" />
 					-->
@@ -128,14 +127,14 @@
 			</control>
 			<!-- Watched Overlay for In-Progress Items -->
 			<control type="image">
-				<posx>206</posx>
-				<posy>380</posy>
-				<width>43</width>
-				<height>43</height>
+				<posx>309</posx>
+				<posy>570</posy>
+				<width>64</width>
+				<height>64</height>
 				<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
 				<animation type="Focus" reversible="false">
-					<effect type="zoom" center="135,198" start="75" end="100" time="250" tween="sine" easing="inout" delay="150" />
+					<effect type="zoom" center="202,297" start="75" end="100" time="250" tween="sine" easing="inout" delay="150" />
 					<!--
 					<effect type="fade" start="0" end="100" time="300" />
 					-->
@@ -153,10 +152,10 @@
 			<visible>!String.IsEmpty(ListItem.Title)</visible>
 			<!-- Movie and TV Show Titles -->
 			<control type="fadelabel">
-				<posx>500</posx>
-				<posy>450</posy>
-				<width>750</width>
-				<height>30</height>
+				<posx>750</posx>
+				<posy>675</posy>
+				<width>1125</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
 				<pauseatend>400</pauseatend>
@@ -167,10 +166,10 @@
 			</control>
 			<!-- Season - TV Show Title -->
 			<control type="fadelabel">
-				<posx>500</posx>
-				<posy>450</posy>
-				<width>750</width>
-				<height>30</height>
+				<posx>750</posx>
+				<posy>675</posy>
+				<width>1125</width>
+				<height>45</height>
 				<aligny>center</aligny>
 				<scrollout>false</scrollout>
 				<pauseatend>400</pauseatend>
@@ -180,17 +179,17 @@
 				<visible>Container.Content(seasons)</visible>
 			</control>
 			<control type="grouplist">
-				<posx>500</posx>
-				<posy>481</posy>
-				<width>750</width>
-				<height>30</height>
-				<itemgap>10</itemgap>
+				<posx>750</posx>
+				<posy>722</posy>
+				<width>1125</width>
+				<height>45</height>
+				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<include>VisibleIfNotMovieSet</include>
 				<!-- Genre -->
 				<control type="label">
-					<width min="25" max="540">auto</width>
-					<height>30</height>
+					<width min="38" max="810">auto</width>
+					<height>45</height>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$INFO[ListItem.Genre]</label>
@@ -203,8 +202,8 @@
 				</control>
 				<!-- Season Number -->
 				<control type="label">
-					<width min="25" max="220">auto</width>
-					<height>30</height>
+					<width min="38" max="330">auto</width>
+					<height>45</height>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsInfo</textcolor>
 					<label>$INFO[ListItem.Label]</label>
@@ -213,10 +212,10 @@
 			</control>
 			<!-- Movie Sets -->
 			<control type="label">
-				<posx>500</posx>
-				<posy>481</posy>
-				<width>760</width>
-				<height>30</height>
+				<posx>750</posx>
+				<posy>722</posy>
+				<width>1140</width>
+				<height>45</height>
 				<font>METF_MediaDetailsSmall</font>
 				<textcolor>MediaDetailsGenre</textcolor>
 				<label>$LOCALIZE[31313]</label>
@@ -224,10 +223,10 @@
 			</control>
 			<!-- Tagline -->
 			<control type="textbox">
-				<posx>500</posx>
-				<posy>130</posy>
-				<width>760</width>
-				<height>50</height>
+				<posx>750</posx>
+				<posy>195</posy>
+				<width>1140</width>
+				<height>75</height>
 				<align>left</align>
 				<font>METF_PlotText</font>
 				<textcolor>TextNF</textcolor>
@@ -236,12 +235,12 @@
 			</control>
 		</control>
 		<control type="grouplist">
-			<posx>206</posx>
-			<posy>509</posy>
-			<width>290</width>
-			<height>30</height>
+			<posx>309</posx>
+			<posy>764</posy>
+			<width>435</width>
+			<height>45</height>
 			<align>center</align>
-			<itemgap>10</itemgap>
+			<itemgap>15</itemgap>
 			<orientation>horizontal</orientation>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
@@ -251,61 +250,60 @@
 			<include>VisibleIfNotMovieSet</include>
 		</control>
 	</include>
-
 	<include name="BannerViewCommon_Browser">
-		<itemlayout width="400" height="90">
+		<itemlayout width="600" height="135">
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture>frames/banner_diffuse.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture background="true" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio scalediffuse="true">keep</aspectratio>
 				<visible>String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture background="true" fallback="DefaultBanner.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(banner)]</texture>
 				<aspectratio scalediffuse="true">stretch</aspectratio>
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>4</posx>
-				<posy>7</posy>
-				<width>390</width>
-				<height>86</height>
+				<posx>6</posx>
+				<posy>10</posy>
+				<width>585</width>
+				<height>129</height>
 				<texture background="true">frames/banner_frame2.png</texture>
 				<aspectratio scalediffuse="true">stretch</aspectratio>
-			<visible>!String.IsEmpty(ListItem.Title)</visible>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>354</posx>
-				<posy>52</posy>
-				<width>28</width>
-				<height>28</height>
+				<posx>531</posx>
+				<posy>78</posy>
+				<width>42</width>
+				<height>42</height>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
 				<visible>!Skin.HasSetting(HideTVWatchedOverlays)</visible>
 			</control>
 		</itemlayout>
-		<focusedlayout width="400" height="90">
+		<focusedlayout width="600" height="135">
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture>frames/banner_diffuse.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 				<animation reversible="false" effect="zoom" center="auto" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
@@ -313,10 +311,10 @@
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture background="true" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Icon]</texture>
 				<aspectratio scalediffuse="true">keep</aspectratio>
 				<animation reversible="false" effect="zoom" center="auto" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
@@ -324,10 +322,10 @@
 				<visible>String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>12</posx>
-				<posy>15</posy>
-				<width>375</width>
-				<height>70</height>
+				<posx>18</posx>
+				<posy>22</posy>
+				<width>562</width>
+				<height>105</height>
 				<texture background="true" fallback="DefaultBanner.png" diffuse="frames/banner_diffuse.png">$INFO[ListItem.Art(banner)]</texture>
 				<aspectratio scalediffuse="true">stretch</aspectratio>
 				<animation reversible="false" effect="zoom" center="auto" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
@@ -335,35 +333,34 @@
 				<visible>!String.IsEmpty(ListItem.Title)</visible>
 			</control>
 			<control type="image">
-				<posx>4</posx>
-				<posy>7</posy>
-				<width>390</width>
-				<height>86</height>
+				<posx>6</posx>
+				<posy>10</posy>
+				<width>585</width>
+				<height>129</height>
 				<texture background="true">frames/banner_frame2.png</texture>
 				<aspectratio scalediffuse="true">stretch</aspectratio>
-			<visible>!String.IsEmpty(ListItem.Title)</visible>
+				<visible>!String.IsEmpty(ListItem.Title)</visible>
 				<animation reversible="false" effect="zoom" center="auto" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
 				<animation reversible="false" effect="zoom" center="auto" start="115" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
 			</control>
 			<control type="image">
-				<posx>354</posx>
-				<posy>52</posy>
-				<width>28</width>
-				<height>28</height>
+				<posx>531</posx>
+				<posy>78</posy>
+				<width>42</width>
+				<height>42</height>
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<colordiffuse>WatchedOverlay</colordiffuse>
-				<animation reversible="false" effect="zoom" center="195,43" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
-				<animation reversible="false" effect="zoom" center="195,43" start="115" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
+				<animation reversible="false" effect="zoom" center="292,64" start="100" end="115" time="200" tween="sine" easing="inout">focus</animation>
+				<animation reversible="false" effect="zoom" center="292,64" start="115" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
 				<visible>!Skin.HasSetting(HideTVWatchedOverlays)</visible>
 			</control>
 		</focusedlayout>
 	</include>
-
 	<include name="PosterLargeViewCommon_Browser">
-		<posx>-100</posx>
-		<posy>40</posy>
-		<height>500</height>
-		<width>1500</width>
+		<posx>-150</posx>
+		<posy>60</posy>
+		<height>750</height>
+		<width>2250</width>
 		<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 		<ondown>60</ondown>
 		<orientation>horizontal</orientation>
@@ -374,53 +371,53 @@
 		<include>Animation_OpenCloseFade</include>
 		<include>Animation_HiddenByInfo</include>
 		<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-		<itemlayout width="300" height="420">
+		<itemlayout width="450" height="630">
 			<control type="group">
-				<posx>-30</posx>
-				<posy>10</posy>
+				<posx>-45</posx>
+				<posy>15</posy>
 				<!-- Unfocused Item - Poster -->
 				<control type="image">
-					<posx>22</posx>
-					<posy>24</posy>
-					<width>238</width>
-					<height>359</height>
+					<posx>33</posx>
+					<posy>36</posy>
+					<width>357</width>
+					<height>538</height>
 					<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
-					<posx>22</posx>
-					<posy>24</posy>
-					<width>238</width>
-					<height>359</height>
+					<posx>33</posx>
+					<posy>36</posy>
+					<width>357</width>
+					<height>538</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<visible>String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<!-- Unfocused Item - Frame -->
 				<control type="image">
-					<posx>22</posx>
-					<posy>24</posy>
-					<width>238</width>
-					<height>359</height>
+					<posx>33</posx>
+					<posy>36</posy>
+					<width>357</width>
+					<height>538</height>
 					<texture>frames/ClassicFrameGlass_Vertical.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<colordiffuse>GlassDiffuse</colordiffuse>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
-					<width>285</width>
-					<height>408</height>
+					<width>428</width>
+					<height>612</height>
 					<texture>frames/ClassicFrame_PosterSmall.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<!-- Unfocused Item - Watched Overlay -->
 				<control type="image">
-					<posx>220</posx>
-					<posy>341</posy>
-					<width>32</width>
-					<height>32</height>
+					<posx>330</posx>
+					<posy>512</posy>
+					<width>48</width>
+					<height>48</height>
 					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlay</colordiffuse>
@@ -428,58 +425,58 @@
 				</control>
 				<!-- Unfocused Item - Watched Overlay for In-Progress Items -->
 				<control type="image">
-					<posx>216</posx>
-					<posy>336</posy>
-					<width>43</width>
-					<height>43</height>
+					<posx>324</posx>
+					<posy>504</posy>
+					<width>64</width>
+					<height>64</height>
 					<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 					<colordiffuse>WatchedOverlay</colordiffuse>
 					<visible>ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 				</control>
 			</control>
 		</itemlayout>
-		<focusedlayout width="370" height="420">
+		<focusedlayout width="555" height="630">
 			<!-- Focused Item Poster -->
 			<control type="group">
 				<animation type="Focus" reversible="false">
-					<effect type="zoom" center="100,0" start="88" end="100" time="250" tween="sine" easing="inout" delay="200" />
+					<effect type="zoom" center="150,0" start="88" end="100" time="250" tween="sine" easing="inout" delay="200" />
 				</animation>
-				<posx>-15</posx>
+				<posx>-22</posx>
 				<!-- Focused Item - Poster -->
 				<control type="image">
-					<posx>15</posx>
-					<posy>32</posy>
-					<width>286</width>
-					<height>432</height>
+					<posx>22</posx>
+					<posy>48</posy>
+					<width>429</width>
+					<height>648</height>
 					<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<control type="image">
-					<posx>15</posx>
-					<posy>32</posy>
-					<width>286</width>
-					<height>432</height>
+					<posx>22</posx>
+					<posy>48</posy>
+					<width>429</width>
+					<height>648</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 					<visible>String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<!-- Focused Item - Poster Frame -->
 				<control type="image">
-					<posx>-2</posx>
-					<posy>8</posy>
-					<width>321</width>
-					<height>480</height>
+					<posx>-3</posx>
+					<posy>12</posy>
+					<width>482</width>
+					<height>720</height>
 					<texture>frames/ClassicFrame_PosterMedium.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>!String.IsEmpty(ListItem.Title)</visible>
 				</control>
 				<!-- Focused Item - Watched Overlay -->
 				<control type="image">
-					<posx>260</posx>
-					<posy>423</posy>
-					<width>32</width>
-					<height>32</height>
+					<posx>390</posx>
+					<posy>634</posy>
+					<width>48</width>
+					<height>48</height>
 					<fadetime>400</fadetime>
 					<texture>$INFO[ListItem.Overlay]</texture>
 					<colordiffuse>WatchedOverlay</colordiffuse>
@@ -490,10 +487,10 @@
 				</control>
 				<!-- Focused Item - Watched Overlay for In-Progress Items -->
 				<control type="image">
-					<posx>256</posx>
-					<posy>418</posy>
-					<width>43</width>
-					<height>43</height>
+					<posx>384</posx>
+					<posy>627</posy>
+					<width>64</width>
+					<height>64</height>
 					<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 					<colordiffuse>WatchedOverlay</colordiffuse>
 					<animation type="Focus" reversible="false">
@@ -512,12 +509,12 @@
 			<include>Animation_OpenCloseFade</include>
 			<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 			<control type="group">
-				<posx>520</posx>
-				<posy>450</posy>
+				<posx>780</posx>
+				<posy>675</posy>
 				<!-- Title -->
 				<control type="fadelabel">
-					<width>730</width>
-					<height>50</height>
+					<width>1095</width>
+					<height>75</height>
 					<aligny>center</aligny>
 					<scrollout>false</scrollout>
 					<pauseatend>400</pauseatend>
@@ -527,19 +524,19 @@
 				</control>
 				<!-- Details -->
 				<control type="grouplist">
-					<posy>42</posy>
-					<width>1200</width>
-					<height>30</height>
-					<itemgap>10</itemgap>
+					<posy>63</posy>
+					<width>1800</width>
+					<height>45</height>
+					<itemgap>15</itemgap>
 					<orientation>horizontal</orientation>
 					<include>ViewDetailsGenreYearDurEpsUnwatched</include>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 					<include>VisibleIfNotMovieSet</include>
 				</control>
 				<control type="label">
-					<posy>42</posy>
-					<width>800</width>
-					<height>30</height>
+					<posy>63</posy>
+					<width>1200</width>
+					<height>45</height>
 					<font>METF_MediaDetailsSmall</font>
 					<textcolor>MediaDetailsGenre</textcolor>
 					<label>$LOCALIZE[31313]</label>

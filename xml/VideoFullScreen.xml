@@ -1,48 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<controls>
 		<control type="group">
-			<animation effect="slide" end="0,-200" time="0" condition="Window.IsVisible(fullscreeninfo)">conditional</animation>
+			<animation effect="slide" end="0,-300" time="0" condition="Window.IsVisible(fullscreeninfo)">conditional</animation>
 			<!-- Background Image -->
 			<control type="image">
 				<posx>0</posx>
-				<posy>-45</posy>
-				<width>1280</width>
-				<height>186</height>
+				<posy>-68</posy>
+				<width>1920</width>
+				<height>279</height>
 				<texture>osd/osd_dialog_bg_top.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 			</control>
-
 			<control type="label" id="10">
-				<description>row 1 label</description>
-				<posx>20</posx>
-				<posy>10</posy>
 				<label></label>
+				<description>row 1 label</description>
+				<posx>30</posx>
+				<posy>15</posy>
 				<align>left</align>
-				<width>1240</width>
-				<height>36</height>
+				<width>1860</width>
+				<height>54</height>
 				<font>METF_DialogVerySmall</font>
 				<textcolor>TextNF</textcolor>
 			</control>
 			<control type="label" id="11">
-				<description>row 2 label</description>
-				<posx>20</posx>
-				<posy>45</posy>
 				<label></label>
+				<description>row 2 label</description>
+				<posx>30</posx>
+				<posy>68</posy>
 				<align>left</align>
-				<width>1240</width>
-				<height>36</height>
+				<width>1860</width>
+				<height>54</height>
 				<font>METF_DialogVerySmall</font>
 				<textcolor>TextNF</textcolor>
 			</control>
 			<control type="label" id="12">
-				<description>row 3 label</description>
-				<posx>20</posx>
-				<posy>80</posy>
 				<label></label>
+				<description>row 3 label</description>
+				<posx>30</posx>
+				<posy>120</posy>
 				<align>left</align>
-				<width>1240</width>
-				<height>108</height>
+				<width>1860</width>
+				<height>162</height>
 				<font>METF_DialogVerySmall</font>
 				<textcolor>TextNF</textcolor>
 			</control>
@@ -52,27 +50,27 @@
 			<animation delay="300" effect="fade" time="200">Visible</animation>
 			<animation effect="fade" delay="200" time="150">Hidden</animation>
 			<control type="image" id="1">
-				<left>580</left>
-				<top>300</top>
-				<width>120</width>
-				<height>120</height>
+				<left>870</left>
+				<top>450</top>
+				<width>180</width>
+				<height>180</height>
 				<texture>flags/ProgressCircle/p100.png</texture>
 				<animation effect="fade" end="50" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="image" id="1">
-				<left>580</left>
-				<top>300</top>
-				<width>120</width>
-				<height>120</height>
+				<left>870</left>
+				<top>450</top>
+				<width>180</width>
+				<height>180</height>
 				<texture colordiffuse="DialogProgressBar">flags/ProgressCircle/p$INFO[Player.CacheLevel].png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>buffering value</description>
 				<label>$INFO[Player.CacheLevel]%</label>
-				<left>580</left>
-				<top>300</top>
-				<width>120</width>
-				<height>120</height>
+				<left>870</left>
+				<top>450</top>
+				<width>180</width>
+				<height>180</height>
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>METF_DialogVerySmall</font>
@@ -82,10 +80,10 @@
 			<control type="label" id="2">
 				<description>buffering label</description>
 				<label>$LOCALIZE[15107]</label>
-				<left>580</left>
-				<top>400</top>
-				<width>120</width>
-				<height>20</height>
+				<left>870</left>
+				<top>600</top>
+				<width>180</width>
+				<height>30</height>
 				<aligny>center</aligny>
 				<align>center</align>
 				<font>METF_DialogVerySmall</font>

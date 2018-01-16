@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_Gallery_Square">
 		<control type="group">
@@ -6,10 +5,10 @@
 			<!-- Browser -->
 			<control type="panel" id="58">
 				<viewtype label="$LOCALIZE[31414] $LOCALIZE[31415]">icon</viewtype>
-				<posx>25</posx>
-				<posy>65</posy>
-				<width>1230</width>
-				<height>410</height>
+				<posx>38</posx>
+				<posy>98</posy>
+				<width>1845</width>
+				<height>615</height>
 				<scrolltime>200</scrolltime>
 				<orientation>vertical</orientation>
 				<onup>58</onup>
@@ -23,79 +22,79 @@
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewGallerySquare)</visible>
 				<visible>Window.IsActive(pictures) | Window.IsActive(programs) | Window.IsActive(videos) | Container.Content(Addons) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(musicvideos) | String.Contains(Container.FolderPath,plugin)</visible>
-				<itemlayout width="205" height="205">
+				<itemlayout width="308" height="308">
 					<control type="image">
-						<posx>25</posx>
-						<posy>25</posy>
-						<width>155</width>
-						<height>155</height>
+						<posx>38</posx>
+						<posy>38</posy>
+						<width>232</width>
+						<height>232</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 						<visible>!String.IsEqual(ListItem.Icon,-) + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>25</posy>
-						<width>155</width>
-						<height>155</height>
+						<posx>38</posx>
+						<posy>38</posy>
+						<width>232</width>
+						<height>232</height>
 						<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">keep</aspectratio>
 						<visible>Container.Content(musicvideos) + !Skin.HasSetting(CropMVGalleryIcon)</visible>
 					</control>
 					<control type="image">
-						<posx>25</posx>
-						<posy>25</posy>
-						<width>155</width>
-						<height>155</height>
+						<posx>38</posx>
+						<posy>38</posy>
+						<width>232</width>
+						<height>232</height>
 						<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<visible>!Container.Content(musicvideos) | Skin.HasSetting(CropMVGalleryIcon)</visible>
 					</control>
 					<control type="image">
-						<posx>6</posx>
-						<posy>4</posy>
-						<width>192</width>
-						<height>195</height>
+						<posx>9</posx>
+						<posy>6</posy>
+						<width>288</width>
+						<height>292</height>
 						<texture>frames/ClassicFrame_SquareSmall.png</texture>
 						<visible>!String.IsEqual(ListItem.Icon,-) + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout width="205" height="205">
+				<focusedlayout width="308" height="308">
 					<control type="group">
 						<animation reversible="false" effect="zoom" center="auto" start="100" end="120" time="200" tween="sine" easing="inout">focus</animation>
 						<animation reversible="false" effect="zoom" center="auto" start="120" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
-							<width>155</width>
-							<height>155</height>
+							<posx>38</posx>
+							<posy>38</posy>
+							<width>232</width>
+							<height>232</height>
 							<texture>frames/ClassicFrame_Background.png</texture>
 							<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 							<visible>!String.IsEqual(ListItem.Icon,-) + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
-							<width>155</width>
-							<height>155</height>
+							<posx>38</posx>
+							<posy>38</posy>
+							<width>232</width>
+							<height>232</height>
 							<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">keep</aspectratio>
-						<visible>Container.Content(musicvideos) + !Skin.HasSetting(CropMVGalleryIcon)</visible>
+							<visible>Container.Content(musicvideos) + !Skin.HasSetting(CropMVGalleryIcon)</visible>
 						</control>
 						<control type="image">
-							<posx>25</posx>
-							<posy>25</posy>
-							<width>155</width>
-							<height>155</height>
+							<posx>38</posx>
+							<posy>38</posy>
+							<width>232</width>
+							<height>232</height>
 							<texture background="true" fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
-						<visible>!Container.Content(musicvideos) | Skin.HasSetting(CropMVGalleryIcon)</visible>
+							<visible>!Container.Content(musicvideos) | Skin.HasSetting(CropMVGalleryIcon)</visible>
 						</control>
 						<control type="image">
-							<posx>6</posx>
-							<posy>4</posy>
-							<width>192</width>
-							<height>195</height>
+							<posx>9</posx>
+							<posy>6</posy>
+							<width>288</width>
+							<height>292</height>
 							<texture>frames/ClassicFrame_SquareSmall.png</texture>
 							<visible>!String.IsEqual(ListItem.Icon,-) + [!String.StartsWith(ListItem.Icon,default) | String.StartsWith(ListItem.Icon,defaultalbumcover)] + !String.IsEmpty(ListItem.Icon)</visible>
 						</control>
@@ -106,12 +105,12 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
-				<posx>40</posx>
-				<posy>472</posy>
+				<posx>60</posx>
+				<posy>708</posy>
 				<!-- Title -->
 				<control type="label">
-					<width>1200</width>
-					<height>40</height>
+					<width>1800</width>
+					<height>60</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
@@ -123,11 +122,11 @@
 				</control>
 				<!-- Details -->
 				<control type="grouplist">
-					<posy>33</posy>
-					<width>1200</width>
-					<height>30</height>
+					<posy>50</posy>
+					<width>1800</width>
+					<height>45</height>
 					<align>center</align>
-					<itemgap>10</itemgap>
+					<itemgap>15</itemgap>
 					<orientation>horizontal</orientation>
 					<include>Animation_OpenCloseFade</include>
 					<include>Animation_FadedByMenu</include>

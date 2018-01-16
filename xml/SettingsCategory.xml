@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
 		<control type="group">
 			<animation type="Conditional" condition="Window.IsActive(yesnodialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog)">
-				<effect type="zoom" time="600" center="640,360" start="100" end="50" tween="cubic" easing="inout" />
+				<effect type="zoom" time="600" center="960,540" start="100" end="50" tween="cubic" easing="inout" />
 				<effect type="fade" time="400" start="100" end="0" />
 			</animation>
 			<control type="grouplist" id="3">
@@ -14,9 +13,9 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_CommonFadeNoHide</include>
 				<posx>0</posx>
-				<posy>80</posy>
-				<width>380</width>
-				<height>456</height>
+				<posy>120</posy>
+				<width>570</width>
+				<height>684</height>
 				<itemgap>0</itemgap>
 				<scrolltime>0</scrolltime>
 				<onleft>5</onleft>
@@ -30,10 +29,10 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_CommonFadeNoHide</include>
-				<posx>440</posx>
-				<posy>80</posy>
-				<width>840</width>
-				<height>456</height>
+				<posx>660</posx>
+				<posy>120</posy>
+				<width>1260</width>
+				<height>684</height>
 				<scrolltime>0</scrolltime>
 				<itemgap>0</itemgap>
 				<onleft>3</onleft>
@@ -57,17 +56,17 @@
 				<texturedowndisabled colordiffuse="40FFFFFF">ArrowDownNF.png</texturedowndisabled>
 			</control>
 			<control type="button" id="10">
+				<texturenofocus></texturenofocus>
 				<description>Default Category Button</description>
-				<width>370</width>
-				<height>50</height>
-				<textoffsetx>20</textoffsetx>
+				<width>555</width>
+				<height>75</height>
+				<textoffsetx>30</textoffsetx>
 				<font>METF_TitleTextMedium</font>
 				<textcolor>SettingsDetail</textcolor>
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<align>right</align>
 				<aligny>center</aligny>
 				<texturefocus>ButtonFO.png</texturefocus>
-				<texturenofocus></texturenofocus>
 				<alttexturefocus>ButtonFO.png</alttexturefocus>
 				<alttexturenofocus></alttexturenofocus>
 				<pulseonselect>false</pulseonselect>
@@ -86,10 +85,10 @@
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_HiddenByInfo</include>
 				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-				<posx>300</posx>
-				<posy>565</posy>
-				<width>750</width>
-				<height>64</height>
+				<posx>450</posx>
+				<posy>848</posy>
+				<width>1125</width>
+				<height>96</height>
 				<font>METF_PlotTextSmall</font>
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
@@ -97,13 +96,13 @@
 				<align>justify</align>
 			</control>
 			<control type="label" id="14">
+				<label></label>
 				<description>Default Label</description>
-				<height>38</height>
+				<height>57</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_ContextValue</font>
 				<textcolor>SettingsDetail</textcolor>
-				<label></label>
 			</control>
 		</control>
 		<include>Global_ContextFilter</include>

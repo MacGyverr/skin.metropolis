@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
@@ -9,13 +8,13 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<animation effect="slide" start="830,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="830,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="1245,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="1245,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>830</width>
-				<height>453</height>
+				<width>1245</width>
+				<height>680</height>
 				<texture background="true">BlackBG.png</texture>
 				<aspectratio>scale</aspectratio>
 				<colordiffuse>f0000000</colordiffuse>
@@ -27,23 +26,22 @@
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<control type="label" id="1">
 					<description>LabelHeading</description>
-					<posx>10</posx>
+					<posx>15</posx>
 					<posy>0</posy>
-					<width>790</width>
-					<height>38</height>
+					<width>1185</width>
+					<height>57</height>
 					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
 					<textcolor>SettingsTitle</textcolor>
 					<align>left</align>
-					<aligny>center</aligny>
 					<scroll>true</scroll>
 					<label>$LOCALIZE[13406]</label>
 				</control>
 				<control type="list" id="5">
-					<posx>10</posx>
-					<posy>92</posy>
-					<width>790</width>
-					<height>351</height>
+					<posx>15</posx>
+					<posy>138</posy>
+					<width>1185</width>
+					<height>526</height>
 					<onleft>PreviousMenu</onleft>
 					<onright>PreviousMenu</onright>
 					<onup>5</onup>
@@ -51,12 +49,12 @@
 					<viewtype>list</viewtype>
 					<orientation>vertical</orientation>
 					<scrolltime>200</scrolltime>
-					<itemlayout height="27" width="790">
+					<itemlayout height="40" width="1185">
 						<control type="label">
-							<posx>10</posx>
-							<posy>-2</posy>
-							<width>780</width>
-							<height>27</height>
+							<posx>15</posx>
+							<posy>-3</posy>
+							<width>1170</width>
+							<height>40</height>
 							<font>METF_DialogMedium</font>
 							<textcolor>TextNF</textcolor>
 							<align>left</align>
@@ -64,21 +62,21 @@
 							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout height="27" width="790">
+					<focusedlayout height="40" width="1185">
 						<control type="image">
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>790</width>
-							<height>27</height>
+							<width>1185</width>
+							<height>40</height>
 							<aligny>center</aligny>
 							<texture>FocusLine.png</texture>
 							<colordiffuse>FocusBar</colordiffuse>
 						</control>
 						<control type="label">
-							<posx>10</posx>
-							<posy>-2</posy>
-							<width>780</width>
-							<height>27</height>
+							<posx>15</posx>
+							<posy>-3</posy>
+							<width>1170</width>
+							<height>40</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>METF_DialogMedium</font>

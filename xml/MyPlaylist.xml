@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<views>55,53,57</views>
 	<defaultcontrol>55</defaultcontrol>
@@ -21,81 +20,81 @@
 				<include>NavMenuListCommon</include>
 				<include>NavMenuListOrder</include>
 				<control type="radiobutton" id="20">
+					<texturenofocus></texturenofocus>
 					<description>Shuffle</description>
-					<width>340</width>
+					<width>510</width>
 					<align>left</align>
 					<label>191</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="21">
+					<texturenofocus></texturenofocus>
 					<description>Save</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>190</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="22">
+					<texturenofocus></texturenofocus>
 					<description>Clear</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>192</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="23">
+					<texturenofocus></texturenofocus>
 					<description>Play</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>208</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="button" id="26">
+					<texturenofocus></texturenofocus>
 					<description>repeat</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>208</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<include>NavMenuListPlaying</include>

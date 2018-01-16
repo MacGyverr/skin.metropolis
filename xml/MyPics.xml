@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<views>55,509,59,58,559,500</views>
 	<defaultcontrol>55</defaultcontrol>
@@ -28,70 +27,70 @@
 				<include>NavMenuListOrder</include>
 				<include>NavMenuListFilter</include>
 				<control type="button" id="51">
+					<texturenofocus></texturenofocus>
 					<description>Get more</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>21452</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(addonbrowser, addons://more/image/, return)</onclick>
 					<visible>Container.Content(addons)</visible>
 				</control>
 				<control type="button" id="6">
+					<texturenofocus></texturenofocus>
 					<description>Slideshow</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>108</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<visible>!ListItem.IsFolder + !String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<control type="button" id="7">
+					<texturenofocus></texturenofocus>
 					<description>Recursive Slideshow</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>108</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<visible>ListItem.IsFolder + !String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<control type="radiobutton" id="9">
+					<texturenofocus></texturenofocus>
 					<description>Randomise</description>
-					<width>340</width>
+					<width>510</width>
 					<align>left</align>
 					<label>13319</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<visible>!String.Contains(Container.FolderPath,plugin)</visible>
 				</control>
 				<include>NavMenuListPlaying</include>

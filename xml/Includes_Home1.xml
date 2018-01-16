@@ -1,68 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- Home1 Default-->
 	<visible>![Skin.HasSetting(Home2) | Skin.HasSetting(Home3)]</visible>
-
 	<include name="HomeStatsPosition1">
-		<posx>1070</posx>
-		<posy>45</posy>
-		<width>220</width>
-		<height>416</height>
+		<posx>1605</posx>
+		<posy>68</posy>
+		<width>330</width>
+		<height>624</height>
 	</include>
 	<include name="HomeStatsDetails1">
-		<width>120</width>
-		<height>24</height>
+		<width>180</width>
+		<height>36</height>
 		<align>left</align>
 		<aligny>center</aligny>
 		<font>METF_HomeStatsText</font>
 		<textcolor>HomeStatsCategory</textcolor>
 	</include>
 	<include name="HomeStatsDetailsNumber1">
-		<width>60</width>
-		<height>24</height>
+		<width>90</width>
+		<height>36</height>
 		<align>right</align>
 		<aligny>center</aligny>
 		<font>METF_HomeStatsText</font>
 		<textcolor>HomeStatsNumber</textcolor>
 	</include>
-
 	<include name="Home1_Default">
 		<include>HomeDeck</include>
 		<control type="button" id="9002">
-			<description>Hidden Button to pass through navigation when homedeck is disabled</description>
-			<posx>-20</posx>
-			<posy>-20</posy>
-			<width>1</width>
-			<height>1</height>
-			<label></label>
-			<font></font>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
+			<label></label>
+			<font></font>
+			<description>Hidden Button to pass through navigation when homedeck is disabled</description>
+			<posx>-30</posx>
+			<posy>-30</posy>
+			<width>1</width>
+			<height>1</height>
 			<onleft>9000</onleft>
 			<onright>9001</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<visible>false</visible>
 		</control>
-
 		<!-- Large Fanart and Frame -->
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<control type="image">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<texture>frames/ClassicFrame_Background.png</texture>
 				<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 			</control>
 			<control type="multiimage">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>500</fadetime>
@@ -73,10 +69,10 @@
 				<visible allowhiddenfocus="true">!Skin.HasSetting(HomeStretchBackgrounds)</visible>
 			</control>
 			<control type="multiimage">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>500</fadetime>
@@ -87,10 +83,10 @@
 				<visible allowhiddenfocus="true">Skin.HasSetting(HomeStretchBackgrounds)</visible>
 			</control>
 			<control type="multiimage">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>500</fadetime>
@@ -101,10 +97,10 @@
 				<visible allowhiddenfocus="true">!Skin.HasSetting(HomeStretchBackgrounds)</visible>
 			</control>
 			<control type="multiimage">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<timeperimage>5000</timeperimage>
 				<randomize>true</randomize>
 				<fadetime>500</fadetime>
@@ -115,43 +111,42 @@
 				<visible allowhiddenfocus="true">Skin.HasSetting(HomeStretchBackgrounds)</visible>
 			</control>
 			<control type="videowindow">
-				<posx>240</posx>
-				<posy>50</posy>
-				<width>800</width>
-				<height>450</height>
+				<posx>360</posx>
+				<posy>75</posy>
+				<width>1200</width>
+				<height>675</height>
 				<visible>Player.HasVideo</visible>
 			</control>
 			<control type="image">
-				<posx>215</posx>
-				<posy>25</posy>
-				<width>848</width>
-				<height>507</height>
+				<posx>322</posx>
+				<posy>38</posy>
+				<width>1272</width>
+				<height>760</height>
 				<texture>frames/ClassicFrame_Fanart.png</texture>
 			</control>
 		</control>
-
 		<!-- Help Text for LEFT side of Home screen -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>2</posy>
+			<posy>3</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
 			<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)] + String.Contains(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
-				<posx>190</posx>
-				<posy>475</posy>
-				<width>30</width>
-				<height>30</height>
+				<posx>285</posx>
+				<posy>712</posy>
+				<width>45</width>
+				<height>45</height>
 				<texture>ArrowRight.png</texture>
 				<colordiffuse>HelpArrowDiffuse</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>188</posx>
-				<posy>477</posy>
-				<width>140</width>
-				<height>25</height>
+				<posx>282</posx>
+				<posy>716</posy>
+				<width>210</width>
+				<height>38</height>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>METF_HelpText</font>
@@ -162,25 +157,25 @@
 		<!-- Help Text for RIGHT side of Home screen -->
 		<control type="group">
 			<posx>0</posx>
-			<posy>2</posy>
+			<posy>3</posy>
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(HideHelpText)</visible>
 			<visible>Control.HasFocus(9001) + !String.IsEqual(Container(9000).ListItem.Property(hasSubmenu),True)</visible>
 			<control type="image">
-				<posx>1060</posx>
-				<posy>475</posy>
-				<width>30</width>
-				<height>30</height>
+				<posx>1590</posx>
+				<posy>712</posy>
+				<width>45</width>
+				<height>45</height>
 				<texture>ArrowLeft.png</texture>
 				<colordiffuse>HelpArrowDiffuse</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>1092</posx>
-				<posy>477</posy>
-				<width>140</width>
-				<height>25</height>
+				<posx>1638</posx>
+				<posy>716</posy>
+				<width>210</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<font>METF_HelpText</font>
@@ -188,13 +183,12 @@
 				<label>$LOCALIZE[33061]</label>
 			</control>
 		</control>
-
 		<!-- Main Menu -->
 		<control type="list" id="9000">
 			<posx>0</posx>
-			<posy>50</posy>
-			<width>220</width>
-			<height>416</height>
+			<posy>75</posy>
+			<width>330</width>
+			<height>624</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<onleft>9002</onleft>
@@ -204,12 +198,12 @@
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
-			<itemlayout width="200" height="32">
+			<itemlayout width="300" height="48">
 				<control type="label">
-					<posx>12</posx>
+					<posx>18</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>300</width>
+					<height>48</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>
@@ -217,23 +211,23 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout width="220" height="32">
+			<focusedlayout width="330" height="48">
 				<!-- Focus Bar -->
 				<control type="image">
-					<posx>15</posx>
+					<posx>22</posx>
 					<posy>0</posy>
-					<width>208</width>
-					<height>32</height>
+					<width>312</width>
+					<height>48</height>
 					<aligny>center</aligny>
 					<texture flipx="true">FocusLine.png</texture>
 					<colordiffuse>FocusBar</colordiffuse>
 					<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 				</control>
 				<control type="label">
-					<posx>12</posx>
+					<posx>18</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>300</width>
+					<height>48</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>
@@ -242,10 +236,10 @@
 					<visible>!Control.HasFocus(9001) + ![Control.HasFocus(8000) | Control.HasFocus(8001) | Control.HasFocus(8002) | Control.HasFocus(8003)]</visible>
 				</control>
 				<control type="label">
-					<posx>12</posx>
+					<posx>18</posx>
 					<posy>0</posy>
-					<width>200</width>
-					<height>32</height>
+					<width>300</width>
+					<height>48</height>
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>METF_HomeMenu</font>
@@ -258,7 +252,6 @@
 				<include>skinshortcuts-mainmenu</include>
 			</content>
 		</control>
-
 		<!-- Submenus -->
 		<control type="list" id="9001">
 			<animation effect="fade" start="100" end="0" time="0">Hidden</animation>
@@ -266,32 +259,32 @@
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
-			<posx>1060</posx>
-			<posy>50</posy>
-			<width>220</width>
-			<height>416</height>
+			<posx>1590</posx>
+			<posy>75</posy>
+			<width>330</width>
+			<height>624</height>
 			<orientation>vertical</orientation>
 			<align>left</align>
 			<itemgap>0</itemgap>
 			<onleft>9000</onleft>
 			<onright>9000</onright>
 			<visible allowhiddenfocus="true">[Control.HasFocus(9000) + !Skin.HasSetting(HomeStats)] | Control.HasFocus(9001)</visible>
-			<itemlayout width="450" height="32">
+			<itemlayout width="675" height="48">
 				<control type="label">
-					<width>208</width>
-					<height>32</height>
+					<width>312</width>
+					<height>48</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textoffsetx>8</textoffsetx>
+					<textoffsetx>12</textoffsetx>
 					<font>METF_HomeMenu</font>
 					<textcolor>HomeMenuText</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
-			<focusedlayout width="450" height="32">
+			<focusedlayout width="675" height="48">
 				<control type="image">
-					<width>208</width>
-					<height>32</height>
+					<width>312</width>
+					<height>48</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<texture>FocusLine.png</texture>
@@ -299,22 +292,22 @@
 					<visible allowhiddenfocus="true">Control.HasFocus(9001)</visible>
 				</control>
 				<control type="label">
-					<width>208</width>
-					<height>32</height>
+					<width>312</width>
+					<height>48</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textoffsetx>8</textoffsetx>
+					<textoffsetx>12</textoffsetx>
 					<font>METF_HomeMenu</font>
 					<textcolor>HomeMenuText</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 					<visible allowhiddenfocus="true">!Control.HasFocus(9001)</visible>
 				</control>
 				<control type="label">
-					<width>208</width>
-					<height>32</height>
+					<width>312</width>
+					<height>48</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textoffsetx>8</textoffsetx>
+					<textoffsetx>12</textoffsetx>
 					<font>METF_HomeMenu</font>
 					<textcolor>FocusBarText</textcolor>
 					<label>$INFO[ListItem.Label]</label>
@@ -325,7 +318,6 @@
 				<include>skinshortcuts-submenu</include>
 			</content>
 		</control>
-
 		<!-- Shared Home Stats/Media Totals -->
 		<include>HomeStats</include>
 	</include>

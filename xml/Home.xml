@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=0)</onload>
@@ -15,9 +14,9 @@
 		<control type="rss">
 			<description>RSS Feed</description>
 			<posx>0</posx>
-			<posy>4</posy>
-			<width>1280</width>
-			<height>20</height>
+			<posy>6</posy>
+			<width>1920</width>
+			<height>30</height>
 			<font>METF_RSS</font>
 			<urlset>1</urlset>
 			<titlecolor>RSSTitle</titlecolor>

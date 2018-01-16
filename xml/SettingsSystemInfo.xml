@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
@@ -8,9 +7,9 @@
 			<include>Animation_OpenCloseFade</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
-				<posy>126</posy>
-				<width>380</width>
-				<height>380</height>
+				<posy>189</posy>
+				<width>570</width>
+				<height>570</height>
 				<itemgap>0</itemgap>
 				<scrolltime>0</scrolltime>
 				<onup>9000</onup>
@@ -47,88 +46,88 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>440</posx>
-				<posy>126</posy>
-				<width>840</width>
-				<height>380</height>
+				<posx>660</posx>
+				<posy>189</posy>
+				<width>1260</width>
+				<height>570</height>
 				<visible>!ControlGroup(9000).HasFocus(100)</visible>
 				<control type="label" id="2">
-					<width>778</width>
+					<width>1167</width>
 					<description>Label 2</description>
 					<include>SettingsLabel</include>
 				</control>
 				<control type="label" id="3">
-					<width>778</width>
+					<width>1167</width>
 					<description>Label 3</description>
 					<posx>0</posx>
-					<posy>38</posy>
+					<posy>57</posy>
 					<include>SettingsLabel</include>
 				</control>
 				<control type="label" id="4">
-					<width>778</width>
+					<width>1167</width>
 					<description>Label 4</description>
-					<posx>0</posx>
-					<posy>76</posy>
-					<include>SettingsLabel</include>
-				</control>
-				<control type="label" id="5">
-					<width>778</width>
-					<description>Label 5</description>
 					<posx>0</posx>
 					<posy>114</posy>
 					<include>SettingsLabel</include>
 				</control>
+				<control type="label" id="5">
+					<width>1167</width>
+					<description>Label 5</description>
+					<posx>0</posx>
+					<posy>171</posy>
+					<include>SettingsLabel</include>
+				</control>
 				<control type="label" id="6">
-					<width>778</width>
+					<width>1167</width>
 					<description>Label 6</description>
-					<posx>0</posx>
-					<posy>152</posy>
-					<include>SettingsLabel</include>
-				</control>
-				<control type="label" id="7">
-					<width>778</width>
-					<description>Label 7</description>
-					<posx>0</posx>
-					<posy>190</posy>
-					<include>SettingsLabel</include>
-				</control>
-				<control type="label" id="8">
-					<width>778</width>
-					<description>Label 8</description>
 					<posx>0</posx>
 					<posy>228</posy>
 					<include>SettingsLabel</include>
 				</control>
-				<control type="label" id="9">
-					<width>778</width>
-					<description>Label 9</description>
+				<control type="label" id="7">
+					<width>1167</width>
+					<description>Label 7</description>
 					<posx>0</posx>
-					<posy>266</posy>
+					<posy>285</posy>
 					<include>SettingsLabel</include>
 				</control>
-				<control type="label" id="10">
-					<width>778</width>
-					<description>Label 10</description>
-					<posx>0</posx>
-					<posy>304</posy>
-					<include>SettingsLabel</include>
-				</control>
-				<control type="label" id="11">
-					<width>778</width>
-					<description>Label 11</description>
+				<control type="label" id="8">
+					<width>1167</width>
+					<description>Label 8</description>
 					<posx>0</posx>
 					<posy>342</posy>
 					<include>SettingsLabel</include>
 				</control>
+				<control type="label" id="9">
+					<width>1167</width>
+					<description>Label 9</description>
+					<posx>0</posx>
+					<posy>399</posy>
+					<include>SettingsLabel</include>
+				</control>
+				<control type="label" id="10">
+					<width>1167</width>
+					<description>Label 10</description>
+					<posx>0</posx>
+					<posy>456</posy>
+					<include>SettingsLabel</include>
+				</control>
+				<control type="label" id="11">
+					<width>1167</width>
+					<description>Label 11</description>
+					<posx>0</posx>
+					<posy>513</posy>
+					<include>SettingsLabel</include>
+				</control>
 			</control>
 			<control type="group">
-				<posx>460</posx>
-				<posy>136</posy>
-				<width>840</width>
-				<height>380</height>
+				<posx>690</posx>
+				<posy>204</posy>
+				<width>1260</width>
+				<height>570</height>
 				<visible>ControlGroup(9000).HasFocus(100)</visible>
 				<control type="textbox" id="30">
-					<width>778</width>
+					<width>1167</width>
 					<align>left</align>
 					<font>METF_ContextValue</font>
 					<textcolor>SettingsDetail</textcolor>

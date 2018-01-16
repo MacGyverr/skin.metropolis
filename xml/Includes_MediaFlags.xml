@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="MediaInfo">
 		<control type="group" id="9901">
@@ -10,47 +9,47 @@
 			<visible>![[Player.HasAudio | Player.HasVideo] + Skin.HasSetting(MediaOverlay)]</visible>
 			<!-- Studio -->
 			<control type="group">
-				<posx>30</posx>
-				<posy>550</posy>
-				<width>160</width>
-				<height>90</height>
+				<posx>45</posx>
+				<posy>825</posy>
+				<width>240</width>
+				<height>135</height>
 				<control type="image">
-					<width>112</width>
-					<height>110</height>
+					<width>168</width>
+					<height>165</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture fallback="flags/default-studio.png">$VAR[Studio_Icons]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 					<visible>!String.IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
-					<width>112</width>
-					<height>110</height>
+					<width>168</width>
+					<height>165</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture>flags/default-studio.png</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 					<visible>String.IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
-					<posx>-14</posx>
-					<posy>10</posy>
-					<width>140</width>
-					<height>90</height>
+					<posx>-21</posx>
+					<posy>15</posy>
+					<width>210</width>
+					<height>135</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
 			<control type="grouplist">
-				<posx>18</posx>
-				<posy>651</posy>
-				<width>260</width>
-				<height>62</height>
+				<posx>27</posx>
+				<posy>976</posy>
+				<width>390</width>
+				<height>93</height>
 				<align>left</align>
-				<itemgap>8</itemgap>
+				<itemgap>12</itemgap>
 				<orientation>horizontal</orientation>
 				<!-- MPAA Flag (or Game Platform when in Advanced Launcher addon) -->
 				<control type="group">
-					<width>58</width>
-					<height>62</height>
+					<width>87</width>
+					<height>93</height>
 					<control type="image">
 						<include>MediaFlagsVarsSquare</include>
 						<texture>$VAR[MediaFlag_MPAA]</texture>
@@ -64,17 +63,17 @@
 						<visible>!String.IsEmpty(ListItem.Writer) + String.Contains(Container.FolderPath,advanced.launcher)</visible>
 					</control>
 					<control type="image">
-						<posx>2</posx>
-						<width>66</width>
-						<height>54</height>
+						<posx>3</posx>
+						<width>99</width>
+						<height>81</height>
 						<texture>flags/flag_framesquare.png</texture>
 						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					</control>
 				</control>
 				<!-- Star Rating (or Game Genre when in Advanced Launcher addon) -->
 				<control type="group">
-					<width>58</width>
-					<height>62</height>
+					<width>87</width>
+					<height>93</height>
 					<control type="image">
 						<include>MediaFlagsVarsSquare</include>
 						<texture>Star.png</texture>
@@ -97,9 +96,9 @@
 						<visible>!String.IsEmpty(ListItem.Genre) + String.Contains(Container.FolderPath,advanced.launcher)</visible>
 					</control>
 					<control type="image">
-						<posx>2</posx>
-						<width>66</width>
-						<height>54</height>
+						<posx>3</posx>
+						<width>99</width>
+						<height>81</height>
 						<texture>flags/flag_framesquare.png</texture>
 						<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					</control>
@@ -108,8 +107,8 @@
 					<visible>Skin.HasSetting(Show_IMDbMediaFlag)</visible>
 					<!-- IMDb Top250 Flag -->
 					<control type="group">
-						<width>58</width>
-						<height>62</height>
+						<width>87</width>
+						<height>93</height>
 						<visible>!Skin.HasSetting(Show_VotesMediaFlagAlways) + [!String.IsEmpty(ListItem.Top250) + !String.StartsWith(ListItem.Top250,0)]</visible>
 						<control type="image">
 							<include>MediaFlagsVarsSquareHalfTop</include>
@@ -125,17 +124,17 @@
 							<font>METF_DialogSmallBold</font>
 						</control>
 						<control type="image">
-							<posx>2</posx>
-							<width>66</width>
-							<height>54</height>
+							<posx>3</posx>
+							<width>99</width>
+							<height>81</height>
 							<texture>flags/flag_framesquare.png</texture>
 							<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 						</control>
 					</control>
 					<!-- IMDb Votes Flag (if not in Top250) -->
 					<control type="group">
-						<width>58</width>
-						<height>62</height>
+						<width>87</width>
+						<height>93</height>
 						<visible>[Skin.HasSetting(Show_VotesMediaFlagAlways) | [String.IsEmpty(ListItem.Top250) | [!String.IsEmpty(ListItem.Top250) + String.StartsWith(ListItem.Top250,0)]]] + !String.IsEmpty(ListItem.Votes) + !String.StartsWith(ListItem.Votes,0)</visible>
 						<control type="image">
 							<include>MediaFlagsVarsSquareHalfTop</include>
@@ -151,9 +150,9 @@
 							<font>METF_DialogVerySmallBold</font>
 						</control>
 						<control type="image">
-							<posx>2</posx>
-							<width>66</width>
-							<height>54</height>
+							<posx>3</posx>
+							<width>99</width>
+							<height>81</height>
 							<texture>flags/flag_framesquare.png</texture>
 							<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 						</control>

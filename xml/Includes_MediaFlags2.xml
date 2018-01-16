@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="MediaInfo2">
 		<!-- Additional Media Flags -->
 		<control type="grouplist" id="9902">
-			<posx>293</posx>
-			<posy>651</posy>
-			<width>765</width>
-			<height>62</height>
+			<posx>440</posx>
+			<posy>976</posy>
+			<width>1148</width>
+			<height>93</height>
 			<align>left</align>
-			<itemgap>8</itemgap>
+			<itemgap>12</itemgap>
 			<orientation>horizontal</orientation>
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_CommonFade</include>
 			<visible>!String.Contains(Container.FolderPath,plugin)</visible>
 			<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos) | Window.IsActive(fullscreeninfo) | Window.IsActive(115)</visible>
 			<include>VisibleIfNotMovieSet</include>
-
 			<!-- Video Source (not shown in fullscreen video info) -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(MusicVideos)</visible>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
@@ -76,133 +74,127 @@
 					<visible>String.Contains(listitem.filename,dvdscr) | String.Contains(listitem.filename,screener)</visible>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_frame.png</texture>
 				</control>
 			</control>
-
 			<!-- Video Resolution -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/default.png">$VAR[MediaFlag_VideoResolution]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-
 			<!-- Video Aspect -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/VideoAspect/default.png">$VAR[MediaFlag_VideoAspect]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-
 			<!-- Video Codec -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/default.png">$VAR[MediaFlag_VideoCodec]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-
 			<!-- Audio Codec -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/defaultsound.png">$VAR[MediaFlag_AudioCodec]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-
 			<!-- Audio Channels -->
 			<control type="group">
-				<width>90</width>
-				<height>62</height>
+				<width>135</width>
+				<height>93</height>
 				<control type="image">
 					<include>MediaFlagsVarsWide</include>
 					<texture fallback="flags/AudioChannels/DefaultChannels.png">$VAR[MediaFlag_AudioChannels]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 				<control type="image">
-					<width>104</width>
-					<height>54</height>
+					<width>156</width>
+					<height>81</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>
 			</control>
-
 			<!-- Audio Language and Subtitles : Flag=Audio Language, CC=has subtitles -->
 			<control type="group">
-				<width>58</width>
-				<height>62</height>
+				<width>87</width>
+				<height>93</height>
 				<visible>[[!String.IsEmpty(ListItem.SubtitleLanguage) + String.IsEmpty(VideoPlayer.SubtitleLanguage)] | [String.IsEmpty(ListItem.SubtitleLanguage) + !String.IsEmpty(VideoPlayer.SubtitleLanguage)]] | [!String.IsEmpty(ListItem.AudioLanguage) + ![String.Contains(ListItem.AudioLanguage,und) | String.Contains(ListItem.AudioLanguage,unk)]]</visible>
 				<control type="image">
-					<posx>2</posx>
-					<width>66</width>
-					<height>54</height>
+					<posx>3</posx>
+					<width>99</width>
+					<height>81</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_framesquare.png</texture>
 				</control>
 				<control type="image">
-					<top>-2</top>
-					<left>6</left>
-					<width>60</width>
-					<height>55</height>
+					<top>-3</top>
+					<left>9</left>
+					<width>90</width>
+					<height>82</height>
 					<texture background="true" diffuse="flags/nocc.png">$VAR[Language_Icons]</texture>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 					<visible>[String.IsEmpty(ListItem.SubtitleLanguage) + String.IsEmpty(VideoPlayer.SubtitleLanguage)] + !String.IsEmpty(ListItem.AudioLanguage) + !String.Contains(ListItem.AudioLanguage,und)</visible>
 				</control>
 				<control type="image">
-					<top>-2</top>
-					<left>6</left>
-					<width>60</width>
-					<height>55</height>
+					<top>-3</top>
+					<left>9</left>
+					<width>90</width>
+					<height>82</height>
 					<texture background="true" diffuse="flags/cc.png">$VAR[Language_Icons]</texture>
 					<visible>[[!String.IsEmpty(ListItem.SubtitleLanguage) + String.IsEmpty(VideoPlayer.SubtitleLanguage)] | [String.IsEmpty(ListItem.SubtitleLanguage) + !String.IsEmpty(VideoPlayer.SubtitleLanguage)]] + [!String.IsEmpty(ListItem.AudioLanguage) + ![String.Contains(ListItem.AudioLanguage,und) | String.Contains(ListItem.AudioLanguage,unk)]]</visible>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<top>-2</top>
-					<left>6</left>
-					<width>60</width>
-					<height>55</height>
+					<top>-3</top>
+					<left>9</left>
+					<width>90</width>
+					<height>82</height>
 					<texture background="true">flags/cc.png</texture>
 					<visible>[[!String.IsEmpty(ListItem.SubtitleLanguage) + String.IsEmpty(VideoPlayer.SubtitleLanguage)] | [String.IsEmpty(ListItem.SubtitleLanguage) + !String.IsEmpty(VideoPlayer.SubtitleLanguage)]] + [String.IsEmpty(ListItem.AudioLanguage) | [String.Contains(ListItem.AudioLanguage,und) | String.Contains(ListItem.AudioLanguage,unk)]]</visible>
 					<aspectratio aligny="center" scalediffuse="true">stretch</aspectratio>

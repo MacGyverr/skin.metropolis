@@ -1,32 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>4</defaultcontrol>
 	<controls>
 		<control type="group">
 			<animation type="Visible">
-				<effect type="slide" start="0,-300" end="0,0" time="400" tween="cubic" easing="out" />
+				<effect type="slide" start="0,-450" end="0,0" time="400" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="400" />
 			</animation>
 			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="0,-300" time="400" tween="cubic" easing="out" />
+				<effect type="slide" start="0,0" end="0,-450" time="400" tween="cubic" easing="out" />
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="group">
-				<posx>30</posx>
-				<posy>18</posy>
+				<posx>45</posx>
+				<posy>27</posy>
 				<control type="image">
-					<width>256</width>
-					<height>32</height>
+					<width>384</width>
+					<height>48</height>
 					<texture fallback="flags/Rating10/rating0.png">$INFO[MusicPlayer.UserRating,flags/Rating10/rating,.png]</texture>
 					<colordiffuse>MediaFlagDiffuse</colordiffuse>
 				</control>
 			</control>
 			<control type="fadelabel">
-				<posx>200</posx>
-				<posy>10</posy>
-				<width>880</width>
-				<height>40</height>
+				<posx>300</posx>
+				<posy>15</posy>
+				<width>1320</width>
+				<height>60</height>
 				<font>METF_TitleTextLarge</font>
 				<textcolor>TextNF</textcolor>
 				<align>center</align>
@@ -40,20 +39,20 @@
 		</control>
 		<control type="group">
 			<animation type="Visible">
-				<effect type="slide" start="1580,0" end="0,0" time="400" tween="cubic" easing="out" />
+				<effect type="slide" start="2370,0" end="0,0" time="400" tween="cubic" easing="out" />
 				<effect type="fade" start="0" end="100" time="400" />
 			</animation>
 			<animation type="Hidden">
-				<effect type="slide" start="0,0" end="0,1580" time="400" tween="cubic" easing="out" />
+				<effect type="slide" start="0,0" end="0,2370" time="400" tween="cubic" easing="out" />
 				<effect type="fade" start="100" end="0" time="400" />
 			</animation>
-			<animation effect="slide" start="1580,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="1580,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+			<animation effect="slide" start="2370,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="2370,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="label">
-				<posx>1250</posx>
-				<posy>60</posy>
-				<width>150</width>
-				<height>40</height>
+				<posx>1875</posx>
+				<posy>90</posy>
+				<width>225</width>
+				<height>60</height>
 				<aligny>center</aligny>
 				<align>right</align>
 				<font>METF_OSDTime</font>
@@ -66,20 +65,20 @@
 			<include>OSD_Progress_Bar</include>
 			<include>OSD_Player_Details</include>
 			<control type="label">
-				<posx>30</posx>
-				<posy>632</posy>
-				<width>150</width>
-				<height>40</height>
+				<posx>45</posx>
+				<posy>948</posy>
+				<width>225</width>
+				<height>60</height>
 				<aligny>center</aligny>
 				<font>METF_DialogLargeBold</font>
 				<textcolor>OSDFinishTime</textcolor>
 				<label>$INFO[MusicPlayer.Time]</label>
 			</control>
 			<control type="label">
-				<posx>1250</posx>
-				<posy>632</posy>
-				<width>150</width>
-				<height>40</height>
+				<posx>1875</posx>
+				<posy>948</posy>
+				<width>225</width>
+				<height>60</height>
 				<aligny>center</aligny>
 				<align>right</align>
 				<font>METF_DialogLargeBold</font>
@@ -87,10 +86,10 @@
 				<label>$INFO[MusicPlayer.Duration]</label>
 			</control>
 			<control type="grouplist" id="2001">
-				<posx>20</posx>
-				<posy>664</posy>
-				<width>500</width>
-				<itemgap>-10</itemgap>
+				<posx>30</posx>
+				<posy>996</posy>
+				<width>750</width>
+				<itemgap>-15</itemgap>
 				<orientation>horizontal</orientation>
 				<onleft>14</onleft>
 				<onright>9</onright>
@@ -98,39 +97,39 @@
 				<ondown>Close</ondown>
 				<control type="button" id="11">
 					<description>Playlists</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_playlist_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_playlist_nf.png</texturenofocus>
 					<onclick>ActivateWindow(musicplaylist)</onclick>
 				</control>
 				<control type="button" id="16">
-					<description>Repeat</description>
-					<height>52</height>
-					<width>52</width>
-					<label></label>
 					<texturefocus></texturefocus>
 					<texturenofocus></texturenofocus>
+					<label></label>
+					<description>Repeat</description>
+					<height>78</height>
+					<width>78</width>
 					<onclick>PlayerControl(repeat)</onclick>
 				</control>
 				<control type="togglebutton" id="8">
-					<description>Random</description>
-					<height>52</height>
-					<width>52</width>
 					<label></label>
+					<disabledcolor></disabledcolor>
+					<description>Random</description>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_random_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_random_nf.png</texturenofocus>
 					<usealttexture>Playlist.IsRandom</usealttexture>
 					<alttexturefocus>osd/osd_button_random_on_fo.png</alttexturefocus>
 					<alttexturenofocus>osd/osd_button_random_on_nf.png</alttexturenofocus>
-					<disabledcolor></disabledcolor>
 					<colordiffuse></colordiffuse>
 					<onclick>PlayerControl(random)</onclick>
 				</control>
 				<control type="button" id="1101">
 					<description>Last.fm love</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_love_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_love_nf.png</texturenofocus>
 					<onclick>RunScript(service.scrobbler.lastfm,action=LastFM.Love)</onclick>
@@ -138,8 +137,8 @@
 				</control>
 				<control type="button" id="1102">
 					<description>Last.fm ban</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_ban_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_ban_nf.png</texturenofocus>
 					<onclick>RunScript(service.scrobbler.lastfm,action=LastFM.Ban)</onclick>
@@ -147,56 +146,56 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>62</posx>
-				<posy>664</posy>
+				<posx>93</posx>
+				<posy>996</posy>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_nf.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_fo.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_one_nf.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_one_fo.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_all_nf.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>!Control.HasFocus(16)</visible>
 				</control>
 				<control type="image">
-					<width>52</width>
-					<height>52</height>
+					<width>78</width>
+					<height>78</height>
 					<texture>osd/osd_button_repeat_all_fo.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>Control.HasFocus(16)</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="2002">
-				<posx>460</posx>
-				<posy>644</posy>
-				<width>400</width>
-				<itemgap>-10</itemgap>
+				<posx>690</posx>
+				<posy>966</posy>
+				<width>600</width>
+				<itemgap>-15</itemgap>
 				<orientation>horizontal</orientation>
 				<onleft>1102</onleft>
 				<onright>15</onright>
@@ -204,64 +203,64 @@
 				<ondown>Close</ondown>
 				<control type="button" id="9">
 					<description>Previous</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_prev_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_prev_nf.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
 				</control>
 				<control type="button" id="3">
 					<description>Rewind</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_rew_nf.png</texturenofocus>
 					<onclick>PlayerControl(rewind)</onclick>
 				</control>
 				<control type="togglebutton" id="4">
+					<disabledcolor></disabledcolor>
 					<description>Play</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_pause_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_pause_nf.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<alttexturefocus>osd/osd_button_play_fo.png</alttexturefocus>
 					<alttexturenofocus>osd/osd_button_play_nf.png</alttexturenofocus>
-					<disabledcolor></disabledcolor>
 					<colordiffuse></colordiffuse>
 					<onclick>PlayerControl(play)</onclick>
 				</control>
 				<control type="button" id="5">
 					<description>Stop</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_stop_nf.png</texturenofocus>
 					<onclick>PlayerControl(stop)</onclick>
 				</control>
 				<control type="button" id="6">
 					<description>Forward</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_ff_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_ff_nf.png</texturenofocus>
 					<onclick>PlayerControl(forward)</onclick>
 				</control>
 				<control type="button" id="10">
 					<description>Next</description>
-					<height>68</height>
-					<width>68</width>
+					<height>102</height>
+					<width>102</width>
 					<texturefocus>osd/osd_button_next_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_next_nf.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="2003">
-				<posx>1050</posx>
-				<posy>664</posy>
-				<width>208</width>
+				<posx>1575</posx>
+				<posy>996</posy>
+				<width>312</width>
 				<align>right</align>
-				<itemgap>-10</itemgap>
+				<itemgap>-15</itemgap>
 				<orientation>horizontal</orientation>
 				<onleft>10</onleft>
 				<onright>11</onright>
@@ -269,8 +268,8 @@
 				<ondown>Close</ondown>
 				<control type="button" id="15">
 					<description>Lyrics</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_sub_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_sub_nf.png</texturenofocus>
 					<onclick>Close</onclick>
@@ -282,15 +281,15 @@
 				</control>
 				<control type="button" id="500">
 					<description>Visualisation Select Button</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_video_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_video_nf.png</texturenofocus>
 				</control>
 				<control type="button" id="13">
 					<description>Visualisation Preset List</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_vis_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_vis_nf.png</texturenofocus>
 					<enable>Visualisation.HasPresets</enable>
@@ -298,8 +297,8 @@
 				</control>
 				<control type="button" id="14">
 					<description>Visualisation Settings</description>
-					<height>52</height>
-					<width>52</width>
+					<height>78</height>
+					<width>78</width>
 					<texturefocus>osd/osd_button_settings_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_settings_nf.png</texturenofocus>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>

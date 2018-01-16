@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<animation type="WindowOpen" reversible="false">
@@ -11,45 +10,45 @@
 	</animation>
 	<controls>
 		<control type="group">
-			<posx>280</posx>
-			<posy>150</posy>
+			<posx>420</posx>
+			<posy>225</posy>
 			<control type="image">
 				<description>Background Panel</description>
-				<width>740</width>
-				<height>300</height>
+				<width>1110</width>
+				<height>450</height>
 				<texture>frames/Dialog_Glass2Panel.png</texture>
 				<colordiffuse>DialogBackgroundColor</colordiffuse>
 			</control>
 			<control type="label" id="1">
+				<label></label>
 				<description>Heading</description>
-				<posx>50</posx>
-				<posy>50</posy>
-				<width>530</width>
-				<height>30</height>
+				<posx>75</posx>
+				<posy>75</posy>
+				<width>795</width>
+				<height>45</height>
 				<font>METF_Menu</font>
 				<textcolor>DialogTextFO</textcolor>
 				<align>left</align>
 				<aligny>center</aligny>
-				<label></label>
 			</control>
 			<control type="textbox" id="9">
-				<posx>50</posx>
-				<posy>85</posy>
-				<width>650</width>
-				<height>120</height>
+				<label></label>
+				<posx>75</posx>
+				<posy>128</posy>
+				<width>975</width>
+				<height>180</height>
 				<font>METF_InfoText</font>
 				<textcolor>LowerText</textcolor>
 				<include condition="!Skin.HasSetting(AutoScrollFast)">AutoScrollShort</include>
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollShortFast</include>
-				<label></label>
 				<align>left</align>
 			</control>
 			<control type="progress" id="20">
 				<description>Progress Bar</description>
-				<posx>45</posx>
-				<posy>180</posy>
-				<width>650</width>
-				<height>27</height>
+				<posx>68</posx>
+				<posy>270</posy>
+				<width>975</width>
+				<height>40</height>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back.png</texturebg>
 				<lefttexture>osd/osd_progress_left.png</lefttexture>
@@ -58,19 +57,18 @@
 				<colordiffuse>DialogProgressBar</colordiffuse>
 				<info>System.Progressbar</info>
 			</control>
-
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
-				<posx>26</posx>
-				<posy>215</posy>
-				<width>700</width>
+				<posx>39</posx>
+				<posy>322</posy>
+				<width>1050</width>
 				<align>center</align>
 				<control type="button" id="10">
 					<description>Cancel</description>
 					<left>0</left>
 					<top>0</top>
-					<height>40</height>
-					<width>230</width>
+					<height>60</height>
+					<width>345</width>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLargeBold</font>
@@ -90,8 +88,8 @@
 					<description>Ok</description>
 					<left>0</left>
 					<top>0</top>
-					<height>40</height>
-					<width>230</width>
+					<height>60</height>
+					<width>345</width>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLargeBold</font>
@@ -111,8 +109,8 @@
 					<description>custom</description>
 					<left>0</left>
 					<top>0</top>
-					<height>40</height>
-					<width>230</width>
+					<height>60</height>
+					<width>345</width>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLargeBold</font>

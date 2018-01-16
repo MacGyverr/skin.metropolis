@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_BannerFanart">
 		<control type="group">
@@ -6,10 +5,10 @@
 			<!-- Browser -->
 			<control type="fixedlist" id="508">
 				<viewtype label="$LOCALIZE[31442]">bigwide</viewtype>
-				<posx>788</posx>
-				<posy>52</posy>
-				<height>450</height>
-				<width>390</width>
+				<posx>1182</posx>
+				<posy>78</posy>
+				<height>675</height>
+				<width>585</width>
 				<onup>508</onup>
 				<ondown>508</ondown>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
@@ -34,36 +33,36 @@
 				<visible>Window.IsActive(videos) + Container.Content(tvshows)</visible>
 				<!-- Movie Fanart Image -->
 				<control type="image">
-					<posx>35</posx>
-					<posy>66</posy>
-					<width>600</width>
-					<height>338</height>
+					<posx>52</posx>
+					<posy>99</posy>
+					<width>900</width>
+					<height>507</height>
 					<texture>frames/ClassicFrame_Background.png</texture>
 					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>35</posx>
-					<posy>66</posy>
-					<width>600</width>
-					<height>338</height>
+					<posx>52</posx>
+					<posy>99</posy>
+					<width>900</width>
+					<height>507</height>
 					<texture background="true" fallback="home_art/tvshows.jpg">$VAR[LandscapeFanart]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>12</posx>
-					<posy>46</posy>
-					<width>650</width>
-					<height>383</height>
+					<posx>18</posx>
+					<posy>69</posy>
+					<width>975</width>
+					<height>574</height>
 					<texture background="true">frames/ClassicFrame_FanartMedium.png</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<!-- Title -->
 				<control type="label">
-					<posx>35</posx>
-					<posy>430</posy>
-					<width>600</width>
-					<height>30</height>
+					<posx>52</posx>
+					<posy>645</posy>
+					<width>900</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
@@ -72,10 +71,10 @@
 				</control>
 				<!-- Genre -->
 				<control type="label">
-					<posx>35</posx>
-					<posy>459</posy>
-					<width>600</width>
-					<height>30</height>
+					<posx>52</posx>
+					<posy>688</posy>
+					<width>900</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_MediaDetailsSmall</font>
@@ -86,12 +85,12 @@
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
-				<posx>35</posx>
-				<posy>487</posy>
-				<width>600</width>
-				<height>30</height>
+				<posx>52</posx>
+				<posy>730</posy>
+				<width>900</width>
+				<height>45</height>
 				<align>center</align>
-				<itemgap>10</itemgap>
+				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>

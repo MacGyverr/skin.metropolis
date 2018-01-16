@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">7</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
-
 		<control type="group">
-			<posx>440</posx>
-			<posy>80</posy>
+			<posx>660</posx>
+			<posy>120</posy>
 			<control type="label">
 				<description>Channel Title Label</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>650</width>
-				<height>30</height>
+				<width>975</width>
+				<height>45</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabelLeft</include>
@@ -21,9 +19,9 @@
 			<control type="label">
 				<description>Start Date Header Label</description>
 				<posx>0</posx>
-				<posy>50</posy>
-				<width>120</width>
-				<height>25</height>
+				<posy>75</posy>
+				<width>180</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -31,10 +29,10 @@
 			</control>
 			<control type="label">
 				<description>Start Date Label</description>
-				<posx>130</posx>
-				<posy>50</posy>
-				<width>470</width>
-				<height>25</height>
+				<posx>195</posx>
+				<posy>75</posy>
+				<width>705</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -43,9 +41,9 @@
 			<control type="label">
 				<description>Start Time Header Label</description>
 				<posx>0</posx>
-				<posy>85</posy>
-				<width>120</width>
-				<height>25</height>
+				<posy>128</posy>
+				<width>180</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -53,10 +51,10 @@
 			</control>
 			<control type="label">
 				<description>Start Time Label</description>
-				<posx>130</posx>
-				<posy>85</posy>
-				<width>470</width>
-				<height>25</height>
+				<posx>195</posx>
+				<posy>128</posy>
+				<width>705</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -65,9 +63,9 @@
 			<control type="label">
 				<description>Channel Name Header Label</description>
 				<posx>0</posx>
-				<posy>120</posy>
-				<width>120</width>
-				<height>25</height>
+				<posy>180</posy>
+				<width>180</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -75,10 +73,10 @@
 			</control>
 			<control type="label">
 				<description>Channel Name Label</description>
-				<posx>130</posx>
-				<posy>120</posy>
-				<width>470</width>
-				<height>25</height>
+				<posx>195</posx>
+				<posy>180</posy>
+				<width>705</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -87,9 +85,9 @@
 			<control type="label">
 				<description>Duration Header Label</description>
 				<posx>0</posx>
-				<posy>155</posy>
-				<width>120</width>
-				<height>25</height>
+				<posy>232</posy>
+				<width>180</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -97,10 +95,10 @@
 			</control>
 			<control type="label">
 				<description>Duration Label</description>
-				<posx>130</posx>
-				<posy>155</posy>
-				<width>470</width>
-				<height>25</height>
+				<posx>195</posx>
+				<posy>232</posy>
+				<width>705</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -109,9 +107,9 @@
 			<control type="label">
 				<description>Genre Header Label</description>
 				<posx>0</posx>
-				<posy>190</posy>
-				<width>120</width>
-				<height>25</height>
+				<posy>285</posy>
+				<width>180</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -119,10 +117,10 @@
 			</control>
 			<control type="label">
 				<description>Genre Label</description>
-				<posx>130</posx>
-				<posy>190</posy>
-				<width>470</width>
-				<height>25</height>
+				<posx>195</posx>
+				<posy>285</posy>
+				<width>705</width>
+				<height>38</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<include>SettingsLabel</include>
@@ -130,10 +128,10 @@
 			</control>
 			<control type="textbox" id="400">
 				<description>TV Channel Plot</description>
-				<posx>20</posx>
-				<posy>240</posy>
-				<width>730</width>
-				<height>200</height>
+				<posx>30</posx>
+				<posy>360</posy>
+				<width>1095</width>
+				<height>300</height>
 				<align>justify</align>
 				<font>METF_PlotTextMedium</font>
 				<textcolor>TextNF</textcolor>
@@ -142,12 +140,11 @@
 				<include condition="Skin.HasSetting(AutoScrollFast)">AutoScrollLongFast</include>
 			</control>
 		</control>
-
 		<!-- Menu group -->
 		<control type="grouplist" id="9000">
 			<posx>0</posx>
-			<posy>200</posy>
-			<itemgap>20</itemgap>
+			<posy>300</posy>
+			<itemgap>30</itemgap>
 			<orientation>vertical</orientation>
 			<control type="button" id="7">
 				<description>OK Button</description>
@@ -165,16 +162,15 @@
 				<label>19687</label>
 			</control>
 			<control type="button" id="6">
+				<label></label>
 				<description>Record Button</description>
 				<include>SettingsLabelLeft</include>
-				<label></label>
 			</control>
 		</control>
-
 		<!-- Header group -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<label>$LOCALIZE[31601]</label>
@@ -185,10 +181,9 @@
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>
-
 		<!-- Time, weather and debug options -->
 		<include>Global_Weather</include>
- 		<include>Global_Time</include>
+		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 	</controls>
 </window>

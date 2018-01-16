@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<controls>
@@ -6,23 +5,23 @@
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByOSDSettings</include>
-			<left>630</left>
-			<top>110</top>
+			<left>945</left>
+			<top>165</top>
 			<visible>Window.IsActive(FullScreenVideo) + !VideoPlayer.Content(LiveTV)</visible>
 			<control type="image">
 				<description>media info background image</description>
 				<left>0</left>
-				<top>-50</top>
-				<width>650</width>
-				<height>500</height>
+				<top>-75</top>
+				<width>975</width>
+				<height>750</height>
 				<texture>frames/Dialog_Glass2Panel.png</texture>
 			</control>
 			<control type="label">
 				<description>Header</description>
-				<left>50</left>
-				<top>30</top>
-				<width>565</width>
-				<height>25</height>
+				<left>75</left>
+				<top>45</top>
+				<width>848</width>
+				<height>38</height>
 				<label>$LOCALIZE[31136]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -32,10 +31,10 @@
 			</control>
 			<control type="label">
 				<description>Video decoder</description>
-				<left>50</left>
-				<top>60</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>90</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[31139]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -45,10 +44,10 @@
 			</control>
 			<control type="label">
 				<description>Hardware decoding value</description>
-				<left>260</left>
-				<top>60</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>90</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[Player.Process(videodecoder)]$VAR[VideoHWDecoder, (,)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -58,10 +57,10 @@
 			</control>
 			<control type="label">
 				<description>Pixel format</description>
-				<left>50</left>
-				<top>85</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>128</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[31140]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -71,10 +70,10 @@
 			</control>
 			<control type="label">
 				<description>Pixel format value</description>
-				<left>260</left>
-				<top>85</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>128</top>
+				<width>518</width>
+				<height>38</height>
 				<label fallback="1446">$INFO[Player.Process(pixformat)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -84,10 +83,10 @@
 			</control>
 			<control type="label">
 				<description>Deinterlace method</description>
-				<left>50</left>
-				<top>110</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>165</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[16038]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -97,10 +96,10 @@
 			</control>
 			<control type="label">
 				<description>Deinterlace value</description>
-				<left>260</left>
-				<top>110</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>165</top>
+				<width>518</width>
+				<height>38</height>
 				<label fallback="1446">$INFO[Player.Process(deintmethod)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -110,10 +109,10 @@
 			</control>
 			<control type="label">
 				<description>Video stream</description>
-				<left>50</left>
-				<top>135</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>202</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[38031]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -123,10 +122,10 @@
 			</control>
 			<control type="label">
 				<description>Video stream value</description>
-				<left>260</left>
-				<top>135</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>202</top>
+				<width>518</width>
+				<height>38</height>
 				<label fallback="1446">$INFO[Player.Process(videowidth),,x]$INFO[Player.Process(videoheight),, px]$INFO[Player.Process(videodar),$COMMA , AR]$INFO[Player.Process(videofps),$COMMA , FPS]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -136,10 +135,10 @@
 			</control>
 			<control type="label">
 				<description>Header</description>
-				<left>50</left>
-				<top>165</top>
-				<width>565</width>
-				<height>25</height>
+				<left>75</left>
+				<top>248</top>
+				<width>848</width>
+				<height>38</height>
 				<label>$LOCALIZE[31137]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -148,10 +147,10 @@
 			</control>
 			<control type="label">
 				<description>Audio stream</description>
-				<left>50</left>
-				<top>195</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>292</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[460]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -160,10 +159,10 @@
 			</control>
 			<control type="label">
 				<description>Audio stream value</description>
-				<left>260</left>
-				<top>195</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>292</top>
+				<width>518</width>
+				<height>38</height>
 				<label fallback="1446">$INFO[Player.Process(audiodecoder)]$INFO[Player.Process(audiobitspersample),$COMMA , bit]$INFO[Player.Process(audiosamplerate),$COMMA , Hz]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -172,10 +171,10 @@
 			</control>
 			<control type="label">
 				<description>Channels</description>
-				<left>50</left>
-				<top>220</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>330</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[31141]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -184,10 +183,10 @@
 			</control>
 			<control type="label">
 				<description>Channels value</description>
-				<left>260</left>
-				<top>220</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>330</top>
+				<width>518</width>
+				<height>38</height>
 				<label fallback="1446">$INFO[Player.Process(audiochannels)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -196,10 +195,10 @@
 			</control>
 			<control type="label">
 				<description>Header</description>
-				<left>50</left>
-				<top>250</top>
-				<width>565</width>
-				<height>25</height>
+				<left>75</left>
+				<top>375</top>
+				<width>848</width>
+				<height>38</height>
 				<label>$LOCALIZE[31138]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -208,10 +207,10 @@
 			</control>
 			<control type="label">
 				<description>CPU</description>
-				<left>50</left>
-				<top>280</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>420</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[31142]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -220,10 +219,10 @@
 			</control>
 			<control type="label">
 				<description>CPU value</description>
-				<left>260</left>
-				<top>280</top>
-				<width>340</width>
-				<height>25</height>
+				<left>390</left>
+				<top>420</top>
+				<width>510</width>
+				<height>38</height>
 				<info>System.CpuUsage</info>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -233,10 +232,10 @@
 			</control>
 			<control type="progress">
 				<description>Progress Bar</description>
-				<left>260</left>
-				<top>287</top>
-				<width>275</width>
-				<height>14</height>
+				<left>390</left>
+				<top>430</top>
+				<width>412</width>
+				<height>21</height>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
@@ -248,10 +247,10 @@
 			</control>
 			<control type="label">
 				<description>CPU value</description>
-				<left>545</left>
-				<top>280</top>
-				<width>180</width>
-				<height>25</height>
+				<left>818</left>
+				<top>420</top>
+				<width>270</width>
+				<height>38</height>
 				<info>System.CpuUsage</info>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -261,10 +260,10 @@
 			</control>
 			<control type="label">
 				<description>Memory</description>
-				<left>50</left>
-				<top>305</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>458</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[31143]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -273,10 +272,10 @@
 			</control>
 			<control type="progress">
 				<description>Progress Bar</description>
-				<left>260</left>
-				<top>312</top>
-				<width>275</width>
-				<height>14</height>
+				<left>390</left>
+				<top>468</top>
+				<width>412</width>
+				<height>21</height>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
@@ -287,10 +286,10 @@
 			</control>
 			<control type="label">
 				<description>Memory value</description>
-				<left>545</left>
-				<top>305</top>
-				<width>180</width>
-				<height>25</height>
+				<left>818</left>
+				<top>458</top>
+				<width>270</width>
+				<height>38</height>
 				<label>$INFO[System.Memory(used.percent)]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -299,16 +298,16 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<orientation>horizontal</orientation>
-				<left>50</left>
-				<top>340</top>
-				<width>560</width>
+				<left>75</left>
+				<top>510</top>
+				<width>840</width>
 				<align>center</align>
 				<control type="button">
 					<description>Debug</description>
 					<left>0</left>
 					<top>0</top>
-					<height>40</height>
-					<width>230</width>
+					<height>60</height>
+					<width>345</width>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLargeBold</font>
@@ -323,28 +322,27 @@
 				</control>
 			</control>
 		</control>
-
 		<!-- PVR info -->
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
 			<include>Animation_FadedByOSDSettings</include>
-			<left>630</left>
-			<top>110</top>
+			<left>945</left>
+			<top>165</top>
 			<visible>Window.IsActive(FullScreenVideo) + VideoPlayer.Content(LiveTV)</visible>
 			<control type="image">
 				<description>media info background image</description>
 				<left>0</left>
-				<top>-50</top>
-				<width>650</width>
-				<height>458</height>
+				<top>-75</top>
+				<width>975</width>
+				<height>687</height>
 				<texture>frames/Dialog_Glass2Panel.png</texture>
 			</control>
 			<control type="label">
 				<description>Header</description>
-				<left>50</left>
-				<top>30</top>
-				<width>565</width>
-				<height>25</height>
+				<left>75</left>
+				<top>45</top>
+				<width>848</width>
+				<height>38</height>
 				<label>$LOCALIZE[19005]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -353,10 +351,10 @@
 			</control>
 			<control type="label">
 				<description>Backend</description>
-				<left>50</left>
-				<top>60</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>90</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19012]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -365,10 +363,10 @@
 			</control>
 			<control type="label">
 				<description>Backend value</description>
-				<left>260</left>
-				<top>60</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>90</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamClient]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -377,10 +375,10 @@
 			</control>
 			<control type="label">
 				<description>Device</description>
-				<left>50</left>
-				<top>85</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>128</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19006]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -389,10 +387,10 @@
 			</control>
 			<control type="label">
 				<description>Device value</description>
-				<left>260</left>
-				<top>85</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>128</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamDevice]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -401,10 +399,10 @@
 			</control>
 			<control type="label">
 				<description>Status</description>
-				<left>50</left>
-				<top>110</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>165</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19007]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -413,10 +411,10 @@
 			</control>
 			<control type="label">
 				<description>Status value</description>
-				<left>260</left>
-				<top>110</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>165</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamStatus]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -425,10 +423,10 @@
 			</control>
 			<control type="label">
 				<description>Signal</description>
-				<left>50</left>
-				<top>135</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>202</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19008]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -437,10 +435,10 @@
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
-				<left>260</left>
-				<top>142</top>
-				<width>275</width>
-				<height>14</height>
+				<left>390</left>
+				<top>213</top>
+				<width>412</width>
+				<height>21</height>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
@@ -451,10 +449,10 @@
 			</control>
 			<control type="label">
 				<description>Signal value</description>
-				<left>545</left>
-				<top>135</top>
-				<width>180</width>
-				<height>25</height>
+				<left>818</left>
+				<top>202</top>
+				<width>270</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamSignal]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -463,10 +461,10 @@
 			</control>
 			<control type="label">
 				<description>SNR</description>
-				<left>50</left>
-				<top>160</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>240</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19009]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -475,10 +473,10 @@
 			</control>
 			<control type="progress">
 				<description>Progressbar</description>
-				<left>260</left>
-				<top>167</top>
-				<width>275</width>
-				<height>14</height>
+				<left>390</left>
+				<top>250</top>
+				<width>412</width>
+				<height>21</height>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back2.png</texturebg>
 				<lefttexture>osd/osd_progress_left2.png</lefttexture>
@@ -489,10 +487,10 @@
 			</control>
 			<control type="label">
 				<description>SNR value</description>
-				<left>545</left>
-				<top>160</top>
-				<width>180</width>
-				<height>25</height>
+				<left>818</left>
+				<top>240</top>
+				<width>270</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamSNR]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -501,10 +499,10 @@
 			</control>
 			<control type="label">
 				<description>BER</description>
-				<left>50</left>
-				<top>185</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>278</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19010]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -513,10 +511,10 @@
 			</control>
 			<control type="label">
 				<description>BER value</description>
-				<left>260</left>
-				<top>185</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>278</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamBER]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -525,10 +523,10 @@
 			</control>
 			<control type="label">
 				<description>UNC</description>
-				<left>50</left>
-				<top>210</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>315</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19011]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -537,10 +535,10 @@
 			</control>
 			<control type="label">
 				<description>UNC value</description>
-				<left>260</left>
-				<top>210</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>315</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamUNC]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -549,10 +547,10 @@
 			</control>
 			<control type="label">
 				<description>Service</description>
-				<left>50</left>
-				<top>235</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>352</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19099]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -561,10 +559,10 @@
 			</control>
 			<control type="label">
 				<description>Service value</description>
-				<left>260</left>
-				<top>235</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>352</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamServiceName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -573,10 +571,10 @@
 			</control>
 			<control type="label">
 				<description>Encryption</description>
-				<left>50</left>
-				<top>260</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>390</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19015]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -585,10 +583,10 @@
 			</control>
 			<control type="label">
 				<description>Encryption value</description>
-				<left>260</left>
-				<top>260</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>390</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamEncryptionName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -597,10 +595,10 @@
 			</control>
 			<control type="label">
 				<description>Provider</description>
-				<left>50</left>
-				<top>285</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>428</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19101]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -609,10 +607,10 @@
 			</control>
 			<control type="label">
 				<description>Provider value</description>
-				<left>260</left>
-				<top>285</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>428</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamProviderName]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -621,10 +619,10 @@
 			</control>
 			<control type="label">
 				<description>Mux</description>
-				<left>50</left>
-				<top>310</top>
-				<width>205</width>
-				<height>25</height>
+				<left>75</left>
+				<top>465</top>
+				<width>308</width>
+				<height>38</height>
 				<label>$LOCALIZE[19100]:</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -633,10 +631,10 @@
 			</control>
 			<control type="label">
 				<description>Mux value</description>
-				<left>260</left>
-				<top>310</top>
-				<width>345</width>
-				<height>25</height>
+				<left>390</left>
+				<top>465</top>
+				<width>518</width>
+				<height>38</height>
 				<label>$INFO[PVR.ActStreamMux]</label>
 				<align>left</align>
 				<aligny>center</aligny>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<views>55,905,58,559,501</views>
 	<defaultcontrol always="true">55</defaultcontrol>
@@ -28,20 +27,20 @@
 				<include>NavMenuListFilter</include>
 				<include>NavMenuListSearch</include>
 				<control type="togglebutton" id="50">
+					<texturenofocus></texturenofocus>
+					<alttexturenofocus border="2"></alttexturenofocus>
 					<description>Update Library</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<label>653</label>
 					<altlabel>13353</altlabel>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<font>METF_DialogLarge</font>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
-					<alttexturenofocus border="2"></alttexturenofocus>
 					<alttexturefocus border="5">ButtonFO2.png</alttexturefocus>
 					<usealttexture>library.isscanningmusic</usealttexture>
 					<aligny>center</aligny>
@@ -50,19 +49,19 @@
 					<visible>!Container.Content(addons)</visible>
 				</control>
 				<control type="button" id="51">
+					<texturenofocus></texturenofocus>
 					<description>Get more</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>21452</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 					<onclick>ActivateWindow(addonbrowser, addons://more/audio/, return)</onclick>
 					<visible>Container.Content(addons)</visible>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">8</defaultcontrol>
 	<controls>
@@ -7,61 +6,61 @@
 			<include>Dimensions_Fullscreen</include>
 		</control>
 		<control type="label">
-			<width>1260</width>
+			<width>1890</width>
 			<align>center</align>
 			<label>SettingsScreenCalibration.xml</label>
 		</control>
 		<control type="mover" id="8">
+			<texturenofocus></texturenofocus>
 			<description>top left mover</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>128</width>
-			<height>128</height>
+			<width>192</width>
+			<height>192</height>
 			<texturefocus>calibrate/CalibrateTopLeft.png</texturefocus>
-			<texturenofocus></texturenofocus>
 		</control>
 		<control type="mover" id="9">
-			<description>right bottom mover</description>
-			<posx>700</posx>
-			<posy>500</posy>
-			<width>128</width>
-			<height>128</height>
-			<texturefocus>calibrate/CalibrateBottomRight.png</texturefocus>
 			<texturenofocus></texturenofocus>
+			<description>right bottom mover</description>
+			<posx>1050</posx>
+			<posy>750</posy>
+			<width>192</width>
+			<height>192</height>
+			<texturefocus>calibrate/CalibrateBottomRight.png</texturefocus>
 		</control>
 		<control type="mover" id="10">
-			<description>subtitle position mover</description>
-			<posx>200</posx>
-			<posy>500</posy>
-			<width>512</width>
-			<height>128</height>
-			<texturefocus>calibrate/CalibrateSubtitles.png</texturefocus>
 			<texturenofocus></texturenofocus>
+			<description>subtitle position mover</description>
+			<posx>300</posx>
+			<posy>750</posy>
+			<width>768</width>
+			<height>192</height>
+			<texturefocus>calibrate/CalibrateSubtitles.png</texturefocus>
 		</control>
 		<control type="resize" id="11">
+			<texturenofocus></texturenofocus>
 			<description>pixel aspect ratio box</description>
 			<posx>0</posx>
-			<posy>232</posy>
-			<width>256</width>
-			<height>256</height>
+			<posy>348</posy>
+			<width>384</width>
+			<height>384</height>
 			<texturefocus>calibrate/CalibratePixelRatio.png</texturefocus>
-			<texturenofocus></texturenofocus>
 		</control>
 		<control type="label" id="2">
-			<description>coordinates label</description>
-			<posx>20</posx>
-			<posy>40</posy>
-			<width>1240</width>
-			<align>center</align>
 			<label></label>
+			<description>coordinates label</description>
+			<posx>30</posx>
+			<posy>60</posy>
+			<width>1860</width>
+			<align>center</align>
 		</control>
 		<control type="label" id="3">
-			<description>help information</description>
-			<posx>20</posx>
-			<posy>70</posy>
-			<width>1240</width>
-			<align>center</align>
 			<label></label>
+			<description>help information</description>
+			<posx>30</posx>
+			<posy>105</posy>
+			<width>1860</width>
+			<align>center</align>
 		</control>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 	</controls>

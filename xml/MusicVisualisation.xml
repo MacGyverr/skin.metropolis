@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow) + Skin.HasSetting(VisBgArtistSlideshow)">RunScript(script.artistslideshow)</onload>
 	<defaultcontrol></defaultcontrol>
@@ -26,18 +25,18 @@
 			<description>visualisation</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
+			<width>1920</width>
+			<height>1080</height>
 			<include>Animation_BackdropFade</include>
 		</control>
 		<control type="group">
 			<visible>Player.ShowInfo + Skin.HasSetting(ShowMusicTime) + ![Window.IsVisible(musicosd) | Window.IsVisible(seekbar)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="label">
-				<posx>1250</posx>
-				<posy>10</posy>
-				<width>150</width>
-				<height>40</height>
+				<posx>1875</posx>
+				<posy>15</posy>
+				<width>225</width>
+				<height>60</height>
 				<aligny>center</aligny>
 				<align>right</align>
 				<font>METF_OSDTime</font>
@@ -49,67 +48,67 @@
 			<visible>Player.ShowInfo + !Window.IsVisible(musicosd)</visible>
 			<animation type="Visible">
 				<effect type="fade" time="200" start="0" end="100" />
-				<effect type="slide" time="600" start="0,151" end="0,0" easing="out" tween="cubic" />
+				<effect type="slide" time="600" start="0,226" end="0,0" easing="out" tween="cubic" />
 			</animation>
 			<animation type="Hidden">
 				<effect type="fade" time="200" start="100" end="0" />
-				<effect type="slide" time="600" start="0,0" end="0,151" easing="out" tween="cubic" />
+				<effect type="slide" time="600" start="0,0" end="0,226" easing="out" tween="cubic" />
 			</animation>
 			<control type="image">
 				<posx>0</posx>
-				<posy>460</posy>
-				<width>1280</width>
-				<height>260</height>
+				<posy>690</posy>
+				<width>1920</width>
+				<height>390</height>
 				<texture>osd/osd_dialog_bg.png</texture>
 				<colordiffuse>OSDBackgroundColor</colordiffuse>
 				<visible>!Skin.HasSetting(SlimMusicInfo)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>546</posy>
-				<width>1300</width>
-				<height>194</height>
+				<posy>819</posy>
+				<width>1950</width>
+				<height>291</height>
 				<texture>BlackBG.png</texture>
 				<colordiffuse>dd909090</colordiffuse>
 				<visible>Skin.HasSetting(SlimMusicInfo) + !Skin.HasSetting(HideVisClock) + !Skin.HasSetting(HideClockTemp)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>580</posy>
-				<width>1280</width>
-				<height>160</height>
+				<posy>870</posy>
+				<width>1920</width>
+				<height>240</height>
 				<texture>BlackBG.png</texture>
 				<colordiffuse>dd909090</colordiffuse>
 				<visible>Skin.HasSetting(SlimMusicInfo) + !Skin.HasSetting(HideVisClock) + Skin.HasSetting(HideClockTemp)</visible>
 			</control>
 			<control type="image">
 				<posx>0</posx>
-				<posy>606</posy>
-				<width>1280</width>
-				<height>134</height>
+				<posy>909</posy>
+				<width>1920</width>
+				<height>201</height>
 				<texture>BlackBG.png</texture>
 				<colordiffuse>dd909090</colordiffuse>
 				<visible>Skin.HasSetting(SlimMusicInfo) + Skin.HasSetting(HideVisClock)</visible>
 			</control>
 			<control type="group">
-				<posx>-20</posx>
-				<posy>555</posy>
-				<animation effect="slide" start="-280" end="30" time="600" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-				<animation effect="slide" start="30" end="-280" time="600" tween="cubic" easing="out" delay="800">WindowClose</animation>
+				<posx>-30</posx>
+				<posy>832</posy>
+				<animation effect="slide" start="-420" end="45" time="600" tween="cubic" easing="out" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="45" end="-420" time="600" tween="cubic" easing="out" delay="800">WindowClose</animation>
 				<visible>!Skin.HasSetting(SlimMusicInfo) + Skin.HasSetting(MediaOverlay)</visible>
 				<control type="image" id="7026">
-					<width>180</width>
-					<height>180</height>
-					<posx>64</posx>
-					<posy>-70</posy>
+					<width>270</width>
+					<height>270</height>
+					<posx>96</posx>
+					<posy>-105</posy>
 					<include>Animation_SpinningCD</include>
 				</control>
 				<control type="image">
 					<description>cover image</description>
-					<posx>-50</posx>
-					<posy>-80</posy>
-					<width>340</width>
-					<height>200</height>
+					<posx>-75</posx>
+					<posy>-120</posy>
+					<width>510</width>
+					<height>300</height>
 					<fadetime>200</fadetime>
 					<texture background="true">$INFO[MusicPlayer.Cover]</texture>
 					<aspectratio aligny="bottom">keep</aspectratio>
@@ -118,10 +117,11 @@
 				</control>
 			</control>
 			<control type="label">
-				<posx>324</posx>
-				<posy>485</posy><!-- -143 -->
-				<width>650</width>
-				<height>25</height>
+				<posx>486</posx>
+				<posy>728</posy>
+				<!-- -143 -->
+				<width>975</width>
+				<height>38</height>
 				<align>center</align>
 				<scroll>true</scroll>
 				<font>METF_MusicVizTitle</font>
@@ -129,10 +129,11 @@
 				<visible>!Skin.HasSetting(SlimMusicInfo)</visible>
 			</control>
 			<control type="label">
-				<posx>324</posx>
-				<posy>575</posy> <!-- -103 -->
-				<width>650</width>
-				<height>24</height>
+				<posx>486</posx>
+				<posy>862</posy>
+				<!-- -103 -->
+				<width>975</width>
+				<height>36</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>METF_TitleTextLarge</font>
@@ -141,10 +142,11 @@
 				<visible>!Skin.HasSetting(SlimMusicInfo)</visible>
 			</control>
 			<control type="label">
-				<posx>10</posx>
-				<posy>608</posy><!-- -143 -->
-				<width>336</width>
-				<height>30</height>
+				<posx>15</posx>
+				<posy>912</posy>
+				<!-- -143 -->
+				<width>504</width>
+				<height>45</height>
 				<align>left</align>
 				<scroll>true</scroll>
 				<font>METF_SettingsHeading</font>
@@ -152,10 +154,11 @@
 				<visible>Skin.HasSetting(SlimMusicInfo)</visible>
 			</control>
 			<control type="label">
-				<posx>10</posx>
-				<posy>636</posy> <!-- -103 -->
-				<width>336</width>
-				<height>30</height>
+				<posx>15</posx>
+				<posy>954</posy>
+				<!-- -103 -->
+				<width>504</width>
+				<height>45</height>
 				<align>left</align>
 				<font>METF_SettingsHeading</font>
 				<label>$INFO[MusicPlayer.Album]</label>
@@ -163,21 +166,21 @@
 				<visible>Skin.HasSetting(SlimMusicInfo)</visible>
 			</control>
 			<control type="label">
-				<posx>330</posx>
-				<posy>612</posy>
-				<width>650</width><!-- 1280 -->
-				<height>30</height>
+				<posx>495</posx>
+				<posy>918</posy>
+				<width>975</width>
+				<!-- 1280 -->
+				<height>45</height>
 				<align>center</align>
 				<font>METF_SettingsHeading</font>
 				<label>[COLOR=white]$INFO[MusicPlayer.Title][/COLOR]</label>
 			</control>
 			<control type="progress" id="23">
 				<description>Progressbar</description>
-				<posx>400</posx>
-				<posy>660</posy>
-				<width>500</width>
-				<height>15</height>
-				<align>center</align>
+				<posx>600</posx>
+				<posy>990</posy>
+				<width>750</width>
+				<height>22</height>
 				<info>Player.Progress</info>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back.png</texturebg>
@@ -189,10 +192,10 @@
 				<visible>!Skin.HasSetting(ShowMusicTime)</visible>
 			</control>
 			<control type="fadelabel">
-				<posx>395</posx>
-				<posy>664</posy>
-				<width>90</width>
-				<height>8</height>
+				<posx>592</posx>
+				<posy>996</posy>
+				<width>135</width>
+				<height>12</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<info>MusicPlayer.Time</info>
@@ -202,11 +205,10 @@
 			</control>
 			<control type="progress" id="23">
 				<description>Progressbar</description>
-				<posx>495</posx>
-				<posy>660</posy>
-				<width>320</width>
-				<height>15</height>
-				<align>center</align>
+				<posx>742</posx>
+				<posy>990</posy>
+				<width>480</width>
+				<height>22</height>
 				<info>Player.Progress</info>
 				<reveal>true</reveal>
 				<texturebg>osd/osd_progress_back.png</texturebg>
@@ -218,10 +220,10 @@
 				<visible>Skin.HasSetting(ShowMusicTime)</visible>
 			</control>
 			<control type="fadelabel">
-				<posx>824</posx>
-				<posy>664</posy>
-				<width>90</width>
-				<height>8</height>
+				<posx>1236</posx>
+				<posy>996</posy>
+				<width>135</width>
+				<height>12</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<info>MusicPlayer.Duration</info>
@@ -230,10 +232,10 @@
 				<visible>Skin.HasSetting(ShowMusicTime)</visible>
 			</control>
 			<control type="fadelabel">
-				<posx>306</posx>
-				<posy>676</posy>
-				<width>700</width>
-				<height>8</height>
+				<posx>459</posx>
+				<posy>1014</posy>
+				<width>1050</width>
+				<height>12</height>
 				<visible>true</visible>
 				<scroll>false</scroll>
 				<scrollout>false</scrollout>
@@ -246,67 +248,68 @@
 			</control>
 			<control type="group">
 				<control type="image">
-					<posx>10</posx>
-					<posy>680</posy>
+					<posx>15</posx>
+					<posy>1020</posy>
 					<description>Codec Image</description>
-					<width>67</width>  <!-- 160x80 -->
-					<height>30</height>
+					<width>100</width>
+					<!-- 160x80 -->
+					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[MusicPlayer.Codec,flags/AudioCodec/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>675</posy>
-					<width>77</width>
-					<height>40</height>
+					<posx>8</posx>
+					<posy>1012</posy>
+					<width>116</width>
+					<height>60</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_frame.png</texture>
 				</control>
 				<control type="image">
-					<posx>85</posx>
-					<posy>680</posy>
-					<width>60</width>
-					<height>30</height>
+					<posx>128</posx>
+					<posy>1020</posy>
+					<width>90</width>
+					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture fallback="flags/AudioChannels/DefaultChannels.png">$INFO[MusicPlayer.Channels,flags/AudioChannels/,ch.png]</texture>
 				</control>
 				<control type="image">
-					<posx>75</posx>
-					<posy>675</posy>
-					<width>80</width>
-					<height>40</height>
+					<posx>112</posx>
+					<posy>1012</posy>
+					<width>120</width>
+					<height>60</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_frame.png</texture>
 				</control>
 				<control type="image">
-					<posx>158</posx>
-					<posy>680</posy>
-					<width>60</width>
-					<height>30</height>
+					<posx>237</posx>
+					<posy>1020</posy>
+					<width>90</width>
+					<height>45</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$VAR[Player_RecordLabel_Icons]</texture>
 				</control>
 				<control type="image">
-					<posx>148</posx>
-					<posy>675</posy>
-					<width>80</width>
-					<height>40</height>
+					<posx>222</posx>
+					<posy>1012</posy>
+					<width>120</width>
+					<height>60</height>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 					<texture>flags/flag_frame.png</texture>
 				</control>
 				<control type="image">
-					<posx>233</posx>
-					<posy>685</posy>
-					<width>88</width>
-					<height>22</height>
+					<posx>350</posx>
+					<posy>1028</posy>
+					<width>132</width>
+					<height>33</height>
 					<colordiffuse>OSDProgressBar</colordiffuse>
 					<texture fallback="flags/Rating10/rating0.png">$INFO[MusicPlayer.UserRating,flags/Rating10/rating,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>218</posx>
-					<posy>675</posy>
-					<width>118</width>
-					<height>40</height>
+					<posx>327</posx>
+					<posy>1012</posy>
+					<width>177</width>
+					<height>60</height>
 					<texture>flags/flag_frame.png</texture>
 					<colordiffuse>MediaFlagBoxDiffuse</colordiffuse>
 				</control>

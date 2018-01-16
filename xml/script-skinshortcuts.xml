@@ -1,18 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<controls>
 		<control type="group">
 			<include>Animation_OpenCloseFade</include>
-			<visible>IsEmpty(Window.Property(additionalDialog))</visible>
-
+			<visible>String.IsEmpty(Window.Property(additionalDialog))</visible>
 			<!-- Heading -->
 			<control type="group">
 				<animation type="Conditional" condition="Window.IsActive(extendedprogressdialog)">
 					<effect type="fade" time="200" start="100" end="10" />
 				</animation>
-				<posx>30</posx>
-				<posy>10</posy>
+				<posx>45</posx>
+				<posy>15</posy>
 				<control type="label">
 					<description>Settings</description>
 					<label>$LOCALIZE[5]</label>
@@ -28,12 +26,11 @@
 					<include>Global_HeadingDetailVars</include>
 				</control>
 			</control>
-
 			<control type="group">
 				<!-- Move down -->
 				<control type="button" id="304">
-					<left>-10</left>
-					<top>-10</top>
+					<left>-15</left>
+					<top>-15</top>
 					<width>1</width>
 					<height>1</height>
 					<onleft>211</onleft>
@@ -43,8 +40,8 @@
 				</control>
 				<!-- Move up -->
 				<control type="button" id="303">
-					<left>-10</left>
-					<top>-10</top>
+					<left>-15</left>
+					<top>-15</top>
 					<width>1</width>
 					<height>1</height>
 					<onleft>304</onleft>
@@ -54,8 +51,8 @@
 				</control>
 				<!-- Remove -->
 				<control type="button" id="302">
-					<left>-10</left>
-					<top>-10</top>
+					<left>-15</left>
+					<top>-15</top>
 					<width>1</width>
 					<height>1</height>
 					<onleft>303</onleft>
@@ -63,24 +60,23 @@
 					<onup>noop</onup>
 					<ondown>noop</ondown>
 				</control>
-
 				<!-- Left list -->
 				<control type="list" id="211">
 					<left>0</left>
-					<top>65</top>
-					<width>370</width>
-					<height>462</height>
+					<top>98</top>
+					<width>555</width>
+					<height>693</height>
 					<onleft>9001</onleft>
 					<onright>304</onright>
 					<onup>211</onup>
 					<ondown>211</ondown>
 					<scrolltime tween="sine" easing="out">240</scrolltime>
-					<itemlayout width="375" height="38">
+					<itemlayout width="562" height="57">
 						<control type="label">
-							<left>-75</left>
-							<top>5</top>
-							<width>350</width>
-							<height>38</height>
+							<left>-112</left>
+							<top>8</top>
+							<width>525</width>
+							<height>57</height>
 							<font>METF_TitleTextMedium</font>
 							<textcolor>white</textcolor>
 							<align>right</align>
@@ -89,72 +85,72 @@
 							<animation effect="fade" start="100" end="75" time="0" condition="!Control.HasFocus(211)">Conditional</animation>
 						</control>
 					</itemlayout>
-					<focusedlayout width="375" height="38">
+					<focusedlayout width="562" height="57">
 						<control type="image">
-							<left>00</left>
-							<top>5</top>
-							<width>375</width>
-							<height>38</height>
+							<left>0</left>
+							<top>8</top>
+							<width>562</width>
+							<height>57</height>
 							<align>left</align>
 							<aligny>center</aligny>
 							<texture border="5">ButtonFO.png</texture>
 						</control>
 						<control type="image">
-							<left>283</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>424</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_channel_previous_fo.png</texture>
 							<visible>!Control.HasFocus(304)</visible>
 						</control>
 						<control type="image">
-							<left>311</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>466</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_channel_next_fo.png</texture>
 							<visible>!Control.HasFocus(303)</visible>
 						</control>
 						<control type="image">
-							<left>339</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>508</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_ban_fo.png</texture>
 							<visible>!Control.HasFocus(302)</visible>
 						</control>
 						<control type="image">
-							<left>283</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>424</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_channel_previous_nf.png</texture>
 							<include>Animation_ButtonFocus</include>
 							<visible>Control.HasFocus(304)</visible>
 						</control>
 						<control type="image">
-							<left>311</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>466</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_channel_next_nf.png</texture>
 							<include>Animation_ButtonFocus</include>
 							<visible>Control.HasFocus(303)</visible>
 						</control>
 						<control type="image">
-							<left>339</left>
-							<top>8</top>
-							<width>29</width>
-							<height>29</height>
+							<left>508</left>
+							<top>12</top>
+							<width>44</width>
+							<height>44</height>
 							<texture>osd/osd_button_ban_nf.png</texture>
 							<include>Animation_ButtonFocus</include>
 							<visible>Control.HasFocus(302)</visible>
 						</control>
 						<control type="label">
-							<left>-75</left>
-							<top>5</top>
-							<width>350</width>
-							<height>38</height>
+							<left>-112</left>
+							<top>8</top>
+							<width>525</width>
+							<height>57</height>
 							<font>METF_TitleTextMedium</font>
 							<textcolor>white</textcolor>
 							<align>right</align>
@@ -163,34 +159,32 @@
 						</control>
 					</focusedlayout>
 				</control>
-
 				<!-- Icon and Background backdrop (mainmenu) -->
 				<control type="image" id="911">
-					<left>550</left>
-					<top>174</top>
-					<width>448</width>
-					<height>156</height>
-					<texture background="true" >list/listfocus.png</texture>
+					<left>825</left>
+					<top>261</top>
+					<width>672</width>
+					<height>234</height>
+					<texture background="true">list/listfocus.png</texture>
 					<colordiffuse>BackgroundColor</colordiffuse>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Icon backdrop (submenu) -->
 				<control type="image" id="912">
-					<left>550</left>
-					<top>138</top>
-					<width>390</width>
-					<height>156</height>
-					<texture background="true" >list/listfocus.png</texture>
+					<left>825</left>
+					<top>207</top>
+					<width>585</width>
+					<height>234</height>
+					<texture background="true">list/listfocus.png</texture>
 					<colordiffuse>BackgroundColor</colordiffuse>
 					<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
-
 				<!-- Right grouplist -->
 				<control type="grouplist" id="9000">
-					<left>385</left>
-					<top>70</top>
-					<width>800</width>
-					<height>660</height>
+					<left>578</left>
+					<top>105</top>
+					<width>1200</width>
+					<height>990</height>
 					<itemgap>0</itemgap>
 					<onleft>211</onleft>
 					<onright>noop</onright>
@@ -203,8 +197,8 @@
 					<control type="button" id="401">
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -217,8 +211,8 @@
 						<description>Choose thumbnail Button</description>
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -231,8 +225,8 @@
 						<description>Choose background Button</description>
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -243,28 +237,28 @@
 					</control>
 					<!-- Thumbnail (Home2 icon) -->
 					<control type="image" id="901">
-						<left>210</left>
+						<left>315</left>
 						<top>0</top>
-						<width>80</width>
-						<height>120</height>
+						<width>120</width>
+						<height>180</height>
 						<texture background="true" fallback="DefaultShortcut.png">$INFO[Container(211).ListItem.Icon]</texture>
 						<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					</control>
 					<!-- Thumbnail (Submenu icon) -->
 					<control type="image" id="902">
-						<left>300</left>
+						<left>450</left>
 						<top>0</top>
-						<width>120</width>
-						<height>120</height>
+						<width>180</width>
+						<height>180</height>
 						<texture background="true" fallback="DefaultShortcut.png">$INFO[Container(211).ListItem.Icon]</texture>
 						<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					</control>
 					<!-- Background -->
 					<control type="multiimage" id="903">
-						<left>350</left>
-						<top>-120</top>
-						<width>220</width>
-						<height>120</height>
+						<left>525</left>
+						<top>-180</top>
+						<width>330</width>
+						<height>180</height>
 						<timeperimage>5000</timeperimage>
 						<randomize>true</randomize>
 						<fadetime>500</fadetime>
@@ -274,10 +268,10 @@
 					</control>
 					<!-- Thumbnail Label (Home2) -->
 					<control type="label" id="904">
-						<left>150</left>
+						<left>225</left>
 						<top>0</top>
-						<width>200</width>
-						<height>30</height>
+						<width>300</width>
+						<height>45</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
@@ -287,10 +281,10 @@
 					</control>
 					<!-- Thumbnail Label (Submenu) -->
 					<control type="label" id="905">
-						<left>260</left>
+						<left>390</left>
 						<top>0</top>
-						<width>200</width>
-						<height>30</height>
+						<width>300</width>
+						<height>45</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
@@ -300,10 +294,10 @@
 					</control>
 					<!-- Background Label -->
 					<control type="label" id="906">
-						<left>360</left>
-						<top>-30</top>
-						<width>200</width>
-						<height>30</height>
+						<left>540</left>
+						<top>-45</top>
+						<width>300</width>
+						<height>45</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
@@ -315,8 +309,8 @@
 					<control type="button" id="305">
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -328,8 +322,8 @@
 					<control type="button" id="312">
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -342,21 +336,21 @@
 					<control type="button" id="307">
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$ADDON[script.skinshortcuts 32027]</label>
-		<!--				<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>  -->
+						<!--				<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>  -->
 					</control>
 					<!-- Customize Submenu -->
 					<control type="button" id="405">
 						<left>0</left>
 						<top>0</top>
-						<width>700</width>
-						<height>36</height>
+						<width>1050</width>
+						<height>54</height>
 						<font>METF_SettingsDetail</font>
 						<textcolor>white</textcolor>
 						<align>left</align>
@@ -365,19 +359,18 @@
 						<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					</control>
 					<control type="image" id="910">
-						<height>8</height>
-						<width>700</width>
+						<height>12</height>
+						<width>1050</width>
 						<texture border="2">SettingsLine.png</texture>
 						<colordiffuse>SettingsLine</colordiffuse>
 					</control>
 				</control>
-
 				<!-- Button grouplist -->
 				<control type="grouplist" id="9001">
-					<left>385</left>
-					<top>488</top>
-					<width>800</width>
-					<height>38</height>
+					<left>578</left>
+					<top>732</top>
+					<width>1200</width>
+					<height>57</height>
 					<itemgap>0</itemgap>
 					<onleft>211</onleft>
 					<onright>noop</onright>
@@ -386,8 +379,8 @@
 					<orientation>horizontal</orientation>
 					<!-- Add item -->
 					<control type="button" id="301">
-						<width>220</width>
-						<height>38</height>
+						<width>330</width>
+						<height>57</height>
 						<align>center</align>
 						<font>METF_TitleTextMedium</font>
 						<textcolor>white</textcolor>
@@ -398,8 +391,8 @@
 					</control>
 					<!-- OK Button -->
 					<control type="button" id="10">
-						<width>220</width>
-						<height>38</height>
+						<width>330</width>
+						<height>57</height>
 						<label>$LOCALIZE[186]</label>
 						<align>center</align>
 						<font>METF_TitleTextMedium</font>
@@ -411,8 +404,8 @@
 					</control>
 					<!-- Reset -->
 					<control type="button" id="308">
-						<width>260</width>
-						<height>38</height>
+						<width>390</width>
+						<height>57</height>
 						<align>center</align>
 						<font>METF_TitleTextMedium</font>
 						<textcolor>white</textcolor>
@@ -422,12 +415,10 @@
 						<label>$ADDON[script.skinshortcuts 32028]</label>
 					</control>
 				</control>
-
 				<!-- Help text for each button -->
 				<control type="group">
 					<include>PlotBox</include>
 				</control>
-
 				<include>Global_ContextFilter</include>
 				<include>Global_Weather</include>
 				<include>Global_Time</include>

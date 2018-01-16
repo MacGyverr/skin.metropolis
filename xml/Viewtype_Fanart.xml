@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_Fanart">
 		<control type="group">
 			<visible>Control.IsVisible(504)</visible>
 			<!-- Browser -->
 			<control type="wraplist" id="504">
-				<posx>20</posx>
-				<posy>40</posy>
-				<height>420</height>
-				<width>1240</width>
+				<posx>30</posx>
+				<posy>60</posy>
+				<height>630</height>
+				<width>1860</width>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 				<ondown>60</ondown>
 				<onleft>504</onleft>
@@ -23,22 +22,22 @@
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewFanart)</visible>
 				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
-				<itemlayout width="260" height="420">
+				<itemlayout width="390" height="630">
 					<control type="image">
-						<posx>28</posx>
-						<posy>60</posy>
-						<width>204</width>
-						<height>300</height>
+						<posx>42</posx>
+						<posy>90</posy>
+						<width>306</width>
+						<height>450</height>
 						<texture background="true" fallback="DefaultThumb.png">$VAR[PosterThumb]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>28</posx>
-						<posy>60</posy>
-						<width>204</width>
-						<height>300</height>
+						<posx>42</posx>
+						<posy>90</posy>
+						<width>306</width>
+						<height>450</height>
 						<texture>frames/ClassicFrameGlass_Vertical.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -46,20 +45,20 @@
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>39</posy>
-						<width>244</width>
-						<height>342</height>
+						<posx>15</posx>
+						<posy>58</posy>
+						<width>366</width>
+						<height>513</height>
 						<texture>frames/ClassicFrame_PosterSmall.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title)</visible>
 					</control>
 					<control type="image">
-						<posx>191</posx>
-						<posy>319</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>286</posx>
+						<posy>478</posy>
+						<width>48</width>
+						<height>48</height>
 						<fadetime>200</fadetime>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
@@ -67,21 +66,21 @@
 					</control>
 					<!-- Watched Overlay for In-Progress Items -->
 					<control type="image">
-						<posx>187</posx>
-						<posy>314</posy>
-						<width>43</width>
-						<height>43</height>
+						<posx>280</posx>
+						<posy>471</posy>
+						<width>64</width>
+						<height>64</height>
 						<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout width="720" height="420">
+				<focusedlayout width="1080" height="630">
 					<control type="image">
-						<posx>34</posx>
-						<posy>31</posy>
-						<width>646</width>
-						<height>362</height>
+						<posx>51</posx>
+						<posy>46</posy>
+						<width>969</width>
+						<height>543</height>
 						<texture>frames/ClassicFrame_SegmentedDiffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -89,10 +88,10 @@
 						<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>34</posx>
-						<posy>31</posy>
-						<width>646</width>
-						<height>362</height>
+						<posx>51</posx>
+						<posy>46</posy>
+						<width>969</width>
+						<height>543</height>
 						<texture>frames/ClassicFrame_Background.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -100,65 +99,65 @@
 						<visible>!String.IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>34</posx>
-						<posy>31</posy>
-						<width>646</width>
-						<height>362</height>
+						<posx>51</posx>
+						<posy>46</posy>
+						<width>969</width>
+						<height>543</height>
 						<texture fallback="home_art/movies.jpg" diffuse="frames/ClassicFrame_SegmentedDiffuse.png">$VAR[LandscapeFanart]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>34</posx>
-						<posy>31</posy>
-						<width>646</width>
-						<height>362</height>
+						<posx>51</posx>
+						<posy>46</posy>
+						<width>969</width>
+						<height>543</height>
 						<texture fallback="home_art/movies.jpg">$VAR[LandscapeFanart]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>9</posx>
-						<posy>10</posy>
-						<width>700</width>
-						<height>410</height>
+						<posx>14</posx>
+						<posy>15</posy>
+						<width>1050</width>
+						<height>615</height>
 						<texture>frames/ClassicFrame_Segmented.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title) + !Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>9</posx>
-						<posy>10</posy>
-						<width>700</width>
-						<height>410</height>
+						<posx>14</posx>
+						<posy>15</posy>
+						<width>1050</width>
+						<height>615</height>
 						<texture>frames/ClassicFrame_FanartMedium.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>!String.IsEmpty(ListItem.Title) + Skin.HasSetting(NoSegmentedFanart)</visible>
 					</control>
 					<control type="image">
-						<posx>638</posx>
-						<posy>352</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>957</posx>
+						<posy>528</posy>
+						<width>48</width>
+						<height>48</height>
 						<fadetime>200</fadetime>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<animation type="Focus" reversible="false">
-							<effect type="zoom" center="323,181" start="70" end="100" time="400" tween="back" easing="out" />
+							<effect type="zoom" center="484,272" start="70" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="0" end="100" time="300" />
 						</animation>
 						<visible>!ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
 					</control>
 					<!-- Watched Overlay for In-Progress Items -->
 					<control type="image">
-						<posx>634</posx>
-						<posy>347</posy>
-						<width>43</width>
-						<height>43</height>
+						<posx>951</posx>
+						<posy>520</posy>
+						<width>64</width>
+						<height>64</height>
 						<texture>flags/Progress/$INFO[ListItem.PercentPlayed].png</texture>
 						<colordiffuse>WatchedOverlay</colordiffuse>
 						<visible>ListItem.IsResumable + [[[Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideMovieWatchedOverlays)] | [![Container.Content(movies) | Container.Content(sets)] + !Skin.HasSetting(HideTVWatchedOverlays)]]</visible>
@@ -166,8 +165,8 @@
 				</focusedlayout>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>443</posy>
+				<posx>60</posx>
+				<posy>664</posy>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<include>Animation_OpenCloseFade</include>
@@ -176,8 +175,8 @@
 				<control type="fadelabel">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>1200</width>
-					<height>50</height>
+					<width>1800</width>
+					<height>75</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<scrollout>false</scrollout>
@@ -189,10 +188,10 @@
 				</control>
 				<!-- Genre -->
 				<control type="label">
-					<posx>200</posx>
-					<posy>36</posy>
-					<width>800</width>
-					<height>30</height>
+					<posx>300</posx>
+					<posy>54</posy>
+					<width>1200</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_MediaDetailsSmall</font>
@@ -201,10 +200,10 @@
 					<visible>!String.IsEmpty(ListItem.Genre)</visible>
 				</control>
 				<control type="label">
-					<posx>200</posx>
-					<posy>36</posy>
-					<width>800</width>
-					<height>30</height>
+					<posx>300</posx>
+					<posy>54</posy>
+					<width>1200</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_MediaDetailsSmall</font>
@@ -215,12 +214,12 @@
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
-				<posx>40</posx>
-				<posy>507</posy>
-				<width>1200</width>
-				<height>30</height>
+				<posx>60</posx>
+				<posy>760</posy>
+				<width>1800</width>
+				<height>45</height>
 				<align>center</align>
-				<itemgap>10</itemgap>
+				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>

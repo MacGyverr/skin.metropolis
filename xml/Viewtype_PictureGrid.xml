@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Viewtype_PictureGrid">
 		<control type="group">
@@ -6,10 +5,10 @@
 			<!-- Browser -->
 			<control type="panel" id="500">
 				<viewtype label="31293">icon</viewtype>
-				<posx>740</posx>
-				<posy>50</posy>
-				<width>496</width>
-				<height>480</height>
+				<posx>1110</posx>
+				<posy>75</posy>
+				<width>744</width>
+				<height>720</height>
 				<onup>500</onup>
 				<ondown>500</ondown>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
@@ -22,38 +21,38 @@
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<visible>!Skin.HasSetting(NoViewPictureGrid)</visible>
-				<itemlayout width="162" height="160">
+				<itemlayout width="243" height="240">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>156</width>
-						<height>156</height>
+						<width>234</width>
+						<height>234</height>
 						<texture>list/listframe.png</texture>
 					</control>
 					<control type="image">
-						<posx>18</posx>
-						<posy>18</posy>
-						<width>120</width>
-						<height>120</height>
+						<posx>27</posx>
+						<posy>27</posy>
+						<width>180</width>
+						<height>180</height>
 						<texture background="true" fallback="DefaultThumb.png" diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout width="162" height="160">
+				<focusedlayout width="243" height="240">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>156</width>
-						<height>156</height>
+						<width>234</width>
+						<height>234</height>
 						<texture>list/listframe.png</texture>
 						<animation reversible="false" effect="zoom" center="auto" start="100" end="130" time="200" tween="sine" easing="inout">focus</animation>
 						<animation reversible="false" effect="zoom" center="auto" start="130" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
 					</control>
 					<control type="image">
-						<posx>18</posx>
-						<posy>18</posy>
-						<width>120</width>
-						<height>120</height>
+						<posx>27</posx>
+						<posy>27</posy>
+						<width>180</width>
+						<height>180</height>
 						<texture background="true" fallback="DefaultThumb.png" diffuse="list/listmatte.png">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<animation reversible="false" effect="zoom" center="auto" start="100" end="130" time="200" tween="sine" easing="inout">focus</animation>
@@ -70,27 +69,27 @@
 				<include>Animation_HiddenByInfo</include>
 				<!-- Picture (3:2 aspect viewing window on a 16:9 monitor) -->
 				<control type="image">
-					<posx>94</posx>
-					<posy>113</posy>
-					<width>558</width>
-					<height>372</height>
+					<posx>141</posx>
+					<posy>170</posy>
+					<width>837</width>
+					<height>558</height>
 					<texture>frames/ClassicFrame_Background.png</texture>
 					<colordiffuse>FrameBackgroundDiffuse</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>94</posx>
-					<posy>113</posy>
-					<width>558</width>
-					<height>372</height>
+					<posx>141</posx>
+					<posy>170</posy>
+					<width>837</width>
+					<height>558</height>
 					<texture background="true">$INFO[ListItem.Thumb]</texture>
 					<aspectratio scalediffuse="false">keep</aspectratio>
 				</control>
 				<control type="image">
-					<posx>72</posx>
-					<posy>92</posy>
-					<width>604</width>
-					<height>420</height>
+					<posx>108</posx>
+					<posy>138</posy>
+					<width>906</width>
+					<height>630</height>
 					<texture>frames/ClassicFrame_FanartMedium.png</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
@@ -104,10 +103,10 @@
 				<include>Animation_HiddenByInfo</include>
 				<!-- Title -->
 				<control type="label">
-					<posx>95</posx>
-					<posy>70</posy>
-					<width>558</width>
-					<height>30</height>
+					<posx>142</posx>
+					<posy>105</posy>
+					<width>837</width>
+					<height>45</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
@@ -115,16 +114,16 @@
 					<label>$VAR[ListItemTitle]</label>
 				</control>
 				<control type="grouplist">
-					<posx>95</posx>
-					<posy>500</posy>
-					<width>558</width>
-					<height>30</height>
+					<posx>142</posx>
+					<posy>750</posy>
+					<width>837</width>
+					<height>45</height>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<!-- Picture Date and Time -->
 					<control type="label">
-						<width min="25" max="661">auto</width>
-						<height>20</height>
+						<width min="38" max="992">auto</width>
+						<height>30</height>
 						<font>METF_MediaDetailsSmall</font>
 						<textcolor>MediaDetailsGenre</textcolor>
 						<label>$INFO[ListItem.PictureDateTime]</label>
@@ -136,8 +135,8 @@
 					</control>
 					<!-- Picture Resolution -->
 					<control type="label">
-						<width min="25" max="661">auto</width>
-						<height>20</height>
+						<width min="38" max="992">auto</width>
+						<height>30</height>
 						<font>METF_MediaDetailsSmall</font>
 						<textcolor>MediaDetailsInfo</textcolor>
 						<label>$INFO[ListItem.PictureResolution]</label>

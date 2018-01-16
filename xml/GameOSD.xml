@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>25</defaultcontrol>
 	<coordinates>
@@ -16,16 +15,16 @@
 			<include>OSD_Player_Details</include>
 			<include>OSD_Player_Time</include>
 			<control type="grouplist" id="100">
-				<posx>292</posx>
-				<posy>650</posy>
-				<width>775</width>
+				<posx>438</posx>
+				<posy>975</posy>
+				<width>1162</width>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
 				<onleft>60</onleft>
 				<onright>10</onright>
 				<onup>Close</onup>
 				<ondown>Close</ondown>
-	<!--			<control type="button" id="5">
+				<!--			<control type="button" id="5">
 					<description>Game Saves</description>
 					<include>Animation_ButtonFocus</include>
 					<height>60</height>
@@ -34,11 +33,12 @@
 					<texturenofocus>osd/osd_button_book_nf.png</texturenofocus>
 					<onclick>ActivateWindow(videobookmarks)</onclick>
 				</control>
-	-->			<control type="button" id="10">
+	-->
+				<control type="button" id="10">
 					<description>Reset</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>osd/osd_button_prev_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_prev_nf.png</texturenofocus>
 					<onclick>PlayerControl(Reset)</onclick>
@@ -46,8 +46,8 @@
 				<control type="button" id="15">
 					<description>Rewind</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>osd/osd_button_rew_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_rew_nf.png</texturenofocus>
 					<onclick>PlayerControl(rewind)</onclick>
@@ -55,8 +55,8 @@
 				<control type="button" id="20">
 					<description>Stop</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>osd/osd_button_stop_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_stop_nf.png</texturenofocus>
 					<onclick>PlayerControl(stop)</onclick>
@@ -64,18 +64,16 @@
 				<control type="togglebutton" id="25">
 					<description>Play</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>osd/osd_button_pause_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_pause_nf.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 					<alttexturefocus>osd/osd_button_play_fo.png</alttexturefocus>
 					<alttexturenofocus>osd/osd_button_play_nf.png</alttexturenofocus>
-					<disabledcolor></disabledcolor>
-					<colordiffuse></colordiffuse>
 					<onclick>PlayerControl(play)</onclick>
 				</control>
-	<!--			<control type="button" id="30">
+				<!--			<control type="button" id="30">
 					<description>Forward</description>
 					<include>Animation_ButtonFocus</include>
 					<height>60</height>
@@ -102,11 +100,12 @@
 					<texturenofocus>osd/osd_button_settings_nf.png</texturenofocus>
 					<onclick>ActivateWindow(osdvideosettings)</onclick>
 				</control>
-	-->			<control type="button" id="45">
+	-->
+				<control type="button" id="45">
 					<description>Controller Settings</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>buttons/button_gameFO.png</texturefocus>
 					<texturenofocus>buttons/button_game.png</texturenofocus>
 					<onclick>ActivateWindow(GameControllers)</onclick>
@@ -114,8 +113,8 @@
 				<control type="button" id="50">
 					<description>View mode button</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>buttons/button_videoconfigFO.png</texturefocus>
 					<texturenofocus>buttons/button_videoconfig.png</texturenofocus>
 					<onclick>ActivateWindow(GameViewMode)</onclick>
@@ -123,8 +122,8 @@
 				<control type="button" id="55">
 					<description>Video filter button</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>buttons/button_layersFO.png</texturefocus>
 					<texturenofocus>buttons/button_layers.png</texturenofocus>
 					<onclick>ActivateWindow(GameVideoFilter)</onclick>
@@ -132,13 +131,13 @@
 				<control type="button" id="60">
 					<description>Audio Settings</description>
 					<include>Animation_ButtonFocus</include>
-					<height>60</height>
-					<width>60</width>
+					<height>90</height>
+					<width>90</width>
 					<texturefocus>osd/osd_button_audio_fo.png</texturefocus>
 					<texturenofocus>osd/osd_button_audio_nf.png</texturenofocus>
 					<onclick>ActivateWindow(osdaudiosettings)</onclick>
 				</control>
-	<!--			<control type="button" id="65">
+				<!--			<control type="button" id="65">
 					<description>Audio Settings</description>
 					<include>Animation_ButtonFocus</include>
 					<height>60</height>
@@ -147,7 +146,8 @@
 					<texturenofocus>osd/osd_button_audio_nf.png</texturenofocus>
 					<onclick>ActivateWindow(GameVolume)</onclick>
 				</control>
-	-->		</control>
+	-->
+			</control>
 		</control>
 	</controls>
 </window>

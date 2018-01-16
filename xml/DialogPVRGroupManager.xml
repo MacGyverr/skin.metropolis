@@ -1,65 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">29</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
-
 		<!-- TV Channels Groups list -->
 		<control type="group">
-			<posx>310</posx>
-			<posy>70</posy>
+			<posx>465</posx>
+			<posy>105</posy>
 			<control type="label">
 				<description>Group Name</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>240</width>
-				<height>38</height>
+				<width>360</width>
+				<height>57</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[19207]</label>
 			</control>
 			<control type="list" id="13">
-				<posx>5</posx>
-				<posy>50</posy>
-				<width>240</width>
-				<height>400</height>
+				<posx>8</posx>
+				<posy>75</posy>
+				<width>360</width>
+				<height>600</height>
 				<scrolltime>0</scrolltime>
 				<onleft>29</onleft>
 				<onright>73</onright>
-				<itemlayout height="38">
+				<itemlayout height="57">
 					<control type="label">
-						<posx>5</posx>
-						<width>235</width>
-						<height>38</height>
+						<posx>8</posx>
+						<width>352</width>
+						<height>57</height>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="38">
+				<focusedlayout height="57">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<height>38</height>
-						<width>240</width>
+						<height>57</height>
+						<width>360</width>
 						<texture>ButtonFO.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(13)">Conditional</animation>
 					</control>
 					<control type="label">
-						<posx>5</posx>
-						<width>235</width>
-						<height>38</height>
+						<posx>8</posx>
+						<width>352</width>
+						<height>57</height>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
 			</control>
-
 			<control type="scrollbar" id="73">
-				<posx>250</posx>
-				<posy>40</posy>
-				<width>25</width>
-				<height>422</height>
+				<posx>375</posx>
+				<posy>60</posy>
+				<width>38</width>
+				<height>633</height>
 				<onleft>13</onleft>
 				<onright>11</onright>
 				<texturesliderbackground></texturesliderbackground>
@@ -68,69 +65,68 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-
 		<!-- Hidden TV Channels list -->
 		<control type="group">
 			<description>Channels List</description>
-			<posx>580</posx>
-			<posy>70</posy>
+			<posx>870</posx>
+			<posy>105</posy>
 			<control type="label">
 				<description>Hidden TV Channel Label</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>300</width>
-				<height>38</height>
+				<width>450</width>
+				<height>57</height>
 				<include>SettingsLabel</include>
 				<label>$LOCALIZE[31608] :</label>
 			</control>
 			<control type="list" id="11">
-				<posx>5</posx>
-				<posy>50</posy>
-				<width>300</width>
-				<height>400</height>
+				<posx>8</posx>
+				<posy>75</posy>
+				<width>450</width>
+				<height>600</height>
 				<onleft>73</onleft>
 				<onright>71</onright>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="60">
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>15</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<posx>45</posx>
+						<posx>68</posx>
 						<posy>0</posy>
-						<width>250</width>
-						<height>35</height>
+						<width>375</width>
+						<height>52</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
 						<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="60">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<height>38</height>
-						<width>300</width>
+						<height>57</height>
+						<width>450</width>
 						<texture>ButtonFO.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(11)">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>15</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<posx>45</posx>
+						<posx>68</posx>
 						<posy>0</posy>
-						<width>250</width>
-						<height>35</height>
+						<width>375</width>
+						<height>52</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
@@ -139,10 +135,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="71">
-				<posx>310</posx>
-				<posy>40</posy>
-				<width>25</width>
-				<height>422</height>
+				<posx>465</posx>
+				<posy>60</posy>
+				<width>38</width>
+				<height>633</height>
 				<onleft>11</onleft>
 				<onright>12</onright>
 				<texturesliderbackground></texturesliderbackground>
@@ -151,12 +147,11 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-
 		<!-- TV Channels list for current group-->
- 		<control type="group">
+		<control type="group">
 			<description>TV Channels list for current group</description>
-			<posx>825</posx>
-			<posy>70</posy>
+			<posx>1238</posx>
+			<posy>105</posy>
 			<control type="label" id="20">
 				<description>Hidden Label used to store current group name</description>
 				<visible>false</visible>
@@ -165,59 +160,59 @@
 				<description>TV Channel Name</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>400</width>
-				<height>38</height>
+				<width>600</width>
+				<height>57</height>
 				<include>SettingsLabel</include>
 				<label>$INFO[Control.GetLabel(20),, :]</label>
 			</control>
 			<control type="list" id="12">
-				<posx>5</posx>
-				<posy>50</posy>
-				<width>400</width>
-				<height>400</height>
+				<posx>8</posx>
+				<posy>75</posy>
+				<width>600</width>
+				<height>600</height>
 				<onleft>71</onleft>
 				<onright>72</onright>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="40">
+				<itemlayout height="60">
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>15</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<posx>45</posx>
+						<posx>68</posx>
 						<posy>0</posy>
-						<width>350</width>
-						<height>35</height>
+						<width>525</width>
+						<height>52</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
 						<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="40">
+				<focusedlayout height="60">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<height>38</height>
-						<width>300</width>
+						<height>57</height>
+						<width>450</width>
 						<texture>ButtonFO.png</texture>
 						<animation effect="fade" start="100" end="50" condition="!Control.HasFocus(12)">Conditional</animation>
 					</control>
 					<control type="image">
-						<posx>10</posx>
-						<posy>5</posy>
-						<width>32</width>
-						<height>32</height>
+						<posx>15</posx>
+						<posy>8</posy>
+						<width>48</width>
+						<height>48</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="label">
-						<posx>45</posx>
+						<posx>68</posx>
 						<posy>0</posy>
-						<width>350</width>
-						<height>35</height>
+						<width>525</width>
+						<height>52</height>
 						<align>left</align>
 						<aligny>center</aligny>
 						<include>SettingsLabel</include>
@@ -226,10 +221,10 @@
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="72">
-				<posx>310</posx>
-				<posy>40</posy>
-				<width>25</width>
-				<height>422</height>
+				<posx>465</posx>
+				<posy>60</posy>
+				<width>38</width>
+				<height>633</height>
 				<onleft>12</onleft>
 				<onright>29</onright>
 				<texturesliderbackground></texturesliderbackground>
@@ -238,12 +233,11 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-
 		<!-- Menu group -->
 		<control type="grouplist">
-			<posx>-70</posx>
-			<posy>186</posy>
-			<itemgap>12</itemgap>
+			<posx>-105</posx>
+			<posy>279</posy>
+			<itemgap>18</itemgap>
 			<orientation>vertical</orientation>
 			<onleft>72</onleft>
 			<onright>13</onright>
@@ -268,15 +262,15 @@
 				<label>$LOCALIZE[31607]</label>
 			</control>
 			<control type="radiobutton" id="25">
+				<texturenofocus></texturenofocus>
 				<description>Hide Group</description>
-				<width>380</width>
-				<height>38</height>
+				<width>570</width>
+				<height>57</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<radiowidth>55</radiowidth>
-				<radioheight>55</radioheight>
+				<radiowidth>82</radiowidth>
+				<radioheight>82</radioheight>
 				<texturefocus>ButtonFO.png</texturefocus>
-				<texturenofocus></texturenofocus>
 				<textureradioonfocus>buttons/button_radio_on.png</textureradioonfocus>
 				<textureradioonnofocus>buttons/button_radio_on.png</textureradioonnofocus>
 				<textureradioofffocus>buttons/button_radio_off.png</textureradioofffocus>
@@ -292,7 +286,7 @@
 				<focusedcolor>DialogTextFO</focusedcolor>
 				<selectedcolor>TextFO</selectedcolor>
 				<disabledcolor>TextDisabled</disabledcolor>
-				<textoffsetx>60</textoffsetx>
+				<textoffsetx>90</textoffsetx>
 				<label>19289</label>
 			</control>
 			<control type="togglebutton" id="34">
@@ -303,11 +297,10 @@
 				<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 			</control>
 		</control>
-
 		<!-- Header group -->
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<include>Animation_SlideDownFadeOut</include>
 			<control type="label">
 				<label>$LOCALIZE[5]</label>
@@ -318,10 +311,9 @@
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>
-
 		<!-- Time, weather and debug options -->
 		<include>Global_Weather</include>
- 		<include>Global_Time</include>
+		<include>Global_Time</include>
 		<include condition="Skin.HasSetting(DebugGrid)">Object_DebugGrid</include>
 	</controls>
 </window>

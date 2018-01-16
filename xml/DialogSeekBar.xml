@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<visible>[Window.IsActive(fullscreenvideo) | Window.IsActive(Visualisation)] + !Window.IsVisible(10153)</visible>
 	<visible>![Window.IsActive(VideoOSD) | Window.IsActive(MusicOSD)] + !Window.IsActive(FullscreenInfo) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
@@ -13,7 +12,7 @@
 			<include condition="!String.IsEqual(Skin.String(OSDFade),Disabled) + String.IsEqual(Skin.String(OSDFadeTime),20)">Animation_FadeOSD20</include>
 			<include condition="!String.IsEqual(Skin.String(OSDFade),Disabled) + String.IsEqual(Skin.String(OSDFadeTime),25)">Animation_FadeOSD25</include>
 			<include condition="!String.IsEqual(Skin.String(OSDFade),Disabled) + String.IsEqual(Skin.String(OSDFadeTime),30)">Animation_FadeOSD30</include>
-			<include condition="!Skin.HasSetting(Slim_Seekbar)">OSD_Progress_Bar2</include> 
+			<include condition="!Skin.HasSetting(Slim_Seekbar)">OSD_Progress_Bar2</include>
 			<include condition="Skin.HasSetting(Slim_Seekbar)">OSD_Progress_Bar3</include>
 			<include condition="!Skin.HasSetting(Slim_Seekbar)">MediaInfo2</include>
 			<visible>!Player.ShowInfo + !Window.IsActive(Visualisation)</visible>

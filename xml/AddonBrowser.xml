@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<views>55,905,58,559</views>
 	<defaultcontrol always="true">55</defaultcontrol>
@@ -24,62 +23,62 @@
 				<include>NavMenuListCommon</include>
 				<include>NavMenuListOrder</include>
 				<control type="radiobutton" id="7">
+					<texturenofocus></texturenofocus>
 					<description>Hide foreign</description>
-					<width>340</width>
+					<width>510</width>
 					<align>left</align>
 					<label>25001</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="radiobutton" id="8">
+					<texturenofocus></texturenofocus>
 					<description>Hide broken</description>
-					<width>340</width>
+					<width>510</width>
 					<align>left</align>
 					<label>24999</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="9">
+					<texturenofocus></texturenofocus>
 					<description>Check for updates</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<label>24034</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="5">
+					<texturenofocus></texturenofocus>
 					<description>Settings</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<label>10004</label>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<include>NavMenuListPlaying</include>
 			</control>

@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<window> 
+<window>
 	<defaultcontrol always="true">60</defaultcontrol>
 	<controls>
 		<include>Global_Background</include>
 		<control type="label">
-			<posx>30</posx>
-			<posy>10</posy>
-			<width>450</width>
-			<height>30</height>
+			<posx>45</posx>
+			<posy>15</posy>
+			<width>675</width>
+			<height>45</height>
 			<align>left</align>
 			<aligny>center</aligny>
 			<font>METF_Heading</font>
@@ -17,14 +16,13 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_OpenCloseFade</include>
 		</control>
-
 		<control type="group">
 			<include>Animation_FadedByMenu</include>
 			<control type="wraplist" id="60">
-				<posx>10</posx>
-				<posy>75</posy>
-				<width>1260</width>
-				<height>450</height>
+				<posx>15</posx>
+				<posy>112</posy>
+				<width>1890</width>
+				<height>675</height>
 				<onleft>60</onleft>
 				<onright>60</onright>
 				<orientation>horizontal</orientation>
@@ -33,40 +31,40 @@
 				<preloaditems>2</preloaditems>
 				<viewtype label="536">list</viewtype>
 				<include>Animation_OpenCloseFade</include>
-				<itemlayout height="450" width="180">
+				<itemlayout height="675" width="270">
 					<control type="image">
-						<posx>15</posx>
-						<posy>75</posy>
-						<width>150</width>
-						<height>300</height>
+						<posx>22</posx>
+						<posy>112</posy>
+						<width>225</width>
+						<height>450</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>59</posy>
-						<width>180</width>
-						<height>335</height>
+						<posx>8</posx>
+						<posy>88</posy>
+						<width>270</width>
+						<height>502</height>
 						<texture>frames/ClassicFrame_Tall.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 				</itemlayout>
-				<focusedlayout height="450" width="180">
+				<focusedlayout height="675" width="270">
 					<control type="image">
-						<posx>15</posx>
-						<posy>75</posy>
-						<width>150</width>
-						<height>300</height>
+						<posx>22</posx>
+						<posy>112</posy>
+						<width>225</width>
+						<height>450</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<aspectratio>stretch</aspectratio>
 						<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
 						<animation reversible="false" effect="zoom" center="auto" start="112" end="100" time="200" tween="sine" easing="inout">unfocus</animation>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>59</posy>
-						<width>180</width>
-						<height>335</height>
+						<posx>8</posx>
+						<posy>88</posy>
+						<width>270</width>
+						<height>502</height>
 						<texture>frames/ClassicFrame_Tall.png</texture>
 						<aspectratio>stretch</aspectratio>
 						<animation reversible="false" effect="zoom" center="auto" start="100" end="112" time="200" tween="sine" easing="inout">focus</animation>
@@ -136,10 +134,9 @@
 					</item>
 				</content>
 			</control>
-
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(1)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -152,8 +149,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(2)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -166,8 +163,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(3)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -180,8 +177,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(4)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -194,8 +191,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(5)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -208,8 +205,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(6)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -222,8 +219,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(7)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -236,8 +233,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(8)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -250,8 +247,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(9)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">
@@ -264,8 +261,8 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>40</posx>
-				<posy>498</posy>
+				<posx>60</posx>
+				<posy>747</posy>
 				<visible>Container(60).HasFocus(10)</visible>
 				<include>Animation_CommonFadeNoHide</include>
 				<control type="label">

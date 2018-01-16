@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<variable name="CoverflowItem-7Image">
 		<value condition="!String.IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
@@ -84,38 +83,38 @@
 			<control type="group">
 				<visible>[!Integer.IsGreater(Container(512).NumItems,12) + !system.getbool(filelists.showparentdiritems)] | [!Integer.IsGreater(Container(512).NumItems,11) + system.getbool(filelists.showparentdiritems)]</visible>
 				<control type="group" id="6001">
-					<posy>200</posy>
-					<camera x="640" y="400" />
+					<posy>300</posy>
+					<camera x="960" y="600" />
 					<visible>Control.IsVisible(512) + Container.OnNext</visible>
-					<animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
+					<animation effect="slide" end="-135,0" time="250" reversible="false">Hidden</animation>
 					<control type="group">
-						<posx>10</posx>
+						<posx>15</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,14) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,13) + system.getbool(filelists.showparentdiritems)]</visible>
 						<visible>Container.OnNext</visible>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -123,32 +122,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,12) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,11) + system.getbool(filelists.showparentdiritems)]</visible>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -156,32 +155,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
+						<posx>285</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,10) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,9) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -189,32 +188,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
+						<posx>420</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,8) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,7) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -222,32 +221,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
+						<posx>555</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,6) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,5) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -255,32 +254,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>460</posx>
+						<posx>690</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,4) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,3) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -288,33 +287,33 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1090</posx>
+						<posx>1635</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,11) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,10) + system.getbool(filelists.showparentdiritems)]</visible>
 						<visible>!Container.OnNext</visible>
-						<animation effect="rotatey" center="1470" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -322,32 +321,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1000</posx>
+						<posx>1500</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,9) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,8) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -355,32 +354,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
+						<posx>1365</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,7) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,6) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -388,32 +387,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
+						<posx>1230</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,5) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,4) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -421,32 +420,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
+						<posx>1095</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,3) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,2) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -454,32 +453,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
+						<posx>960</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,1) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,0) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -488,35 +487,35 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnNext</visible>
-						<animation effect="slide" end="50,0" time="250" reversible="false">Hidden</animation>
+						<animation effect="slide" end="75,0" time="250" reversible="false">Hidden</animation>
 						<control type="group">
-							<posx>550</posx>
+							<posx>825</posx>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="930" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-							<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+							<animation effect="rotatey" center="1395" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -524,33 +523,33 @@
 							</control>
 						</control>
 						<control type="group">
-							<posx>505</posx>
+							<posx>758</posx>
 							<visible>[Integer.IsGreater(Container(512).NumItems,2) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,1) + system.getbool(filelists.showparentdiritems)]</visible>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="405" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+							<animation effect="rotatey" center="608" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -560,38 +559,38 @@
 					</control>
 				</control>
 				<control type="group" id="6002">
-					<posy>200</posy>
-					<camera x="640" y="400" />
+					<posy>300</posy>
+					<camera x="960" y="600" />
 					<visible>Control.IsVisible(512) + Container.OnPrevious</visible>
-					<animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
+					<animation effect="slide" end="135,0" time="250" reversible="false">Hidden</animation>
 					<control type="group">
-						<posx>1000</posx>
+						<posx>1500</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,13) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,12) + system.getbool(filelists.showparentdiritems)]</visible>
 						<visible>Container.OnPrevious</visible>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -599,32 +598,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
+						<posx>1365</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,11) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,10) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -632,32 +631,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
+						<posx>1230</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,9) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,8) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -665,32 +664,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
+						<posx>1095</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,7) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,6) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -698,32 +697,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
+						<posx>960</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,5) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,4) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -731,32 +730,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>550</posx>
+						<posx>825</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,3) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,2) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -764,33 +763,33 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>-80</posx>
+						<posx>-120</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,12) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,11) + system.getbool(filelists.showparentdiritems)]</visible>
 						<visible>!Container.OnPrevious</visible>
-						<animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -798,32 +797,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>10</posx>
+						<posx>15</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,10) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,9) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -831,32 +830,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,8) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,7) + system.getbool(filelists.showparentdiritems)]</visible>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -864,32 +863,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
+						<posx>285</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,6) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,5) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -897,32 +896,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
+						<posx>420</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,4) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,3) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -930,32 +929,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
+						<posx>555</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,2) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,1) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -964,35 +963,35 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnPrevious</visible>
-						<animation effect="slide" end="-50,0" time="250" reversible="false">Hidden</animation>
+						<animation effect="slide" end="-75,0" time="250" reversible="false">Hidden</animation>
 						<control type="group">
-							<posx>460</posx>
+							<posx>690</posx>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="360" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-							<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+							<animation effect="rotatey" center="540" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1000,33 +999,33 @@
 							</control>
 						</control>
 						<control type="group">
-							<posx>505</posx>
+							<posx>758</posx>
 							<visible>[Integer.IsGreater(Container(512).NumItems,1) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,0) + system.getbool(filelists.showparentdiritems)]</visible>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="885" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+							<animation effect="rotatey" center="1328" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1036,38 +1035,38 @@
 					</control>
 				</control>
 				<control type="group" id="6000">
-					<posy>200</posy>
+					<posy>300</posy>
 					<animation effect="fade" time="500">WindowOpen</animation>
 					<animation effect="fade" time="200">WindowClose</animation>
 					<visible>Control.IsVisible(512) + !Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
-					<camera x="640" y="400" />
+					<camera x="960" y="600" />
 					<control type="group">
-						<posx>10</posx>
+						<posx>15</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,12) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,11) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1075,32 +1074,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,10) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,9) + system.getbool(filelists.showparentdiritems)]</visible>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1108,32 +1107,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
+						<posx>285</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,8) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,7) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1141,32 +1140,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
+						<posx>420</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,6) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,5) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1174,32 +1173,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
+						<posx>555</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,4) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,3) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1207,32 +1206,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>460</posx>
+						<posx>690</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,2) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,1) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1240,32 +1239,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1000</posx>
+						<posx>1500</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,11) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,10) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1273,32 +1272,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
+						<posx>1365</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,9) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,8) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1306,32 +1305,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
+						<posx>1230</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,7) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,6) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1339,32 +1338,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
+						<posx>1095</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,5) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,4) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1372,32 +1371,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
+						<posx>960</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,3) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,2) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1405,32 +1404,32 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>550</posx>
+						<posx>825</posx>
 						<visible>[Integer.IsGreater(Container(512).NumItems,1) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,0) + system.getbool(filelists.showparentdiritems)]</visible>
-						<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1438,30 +1437,30 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>505</posx>
+						<posx>758</posx>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>PosterDiffuse</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1473,38 +1472,38 @@
 			<control type="group">
 				<visible>[Integer.IsGreater(Container(512).NumItems,12) + !system.getbool(filelists.showparentdiritems)] | [Integer.IsGreater(Container(512).NumItems,11) + system.getbool(filelists.showparentdiritems)]</visible>
 				<control type="group" id="6001">
-					<posy>200</posy>
-					<camera x="640" y="400" />
+					<posy>300</posy>
+					<camera x="960" y="600" />
 					<visible>Control.IsVisible(512) + Container.OnNext</visible>
-					<animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
+					<animation effect="slide" end="-135,0" time="250" reversible="false">Hidden</animation>
 					<control type="group">
-						<posx>10</posx>
+						<posx>15</posx>
 						<visible>Container.OnNext</visible>
 						<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1512,31 +1511,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1544,31 +1543,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>285</posx>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1576,31 +1575,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>420</posx>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1608,31 +1607,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>555</posx>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1640,31 +1639,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>460</posx>
-						<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>690</posx>
+						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1672,33 +1671,33 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1090</posx>
+						<posx>1635</posx>
 						<visible>!Container.OnNext</visible>
 						<animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
-						<animation effect="rotatey" center="1470" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2205" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1706,31 +1705,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1000</posx>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1500</posx>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1738,31 +1737,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1365</posx>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1770,31 +1769,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1230</posx>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1802,31 +1801,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1095</posx>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1834,31 +1833,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>960</posx>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1867,35 +1866,35 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnNext</visible>
-						<animation effect="slide" end="50,0" time="250" reversible="false">Hidden</animation>
+						<animation effect="slide" end="75,0" time="250" reversible="false">Hidden</animation>
 						<control type="group">
-							<posx>550</posx>
+							<posx>825</posx>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="930" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-							<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+							<animation effect="rotatey" center="1395" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1903,32 +1902,32 @@
 							</control>
 						</control>
 						<control type="group">
-							<posx>505</posx>
+							<posx>758</posx>
 							<visible>Container.OnNext</visible>
-							<animation effect="rotatey" center="405" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+							<animation effect="rotatey" center="608" start="0" end="-55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1938,38 +1937,38 @@
 					</control>
 				</control>
 				<control type="group" id="6002">
-					<posy>200</posy>
-					<camera x="640" y="400" />
+					<posy>300</posy>
+					<camera x="960" y="600" />
 					<visible>Control.IsVisible(512) + Container.OnPrevious</visible>
-					<animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
+					<animation effect="slide" end="135,0" time="250" reversible="false">Hidden</animation>
 					<control type="group">
-						<posx>1000</posx>
+						<posx>1500</posx>
 						<visible>Container.OnPrevious</visible>
 						<animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem7Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -1977,31 +1976,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1365</posx>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2009,31 +2008,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1230</posx>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2041,31 +2040,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1095</posx>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2073,31 +2072,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>960</posx>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2105,31 +2104,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>550</posx>
-						<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>825</posx>
+						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2137,33 +2136,33 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>-80</posx>
+						<posx>-120</posx>
 						<visible>!Container.OnPrevious</visible>
 						<animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
-						<animation effect="rotatey" center="-180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<animation effect="rotatey" center="-270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2171,31 +2170,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>10</posx>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>15</posx>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2203,31 +2202,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2235,31 +2234,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>285</posx>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2267,31 +2266,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>420</posx>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2299,31 +2298,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>555</posx>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2332,35 +2331,35 @@
 					</control>
 					<control type="group">
 						<visible>Container.OnPrevious</visible>
-						<animation effect="slide" end="-50,0" time="250" reversible="false">Hidden</animation>
+						<animation effect="slide" end="-75,0" time="250" reversible="false">Hidden</animation>
 						<control type="group">
-							<posx>460</posx>
+							<posx>690</posx>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="360" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
-							<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+							<animation effect="rotatey" center="540" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
+							<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2368,32 +2367,32 @@
 							</control>
 						</control>
 						<control type="group">
-							<posx>505</posx>
+							<posx>758</posx>
 							<visible>Container.OnPrevious</visible>
-							<animation effect="rotatey" center="885" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
+							<animation effect="rotatey" center="1328" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
 							<control type="group">
 								<control type="image">
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<align>center</align>
 									<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
 								</control>
 								<control type="image">
 									<description>Glass overlay</description>
-									<posx>49</posx>
-									<posy>8</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>12</posy>
+									<width>260</width>
+									<height>381</height>
 									<texture border="-17">frames/showcase_shadow.png</texture>
 								</control>
 								<control type="image">
-									<posx>49</posx>
-									<posy>260</posy>
-									<width>173</width>
-									<height>254</height>
+									<posx>74</posx>
+									<posy>390</posy>
+									<width>260</width>
+									<height>381</height>
 									<colordiffuse>d0FFFFFF</colordiffuse>
 									<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 									<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2403,37 +2402,37 @@
 					</control>
 				</control>
 				<control type="group" id="6000">
-					<posy>200</posy>
+					<posy>300</posy>
 					<animation effect="fade" time="500">WindowOpen</animation>
 					<animation effect="fade" time="200">WindowClose</animation>
 					<visible>Control.IsVisible(512) + !Control.IsVisible(6001) + !Control.IsVisible(6002)</visible>
-					<camera x="640" y="400" />
+					<camera x="960" y="600" />
 					<control type="group">
-						<posx>10</posx>
-						<animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>15</posx>
+						<animation effect="rotatey" center="-135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2441,31 +2440,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>100</posx>
+						<posx>150</posx>
 						<animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2473,31 +2472,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>190</posx>
-						<animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>285</posx>
+						<animation effect="rotatey" center="135" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2505,31 +2504,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>280</posx>
-						<animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>420</posx>
+						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2537,31 +2536,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>370</posx>
-						<animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>555</posx>
+						<animation effect="rotatey" center="405" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2569,31 +2568,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>460</posx>
-						<animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
+						<posx>690</posx>
+						<animation effect="rotatey" center="540" start="-55" end="-55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem-1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2601,31 +2600,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>1000</posx>
-						<animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1500</posx>
+						<animation effect="rotatey" center="2070" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem6Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2633,31 +2632,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>910</posx>
-						<animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1365</posx>
+						<animation effect="rotatey" center="1935" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem5Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2665,31 +2664,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>820</posx>
-						<animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1230</posx>
+						<animation effect="rotatey" center="1800" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem4Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2697,31 +2696,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>730</posx>
-						<animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>1095</posx>
+						<animation effect="rotatey" center="1665" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem3Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2729,31 +2728,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>640</posx>
-						<animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>960</posx>
+						<animation effect="rotatey" center="1530" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem2Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2761,31 +2760,31 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>550</posx>
-						<animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
+						<posx>825</posx>
+						<animation effect="rotatey" center="1395" start="55" end="55" time="0" condition="true">Conditional</animation>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>d0FFFFFF</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem1Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2793,30 +2792,30 @@
 						</control>
 					</control>
 					<control type="group">
-						<posx>505</posx>
+						<posx>758</posx>
 						<control type="group">
 							<control type="image">
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<align>center</align>
 								<texture background="true" diffuse="frames/showcase_matte.png">$VAR[CoverflowItem0Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
 								<description>Glass overlay</description>
-								<posx>49</posx>
-								<posy>8</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>12</posy>
+								<width>260</width>
+								<height>381</height>
 								<texture border="-17">frames/showcase_shadow.png</texture>
 							</control>
 							<control type="image">
-								<posx>49</posx>
-								<posy>260</posy>
-								<width>173</width>
-								<height>254</height>
+								<posx>74</posx>
+								<posy>390</posy>
+								<width>260</width>
+								<height>381</height>
 								<colordiffuse>PosterDiffuse</colordiffuse>
 								<texture background="true" flipy="true" diffuse="frames/showcase_matte_reflect.png">$VAR[CoverflowItem0Image]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -2827,18 +2826,18 @@
 			</control>
 			<!-- Title and Watched Overlay -->
 			<control type="grouplist">
-				<posx>40</posx>
-				<posy>468</posy>
-				<width>1200</width>
-				<height>50</height>
+				<posx>60</posx>
+				<posy>702</posy>
+				<width>1800</width>
+				<height>75</height>
 				<align>center</align>
-				<itemgap>10</itemgap>
+				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
 				<control type="label">
-					<width min="25" max="1200">auto</width>
-					<height>50</height>
+					<width min="38" max="1800">auto</width>
+					<height>75</height>
 					<aligny>center</aligny>
 					<font>METF_TitleTextLarge</font>
 					<textcolor>TitleText</textcolor>
@@ -2868,12 +2867,12 @@
 			</control>
 			<!-- Details -->
 			<control type="grouplist">
-				<posx>40</posx>
-				<posy>505</posy>
-				<width>1200</width>
-				<height>30</height>
+				<posx>60</posx>
+				<posy>758</posy>
+				<width>1800</width>
+				<height>45</height>
 				<align>center</align>
-				<itemgap>10</itemgap>
+				<itemgap>15</itemgap>
 				<orientation>horizontal</orientation>
 				<include>Animation_FadedByMenu</include>
 				<include>Animation_HiddenByInfo</include>
@@ -2882,10 +2881,10 @@
 				<include>VisibleIfNotMovieSet</include>
 			</control>
 			<control type="label">
-				<posx>240</posx>
-				<posy>503</posy>
-				<width>800</width>
-				<height>30</height>
+				<posx>360</posx>
+				<posy>754</posy>
+				<width>1200</width>
+				<height>45</height>
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>METF_MediaDetailsSmall</font>
@@ -2899,8 +2898,8 @@
 				<control type="fixedlist" id="512">
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>130</width>
-					<height>10</height>
+					<width>195</width>
+					<height>15</height>
 					<include condition="!Skin.HasSetting(ViewLockdown)">OnUp7000</include>
 					<ondown>60</ondown>
 					<viewtype label="33031">wrap</viewtype>
@@ -2910,8 +2909,8 @@
 					<focusposition>3</focusposition>
 					<visible>!Skin.HasSetting(NoViewCoverflow)</visible>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
-					<itemlayout height="10" width="10"/>
-					<focusedlayout height="10" width="10"/>
+					<itemlayout height="15" width="15" />
+					<focusedlayout height="15" width="15" />
 				</control>
 			</control>
 			<include>ScrollBar_Horizontal</include>

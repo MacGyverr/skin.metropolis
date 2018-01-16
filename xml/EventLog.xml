@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">570</defaultcontrol>
 	<views>570</views>
@@ -11,10 +10,10 @@
 			<include>Animation_FadedByMenu</include>
 			<include>Animation_HiddenByInfo</include>
 			<control type="list" id="570">
-				<left>95</left>
-				<top>78</top>
-				<width>1080</width>
-				<height>425</height>
+				<left>142</left>
+				<top>117</top>
+				<width>1620</width>
+				<height>638</height>
 				<include condition="!Skin.HasSetting(ViewLockdown)">OnLeft7000</include>
 				<onright>998</onright>
 				<onup>570</onup>
@@ -22,29 +21,29 @@
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>998</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="85" width="1080">
+				<itemlayout height="128" width="1620">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>1080</width>
-						<height>80</height>
+						<width>1620</width>
+						<height>120</height>
 						<texture border="5">ButtonNF.png</texture>
 					</control>
 					<control type="image">
-						<left>2</left>
-						<top>2</top>
-						<width>80</width>
-						<height>76</height>
+						<left>3</left>
+						<top>3</top>
+						<width>120</width>
+						<height>114</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="3">GreyBG2.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
-						<left>90</left>
+						<left>135</left>
 						<top>0</top>
-						<width>870</width>
-						<height>30</height>
+						<width>1305</width>
+						<height>45</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -53,10 +52,10 @@
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
-						<left>90</left>
-						<top>32</top>
-						<width>870</width>
-						<height>48</height>
+						<left>135</left>
+						<top>48</top>
+						<width>1305</width>
+						<height>72</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -64,10 +63,10 @@
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
 					<control type="label">
-						<left>90</left>
+						<left>135</left>
 						<top>0</top>
-						<width>970</width>
-						<height>30</height>
+						<width>1455</width>
+						<height>45</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -76,38 +75,38 @@
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout height="85" width="1080">
+				<focusedlayout height="128" width="1620">
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>1080</width>
-						<height>80</height>
+						<width>1620</width>
+						<height>120</height>
 						<texture border="5">ButtonNF.png</texture>
 						<visible>!Control.HasFocus(570)</visible>
 					</control>
 					<control type="image">
 						<left>0</left>
 						<top>0</top>
-						<width>1080</width>
-						<height>80</height>
+						<width>1620</width>
+						<height>120</height>
 						<texture border="5">ButtonFO.png</texture>
 						<visible>Control.HasFocus(570)</visible>
 					</control>
 					<control type="image">
-						<left>2</left>
-						<top>2</top>
-						<width>80</width>
-						<height>76</height>
+						<left>3</left>
+						<top>3</top>
+						<width>120</width>
+						<height>114</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 						<bordertexture border="3">GreyBG2.png</bordertexture>
 						<bordersize>2</bordersize>
 					</control>
 					<control type="label">
-						<left>90</left>
+						<left>135</left>
 						<top>0</top>
-						<width>870</width>
-						<height>30</height>
+						<width>1305</width>
+						<height>45</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -116,10 +115,10 @@
 						<label>[B]$INFO[ListItem.Label][/B]</label>
 					</control>
 					<control type="textbox">
-						<left>90</left>
-						<top>32</top>
-						<width>870</width>
-						<height>48</height>
+						<left>135</left>
+						<top>48</top>
+						<width>1305</width>
+						<height>72</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -127,10 +126,10 @@
 						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
 					<control type="label">
-						<left>90</left>
+						<left>135</left>
 						<top>0</top>
-						<width>970</width>
-						<height>30</height>
+						<width>1455</width>
+						<height>45</height>
 						<font>METF_DialogDetails</font>
 						<textcolor>SettingsDetail</textcolor>
 						<selectedcolor>DialogTextFO</selectedcolor>
@@ -143,10 +142,10 @@
 			<control type="scrollbar" id="998">
 				<include>Animation_OpenCloseFade</include>
 				<include>Animation_FadedByMenu</include>
-				<posx>1270</posx>
-				<posy>128</posy>
-				<width>22</width>
-				<height>376</height>
+				<posx>1905</posx>
+				<posy>192</posy>
+				<width>33</width>
+				<height>564</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
 				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
@@ -159,19 +158,19 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<control type="label">
 				<label>$LOCALIZE[14111]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
-                                <label>$INFO[Container(570).NumItems,, $LOCALIZE[31277]]</label>
+				<label>$INFO[Container(570).NumItems,, $LOCALIZE[31277]]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>!Integer.IsGreater(Container(570).NumItems,1)</visible>
 			</control>
 			<control type="label">
-                                <label>$INFO[Container(570).NumItems,, $LOCALIZE[31281]]</label>
+				<label>$INFO[Container(570).NumItems,, $LOCALIZE[31281]]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Integer.IsGreater(Container(570).NumItems,1)</visible>
 			</control>
@@ -187,49 +186,49 @@
 				<onright>570</onright>
 				<include>NavMenuListOrder</include>
 				<control type="button" id="21">
+					<texturenofocus></texturenofocus>
+					<label></label>
 					<description>Level button</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<label></label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 				<control type="radiobutton" id="22">
+					<texturenofocus></texturenofocus>
+					<label></label>
 					<description>Only show current level</description>
-					<width>340</width>
+					<width>510</width>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
-					<label></label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 				</control>
 				<control type="button" id="20">
+					<texturenofocus></texturenofocus>
 					<description>Clear button</description>
-					<width>340</width>
-					<height>40</height>
+					<width>510</width>
+					<height>60</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>METF_DialogLarge</font>
 					<label>192</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>30</textoffsetx>
 					<textcolor>TextNF</textcolor>
 					<focusedcolor>DialogTextFO</focusedcolor>
 					<disabledcolor>TextDisabled</disabledcolor>
 					<texturefocus>ButtonFO2Wide.png</texturefocus>
-					<texturenofocus></texturenofocus>
 					<pulseonselect>false</pulseonselect>
 				</control>
 			</control>

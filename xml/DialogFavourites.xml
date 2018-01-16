@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">450</defaultcontrol>
 	<controls>
@@ -8,10 +7,10 @@
 			<include>Animation_CommonFade</include>
 			<control type="image">
 				<description>Icon Image</description>
-				<posx>50</posx>
-				<posy>126</posy>
-				<width>300</width>
-				<height>300</height>
+				<posx>75</posx>
+				<posy>189</posy>
+				<width>450</width>
+				<height>450</height>
 				<texture fallback="DefaultThumb.png">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">frames/thumb_border_round2.png</bordertexture>
 				<bordersize>4</bordersize>
@@ -19,10 +18,10 @@
 				<visible>!Window.IsActive(contextmenu)</visible>
 			</control>
 			<control type="list" id="450">
-				<posx>360</posx>
-				<posy>140</posy>
-				<width>850</width>
-				<height>380</height>
+				<posx>540</posx>
+				<posy>210</posy>
+				<width>1275</width>
+				<height>570</height>
 				<onleft>Close</onleft>
 				<onright>998</onright>
 				<onup>450</onup>
@@ -31,12 +30,12 @@
 				<pagecontrol>998</pagecontrol>
 				<scrolltime>160</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout width="0" height="35">
+				<itemlayout width="0" height="52">
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>740</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1110</width>
+						<height>52</height>
 						<textcolor>TextNF</textcolor>
 						<font>METF_TitleText</font>
 						<aligny>center</aligny>
@@ -44,21 +43,21 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</itemlayout>
-				<focusedlayout width="0" height="35">
+				<focusedlayout width="0" height="52">
 					<control type="image">
-						<posx>35</posx>
+						<posx>52</posx>
 						<posy>0</posy>
-						<width>815</width>
-						<height>33</height>
+						<width>1222</width>
+						<height>50</height>
 						<aligny>center</aligny>
 						<texture>FocusLine.png</texture>
 						<colordiffuse>FocusBar</colordiffuse>
 					</control>
 					<control type="label">
-						<posx>45</posx>
-						<posy>-2</posy>
-						<width>740</width>
-						<height>35</height>
+						<posx>68</posx>
+						<posy>-3</posy>
+						<width>1110</width>
+						<height>52</height>
 						<textcolor>FocusBarText</textcolor>
 						<font>METF_TitleText</font>
 						<aligny>center</aligny>
@@ -69,10 +68,10 @@
 			</control>
 			<control type="scrollbar" id="998">
 				<include>Animation_OpenCloseFade</include>
-				<posx>1270</posx>
-				<posy>128</posy>
-				<width>22</width>
-				<height>376</height>
+				<posx>1905</posx>
+				<posy>192</posy>
+				<width>33</width>
+				<height>564</height>
 				<visible allowhiddenfocus="true">Control.HasFocus(998) | Container.Scrolling</visible>
 				<texturesliderbackground></texturesliderbackground>
 				<textureslidernib>ScrollbarVnibFO.png</textureslidernib>
@@ -86,36 +85,36 @@
 		</control>
 		<control type="image">
 			<include>Animation_CommonFadeNoHide</include>
-			<posx>848</posx>
-			<posy>124</posy>
-			<height>24</height>
-			<width>24</width>
+			<posx>1272</posx>
+			<posy>186</posy>
+			<height>36</height>
+			<width>36</width>
 			<texture>Arrow2Up.png</texture>
 			<visible>Container(450).HasPrevious</visible>
 		</control>
 		<control type="image">
 			<include>Animation_CommonFadeNoHide</include>
-			<posx>848</posx>
-			<posy>522</posy>
-			<height>24</height>
-			<width>24</width>
+			<posx>1272</posx>
+			<posy>783</posy>
+			<height>36</height>
+			<width>36</width>
 			<texture>Arrow2Down.png</texture>
 			<visible>Container(450).HasNext</visible>
 		</control>
 		<control type="group">
-			<posx>30</posx>
-			<posy>10</posy>
+			<posx>45</posx>
+			<posy>15</posy>
 			<control type="label">
 				<label>$LOCALIZE[1036]</label>
 				<include>Global_HeadingSectionVars</include>
 			</control>
 			<control type="label">
-                                <label>$INFO[Container(450).NumItems,, $LOCALIZE[31277]]</label>
+				<label>$INFO[Container(450).NumItems,, $LOCALIZE[31277]]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>!Integer.IsGreater(Container(450).NumItems,1)</visible>
 			</control>
 			<control type="label">
-                                <label>$INFO[Container(450).NumItems,, $LOCALIZE[31281]]</label>
+				<label>$INFO[Container(450).NumItems,, $LOCALIZE[31281]]</label>
 				<include>Global_HeadingDetailVars</include>
 				<visible>Integer.IsGreater(Container(450).NumItems,1)</visible>
 			</control>

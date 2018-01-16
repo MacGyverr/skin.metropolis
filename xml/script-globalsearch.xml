@@ -1,0 +1,1516 @@
+<window>
+	<views>50,51</views>
+	<animation effect="fade" time="400">WindowOpen</animation>
+	<animation effect="fade" time="400">WindowClose</animation>
+	<controls>
+		<!--
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>scale</aspectratio>
+            <texture colordiffuse="FF0E597E">globalsearch/globalsearch-background.jpg</texture>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <aspectratio>scale</aspectratio>
+            <texture colordiffuse="330BAA8E">globalsearch/globalsearch-overlay.jpg</texture>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1280</width>
+            <height>720</height>
+            <texture background="true" colordiffuse="40FFFFFF">$INFO[Container.ListItem.Art(fanart)]</texture>
+            <aspectratio>scale</aspectratio>
+            <fadetime>400</fadetime>
+            <animation effect="fade" time="400">Visible</animation>
+            <animation effect="fade" time="400">Hidden</animation>
+        </control>
+-->
+		<control type="group">
+			<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
+			<control type="image">
+				<left>-4</left>
+				<top>-4</top>
+				<width>472</width>
+				<height>1090</height>
+				<texture>globalsearch/globalsearch-panel.png</texture>
+				<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="group">
+				<top>64</top>
+				<control type="image">
+					<left>333</left>
+					<top>1</top>
+					<width>118</width>
+					<height>118</height>
+					<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-roundbutton.png</texture>
+					<visible>Control.HasFocus(990)</visible>
+				</control>
+				<control type="image">
+					<left>372</left>
+					<top>40</top>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="FFA0A0A0">globalsearch/globalsearch-search.png</texture>
+					<visible>Control.IsVisible(990) + !Control.HasFocus(990)</visible>
+				</control>
+				<control type="image">
+					<left>372</left>
+					<top>40</top>
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="FFF0F0F0">globalsearch/globalsearch-search.png</texture>
+					<visible>Control.HasFocus(990)</visible>
+				</control>
+				<control type="grouplist">
+					<left>20</left>
+					<top>30</top>
+					<width>442</width>
+					<align>center</align>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>auto</width>
+						<height>56</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+						<label>32297</label>
+						<visible>Control.IsVisible(991)</visible>
+					</control>
+					<control type="label" id="991">
+						<label></label>
+						<width>380</width>
+						<height>56</height>
+						<aligny>center</aligny>
+						<font>font13</font>
+					</control>
+				</control>
+				<control type="button" id="990">
+					<texturefocus></texturefocus>
+					<texturenofocus></texturenofocus>
+					<left>76</left>
+					<top>0</top>
+					<width>500</width>
+					<height>120</height>
+					<label>32299</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogVerySmall</font>
+					<onup>SetFocus(9000,99,absolute)</onup>
+					<ondown>2</ondown>
+					<onleft>500</onleft>
+					<onright>500</onright>
+				</control>
+			</control>
+			<control type="group">
+				<top>80</top>
+				<control type="label">
+					<left>0</left>
+					<top>80</top>
+					<width>462</width>
+					<height>50</height>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<font>METF_Heading</font>
+					<aligny>top</aligny>
+					<textcolor>FF12A0C7</textcolor>
+					<label>$LOCALIZE[14018]</label>
+				</control>
+				<control type="button" id="2">
+					<texturenofocus></texturenofocus>
+					<left>0</left>
+					<top>130</top>
+					<width>462</width>
+					<height>80</height>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>METF_DialogVerySmall</font>
+					<textoffsetx>20</textoffsetx>
+					<texturefocus colordiffuse="FF12A0C7">globalsearch/globalsearch-focus.png</texturefocus>
+					<onup>990</onup>
+					<ondown>SetFocus(9000,0,absolute)</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>200</top>
+					<width>462</width>
+					<height>50</height>
+					<textoffsetx>20</textoffsetx>
+					<textoffsety>15</textoffsety>
+					<font>METF_Heading</font>
+					<aligny>top</aligny>
+					<textcolor>FF12A0C7</textcolor>
+					<label>$LOCALIZE[14211]</label>
+				</control>
+				<control type="fixedlist" id="9000">
+					<left>0</left>
+					<top>250</top>
+					<width>462</width>
+					<height>840</height>
+					<movement>6</movement>
+					<onup>2</onup>
+					<ondown>990</ondown>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<itemlayout height="94" width="462">
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>94</width>
+							<height>94</height>
+							<texture colordiffuse="51FFFFFF">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>94</height>
+							<width>350</width>
+							<aligny>center</aligny>
+							<font>METF_StarRating</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>22000000</shadowcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="94" width="462">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>462</width>
+							<height>94</height>
+							<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-focus.png</texture>
+							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>94</width>
+							<height>94</height>
+							<texture colordiffuse="51FFFFFF">globalsearch/globalsearch-black.png</texture>
+							<animation effect="fade" start="100" end="0" time="0" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>-3</left>
+							<top>1</top>
+							<width>94</width>
+							<height>94</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>104</left>
+							<top>0</top>
+							<height>94</height>
+							<width>350</width>
+							<aligny>center</aligny>
+							<font>METF_StarRating</font>
+							<label>$INFO[ListItem.Label]</label>
+							<shadowcolor>22000000</shadowcolor>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="panel" id="50">
+				<left>512</left>
+				<top>192</top>
+				<width>1500</width>
+				<height>720</height>
+				<onleft>9000</onleft>
+				<viewtype label="536">icon</viewtype>
+				<preloaditems>4</preloaditems>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<!--moies,shows,seasons list -->
+				<itemlayout height="360" width="285" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="image">
+						<left>0</left>
+						<top>-2</top>
+						<width>256</width>
+						<height>362</height>
+						<texture fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+						<bordertexture border="20">globalsearch/globalsearch-shadow.png</bordertexture>
+						<bordersize>20</bordersize>
+						<animation effect="slide" end="-15,0" time="0" condition="true">Conditional</animation>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>4</left>
+						<top>274</top>
+						<width>216</width>
+						<height>66</height>
+						<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+					</control>
+					<control type="textbox">
+						<left>15</left>
+						<top>270</top>
+						<width>192</width>
+						<height>70</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="group">
+						<left>170</left>
+						<top>20</top>
+						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+						<control type="image">
+							<left>8</left>
+							<top>1</top>
+							<width>36</width>
+							<height>36</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+						</control>
+						<control type="label">
+							<top>6</top>
+							<align>center</align>
+							<width>50</width>
+							<height>32</height>
+							<textcolor>FFF0F0F0</textcolor>
+							<font>METF_HelpText</font>
+							<label>$INFO[ListItem.UserRating]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<!-- episodes,musicvideos list-->
+				<itemlayout height="360" width="470" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+					<control type="image">
+						<left>1</left>
+						<top>10</top>
+						<width>380</width>
+						<height>250</height>
+						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+						<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>266</top>
+						<width>380</width>
+						<height>80</height>
+						<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+						<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>274</top>
+						<width>360</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+						<visible>Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>274</top>
+						<width>360</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>[B]$INFO[ListItem.Artist][/B]</label>
+						<visible>Container.Content(musicvideos)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>304</top>
+						<width>360</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="group">
+						<left>170</left>
+						<top>20</top>
+						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+						<control type="image">
+							<left>8</left>
+							<top>1</top>
+							<width>36</width>
+							<height>36</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+						</control>
+						<control type="label">
+							<top>6</top>
+							<align>center</align>
+							<width>50</width>
+							<height>32</height>
+							<textcolor>FFF0F0F0</textcolor>
+							<font>METF_HelpText</font>
+							<label>$INFO[ListItem.UserRating]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<!-- songs albums, artists  list-->
+				<itemlayout height="360" width="350" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)">
+					<control type="image">
+						<left>1</left>
+						<top>10</top>
+						<width>300</width>
+						<height>300</height>
+						<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>scale</aspectratio>
+						<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+						<fadetime>500</fadetime>
+					</control>
+					<control type="image">
+						<left>1</left>
+						<top>236</top>
+						<width>300</width>
+						<height>75</height>
+						<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+						<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="textbox">
+						<left>15</left>
+						<top>236</top>
+						<width>270</width>
+						<height>70</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>250</top>
+						<width>270</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>[B]$INFO[ListItem.Artist][/B]</label>
+						<visible>Container.Content(albums) | Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>250</top>
+						<width>270</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
+						<visible>Container.Content(livetv)</visible>
+					</control>
+					<control type="label">
+						<left>15</left>
+						<top>276</top>
+						<width>280</width>
+						<height>28</height>
+						<font>METF_DialogVerySmall</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<selectedcolor>FFF0F0F0</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Container.Content(artists)</visible>
+					</control>
+					<control type="group">
+						<left>250</left>
+						<top>20</top>
+						<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+						<control type="image">
+							<left>8</left>
+							<top>1</top>
+							<width>36</width>
+							<height>36</height>
+							<aspectratio>keep</aspectratio>
+							<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+						</control>
+						<control type="label">
+							<top>6</top>
+							<align>center</align>
+							<width>50</width>
+							<height>32</height>
+							<textcolor>FFF0F0F0</textcolor>
+							<font>METF_HelpText</font>
+							<label>$INFO[ListItem.UserRating]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<!--moies,shows,seasons focused-->
+				<focusedlayout height="360" width="285" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)">
+					<control type="group">
+						<animation effect="slide" start="0,0" end="-40,0" time="300">Focus</animation>
+						<animation effect="slide" start="-40,0" end="0,0" time="125">UnFocus</animation>
+						<control type="image">
+							<left>1</left>
+							<top>15</top>
+							<width>220</width>
+							<height>330</height>
+							<texture border="2" fallback="DefaultVideoCover.png" background="true">$INFO[ListItem.Art(poster)]</texture>
+							<bordertexture colordiffuse="60FFFFFF">globalsearch/globalsearch-black.png</bordertexture>
+							<bordersize>4</bordersize>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>4</left>
+							<top>274</top>
+							<width>212</width>
+							<height>66</height>
+							<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+						</control>
+						<control type="textbox">
+							<left>15</left>
+							<top>270</top>
+							<width>192</width>
+							<height>70</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="group">
+							<left>170</left>
+							<top>20</top>
+							<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+							<control type="image">
+								<left>8</left>
+								<top>1</top>
+								<width>36</width>
+								<height>36</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+							</control>
+							<control type="label">
+								<top>6</top>
+								<align>center</align>
+								<width>50</width>
+								<height>32</height>
+								<textcolor>FFF0F0F0</textcolor>
+								<font>METF_HelpText</font>
+								<label>$INFO[ListItem.UserRating]</label>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<top>15</top>
+						<animation type="Focus">
+							<effect type="slide" start="0,0" end="-40,0" time="300" />
+							<effect type="fade" start="0" end="100" time="300" />
+						</animation>
+						<animation effect="fade" start="100" end="0" time="0">UnFocus</animation>
+						<control type="image">
+							<left>1</left>
+							<width>220</width>
+							<height>330</height>
+							<texture border="8" colordiffuse="FF12A0C7">globalsearch/globalsearch-thumbnail-focus.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<top>15</top>
+						<left>190</left>
+						<width>70</width>
+						<height>330</height>
+						<fadetime>500</fadetime>
+						<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-white.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
+						<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
+					</control>
+					<control type="group">
+						<top>15</top>
+						<left>190</left>
+						<animation effect="fade" start="0" end="100" time="200" delay="250">Focus</animation>
+						<animation effect="fade" start="100" end="0" time="50">UnFocus</animation>
+						<control type="group">
+							<top>20</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-rating.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Rating]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!Container.Content(seasons)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-year.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Year]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-number.png</texture>
+							</control>
+							<control type="label">
+								<top>34</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Episode]</label>
+							</control>
+						</control>
+						<control type="group">
+							<top>260</top>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-watched.png</texture>
+								<visible>Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-unwatched.png</texture>
+								<visible>!Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+				<!--  episodes,musicvideos focused-->
+				<focusedlayout height="360" width="470" condition="Container.Content(episodes) | Container.Content(musicvideos)">
+					<control type="group">
+						<animation effect="slide" start="0,0" end="-40,0" time="300">Focus</animation>
+						<animation effect="slide" start="-40,0" end="0,0" time="125">UnFocus</animation>
+						<control type="image">
+							<left>1</left>
+							<top>10</top>
+							<width>380</width>
+							<height>250</height>
+							<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+							<bordersize>5</bordersize>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>1</left>
+							<top>266</top>
+							<width>380</width>
+							<height>80</height>
+							<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+							<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>274</top>
+							<width>360</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>[B]$INFO[ListItem.TvShowTitle][/B]</label>
+							<visible>Container.Content(episodes)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>274</top>
+							<width>360</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>[B]$INFO[ListItem.Artist][/B]</label>
+							<visible>Container.Content(musicvideos)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>304</top>
+							<width>360</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="group">
+							<left>170</left>
+							<top>20</top>
+							<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+							<control type="image">
+								<left>8</left>
+								<top>1</top>
+								<width>36</width>
+								<height>36</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+							</control>
+							<control type="label">
+								<top>6</top>
+								<align>center</align>
+								<width>50</width>
+								<height>32</height>
+								<textcolor>FFF0F0F0</textcolor>
+								<font>METF_HelpText</font>
+								<label>$INFO[ListItem.UserRating]</label>
+							</control>
+						</control>
+						<control type="image">
+							<left>1</left>
+							<top>10</top>
+							<width>380</width>
+							<height>333</height>
+							<texture border="8" colordiffuse="FF12A0C7">globalsearch/globalsearch-thumbnail-focus.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>354</left>
+						<top>12</top>
+						<width>70</width>
+						<height>330</height>
+						<fadetime>500</fadetime>
+						<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-white.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
+						<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
+					</control>
+					<control type="group">
+						<top>12</top>
+						<left>354</left>
+						<animation effect="fade" start="0" end="100" time="200" delay="250">Focus</animation>
+						<animation effect="fade" start="100" end="0" time="50">UnFocus</animation>
+						<control type="group">
+							<top>20</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-rating.png</texture>
+							</control>
+							<control type="label">
+								<top>34</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Rating]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(episodes)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-number.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Season]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(musicvideos)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-year.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Year]</label>
+							</control>
+						</control>
+						<control type="group">
+							<top>260</top>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-watched.png</texture>
+								<visible>Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-unwatched.png</texture>
+								<visible>!Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+				<!-- songs albums, artists focused-->
+				<focusedlayout height="360" width="350" condition="Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)">
+					<control type="group">
+						<animation effect="slide" start="0,0" end="-40,0" time="300">Focus</animation>
+						<animation effect="slide" start="-40,0" end="0,0" time="125">UnFocus</animation>
+						<control type="image">
+							<left>1</left>
+							<top>10</top>
+							<width>300</width>
+							<height>300</height>
+							<texture border="2" background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+							<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+							<bordersize>5</bordersize>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="image">
+							<left>1</left>
+							<top>236</top>
+							<width>300</width>
+							<height>75</height>
+							<texture colordiffuse="B0FFFFFF">globalsearch/globalsearch-black.png</texture>
+							<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="textbox">
+							<left>15</left>
+							<top>236</top>
+							<width>270</width>
+							<height>70</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Container.Content(artists)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>250</top>
+							<width>270</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>[B]$INFO[ListItem.Artist][/B]</label>
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>250</top>
+							<width>270</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>[B]$INFO[ListItem.Property(ChannelName)][/B]</label>
+							<visible>Container.Content(livetv)</visible>
+						</control>
+						<control type="label">
+							<left>15</left>
+							<top>276</top>
+							<width>280</width>
+							<height>28</height>
+							<font>METF_DialogVerySmall</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<selectedcolor>FFF0F0F0</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Container.Content(artists)</visible>
+						</control>
+						<control type="group">
+							<left>250</left>
+							<top>20</top>
+							<visible>!String.IsEmpty(ListItem.UserRating)</visible>
+							<control type="image">
+								<left>8</left>
+								<top>1</top>
+								<width>36</width>
+								<height>36</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-list-circle.png</texture>
+							</control>
+							<control type="label">
+								<top>6</top>
+								<align>center</align>
+								<width>50</width>
+								<height>32</height>
+								<textcolor>FFF0F0F0</textcolor>
+								<font>METF_HelpText</font>
+								<label>$INFO[ListItem.UserRating]</label>
+							</control>
+						</control>
+						<control type="image">
+							<left>1</left>
+							<top>10</top>
+							<width>300</width>
+							<height>300</height>
+							<texture border="8" colordiffuse="FF12A0C7">globalsearch/globalsearch-thumbnail-focus.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<left>268</left>
+						<top>12</top>
+						<width>70</width>
+						<height>300</height>
+						<fadetime>500</fadetime>
+						<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-white.png</texture>
+						<animation effect="zoom" start="0,100" end="100,100" time="250" center="auto">Focus</animation>
+						<animation effect="zoom" start="100,100" end="0,100" time="125" center="auto" delay="50">UnFocus</animation>
+					</control>
+					<control type="group">
+						<top>12</top>
+						<left>268</left>
+						<animation effect="fade" start="0" end="100" time="200" delay="250">Focus</animation>
+						<animation effect="fade" start="100" end="0" time="50">UnFocus</animation>
+						<control type="group">
+							<visible>Container.Content(artists)</visible>
+							<top>20</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-formed.png</texture>
+							</control>
+							<control type="textbox">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Property(Artist_Formed)]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(artists)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-disbanded.png</texture>
+							</control>
+							<control type="textbox">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Property(Artist_Disbanded)]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+							<top>20</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-rating.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Rating]</label>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+							<top>140</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-year.png</texture>
+							</control>
+							<control type="label">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Year]</label>
+							</control>
+						</control>
+						<control type="group">
+							<top>240</top>
+							<visible>Container.Content(songs)</visible>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-watched.png</texture>
+								<visible>Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>0</top>
+								<width>48</width>
+								<height>48</height>
+								<texture>globalsearch/globalsearch-list-unwatched.png</texture>
+								<visible>!Integer.IsGreater(ListItem.Playcount,0)</visible>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(livetv)</visible>
+							<top>20</top>
+							<control type="image">
+								<top>0</top>
+								<left>0</left>
+								<width>70</width>
+								<height>32</height>
+								<fadetime>500</fadetime>
+								<aspectratio align="center">keep</aspectratio>
+								<texture>globalsearch/globalsearch-list-clock.png</texture>
+							</control>
+							<control type="textbox">
+								<left>0</left>
+								<top>34</top>
+								<width>70</width>
+								<height>32</height>
+								<align>center</align>
+								<font>METF_DialogLarge</font>
+								<selectedcolor>FFF0F0F0</selectedcolor>
+								<label fallback="-">$INFO[ListItem.Property(Duration)]</label>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<!--list view-->
+			<control type="list" id="51">
+				<left>462</left>
+				<top>200</top>
+				<width>1038</width>
+				<height>700</height>
+				<onleft>9000</onleft>
+				<viewtype label="535">biglist</viewtype>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<!--list-->
+				<itemlayout height="100" width="1458">
+					<control type="image">
+						<left>4</left>
+						<top>4</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					<control type="image">
+						<left>4</left>
+						<top>4</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>4</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_DialogVerySmall</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<shadowcolor>22000000</shadowcolor>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Genre]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Property(artist_genre)]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(livetv)</visible>
+					</control>
+				</itemlayout>
+				<!--focused list-->
+				<focusedlayout height="100" width="1458">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>1038</width>
+						<height>100</height>
+						<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-focus.png</texture>
+						<visible>Control.HasFocus(51)</visible>
+					</control>
+					<control type="image">
+						<left>4</left>
+						<top>4</top>
+						<width>90</width>
+						<height>90</height>
+						<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+					</control>
+					<control type="image">
+						<left>4</left>
+						<top>4</top>
+						<width>90</width>
+						<height>90</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>4</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_DialogVerySmall</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+						<shadowcolor>22000000</shadowcolor>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Genre]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.TVShowTitle]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Property(artist_genre)]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(artists)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Artist]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(musicvideos) | Container.Content(albums) | Container.Content(songs)</visible>
+					</control>
+					<control type="label">
+						<left>110</left>
+						<top>45</top>
+						<height>50</height>
+						<width>928</width>
+						<aligny>center</aligny>
+						<font>METF_TitleTextMedium</font>
+						<label>$INFO[ListItem.Property(Starttime)]</label>
+						<shadowcolor>22000000</shadowcolor>
+						<visible>Container.Content(livetv)</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<!--poster view-->
+			<control type="group">
+				<left>1500</left>
+				<top>0</top>
+				<visible>Control.IsVisible(51)</visible>
+				<control type="image">
+					<left>-4</left>
+					<top>-4</top>
+					<width>430</width>
+					<height>1080</height>
+					<texture>globalsearch/globalsearch-panel.png</texture>
+					<bordertexture border="6">globalsearch/globalsearch-panel-shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>100</top>
+					<width>380</width>
+					<height>380</height>
+					<texture background="true">$INFO[ListItem.Art(poster)]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>100</top>
+					<width>380</width>
+					<height>380</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
+				</control>
+				<control type="textbox">
+					<left>10</left>
+					<top>500</top>
+					<height>498</height>
+					<width>400</width>
+					<font>METF_DialogLarge</font>
+					<label>$INFO[ListItem.Plot]</label>
+					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</visible>
+				</control>
+				<control type="textbox">
+					<left>10</left>
+					<top>500</top>
+					<height>498</height>
+					<width>400</width>
+					<font>METF_DialogLarge</font>
+					<label>$INFO[ListItem.Property(Plot)]</label>
+					<visible>Container.Content(livetv)</visible>
+				</control>
+				<control type="textbox">
+					<left>10</left>
+					<top>500</top>
+					<height>498</height>
+					<width>400</width>
+					<font>METF_DialogLarge</font>
+					<label>$INFO[ListItem.Property(Artist_Description)]</label>
+					<visible>Container.Content(artists)</visible>
+				</control>
+				<control type="textbox">
+					<left>10</left>
+					<top>500</top>
+					<height>498</height>
+					<width>400</width>
+					<aligny>justify</aligny>
+					<font>METF_DialogLarge</font>
+					<label>$INFO[ListItem.Property(Album_Description)]</label>
+					<visible>Container.Content(albums)</visible>
+				</control>
+				<control type="textbox">
+					<left>10</left>
+					<top>500</top>
+					<height>498</height>
+					<width>400</width>
+					<font>METF_DialogLarge</font>
+					<label>$INFO[ListItem.Comment]</label>
+					<visible>Container.Content(songs)</visible>
+				</control>
+			</control>
+			<!--arrows-->
+			<control type="button">
+				<left>1172</left>
+				<top>154</top>
+				<width>48</width>
+				<height>24</height>
+				<texturefocus colordiffuse="FF12A0C7" flipy="true">globalsearch/globalsearch-arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="FF12A0C7" flipy="true">globalsearch/globalsearch-arrowdown.png</texturenofocus>
+				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
+				<onclick>SetFocus(500)</onclick>
+				<onclick>PageUp</onclick>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="slide" start="0,0" end="-210,0" condition="Control.IsVisible(51)">Conditional</animation>
+				<visible>Container.HasPrevious</visible>
+			</control>
+			<control type="button">
+				<left>1172</left>
+				<top>930</top>
+				<width>48</width>
+				<height>24</height>
+				<texturefocus colordiffuse="FF12A0C7">globalsearch/globalsearch-arrowdown.png</texturefocus>
+				<texturenofocus colordiffuse="FF12A0C7">globalsearch/globalsearch-arrowdown.png</texturenofocus>
+				<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+				<animation effect="zoom" start="100,0" end="100,100" delay="500" center="auto" time="200">WindowOpen</animation>
+				<animation effect="zoom" start="100,100" end="100,0" center="auto" time="200">WindowClose</animation>
+				<onclick>SetFocus(500)</onclick>
+				<onclick>PageDown</onclick>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<animation effect="slide" start="0,0" end="-210,0" condition="Control.IsVisible(51)">Conditional</animation>
+				<visible>Container.HasNext</visible>
+			</control>
+			<!--lower bar-->
+			<control type="group">
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<left>512</left>
+				<top>908</top>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<left>0</left>
+					<itemgap>6</itemgap>
+					<width>1366</width>
+					<control type="image">
+						<width>110</width>
+						<height>60</height>
+						<fadetime>200</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture>$INFO[Container.ListItem.AudioChannels,flags/AudioChannels/,.png]</texture>
+					</control>
+					<control type="image">
+						<width>110</width>
+						<height>60</height>
+						<fadetime>200</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture>$INFO[Container.ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
+					</control>
+				</control>
+				<control type="grouplist">
+					<orientation>horizontal</orientation>
+					<left>0</left>
+					<itemgap>6</itemgap>
+					<width>1366</width>
+					<align>right</align>
+					<animation effect="slide" start="0,0" end="-420,0" condition="Control.IsVisible(51)">Conditional</animation>
+					<control type="image">
+						<width>110</width>
+						<height>60</height>
+						<fadetime>200</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture>$INFO[Container.ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
+					</control>
+					<control type="image">
+						<width>110</width>
+						<height>60</height>
+						<fadetime>200</fadetime>
+						<aspectratio align="center" aligny="top">keep</aspectratio>
+						<texture>$INFO[Container.ListItem.VideoCodec,flags/videocodec/,.png]</texture>
+					</control>
+				</control>
+			</control>
+			<control type="label" id="999">
+				<left>436</left>
+				<top>0</top>
+				<width>1484</width>
+				<height>1080</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>METF_TitleTextMedium</font>
+				<label>$LOCALIZE[284]</label>
+			</control>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>116</height>
+			<texture>globalsearch/globalsearch-header.png</texture>
+		</control>
+		<control type="group">
+			<top>30</top>
+			<left>90</left>
+			<control type="image">
+				<aspectratio>keep</aspectratio>
+				<width>56</width>
+				<height>56</height>
+				<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-logo.png</texture>
+			</control>
+			<control type="image">
+				<left>40</left>
+				<top>10</top>
+				<aspectratio>keep</aspectratio>
+				<width>192</width>
+				<height>36</height>
+				<texture>globalsearch/globalsearch-logo-text.png</texture>
+			</control>
+		</control>
+		<control type="label">
+			<top>0</top>
+			<align>right</align>
+			<right>20</right>
+			<height>200</height>
+			<width>900</width>
+			<font>METF_TitleTextMedium</font>
+			<shadowcolor>22000000</shadowcolor>
+			<label>$INFO[System.Time]</label>
+		</control>
+		<control type="image">
+			<left>0</left>
+			<top>964</top>
+			<width>1920</width>
+			<height>116</height>
+			<texture flipy="true">globalsearch/globalsearch-header.png</texture>
+		</control>
+		<control type="grouplist">
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<top>1030</top>
+			<right>24</right>
+			<width>1200</width>
+			<itemgap>10</itemgap>
+			<animation effect="fade" time="200">VisibleChange</animation>
+			<control type="label">
+				<width>auto</width>
+				<height>48</height>
+				<aligny>center</aligny>
+				<align>right</align>
+				<shadowcolor>22000000</shadowcolor>
+				<label>$INFO[Container.CurrentItem,, / ]$INFO[Container.NumItems]</label>
+			</control>
+			<control type="image">
+				<width>54</width>
+				<height>44</height>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="FF12A0C7">globalsearch/globalsearch-itemcount.png</texture>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<visible>!String.IsEmpty(Container.NumItems)</visible>
+			</control>
+		</control>
+	</controls>
+</window>
